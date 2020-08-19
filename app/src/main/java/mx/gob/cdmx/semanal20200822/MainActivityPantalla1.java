@@ -56,6 +56,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
@@ -72,6 +73,7 @@ import cz.msebera.android.httpclient.Header;
 import mx.gob.cdmx.semanal20200822.model.DatoContent;
 import mx.gob.cdmx.semanal20200822.model.Usuario;
 
+import static android.text.Layout.JUSTIFICATION_MODE_INTER_WORD;
 import static mx.gob.cdmx.semanal20200822.Nombre.USUARIO;
 import static mx.gob.cdmx.semanal20200822.Nombre.customURL;
 import static mx.gob.cdmx.semanal20200822.Nombre.encuesta;
@@ -107,11 +109,9 @@ public class MainActivityPantalla1 extends Activity implements AdapterView.OnIte
 
 
     private Button btnGuardar;
-    private Button btnAbandono;
-    private Button btnRechazo;
-    private Button btnAbrir;
     private Button btnSalir;
-    public Button uploadButton, emailButton;
+
+    private TextView textPreguntaEntrada;
 
     double latitude;
     double longitude;
@@ -119,12 +119,12 @@ public class MainActivityPantalla1 extends Activity implements AdapterView.OnIte
     Random random = new java.util.Random();
     public int rand;
 
-    public RadioGroup rdPreguntaOcupacion, rdPreguntaFocos,   rdPreguntaCoche,rdPreguntaCuantosCoches,rdPreguntaCuartos, rdPreguntaCuartosDormir,
-    rdPreguntaBanos,rdPreguntaTrabajaron,rdPreguntaInternet,rdPreguntaRegadera,
+    public RadioGroup rdPreguntaOcupacion, rdPreguntaFocos,   rdPreguntaCuantosCoches,rdPreguntaCuartos, rdPreguntaCuartosDormir,
+    rdPreguntaBanos,rdPreguntaRegadera,
     rdPreguntaEstufa, rdPreguntaEdad, rdPreguntaGenero, rdPreguntaTipoVivienda, rdPreguntaTipoPiso;
 
 
-    public RadioGroup  rdPreguntaAporta, rdPreguntaHijos, rdPreguntaAbandono;
+    public RadioGroup  rdPreguntaAporta,  rdPreguntaAbandono;
 
 
     private static final int READ_BLOCK_SIZE = 100000;
@@ -715,6 +715,15 @@ mProgressView = findViewById(R.id.login_progressMain);
 
     txtSeccion.setText(cachaSeccion());
     txtSeccion.setEnabled(false);
+
+    textPreguntaEntrada = (TextView) findViewById(R.id.textPreguntaEntrada);
+
+    // justificar el texto
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+        textPreguntaEntrada.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD);
+    }
+
+
 
     res = getResources();
 
