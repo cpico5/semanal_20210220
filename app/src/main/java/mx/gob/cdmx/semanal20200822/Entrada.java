@@ -404,49 +404,6 @@ public class Entrada extends Activity {
         finish();
     }
 
-    public void Sigue(View view) {
-        // TODO Auto-generated method stub Aqui para generar el archivo vacio// hasta la 112
-
-        final EditText usuario = (EditText) findViewById(R.id.editUsuario);
-        final EditText pass = (EditText) findViewById(R.id.editPass);
-        File directory;
-        File file;
-        File sdCard;
-        sdCard = Environment.getExternalStorageDirectory();
-        FileOutputStream fout = null;
-        try {
-            directory = new File(sdCard.getAbsolutePath() + "/Mis_archivos");
-            directory.mkdirs();
-            Nombre nom = new Nombre();
-            String nombreE = nom.nombreEncuesta();
-            directory = new File(sdCard.getAbsolutePath() + "/" + nombreE + "-Audio" + formattedDate3);
-            directory.mkdirs();
-
-
-        } catch (Exception e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-
-        String user = usuario.getText().toString();
-        String pssw = pass.getText().toString();
-        sacaUsuario(user, pssw);
-        String paso = sacaUsuario(user, pssw).toString();
-
-
-        if (paso.matches("1")) {
-
-            Intent intent = new Intent(Entrada.this, MainActivity.class);
-            Bundle bundle = new Bundle();
-            bundle.putString("Nombre", usuario.getText().toString());
-            intent.putExtras(bundle);
-            startActivity(intent);
-            Toast.makeText(this, "Acceso OK", Toast.LENGTH_SHORT).show();
-
-        } else {
-            Toast.makeText(this, "Usuario y/o Contaseña Incorrectos", Toast.LENGTH_SHORT).show();
-        }
-    }
 
     private String sacaUsuario(String user, String pass) {
         Set<String> set = new HashSet<String>();
@@ -488,17 +445,6 @@ public class Entrada extends Activity {
         db.close();
 
         return acceso;
-    }
-
-    public void continua(View view) {
-
-        Intent i = new Intent(this, MainActivity.class);
-        i.putExtra("Nombre", editUsuario.getText().toString());
-
-        startActivity(i);
-
-        editUsuario.setText("");
-
     }
 
     //Enviar Base
