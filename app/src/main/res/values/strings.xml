@@ -70,7 +70,7 @@
     <string name="PREGUNTA8">En su opinión, ¿la Jefa de Gobierno Claudia Sheinbaum tiene mucha, poca o ninguna capacidad para resolver los problemas de la Ciudad de México?</string>
     <string name="PREGUNTAc1">Por favor dígame, ¿usted está de acuerdo o en desacuerdo con la manera como se aplica la ley en México? (No se lee acuerdo en parte o desacuerdo en parte)</string>
     <string name="PREGUNTAc2">Cuando le menciono la palabra corrupción, ¿en qué partido político piensa usted?(No leer opciónes, si la respuesta es todos insistir en ¿cuál más?)</string>
-<string name="PREGUNTAc3">En el país es frecuente escuchar casos de corrupción de políticos, gobernantes y funcionarios públicos. En su opinión, ¿en de que partidos se escuchan más casos de corrupción: de funcionarios del PAN, del PRI o de Morena? (No leer Todos son iguales?</string>
+<string name="PREGUNTAc3">En el país es frecuente escuchar casos de corrupción de políticos, gobernantes y funcionarios públicos. En su opinión, ¿de que partidos se escuchan más casos de corrupción: de funcionarios del PAN, del PRI o de Morena? (No leer Todos son iguales?</string>
 <string name="PREGUNTAc3a">¿Usted utiliza WhatsApp?</string>
 <string name="PREGUNTAc4">¿Cómo evalúa usted la actuación del gobierno de Andrés Manuel López Obrador en relación al combate de la impunidad y al influyentismo, bien o mal? (no leer regular)</string>
 <string name="PREGUNTAc5">Cree usted que el gobierno de Andrés Manuel López Obrador ha hecho o no todo lo posible para combatir la impunidad de políticos, servidores públicos y de ricos influyentes?</string>
@@ -90,7 +90,7 @@
 <string name="PREGUNTAc17">Solo para estadística, ¿me podría decir por quien voto para Jefe de Gobierno en las elecciones de 2018? Espontáneo</string>
 <string name="PREGUNTAc17a">A dos años de la elección ¿sigue pensando que fue la mejor elección para la Jefatura de Gobierno? (espontáneo)</string>
 <string name="PREGUNTAc17b">Después de dos años de la elección ¿cómo cree que está haciendo su trabajo la Jefa de Gobierno, Claudia Sheinbaum, bien o mal? (no leer regular)</string>
-<string name="PREGUNTAc18">Si hoy fueran las elecciones para elegir alcaldes y diputados ¿por quién partido votaría usted? (espontáneo)</string>
+<string name="PREGUNTAc18">Si hoy fueran las elecciones para elegir alcaldes y diputados ¿por qué partido votaría usted? (espontáneo)</string>
 
 
 

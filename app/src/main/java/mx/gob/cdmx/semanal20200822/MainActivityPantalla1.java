@@ -606,15 +606,15 @@ public String elTiempo() {
 
 private Integer[] mLinearLayoutIds = {
             R.layout.activity_pantalla1,
-            R.layout.activity_pantalla2,
-            R.layout.activity_pantalla3,
-            R.layout.activity_pantalla4,
-            R.layout.activity_pantalla5,
-            R.layout.activity_pantalla6,
-            R.layout.activity_pantalla7,
-            R.layout.activity_pantalla8,
-            R.layout.activity_pantalla9,
-            R.layout.activity_pantalla10,
+//            R.layout.activity_pantalla2,
+//            R.layout.activity_pantalla3,
+//            R.layout.activity_pantalla4,
+//            R.layout.activity_pantalla5,
+//            R.layout.activity_pantalla6,
+//            R.layout.activity_pantalla7,
+//            R.layout.activity_pantalla8,
+//            R.layout.activity_pantalla9,
+//            R.layout.activity_pantalla10,
 ////// R.layout.activity_pantalla11,
 //// R.layout.activity_pantalla12,
 //// R.layout.activity_pantalla13,
@@ -643,7 +643,7 @@ private Integer[] mLinearLayoutIds = {
 protected void onCreate(Bundle savedInstanceState) {
 // TODO Auto-generated method stub
     super.onCreate(savedInstanceState);
-//setContentView(R.layout.activity_pantalla1); // COMENTAR ESTA CUANDO ES ALEATORIO
+setContentView(R.layout.activity_pantalla1); // COMENTAR ESTA CUANDO ES ALEATORIO
 
 Intent startingIntent = getIntent();
 if (startingIntent == null) {
@@ -662,9 +662,9 @@ if (startingIntent == null) {
 random = new java.util.Random();
 //
 /*DESCOMENTAR ESTAS 3 LINEAS CUANDO YA ESTA EL NUMERO DE HOJAS ALEATORIO */
-        rand = random.nextInt(9);
-        setContentView(mLinearLayoutIds[rand]);
-        Log.i(null, "El aleatorio: " + rand); // si rand= 11 en el layoud corresponde a uno mas
+//        rand = random.nextInt(9);
+//        setContentView(mLinearLayoutIds[rand]);
+//        Log.i(null, "El aleatorio: " + rand); // si rand= 11 en el layoud corresponde a uno mas
 
 
 /*activity_pantalla12*/
@@ -827,10 +827,10 @@ rdPreguntaFocos = (RadioGroup) findViewById(R.id.rdPreguntaFocos);
 rdPreguntaBanos = (RadioGroup) findViewById(R.id.rdPreguntaBanos);
 rdPreguntaRegadera = (RadioGroup) findViewById(R.id.rdPreguntaRegadera);
 rdPreguntaEstufa = (RadioGroup) findViewById(R.id.rdPreguntaEstufa);
-rdPreguntaEdad = (RadioGroup) findViewById(R.id.rdPreguntaEdad);
+//rdPreguntaEdad = (RadioGroup) findViewById(R.id.rdPreguntaEdad);
 rdPreguntaGenero = (RadioGroup) findViewById(R.id.rdPreguntaGenero);
 rdPreguntaTipoVivienda = (RadioGroup) findViewById(R.id.rdPreguntaTipoVivienda);
-rdPreguntaTipoPiso = (RadioGroup) findViewById(R.id.rdPreguntaTipoPiso);
+//rdPreguntaTipoPiso = (RadioGroup) findViewById(R.id.rdPreguntaTipoPiso);
 
 
     capturaAporta = res.getString(R.string.PREGUNTAAPORTA);
@@ -841,10 +841,10 @@ capturaCuartos = res.getString(R.string.PREGUNTACUARTOS);
 capturaCuartosDormir = res.getString(R.string.PREGUNTACUARTOSDORMIR);
 capturaBanos = res.getString(R.string.PREGUNTABANOS);
 capturaEstufa = res.getString(R.string.PREGUNTAESTUFA);
-capturaEdad = res.getString(R.string.PREGUNTAEDAD);
+//capturaEdad = res.getString(R.string.PREGUNTAEDAD);
 capturaGenero = res.getString(R.string.PREGUNTAGENERO);
 capturaTipoVivienda = res.getString(R.string.PREGUNTA_TIPO_VIVIENDA);
-capturaTipoPiso = res.getString(R.string.PREGUNTA_TIPO_PISO);
+//capturaTipoPiso = res.getString(R.string.PREGUNTA_TIPO_PISO);
 
 
 
@@ -1690,42 +1690,53 @@ rdPregunta3.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 
             if (checkedId == R.id.radio1) {
                 opc17 = "Claudia Sheinbaum/ Morena/ PT/ Encuentro social";
+                layc17a .setVisibility(View.VISIBLE);	rdPreguntac17a.clearCheck();	opc17a="sin datos";
+
             }
 
             else if (checkedId == R.id.radio2) {
                 opc17 = "Alejandra Barrales/ PAN/ PRD/  MC";
+                layc17a .setVisibility(View.GONE);	rdPreguntac17a.clearCheck();	opc17a="No aplica";
             }
 
             else if (checkedId == R.id.radio3) {
                 opc17 = "Mikel Arriola/ PRI";
+                layc17a .setVisibility(View.GONE);	rdPreguntac17a.clearCheck();	opc17a="No aplica";
             }
 
             else if (checkedId == R.id.radio4) {
                 opc17 = "Mariana Boy/ PVEM";
+                layc17a .setVisibility(View.GONE);	rdPreguntac17a.clearCheck();	opc17a="No aplica";
             }
 
             else if (checkedId == R.id.radio5) {
                 opc17 = "Lorena Osorio/ Independiente";
+                layc17a .setVisibility(View.GONE);	rdPreguntac17a.clearCheck();	opc17a="No aplica";
             }
 
             else if (checkedId == R.id.radio6) {
                 opc17 = "Marco Rascón/ PHCDMX";
+                layc17a .setVisibility(View.GONE);	rdPreguntac17a.clearCheck();	opc17a="No aplica";
             }
 
             else if (checkedId == R.id.radio7) {
                 opc17 = "Purificación Carpinteyro/ PANAL";
+                layc17a .setVisibility(View.GONE);	rdPreguntac17a.clearCheck();	opc17a="No aplica";
             }
 
             else if (checkedId == R.id.radio8) {
                 opc17 = "No voto";
+                layc17a .setVisibility(View.GONE);	rdPreguntac17a.clearCheck();	opc17a="No aplica";
             }
 
             else if (checkedId == R.id.radio9) {
                 opc17 = "Anuló su voto";
+                layc17a .setVisibility(View.GONE);	rdPreguntac17a.clearCheck();	opc17a="No aplica";
             }
 
             else if (checkedId == R.id.radio0) {
                 opc17 = "No sabe / No contestó";
+                layc17a .setVisibility(View.GONE);	rdPreguntac17a.clearCheck();	opc17a="No aplica";
             }
 
         }
@@ -2210,34 +2221,34 @@ rdPreguntaEstufa.setOnCheckedChangeListener(new OnCheckedChangeListener() {
     }
 });
 
-rdPreguntaEdad.setOnCheckedChangeListener(new OnCheckedChangeListener() {
-
-    @Override
-    public void onCheckedChanged(RadioGroup group, int checkedId) {
-
-        if (checkedId == R.id.radio1) {
-            opEdad = "Menor de 18 años";
-        } else if (checkedId == R.id.radio2) {
-            opEdad = "18 a 29";
-        } else if (checkedId == R.id.radio3) {
-            opEdad = "30 a 39";
-        } else if (checkedId == R.id.radio4) {
-            opEdad = "40 a 49";
-        } else if (checkedId == R.id.radio5) {
-            opEdad = "50 a 59";
-        } else if (checkedId == R.id.radio6) {
-            opEdad = "60 a 69";
-        } else if (checkedId == R.id.radio7) {
-            opEdad = "70 o más";
-        } else if (checkedId == R.id.radio0) {
-            opEdad = "No contestó";
-        } else {
-            opEdad = "";
-
-        }
-
-    }
-});
+//rdPreguntaEdad.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+//
+//    @Override
+//    public void onCheckedChanged(RadioGroup group, int checkedId) {
+//
+//        if (checkedId == R.id.radio1) {
+//            opEdad = "Menor de 18 años";
+//        } else if (checkedId == R.id.radio2) {
+//            opEdad = "18 a 29";
+//        } else if (checkedId == R.id.radio3) {
+//            opEdad = "30 a 39";
+//        } else if (checkedId == R.id.radio4) {
+//            opEdad = "40 a 49";
+//        } else if (checkedId == R.id.radio5) {
+//            opEdad = "50 a 59";
+//        } else if (checkedId == R.id.radio6) {
+//            opEdad = "60 a 69";
+//        } else if (checkedId == R.id.radio7) {
+//            opEdad = "70 o más";
+//        } else if (checkedId == R.id.radio0) {
+//            opEdad = "No contestó";
+//        } else {
+//            opEdad = "";
+//
+//        }
+//
+//    }
+//});
 
 rdPreguntaGenero.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 
@@ -2275,25 +2286,25 @@ rdPreguntaTipoVivienda.setOnCheckedChangeListener(new OnCheckedChangeListener() 
 
     }
 });
-
-rdPreguntaTipoPiso.setOnCheckedChangeListener(new OnCheckedChangeListener() {
-
-    @Override
-    public void onCheckedChanged(RadioGroup group, int checkedId) {
-
-        if (checkedId == R.id.radio1) {
-            opTipoPiso = "Tierra o cemento";
-        } else if (checkedId == R.id.radio2) {
-            opTipoPiso = "Cualquier otro";
-        } else if (checkedId == R.id.radio0) {
-            opTipoPiso = "No contestó";
-        } else {
-            opTipoPiso = "";
-
-        }
-
-    }
-});
+//
+//rdPreguntaTipoPiso.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+//
+//    @Override
+//    public void onCheckedChanged(RadioGroup group, int checkedId) {
+//
+//        if (checkedId == R.id.radio1) {
+//            opTipoPiso = "Tierra o cemento";
+//        } else if (checkedId == R.id.radio2) {
+//            opTipoPiso = "Cualquier otro";
+//        } else if (checkedId == R.id.radio0) {
+//            opTipoPiso = "No contestó";
+//        } else {
+//            opTipoPiso = "";
+//
+//        }
+//
+//    }
+//});
 
 rdPreguntaAbandono.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 
@@ -2440,10 +2451,10 @@ public void valores() {
     String strBanos = opBanos;
     String strRegadera = opRegadera;
     String strEstufa = opEstufa;
-    String strEdad = opEdad;
+//    String strEdad = opEdad;
     String strGenero = opGenero;
     String strTipoVivienda = opTipoVivienda;
-    String strTipoPiso = opTipoPiso;
+//    String strTipoPiso = opTipoPiso;
     String strAbandono = opAbandono;
 
     if (strAbandono.matches("1")) {
@@ -2457,7 +2468,7 @@ public void valores() {
     String strBano = opBanos;
     String strRega = opRegadera;
     String strEstu = opEstufa;
-    String strPiso = opTipoPiso;
+    String strPiso = opc11a;
 
 // estudios
     if (strEstudios.matches("sin datos")) {
@@ -2594,7 +2605,11 @@ public void valores() {
         strPiso = "0";
     } else if (strPiso.matches("No aplica")) {
         strPiso = "0";
+    }else if (strPiso.matches("No sabe / No contestó")) {
+        strPiso = "0";
     }
+
+
 
     Integer estudios = Integer.valueOf(strEstudios);
     Integer coches = Integer.valueOf(strCocheCuantos);
@@ -2964,33 +2979,29 @@ public void guardar(View v) {
             else if (lay6.getVisibility() == View.VISIBLE && op6.matches("sin datos")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  captura6,Toast.LENGTH_LONG).show();}
             else if (lay7.getVisibility() == View.VISIBLE && spinnerCalifica.getSelectedItem().toString().equals("Selecciona")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  captura7,Toast.LENGTH_LONG).show();}
             else if (lay8.getVisibility() == View.VISIBLE && op8.matches("sin datos")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  captura8,Toast.LENGTH_LONG).show();}
-            else if (lay9.getVisibility() == View.VISIBLE && op9.matches("sin datos")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  captura9,Toast.LENGTH_LONG).show();}
-            else if (lay10.getVisibility() == View.VISIBLE && op10.matches("sin datos")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  captura10,Toast.LENGTH_LONG).show();}
-            else if (lay11.getVisibility() == View.VISIBLE && op11.matches("sin datos")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  captura11,Toast.LENGTH_LONG).show();}
             else if (layc1.getVisibility() == View.VISIBLE && opc1.matches("sin datos")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac1,Toast.LENGTH_LONG).show();}
             else if (layc2.getVisibility() == View.VISIBLE && opc2.matches("sin datos")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac2,Toast.LENGTH_LONG).show();}
             else if (layc3.getVisibility() == View.VISIBLE && opc3.matches("sin datos")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac3,Toast.LENGTH_LONG).show();}
+            else if (layc3a.getVisibility() == View.VISIBLE && opc3a.matches("sin datos")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac3a,Toast.LENGTH_LONG).show();}
             else if (layc4.getVisibility() == View.VISIBLE && opc4.matches("sin datos")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac4,Toast.LENGTH_LONG).show();}
             else if (layc5.getVisibility() == View.VISIBLE && opc5.matches("sin datos")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac5,Toast.LENGTH_LONG).show();}
-//            else if (layc6.getVisibility() == View.VISIBLE && opc6.matches("sin datos")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac6,Toast.LENGTH_LONG).show();}
-            else if (layc6a.getVisibility() == View.VISIBLE && opc6a.matches("sin datos")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac6a,Toast.LENGTH_LONG).show();}
-            else if (layc6b.getVisibility() == View.VISIBLE && opc6b.matches("sin datos")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac6b,Toast.LENGTH_LONG).show();}
+            else if (layc6.getVisibility() == View.VISIBLE && opc6.matches("sin datos")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac6,Toast.LENGTH_LONG).show();}
             else if (layc7.getVisibility() == View.VISIBLE && opc7.matches("sin datos")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac7,Toast.LENGTH_LONG).show();}
-//            else if (layc8.getVisibility() == View.VISIBLE && opc8.matches("sin datos")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac8,Toast.LENGTH_LONG).show();}
-            else if (layc8a.getVisibility() == View.VISIBLE && opc8a.matches("sin datos")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac8a,Toast.LENGTH_LONG).show();}
-            else if (layc8b.getVisibility() == View.VISIBLE && opc8b.matches("sin datos")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac8b,Toast.LENGTH_LONG).show();}
-            else if (layc8c.getVisibility() == View.VISIBLE && opc8c.matches("sin datos")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac8c,Toast.LENGTH_LONG).show();}
-            else if (layc8d.getVisibility() == View.VISIBLE && opc8d.matches("sin datos")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac8d,Toast.LENGTH_LONG).show();}
-//            else if (layc9.getVisibility() == View.VISIBLE && opc9.matches("sin datos")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac9,Toast.LENGTH_LONG).show();}
+            else if (layc8.getVisibility() == View.VISIBLE && opc8.matches("sin datos")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac8,Toast.LENGTH_LONG).show();}
+            else if (layc9.getVisibility() == View.VISIBLE && opc9.matches("sin datos")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac9,Toast.LENGTH_LONG).show();}
             else if (layc9a.getVisibility() == View.VISIBLE && opc9a.matches("sin datos")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac9a,Toast.LENGTH_LONG).show();}
-            else if (layc9b.getVisibility() == View.VISIBLE && opc9b.matches("sin datos")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac9b,Toast.LENGTH_LONG).show();}
-            else if (layc9c.getVisibility() == View.VISIBLE && opc9c.matches("sin datos")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac9c,Toast.LENGTH_LONG).show();}
             else if (layc10.getVisibility() == View.VISIBLE && opc10.matches("sin datos")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac10,Toast.LENGTH_LONG).show();}
             else if (layc11.getVisibility() == View.VISIBLE && opc11.matches("sin datos")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac11,Toast.LENGTH_LONG).show();}
+            else if (layc11a.getVisibility() == View.VISIBLE && opc11a.matches("sin datos")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac11a,Toast.LENGTH_LONG).show();}
             else if (layc12.getVisibility() == View.VISIBLE && opc12.matches("sin datos")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac12,Toast.LENGTH_LONG).show();}
-            else if (layc12a.getVisibility() == View.VISIBLE && opc12a.matches("sin datos")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac12a,Toast.LENGTH_LONG).show();}
-            else if (layc12b.getVisibility() == View.VISIBLE && opc12b.matches("sin datos")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac12b,Toast.LENGTH_LONG).show();}
             else if (layc13.getVisibility() == View.VISIBLE && opc13.matches("sin datos")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac13,Toast.LENGTH_LONG).show();}
+            else if (layc14.getVisibility() == View.VISIBLE && opc14.matches("sin datos")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac14,Toast.LENGTH_LONG).show();}
+            else if (layc15.getVisibility() == View.VISIBLE && opc15.matches("sin datos")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac15,Toast.LENGTH_LONG).show();}
+            else if (layc16.getVisibility() == View.VISIBLE && opc16.matches("sin datos")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac16,Toast.LENGTH_LONG).show();}
+            else if (layc17.getVisibility() == View.VISIBLE && opc17.matches("sin datos")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac17,Toast.LENGTH_LONG).show();}
+            else if (layc17a.getVisibility() == View.VISIBLE && opc17a.matches("sin datos")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac17a,Toast.LENGTH_LONG).show();}
+            else if (layc17b.getVisibility() == View.VISIBLE && opc17b.matches("sin datos")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac17b,Toast.LENGTH_LONG).show();}
+            else if (layc18.getVisibility() == View.VISIBLE && opc18.matches("sin datos")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac18,Toast.LENGTH_LONG).show();}
 
             else if (opAporta.matches("sin datos")) {
             Toast.makeText(getBaseContext(), "CAPTURA:  " + capturaAporta, Toast.LENGTH_LONG).show();
@@ -3008,15 +3019,19 @@ public void guardar(View v) {
             Toast.makeText(getBaseContext(), "CAPTURA:  " + capturaBanos, Toast.LENGTH_LONG).show();
         } else if (opEstufa.matches("sin datos")) {
             Toast.makeText(getBaseContext(), "CAPTURA:  " + capturaEstufa, Toast.LENGTH_LONG).show();
-        } else if (opEdad.matches("sin datos")) {
-            Toast.makeText(getBaseContext(), "CAPTURA:  " + capturaEdad, Toast.LENGTH_LONG).show();
-        } else if (opGenero.matches("sin datos")) {
+        }
+//            else if (opEdad.matches("sin datos")) {
+//            Toast.makeText(getBaseContext(), "CAPTURA:  " + capturaEdad, Toast.LENGTH_LONG).show();
+//        }
+            else if (opGenero.matches("sin datos")) {
             Toast.makeText(getBaseContext(), "CAPTURA:  " + capturaGenero, Toast.LENGTH_LONG).show();
         } else if (opTipoVivienda.matches("sin datos")) {
             Toast.makeText(getBaseContext(), "CAPTURA:  " + capturaTipoVivienda, Toast.LENGTH_LONG).show();
-        } else if (opTipoPiso.matches("sin datos")) {
-            Toast.makeText(getBaseContext(), "CAPTURA:  " + capturaTipoPiso, Toast.LENGTH_LONG).show();
-        } else {
+        }
+//            else if (opTipoPiso.matches("sin datos")) {
+//            Toast.makeText(getBaseContext(), "CAPTURA:  " + capturaTipoPiso, Toast.LENGTH_LONG).show();
+//        }
+            else {
 
 // para valor por default
             if (opAbandono.matches("sin datos")) {

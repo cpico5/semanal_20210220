@@ -454,8 +454,8 @@ public class MainActivity extends Activity implements OnItemSelectedListener, Ad
                     btnRechazo.setEnabled(false);
                     btnRechazo2.setEnabled(false);
 
-                    Toast toast2 = Toast.makeText(getApplicationContext(), "Selecciona la sección",Toast.LENGTH_LONG);
-                    toast2.setGravity(Gravity.TOP | Gravity.CENTER, 0, 0);
+                    Toast toast2 = Toast.makeText(getApplicationContext(), "No existe esta sección en la muestra",Toast.LENGTH_LONG);
+                    toast2.setGravity(Gravity.CENTER | Gravity.CENTER, 0, 0);
                     toast2.show();
 
                 }else {
@@ -921,17 +921,9 @@ public class MainActivity extends Activity implements OnItemSelectedListener, Ad
 
         final String[] datos = new String[] {
                 "ALAN",
-                "ARREDONDO",
                 "BERNACHI",
-                "DANIEL",
-                "EDUARDO S",
                 "ENRIQUE",
-                "HUGO",
                 "IRIS",
-                "LUJANO",
-                "OSCAR",
-                "POLANCO",
-                "SAUL",
                 "TABLA"
         };
 
