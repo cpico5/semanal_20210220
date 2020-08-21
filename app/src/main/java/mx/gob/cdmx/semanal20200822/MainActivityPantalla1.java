@@ -755,37 +755,37 @@ mProgressView = findViewById(R.id.login_progressMain);
     rdPreguntac17b = (RadioGroup)findViewById(R.id.rdPreguntac17b);	capturac17b =res.getString(R.string.PREGUNTAc17b);	layc17b = (LinearLayout) findViewById(R.id.layc17b);
     rdPreguntac18 = (RadioGroup)findViewById(R.id.rdPreguntac18);	capturac18 =res.getString(R.string.PREGUNTAc18);	layc18 = (LinearLayout) findViewById(R.id.layc18);
 
-    editPregunta1= (EditText)findViewById(R.id.editPregunta1);
-    editPregunta2= (EditText)findViewById(R.id.editPregunta2);
-    editPregunta3= (EditText)findViewById(R.id.editPregunta3);
-    editPregunta4= (EditText)findViewById(R.id.editPregunta4);
-    editPregunta5= (EditText)findViewById(R.id.editPregunta5);
-    editPregunta6= (EditText)findViewById(R.id.editPregunta6);
-    editPregunta7= (EditText)findViewById(R.id.editPregunta7);
-    editPregunta8= (EditText)findViewById(R.id.editPregunta8);
-    editPreguntac1= (EditText)findViewById(R.id.editPreguntac1);
-    editPreguntac2= (EditText)findViewById(R.id.editPreguntac2);
-    editPreguntac3= (EditText)findViewById(R.id.editPreguntac3);
-    editPreguntac3a= (EditText)findViewById(R.id.editPreguntac3a);
-    editPreguntac4= (EditText)findViewById(R.id.editPreguntac4);
-    editPreguntac5= (EditText)findViewById(R.id.editPreguntac5);
-    editPreguntac6= (EditText)findViewById(R.id.editPreguntac6);
-    editPreguntac7= (EditText)findViewById(R.id.editPreguntac7);
-    editPreguntac8= (EditText)findViewById(R.id.editPreguntac8);
-    editPreguntac9= (EditText)findViewById(R.id.editPreguntac9);
-    editPreguntac9a= (EditText)findViewById(R.id.editPreguntac9a);
-    editPreguntac10= (EditText)findViewById(R.id.editPreguntac10);
-    editPreguntac11= (EditText)findViewById(R.id.editPreguntac11);
-    editPreguntac11a= (EditText)findViewById(R.id.editPreguntac11a);
-    editPreguntac12= (EditText)findViewById(R.id.editPreguntac12);
-    editPreguntac13= (EditText)findViewById(R.id.editPreguntac13);
-    editPreguntac14= (EditText)findViewById(R.id.editPreguntac14);
-    editPreguntac15= (EditText)findViewById(R.id.editPreguntac15);
-    editPreguntac16= (EditText)findViewById(R.id.editPreguntac16);
-    editPreguntac17= (EditText)findViewById(R.id.editPreguntac17);
-    editPreguntac17a= (EditText)findViewById(R.id.editPreguntac17a);
-    editPreguntac17b= (EditText)findViewById(R.id.editPreguntac17b);
-    editPreguntac18= (EditText)findViewById(R.id.editPreguntac18);
+//    editPregunta1= (EditText)findViewById(R.id.editPregunta1);
+//    editPregunta2= (EditText)findViewById(R.id.editPregunta2);
+//    editPregunta3= (EditText)findViewById(R.id.editPregunta3);
+//    editPregunta4= (EditText)findViewById(R.id.editPregunta4);
+//    editPregunta5= (EditText)findViewById(R.id.editPregunta5);
+//    editPregunta6= (EditText)findViewById(R.id.editPregunta6);
+//    editPregunta7= (EditText)findViewById(R.id.editPregunta7);
+//    editPregunta8= (EditText)findViewById(R.id.editPregunta8);
+//    editPreguntac1= (EditText)findViewById(R.id.editPreguntac1);
+//    editPreguntac2= (EditText)findViewById(R.id.editPreguntac2);
+//    editPreguntac3= (EditText)findViewById(R.id.editPreguntac3);
+//    editPreguntac3a= (EditText)findViewById(R.id.editPreguntac3a);
+//    editPreguntac4= (EditText)findViewById(R.id.editPreguntac4);
+//    editPreguntac5= (EditText)findViewById(R.id.editPreguntac5);
+//    editPreguntac6= (EditText)findViewById(R.id.editPreguntac6);
+//    editPreguntac7= (EditText)findViewById(R.id.editPreguntac7);
+//    editPreguntac8= (EditText)findViewById(R.id.editPreguntac8);
+//    editPreguntac9= (EditText)findViewById(R.id.editPreguntac9);
+//    editPreguntac9a= (EditText)findViewById(R.id.editPreguntac9a);
+//    editPreguntac10= (EditText)findViewById(R.id.editPreguntac10);
+//    editPreguntac11= (EditText)findViewById(R.id.editPreguntac11);
+//    editPreguntac11a= (EditText)findViewById(R.id.editPreguntac11a);
+//    editPreguntac12= (EditText)findViewById(R.id.editPreguntac12);
+//    editPreguntac13= (EditText)findViewById(R.id.editPreguntac13);
+//    editPreguntac14= (EditText)findViewById(R.id.editPreguntac14);
+//    editPreguntac15= (EditText)findViewById(R.id.editPreguntac15);
+//    editPreguntac16= (EditText)findViewById(R.id.editPreguntac16);
+//    editPreguntac17= (EditText)findViewById(R.id.editPreguntac17);
+//    editPreguntac17a= (EditText)findViewById(R.id.editPreguntac17a);
+//    editPreguntac17b= (EditText)findViewById(R.id.editPreguntac17b);
+//    editPreguntac18= (EditText)findViewById(R.id.editPreguntac18);
 
 
 //        editPreguntac3b= (EditText)findViewById(R.id.editPreguntac3b);
@@ -1087,118 +1087,24 @@ rdPregunta3.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-
-
-
-    rdPregunta9.setOnCheckedChangeListener(new OnCheckedChangeListener() {
-        @Override
-        public void onCheckedChanged(RadioGroup group, int checkedId) {
-
-            if (checkedId == R.id.radio1) {
-                op9 = "Si";
-            }
-
-            else if (checkedId == R.id.radio2) {
-                op9 = "No";
-            }
-
-            else if (checkedId == R.id.radio0) {
-                op9 = "No sabe / No contestó";
-            }
-
-        }
-    });
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-
-
-    rdPregunta10.setOnCheckedChangeListener(new OnCheckedChangeListener() {
-        @Override
-        public void onCheckedChanged(RadioGroup group, int checkedId) {
-
-            if (checkedId == R.id.radio1) {
-                op10 = "Mejor";
-            }
-
-            else if (checkedId == R.id.radio2) {
-                op10 = "Igual de bien";
-            }
-
-            else if (checkedId == R.id.radio3) {
-                op10 = "Igual de mal";
-            }
-
-            else if (checkedId == R.id.radio4) {
-                op10 = "Peor";
-            }
-
-            else if (checkedId == R.id.radio0) {
-                op10 = "No sabe / No contestó";
-            }
-
-        }
-    });
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-
-
-    rdPregunta11.setOnCheckedChangeListener(new OnCheckedChangeListener() {
-        @Override
-        public void onCheckedChanged(RadioGroup group, int checkedId) {
-
-            if (checkedId == R.id.radio1) {
-                op11 = "Mejor";
-            }
-
-            else if (checkedId == R.id.radio2) {
-                op11 = "Igual de bien";
-            }
-
-            else if (checkedId == R.id.radio3) {
-                op11 = "Igual de mal";
-            }
-
-            else if (checkedId == R.id.radio4) {
-                op11 = "Peor";
-            }
-
-            else if (checkedId == R.id.radio0) {
-                op11 = "No sabe / No contestó";
-            }
-
-        }
-    });
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-
-
     rdPreguntac1.setOnCheckedChangeListener(new OnCheckedChangeListener() {
         @Override
         public void onCheckedChanged(RadioGroup group, int checkedId) {
 
             if (checkedId == R.id.radio1) {
-                opc1 = "Muy probable";
+                opc1 = "Acuerdo";
             }
 
             else if (checkedId == R.id.radio2) {
-                opc1 = "Probable";
+                opc1 = "Acuerdo en parte";
             }
 
             else if (checkedId == R.id.radio3) {
-                opc1 = "Poco probable";
+                opc1 = "Desacuerdo en parte";
             }
 
             else if (checkedId == R.id.radio4) {
-                opc1 = "Nada probable";
+                opc1 = "Desacuerdo";
             }
 
             else if (checkedId == R.id.radio0) {
@@ -1210,16 +1116,58 @@ rdPregunta3.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+
+
+
     rdPreguntac2.setOnCheckedChangeListener(new OnCheckedChangeListener() {
         @Override
         public void onCheckedChanged(RadioGroup group, int checkedId) {
 
             if (checkedId == R.id.radio1) {
-                opc2 = "El coronavirus";
+                opc2 = "Morena";
             }
+
             else if (checkedId == R.id.radio2) {
-                opc2 = "Mi situación económica";
+                opc2 = "PRI";
             }
+
+            else if (checkedId == R.id.radio3) {
+                opc2 = "PAN";
+            }
+
+            else if (checkedId == R.id.radio4) {
+                opc2 = "PRD";
+            }
+
+            else if (checkedId == R.id.radio5) {
+                opc2 = "PT";
+            }
+
+            else if (checkedId == R.id.radio6) {
+                opc2 = "PVEM";
+            }
+
+            else if (checkedId == R.id.radio7) {
+                opc2 = "Movimiento Ciudadano";
+            }
+
+            else if (checkedId == R.id.radio8) {
+                opc2 = "Candidato Independiente";
+            }
+
+            else if (checkedId == R.id.radio9) {
+                opc2 = "Otro";
+            }
+
+            else if (checkedId == R.id.radio10) {
+                opc2 = "No votaría";
+            }
+
+            else if (checkedId == R.id.radio11) {
+                opc2 = "Anularía su voto";
+            }
+
             else if (checkedId == R.id.radio0) {
                 opc2 = "No sabe / No contestó";
             }
@@ -1233,39 +1181,55 @@ rdPregunta3.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 
 
 
-
     rdPreguntac3.setOnCheckedChangeListener(new OnCheckedChangeListener() {
         @Override
         public void onCheckedChanged(RadioGroup group, int checkedId) {
 
             if (checkedId == R.id.radio1) {
-                opc3 = "Si";
-                layc4 .setVisibility(View.VISIBLE);	rdPreguntac4.clearCheck();	opc4="sin datos";
-                layc5 .setVisibility(View.VISIBLE);	rdPreguntac5.clearCheck();	opc5="sin datos";
-                layc6 .setVisibility(View.VISIBLE);	rdPreguntac6.clearCheck();	opc6="sin datos";
-                layc6a .setVisibility(View.VISIBLE);	rdPreguntac6a.clearCheck();	opc6a="sin datos";
-                layc6b .setVisibility(View.VISIBLE);	rdPreguntac6b.clearCheck();	opc6b="sin datos";
-
+                opc3 = "PRI";
             }
 
             else if (checkedId == R.id.radio2) {
-                opc3 = "No";
-                layc4 .setVisibility(View.GONE);	rdPreguntac4.clearCheck();	opc4="No aplica";
-                layc5 .setVisibility(View.GONE);	rdPreguntac5.clearCheck();	opc5="No aplica";
-                layc6 .setVisibility(View.GONE);	rdPreguntac6.clearCheck();	opc6="No aplica";
-                layc6a .setVisibility(View.GONE);	rdPreguntac6a.clearCheck();	opc6a="No aplica";
-                layc6b .setVisibility(View.GONE);	rdPreguntac6b.clearCheck();	opc6b="No aplica";
+                opc3 = "PAN";
+            }
 
+            else if (checkedId == R.id.radio3) {
+                opc3 = "Morena";
+            }
+
+            else if (checkedId == R.id.radio4) {
+                opc3 = "Todos son igual de corruptos";
             }
 
             else if (checkedId == R.id.radio0) {
                 opc3 = "No sabe / No contestó";
-                layc4 .setVisibility(View.GONE);	rdPreguntac4.clearCheck();	opc4="No aplica";
-                layc5 .setVisibility(View.GONE);	rdPreguntac5.clearCheck();	opc5="No aplica";
-                layc6 .setVisibility(View.GONE);	rdPreguntac6.clearCheck();	opc6="No aplica";
-                layc6a .setVisibility(View.GONE);	rdPreguntac6a.clearCheck();	opc6a="No aplica";
-                layc6b .setVisibility(View.GONE);	rdPreguntac6b.clearCheck();	opc6b="No aplica";
+            }
 
+        }
+    });
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+    rdPreguntac3a.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+        @Override
+        public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+            if (checkedId == R.id.radio1) {
+                opc3a = "Si";
+            }
+
+            else if (checkedId == R.id.radio2) {
+                opc3a = "No";
+            }
+
+            else if (checkedId == R.id.radio0) {
+                opc3a = "No sabe / No contestó";
             }
 
         }
@@ -1282,42 +1246,19 @@ rdPregunta3.setOnCheckedChangeListener(new OnCheckedChangeListener() {
         public void onCheckedChanged(RadioGroup group, int checkedId) {
 
             if (checkedId == R.id.radio1) {
-                opc4 = "Públicas";
-                layc5 .setVisibility(View.GONE);	rdPreguntac5.clearCheck();	opc5="No aplica";
-                layc6 .setVisibility(View.VISIBLE);	rdPreguntac6.clearCheck();	opc6="sin datos";
-                layc6a .setVisibility(View.VISIBLE);	rdPreguntac6a.clearCheck();	opc6a="sin datos";
-                layc6b .setVisibility(View.VISIBLE);	rdPreguntac6b.clearCheck();	opc6b="sin datos";
-                layc7 .setVisibility(View.VISIBLE);	rdPreguntac7.clearCheck();	opc7="sin datos";
-
+                opc4 = "Bien";
             }
 
             else if (checkedId == R.id.radio2) {
-                opc4 = "Privadas";
-                layc5 .setVisibility(View.VISIBLE);	rdPreguntac5.clearCheck();	opc5="sin datos";
-                layc6 .setVisibility(View.VISIBLE);	rdPreguntac6.clearCheck();	opc6="sin datos";
-                layc6a .setVisibility(View.VISIBLE);	rdPreguntac6a.clearCheck();	opc6a="sin datos";
-                layc6b .setVisibility(View.VISIBLE);	rdPreguntac6b.clearCheck();	opc6b="sin datos";
-                layc7 .setVisibility(View.VISIBLE);	rdPreguntac7.clearCheck();	opc7="sin datos";
-
+                opc4 = "Regular";
             }
 
             else if (checkedId == R.id.radio3) {
-                opc4 = "Ambas";
-                layc5 .setVisibility(View.GONE);	rdPreguntac5.clearCheck();	opc5="No aplica";
-                layc6 .setVisibility(View.VISIBLE);	rdPreguntac6.clearCheck();	opc6="sin datos";
-                layc6a .setVisibility(View.VISIBLE);	rdPreguntac6a.clearCheck();	opc6a="sin datos";
-                layc6b .setVisibility(View.VISIBLE);	rdPreguntac6b.clearCheck();	opc6b="sin datos";
-                layc7 .setVisibility(View.VISIBLE);	rdPreguntac7.clearCheck();	opc7="sin datos";
+                opc4 = "Mal";
             }
 
             else if (checkedId == R.id.radio0) {
                 opc4 = "No sabe / No contestó";
-                layc5 .setVisibility(View.GONE);	rdPreguntac5.clearCheck();	opc5="No aplica";
-                layc6 .setVisibility(View.GONE);	rdPreguntac6.clearCheck();	opc6="No aplica";
-                layc6a .setVisibility(View.GONE);	rdPreguntac6a.clearCheck();	opc6a="No aplica";
-                layc6b .setVisibility(View.GONE);	rdPreguntac6b.clearCheck();	opc6b="No aplica";
-                layc7 .setVisibility(View.GONE);	rdPreguntac7.clearCheck();	opc7="No aplica";
-
             }
 
         }
@@ -1334,60 +1275,15 @@ rdPregunta3.setOnCheckedChangeListener(new OnCheckedChangeListener() {
         public void onCheckedChanged(RadioGroup group, int checkedId) {
 
             if (checkedId == R.id.radio1) {
-                opc5 = "Los cambiare a pública";
-                layc6 .setVisibility(View.GONE);	rdPreguntac6.clearCheck();	opc6="No aplica";
-                layc6a .setVisibility(View.GONE);	rdPreguntac6a.clearCheck();	opc6a="No aplica";
-                layc6b .setVisibility(View.GONE);	rdPreguntac6b.clearCheck();	opc6b="No aplica";
+                opc5 = "Si";
             }
 
             else if (checkedId == R.id.radio2) {
-                opc5 = "Continuarán en privada";
-                layc6 .setVisibility(View.GONE);	rdPreguntac6.clearCheck();	opc6="No aplica";
-                layc6a .setVisibility(View.GONE);	rdPreguntac6a.clearCheck();	opc6a="No aplica";
-                layc6b .setVisibility(View.GONE);	rdPreguntac6b.clearCheck();	opc6b="No aplica";
-            }
-
-            else if (checkedId == R.id.radio3) {
-                opc5 = "No lo decido aun";
-                layc6 .setVisibility(View.GONE);	rdPreguntac6.clearCheck();	opc6="No aplica";
-                layc6a .setVisibility(View.GONE);	rdPreguntac6a.clearCheck();	opc6a="No aplica";
-                layc6b .setVisibility(View.GONE);	rdPreguntac6b.clearCheck();	opc6b="No aplica";
+                opc5 = "No";
             }
 
             else if (checkedId == R.id.radio0) {
                 opc5 = "No sabe / No contestó";
-                layc6 .setVisibility(View.GONE);	rdPreguntac6.clearCheck();	opc6="No aplica";
-                layc6a .setVisibility(View.GONE);	rdPreguntac6a.clearCheck();	opc6a="No aplica";
-                layc6b .setVisibility(View.GONE);	rdPreguntac6b.clearCheck();	opc6b="No aplica";
-            }
-
-        }
-    });
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-
-
-    rdPreguntac6a.setOnCheckedChangeListener(new OnCheckedChangeListener() {
-        @Override
-        public void onCheckedChanged(RadioGroup group, int checkedId) {
-
-            if (checkedId == R.id.radio1) {
-                opc6a = "Si";
-            }
-
-            else if (checkedId == R.id.radio2) {
-                opc6a = "No";
-            }
-
-            else if (checkedId == R.id.radio0) {
-                opc6a = "No sabe / No contestó";
             }
 
         }
@@ -1399,20 +1295,24 @@ rdPregunta3.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 
 
 
-    rdPreguntac6b.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+    rdPreguntac6.setOnCheckedChangeListener(new OnCheckedChangeListener() {
         @Override
         public void onCheckedChanged(RadioGroup group, int checkedId) {
 
             if (checkedId == R.id.radio1) {
-                opc6b = "Si";
+                opc6 = "Está combatiendo sin hacer distinciones";
             }
 
             else if (checkedId == R.id.radio2) {
-                opc6b = "No";
+                opc6 = "Esta persiguiendo cuando le conviene";
+            }
+
+            else if (checkedId == R.id.radio3) {
+                opc6 = "Ambas";
             }
 
             else if (checkedId == R.id.radio0) {
-                opc6b = "No sabe / No contestó";
+                opc6 = "No sabe / No contestó";
             }
 
         }
@@ -1429,11 +1329,11 @@ rdPregunta3.setOnCheckedChangeListener(new OnCheckedChangeListener() {
         public void onCheckedChanged(RadioGroup group, int checkedId) {
 
             if (checkedId == R.id.radio1) {
-                opc7 = "Si";
+                opc7 = "Ha hecho todo lo posible";
             }
 
             else if (checkedId == R.id.radio2) {
-                opc7 = "No";
+                opc7 = "No ha hecho todo lo posible";
             }
 
             else if (checkedId == R.id.radio0) {
@@ -1447,26 +1347,26 @@ rdPregunta3.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 
 
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-
-
-
-    rdPreguntac8a.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+    rdPreguntac8.setOnCheckedChangeListener(new OnCheckedChangeListener() {
         @Override
         public void onCheckedChanged(RadioGroup group, int checkedId) {
 
             if (checkedId == R.id.radio1) {
-                opc8a = "Si";
+                opc8 = "Mucha";
             }
 
             else if (checkedId == R.id.radio2) {
-                opc8a = "No";
+                opc8 = "Poca";
+            }
+
+            else if (checkedId == R.id.radio3) {
+                opc8 = "Regular";
             }
 
             else if (checkedId == R.id.radio0) {
-                opc8a = "No sabe / No contestó";
+                opc8 = "No sabe / No contestó";
             }
 
         }
@@ -1478,78 +1378,28 @@ rdPregunta3.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 
 
 
-    rdPreguntac8b.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+    rdPreguntac9.setOnCheckedChangeListener(new OnCheckedChangeListener() {
         @Override
         public void onCheckedChanged(RadioGroup group, int checkedId) {
 
             if (checkedId == R.id.radio1) {
-                opc8b = "Si";
+                opc9 = "Es igual de corrupto";
             }
 
             else if (checkedId == R.id.radio2) {
-                opc8b = "No";
+                opc9 = "Es menos corrupto";
+            }
+
+            else if (checkedId == R.id.radio3) {
+                opc9 = "Es más corrupto";
             }
 
             else if (checkedId == R.id.radio0) {
-                opc8b = "No sabe / No contestó";
+                opc9 = "No sabe / No contestó";
             }
 
         }
     });
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-
-
-    rdPreguntac8c.setOnCheckedChangeListener(new OnCheckedChangeListener() {
-        @Override
-        public void onCheckedChanged(RadioGroup group, int checkedId) {
-
-            if (checkedId == R.id.radio1) {
-                opc8c = "Si";
-            }
-
-            else if (checkedId == R.id.radio2) {
-                opc8c = "No";
-            }
-
-            else if (checkedId == R.id.radio0) {
-                opc8c = "No sabe / No contestó";
-            }
-
-        }
-    });
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-
-
-    rdPreguntac8d.setOnCheckedChangeListener(new OnCheckedChangeListener() {
-        @Override
-        public void onCheckedChanged(RadioGroup group, int checkedId) {
-
-            if (checkedId == R.id.radio1) {
-                opc8d = "Si";
-            }
-
-            else if (checkedId == R.id.radio2) {
-                opc8d = "No";
-            }
-
-            else if (checkedId == R.id.radio0) {
-                opc8d = "No sabe / No contestó";
-            }
-
-        }
-    });
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -1562,11 +1412,31 @@ rdPregunta3.setOnCheckedChangeListener(new OnCheckedChangeListener() {
         public void onCheckedChanged(RadioGroup group, int checkedId) {
 
             if (checkedId == R.id.radio1) {
-                opc9a = "Si";
+                opc9a = "Menor de 18 años";
             }
 
             else if (checkedId == R.id.radio2) {
-                opc9a = "No";
+                opc9a = "18 a 29";
+            }
+
+            else if (checkedId == R.id.radio3) {
+                opc9a = "30 a 39";
+            }
+
+            else if (checkedId == R.id.radio4) {
+                opc9a = "40 a 49";
+            }
+
+            else if (checkedId == R.id.radio5) {
+                opc9a = "50 a 59";
+            }
+
+            else if (checkedId == R.id.radio6) {
+                opc9a = "60 a 69";
+            }
+
+            else if (checkedId == R.id.radio7) {
+                opc9a = "70 o más";
             }
 
             else if (checkedId == R.id.radio0) {
@@ -1579,51 +1449,6 @@ rdPregunta3.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-
-
-
-    rdPreguntac9b.setOnCheckedChangeListener(new OnCheckedChangeListener() {
-        @Override
-        public void onCheckedChanged(RadioGroup group, int checkedId) {
-
-            if (checkedId == R.id.radio1) {
-                opc9b = "Primero a personal médico y personas vulnerables";
-            }
-
-            else if (checkedId == R.id.radio2) {
-                opc9b = "A todos al mismo tiempo";
-            }
-
-            else if (checkedId == R.id.radio0) {
-                opc9b = "No sabe / No contestó";
-            }
-
-        }
-    });
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-    rdPreguntac9c.setOnCheckedChangeListener(new OnCheckedChangeListener() {
-        @Override
-        public void onCheckedChanged(RadioGroup group, int checkedId) {
-
-            if (checkedId == R.id.radio1) {
-                opc9c = "Comprarla y distribuirla el gobierno";
-            }
-
-            else if (checkedId == R.id.radio2) {
-                opc9c = "Estar disponible también de forma privada";
-            }
-
-            else if (checkedId == R.id.radio0) {
-                opc9c = "No sabe / No contestó";
-            }
-
-        }
-    });
-
-
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
@@ -1657,15 +1482,40 @@ rdPregunta3.setOnCheckedChangeListener(new OnCheckedChangeListener() {
         public void onCheckedChanged(RadioGroup group, int checkedId) {
 
             if (checkedId == R.id.radio1) {
-                opc11 = "Si";
+                opc11 = "Es cierto";
             }
 
             else if (checkedId == R.id.radio2) {
-                opc11 = "No";
+                opc11 = "No es cierto";
             }
 
             else if (checkedId == R.id.radio0) {
                 opc11 = "No sabe / No contestó";
+            }
+
+        }
+    });
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+    rdPreguntac11a.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+        @Override
+        public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+            if (checkedId == R.id.radio1) {
+                opc11a = "Tierra o cemento";
+            }
+
+            else if (checkedId == R.id.radio2) {
+                opc11a = "Cualquier otro";
+            }
+
+            else if (checkedId == R.id.radio0) {
+                opc11a = "No sabe / No contestó";
             }
 
         }
@@ -1682,112 +1532,19 @@ rdPregunta3.setOnCheckedChangeListener(new OnCheckedChangeListener() {
         public void onCheckedChanged(RadioGroup group, int checkedId) {
 
             if (checkedId == R.id.radio1) {
-                opc12 = "Claudia Sheinbaum/ Morena/ PT/ Encuentro social";
-                layc12a .setVisibility(View.VISIBLE);	rdPreguntac12a.clearCheck();	opc12a="sin datos";
-
+                opc12 = "Bien";
             }
 
             else if (checkedId == R.id.radio2) {
-                opc12 = "Alejandra Barrales/ PAN/ PRD/  MC";
-                layc12a .setVisibility(View.GONE);	rdPreguntac12a.clearCheck();	opc12a="No aplica";
+                opc12 = "Regular";
             }
 
             else if (checkedId == R.id.radio3) {
-                opc12 = "Mikel Arriola/ PRI";
-                layc12a .setVisibility(View.GONE);	rdPreguntac12a.clearCheck();	opc12a="No aplica";
-            }
-
-            else if (checkedId == R.id.radio4) {
-                opc12 = "Mariana Boy/ PVEM";
-                layc12a .setVisibility(View.GONE);	rdPreguntac12a.clearCheck();	opc12a="No aplica";
-            }
-
-            else if (checkedId == R.id.radio5) {
-                opc12 = "Lorena Osorio/ Independiente";
-                layc12a .setVisibility(View.GONE);	rdPreguntac12a.clearCheck();	opc12a="No aplica";
-            }
-
-            else if (checkedId == R.id.radio6) {
-                opc12 = "Marco Rascón/ PHCDMX";
-                layc12a .setVisibility(View.GONE);	rdPreguntac12a.clearCheck();	opc12a="No aplica";
-            }
-
-            else if (checkedId == R.id.radio7) {
-                opc12 = "Purificación Carpinteyro/ PANAL";
-                layc12a .setVisibility(View.GONE);	rdPreguntac12a.clearCheck();	opc12a="No aplica";
-            }
-
-            else if (checkedId == R.id.radio8) {
-                opc12 = "No voto";
-                layc12a .setVisibility(View.GONE);	rdPreguntac12a.clearCheck();	opc12a="No aplica";
-            }
-
-            else if (checkedId == R.id.radio9) {
-                opc12 = "Anuló su voto";
-                layc12a .setVisibility(View.GONE);	rdPreguntac12a.clearCheck();	opc12a="No aplica";
+                opc12 = "Mal";
             }
 
             else if (checkedId == R.id.radio0) {
                 opc12 = "No sabe / No contestó";
-                layc12a .setVisibility(View.GONE);	rdPreguntac12a.clearCheck();	opc12a="No aplica";
-            }
-
-        }
-    });
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-
-
-    rdPreguntac12a.setOnCheckedChangeListener(new OnCheckedChangeListener() {
-        @Override
-        public void onCheckedChanged(RadioGroup group, int checkedId) {
-
-            if (checkedId == R.id.radio1) {
-                opc12a = "Si fue la mejor";
-            }
-
-            else if (checkedId == R.id.radio2) {
-                opc12a = "En parte";
-            }
-
-            else if (checkedId == R.id.radio3) {
-                opc12a = "No fue la mejor";
-            }
-
-            else if (checkedId == R.id.radio0) {
-                opc12a = "No sabe / No contestó";
-            }
-
-        }
-    });
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-
-
-    rdPreguntac12b.setOnCheckedChangeListener(new OnCheckedChangeListener() {
-        @Override
-        public void onCheckedChanged(RadioGroup group, int checkedId) {
-
-            if (checkedId == R.id.radio1) {
-                opc12b = "Bien";
-            }
-
-            else if (checkedId == R.id.radio2) {
-                opc12b = "Regular";
-            }
-
-            else if (checkedId == R.id.radio3) {
-                opc12b = "Mal";
-            }
-
-            else if (checkedId == R.id.radio0) {
-                opc12b = "No sabe / No contestó";
             }
 
         }
@@ -1804,47 +1561,19 @@ rdPregunta3.setOnCheckedChangeListener(new OnCheckedChangeListener() {
         public void onCheckedChanged(RadioGroup group, int checkedId) {
 
             if (checkedId == R.id.radio1) {
-                opc13 = "Morena";
+                opc13 = "Acuerdo";
             }
 
             else if (checkedId == R.id.radio2) {
-                opc13 = "PRI";
+                opc13 = "Acuerdo en parte";
             }
 
             else if (checkedId == R.id.radio3) {
-                opc13 = "PAN";
+                opc13 = "Desacuerdo en parte";
             }
 
             else if (checkedId == R.id.radio4) {
-                opc13 = "PRD";
-            }
-
-            else if (checkedId == R.id.radio5) {
-                opc13 = "PT";
-            }
-
-            else if (checkedId == R.id.radio6) {
-                opc13 = "PVEM";
-            }
-
-            else if (checkedId == R.id.radio7) {
-                opc13 = "Movimiento Ciudadano";
-            }
-
-            else if (checkedId == R.id.radio8) {
-                opc13 = "Candidato Independiente";
-            }
-
-            else if (checkedId == R.id.radio9) {
-                opc13 = "Otro";
-            }
-
-            else if (checkedId == R.id.radio10) {
-                opc13 = "No votaría";
-            }
-
-            else if (checkedId == R.id.radio11) {
-                opc13 = "Anularía su voto";
+                opc13 = "Desacuerdo";
             }
 
             else if (checkedId == R.id.radio0) {
@@ -1855,6 +1584,274 @@ rdPregunta3.setOnCheckedChangeListener(new OnCheckedChangeListener() {
     });
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+    rdPreguntac14.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+        @Override
+        public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+            if (checkedId == R.id.radio1) {
+                opc14 = "Acuerdo";
+            }
+
+            else if (checkedId == R.id.radio2) {
+                opc14 = "Acuerdo en parte";
+            }
+
+            else if (checkedId == R.id.radio3) {
+                opc14 = "Desacuerdo en parte";
+            }
+
+            else if (checkedId == R.id.radio4) {
+                opc14 = "Desacuerdo";
+            }
+
+            else if (checkedId == R.id.radio0) {
+                opc14 = "No sabe / No contestó";
+            }
+
+        }
+    });
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+    rdPreguntac15.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+        @Override
+        public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+            if (checkedId == R.id.radio1) {
+                opc15 = "Más corrupto";
+            }
+
+            else if (checkedId == R.id.radio2) {
+                opc15 = "Igual de corrupto";
+            }
+
+            else if (checkedId == R.id.radio3) {
+                opc15 = "Menos corrupto";
+            }
+
+            else if (checkedId == R.id.radio0) {
+                opc15 = "No sabe / No contestó";
+            }
+
+        }
+    });
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+    rdPreguntac16.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+        @Override
+        public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+            if (checkedId == R.id.radio1) {
+                opc16 = "Mucho";
+            }
+
+            else if (checkedId == R.id.radio2) {
+                opc16 = "Regular";
+            }
+
+            else if (checkedId == R.id.radio3) {
+                opc16 = "Poco";
+            }
+
+            else if (checkedId == R.id.radio4) {
+                opc16 = "Nada";
+            }
+
+            else if (checkedId == R.id.radio0) {
+                opc16 = "No sabe / No contestó";
+            }
+
+        }
+    });
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+    rdPreguntac17.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+        @Override
+        public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+            if (checkedId == R.id.radio1) {
+                opc17 = "Claudia Sheinbaum/ Morena/ PT/ Encuentro social";
+            }
+
+            else if (checkedId == R.id.radio2) {
+                opc17 = "Alejandra Barrales/ PAN/ PRD/  MC";
+            }
+
+            else if (checkedId == R.id.radio3) {
+                opc17 = "Mikel Arriola/ PRI";
+            }
+
+            else if (checkedId == R.id.radio4) {
+                opc17 = "Mariana Boy/ PVEM";
+            }
+
+            else if (checkedId == R.id.radio5) {
+                opc17 = "Lorena Osorio/ Independiente";
+            }
+
+            else if (checkedId == R.id.radio6) {
+                opc17 = "Marco Rascón/ PHCDMX";
+            }
+
+            else if (checkedId == R.id.radio7) {
+                opc17 = "Purificación Carpinteyro/ PANAL";
+            }
+
+            else if (checkedId == R.id.radio8) {
+                opc17 = "No voto";
+            }
+
+            else if (checkedId == R.id.radio9) {
+                opc17 = "Anuló su voto";
+            }
+
+            else if (checkedId == R.id.radio0) {
+                opc17 = "No sabe / No contestó";
+            }
+
+        }
+    });
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+    rdPreguntac17a.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+        @Override
+        public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+            if (checkedId == R.id.radio1) {
+                opc17a = "Si fue la mejor";
+            }
+
+            else if (checkedId == R.id.radio2) {
+                opc17a = "En parte";
+            }
+
+            else if (checkedId == R.id.radio3) {
+                opc17a = "No fue la mejor";
+            }
+
+            else if (checkedId == R.id.radio0) {
+                opc17a = "No sabe / No contestó";
+            }
+
+        }
+    });
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+    rdPreguntac17b.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+        @Override
+        public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+            if (checkedId == R.id.radio1) {
+                opc17b = "Bien";
+            }
+
+            else if (checkedId == R.id.radio2) {
+                opc17b = "Regular";
+            }
+
+            else if (checkedId == R.id.radio3) {
+                opc17b = "Mal";
+            }
+
+            else if (checkedId == R.id.radio0) {
+                opc17b = "No sabe / No contestó";
+            }
+
+        }
+    });
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+    rdPreguntac18.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+        @Override
+        public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+            if (checkedId == R.id.radio1) {
+                opc18 = "Morena";
+            }
+
+            else if (checkedId == R.id.radio2) {
+                opc18 = "PRI";
+            }
+
+            else if (checkedId == R.id.radio3) {
+                opc18 = "PAN";
+            }
+
+            else if (checkedId == R.id.radio4) {
+                opc18 = "PRD";
+            }
+
+            else if (checkedId == R.id.radio5) {
+                opc18 = "PT";
+            }
+
+            else if (checkedId == R.id.radio6) {
+                opc18 = "PVEM";
+            }
+
+            else if (checkedId == R.id.radio7) {
+                opc18 = "Movimiento Ciudadano";
+            }
+
+            else if (checkedId == R.id.radio8) {
+                opc18 = "Candidato Independiente";
+            }
+
+            else if (checkedId == R.id.radio9) {
+                opc18 = "Otro";
+            }
+
+            else if (checkedId == R.id.radio10) {
+                opc18 = "No votaría";
+            }
+
+            else if (checkedId == R.id.radio11) {
+                opc18 = "Anularía su voto";
+            }
+
+            else if (checkedId == R.id.radio0) {
+                opc18 = "No sabe / No contestó";
+            }
+
+        }
+    });
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 
 
