@@ -14,8 +14,6 @@ import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.Locale;
 
-import mx.gob.cdmx.semanal20200822.R;
-
 import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -34,7 +32,7 @@ import android.os.Environment;
 import android.os.Handler;
 import android.provider.Settings.Secure;
 //import android.service.textservice.SpellCheckerService.Session;
-import android.support.v4.app.ActivityCompat;
+import androidx.core.app.ActivityCompat;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.view.View;

@@ -158,6 +158,7 @@ android:textColor="@drawable/radiobutton_color_selector"
 android:textSize="16sp"
 android:theme="@style/RadioButton"
 android:text="No votaría"
+      android:visibility="gone"
 />
 
   <RadioButton
@@ -170,6 +171,7 @@ android:textColor="@drawable/radiobutton_color_selector"
 android:textSize="16sp"
 android:theme="@style/RadioButton"
 android:text="Anularía su voto"
+      android:visibility="gone"
 />
 
   <RadioButton

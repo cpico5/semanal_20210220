@@ -31,15 +31,27 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="mx.gob.cdmx.semanal20200822.Entrada"
+            android:name="mx.gob.cdmx.semanal20200822.Bienvenida"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat"
             tools:ignore="LockedOrientationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="mx.gob.cdmx.semanal20200822.Entrada"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
         </activity>
         <activity
             android:name="mx.gob.cdmx.semanal20200822.MainActivity"
