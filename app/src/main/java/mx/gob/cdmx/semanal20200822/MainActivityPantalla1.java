@@ -1586,27 +1586,28 @@ rdPregunta3.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-
-
-
     rdPreguntac14.setOnCheckedChangeListener(new OnCheckedChangeListener() {
         @Override
         public void onCheckedChanged(RadioGroup group, int checkedId) {
 
             if (checkedId == R.id.radio1) {
-                opc14 = "Acuerdo";
+                opc14 = "Aumentado mucho";
             }
 
             else if (checkedId == R.id.radio2) {
-                opc14 = "Acuerdo en parte";
+                opc14 = "Aumentado algo";
             }
 
             else if (checkedId == R.id.radio3) {
-                opc14 = "Desacuerdo en parte";
+                opc14 = "Sigue igual";
             }
 
             else if (checkedId == R.id.radio4) {
-                opc14 = "Desacuerdo";
+                opc14 = "Disminuido un poco";
+            }
+
+            else if (checkedId == R.id.radio5) {
+                opc14 = "Disminuido mucho";
             }
 
             else if (checkedId == R.id.radio0) {
@@ -1710,7 +1711,7 @@ rdPregunta3.setOnCheckedChangeListener(new OnCheckedChangeListener() {
             }
 
             else if (checkedId == R.id.radio5) {
-                opc17 = "Lorena Osorio/ Independiente";
+                opc17 = "Lorena Osornio/ Independiente";
                 layc17a .setVisibility(View.GONE);	rdPreguntac17a.clearCheck();	opc17a="No aplica";
             }
 

@@ -26,7 +26,7 @@ import android.os.Environment;
 import android.os.Handler;
 import android.os.SystemClock;
 import android.provider.Settings.Secure;
-import android.support.v4.app.ActivityCompat;
+import androidx.core.app.ActivityCompat;
 import android.telephony.TelephonyManager;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -74,7 +74,6 @@ import java.util.Random;
 import java.util.Set;
 
 import cz.msebera.android.httpclient.Header;
-import mx.gob.cdmx.semanal20200822.R;
 import mx.gob.cdmx.semanal20200822.model.DatoContent;
 
 import static mx.gob.cdmx.semanal20200822.Nombre.USUARIO;
