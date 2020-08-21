@@ -23,6 +23,7 @@ import mx.gob.cdmx.semanal20200822.model.Colonia;
 import mx.gob.cdmx.semanal20200822.model.Status;
 import mx.gob.cdmx.semanal20200822.model.TelefonoAsignado;
 import mx.gob.cdmx.semanal20200822.model.Usuario;
+import mx.gob.cdmx.semanal20200822.model.Usuarios;
 
 public class UsuariosSQLiteHelper2 extends SQLiteOpenHelper {
 
@@ -49,7 +50,7 @@ public class UsuariosSQLiteHelper2 extends SQLiteOpenHelper {
     static String prefix = "listado";
 
     private static final String DATABASE_NAME = Environment.getExternalStorageDirectory() + "/Mis_archivos/" + nombreD + "_" + prefix + "";
-    private static final int DATABASE_VERSION = 4;
+    private static final int DATABASE_VERSION = 6;
 
     public UsuariosSQLiteHelper2(Context context, String name, CursorFactory factory, int version) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -109,17 +110,12 @@ public class UsuariosSQLiteHelper2 extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
 // TODO Auto-generated method stub
         db.execSQL(DATABASE_DATOS);
-        db.execSQL(DATABASE_USUARIOS);
+//        db.execSQL(DATABASE_USUARIOS);
 
-        db.execSQL(DaoManager.generateCreateQueryString(Usuario.class));
-        db.execSQL(DaoManager.generateCreateQueryString(Status.class));
-        db.execSQL(DaoManager.generateCreateQueryString(Alcaldia.class));
-        db.execSQL(DaoManager.generateCreateQueryString(Colonia.class));
-        db.execSQL(DaoManager.generateCreateQueryString(Bitacora.class));
-        db.execSQL(DaoManager.generateCreateQueryString(TelefonoAsignado.class));
+        db.execSQL(DaoManager.generateCreateQueryString(Usuarios.class));
 
         cargaDatos(db);
-        cargaUsuarios(db);
+//        cargaUsuarios(db);
 
     }
 
@@ -189,12 +185,8 @@ public class UsuariosSQLiteHelper2 extends SQLiteOpenHelper {
         db.execSQL("DROP table if exists " + TablaDatos.TABLA_DATOS);
         db.execSQL("DROP table if exists " + TablaUsuarios.TABLA_USUARIOS);
 
-        db.execSQL(DaoManager.generateDropIfExistsQueryString(Usuario.class));
-        db.execSQL(DaoManager.generateDropIfExistsQueryString(Status.class));
-        db.execSQL(DaoManager.generateDropIfExistsQueryString(Alcaldia.class));
-        db.execSQL(DaoManager.generateDropIfExistsQueryString(Colonia.class));
-        db.execSQL(DaoManager.generateDropIfExistsQueryString(Bitacora.class));
-        db.execSQL(DaoManager.generateDropIfExistsQueryString(TelefonoAsignado.class));
+        db.execSQL(DaoManager.generateDropIfExistsQueryString(Usuarios.class));
+
 
         onCreate(db);
     }

@@ -111,33 +111,30 @@ public static String COLUMNA_pregunta_1="pregunta_1";
         public static String COLUMNA_pregunta_6="pregunta_6";
         public static String COLUMNA_pregunta_7="pregunta_7";
         public static String COLUMNA_pregunta_8="pregunta_8";
-        public static String COLUMNA_pregunta_9="pregunta_9";
-        public static String COLUMNA_pregunta_10="pregunta_10";
-        public static String COLUMNA_pregunta_11="pregunta_11";
         public static String COLUMNA_pregunta_c1="pregunta_c1";
         public static String COLUMNA_pregunta_c2="pregunta_c2";
         public static String COLUMNA_pregunta_c3="pregunta_c3";
+        public static String COLUMNA_pregunta_c3a="pregunta_c3a";
         public static String COLUMNA_pregunta_c4="pregunta_c4";
         public static String COLUMNA_pregunta_c5="pregunta_c5";
         public static String COLUMNA_pregunta_c6="pregunta_c6";
-        public static String COLUMNA_pregunta_c6a="pregunta_c6a";
-        public static String COLUMNA_pregunta_c6b="pregunta_c6b";
         public static String COLUMNA_pregunta_c7="pregunta_c7";
         public static String COLUMNA_pregunta_c8="pregunta_c8";
-        public static String COLUMNA_pregunta_c8a="pregunta_c8a";
-        public static String COLUMNA_pregunta_c8b="pregunta_c8b";
-        public static String COLUMNA_pregunta_c8c="pregunta_c8c";
-        public static String COLUMNA_pregunta_c8d="pregunta_c8d";
         public static String COLUMNA_pregunta_c9="pregunta_c9";
         public static String COLUMNA_pregunta_c9a="pregunta_c9a";
-        public static String COLUMNA_pregunta_c9b="pregunta_c9b";
-        public static String COLUMNA_pregunta_c9c="pregunta_c9c";
         public static String COLUMNA_pregunta_c10="pregunta_c10";
         public static String COLUMNA_pregunta_c11="pregunta_c11";
+        public static String COLUMNA_pregunta_c11a="pregunta_c11a";
         public static String COLUMNA_pregunta_c12="pregunta_c12";
-        public static String COLUMNA_pregunta_c12a="pregunta_c12a";
-        public static String COLUMNA_pregunta_c12b="pregunta_c12b";
         public static String COLUMNA_pregunta_c13="pregunta_c13";
+        public static String COLUMNA_pregunta_c14="pregunta_c14";
+        public static String COLUMNA_pregunta_c15="pregunta_c15";
+        public static String COLUMNA_pregunta_c16="pregunta_c16";
+        public static String COLUMNA_pregunta_c17="pregunta_c17";
+        public static String COLUMNA_pregunta_c17a="pregunta_c17a";
+        public static String COLUMNA_pregunta_c17b="pregunta_c17b";
+        public static String COLUMNA_pregunta_c18="pregunta_c18";
+
 
         public static String COLUMNA_aporta  		="aporta";
         public static String COLUMNA_ocupacion  	="ocupacion";
@@ -148,10 +145,8 @@ public static String COLUMNA_pregunta_1="pregunta_1";
         public static String COLUMNA_banos  		="banos";
         public static String COLUMNA_regadera  	="regadera";
         public static String COLUMNA_estufa  		="estufa";
-        public static String COLUMNA_edad  		="edad";
         public static String COLUMNA_genero  		="genero";
         public static String COLUMNA_tipo_vivienda ="tipo_vivienda";
-        public static String COLUMNA_tipo_piso 	="tipo_piso";
 
 
         public static String COLUMNA_abandono="abandono";
@@ -188,34 +183,29 @@ public static String COLUMNA_pregunta_1="pregunta_1";
             + TablaEncuestas.COLUMNA_pregunta_6 +  " text, "
             + TablaEncuestas.COLUMNA_pregunta_7 +  " text, "
             + TablaEncuestas.COLUMNA_pregunta_8 +  " text, "
-            + TablaEncuestas.COLUMNA_pregunta_9 +  " text, "
-            + TablaEncuestas.COLUMNA_pregunta_10 +  " text, "
-            + TablaEncuestas.COLUMNA_pregunta_11 +  " text, "
             + TablaEncuestas.COLUMNA_pregunta_c1 +  " text, "
             + TablaEncuestas.COLUMNA_pregunta_c2 +  " text, "
             + TablaEncuestas.COLUMNA_pregunta_c3 +  " text, "
+            + TablaEncuestas.COLUMNA_pregunta_c3a +  " text, "
             + TablaEncuestas.COLUMNA_pregunta_c4 +  " text, "
             + TablaEncuestas.COLUMNA_pregunta_c5 +  " text, "
             + TablaEncuestas.COLUMNA_pregunta_c6 +  " text, "
-            + TablaEncuestas.COLUMNA_pregunta_c6a +  " text, "
-            + TablaEncuestas.COLUMNA_pregunta_c6b +  " text, "
             + TablaEncuestas.COLUMNA_pregunta_c7 +  " text, "
             + TablaEncuestas.COLUMNA_pregunta_c8 +  " text, "
-            + TablaEncuestas.COLUMNA_pregunta_c8a +  " text, "
-            + TablaEncuestas.COLUMNA_pregunta_c8b +  " text, "
-            + TablaEncuestas.COLUMNA_pregunta_c8c +  " text, "
-            + TablaEncuestas.COLUMNA_pregunta_c8d +  " text, "
             + TablaEncuestas.COLUMNA_pregunta_c9 +  " text, "
             + TablaEncuestas.COLUMNA_pregunta_c9a +  " text, "
-            + TablaEncuestas.COLUMNA_pregunta_c9b +  " text, "
-            + TablaEncuestas.COLUMNA_pregunta_c9c +  " text, "
             + TablaEncuestas.COLUMNA_pregunta_c10 +  " text, "
             + TablaEncuestas.COLUMNA_pregunta_c11 +  " text, "
+            + TablaEncuestas.COLUMNA_pregunta_c11a +  " text, "
             + TablaEncuestas.COLUMNA_pregunta_c12 +  " text, "
-            + TablaEncuestas.COLUMNA_pregunta_c12a +  " text, "
-            + TablaEncuestas.COLUMNA_pregunta_c12b +  " text, "
             + TablaEncuestas.COLUMNA_pregunta_c13 +  " text, "
-
+            + TablaEncuestas.COLUMNA_pregunta_c14 +  " text, "
+            + TablaEncuestas.COLUMNA_pregunta_c15 +  " text, "
+            + TablaEncuestas.COLUMNA_pregunta_c16 +  " text, "
+            + TablaEncuestas.COLUMNA_pregunta_c17 +  " text, "
+            + TablaEncuestas.COLUMNA_pregunta_c17a +  " text, "
+            + TablaEncuestas.COLUMNA_pregunta_c17b +  " text, "
+            + TablaEncuestas.COLUMNA_pregunta_c18 +  " text, "
 
             + TablaEncuestas.COLUMNA_aporta  +  " text, "
     + TablaEncuestas.COLUMNA_ocupacion  +  " text, "
@@ -226,11 +216,8 @@ public static String COLUMNA_pregunta_1="pregunta_1";
     + TablaEncuestas.COLUMNA_banos  +  " text, "
     + TablaEncuestas.COLUMNA_regadera  +  " text, "
     + TablaEncuestas.COLUMNA_estufa  +  " text, "
-    + TablaEncuestas.COLUMNA_edad  +  " text, "
     + TablaEncuestas.COLUMNA_genero  +  " text, "
     + TablaEncuestas.COLUMNA_tipo_vivienda  +  " text, "
-    + TablaEncuestas.COLUMNA_tipo_piso  +  " text, "
-
 
     + TablaEncuestas.COLUMNA_abandono +  " text, "
 

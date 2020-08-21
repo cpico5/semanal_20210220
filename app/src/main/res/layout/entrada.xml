@@ -15,7 +15,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-
             <LinearLayout
                 android:id="@+id/OnClickListener"
                 android:layout_width="124dp"
@@ -155,10 +154,20 @@
                     </LinearLayout>
 
                     <ProgressBar
+                        android:id="@+id/login_progressMain"
+                        style="?android:attr/progressBarStyleLarge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:foregroundGravity="center"
+                        android:textAlignment="center"
+                        android:layout_marginBottom="8dp"
+                        android:visibility="gone" />
+
+                    <ProgressBar
                         android:id="@+id/login_progress"
                         style="@android:style/Widget.Holo.ProgressBar.Large"
-                        android:layout_width="30px"
-                        android:layout_height="30px"
+                        android:layout_width="6dp"
+                        android:layout_height="5dp"
                         android:layout_gravity="center"
                         android:layout_marginTop="150dp"
                         android:indeterminateTint="#25C585"

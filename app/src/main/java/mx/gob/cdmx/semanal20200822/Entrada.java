@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.lang.reflect.Method;
+import java.lang.reflect.Type;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -18,6 +19,9 @@ import java.util.Set;
 
 
 import android.Manifest;
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
@@ -35,6 +39,7 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.ActivityCompat;
 import android.telephony.TelephonyManager;
 import android.util.Log;
@@ -44,6 +49,25 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.AsyncHttpResponseHandler;
+import com.loopj.android.http.MySSLSocketFactory;
+import com.loopj.android.http.RequestHandle;
+import com.loopj.android.http.RequestParams;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import cz.msebera.android.httpclient.Header;
+import mx.gob.cdmx.semanal20200822.db.DaoManager;
+import mx.gob.cdmx.semanal20200822.model.Usuarios;
+
+import static mx.gob.cdmx.semanal20200822.Nombre.USUARIO;
+import static mx.gob.cdmx.semanal20200822.Nombre.customURL;
+import static mx.gob.cdmx.semanal20200822.Nombre.encuesta;
 
 public class Entrada extends Activity {
 
@@ -60,6 +84,12 @@ public class Entrada extends Activity {
     public String tablet;
     double latitude;
     double longitude;
+
+    public EditText mUsuario;
+    public EditText mPass;
+    private View mProgressView;
+    private Usuarios usuarios;
+    private DaoManager daoManager;
 
 
     Nombre nom = new Nombre();
@@ -232,6 +262,12 @@ public class Entrada extends Activity {
         file.delete(); // delete child file or empty directory
     }
 
+    protected void showToast(String string) {
+        Toast.makeText(this, string, Toast.LENGTH_SHORT).show();
+
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.O)
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (Build.VERSION.SDK_INT >= 23) {
@@ -259,7 +295,9 @@ public class Entrada extends Activity {
 
         Log.i(TAG, " =====> la latitud: " + latitude);
 
-
+        mUsuario = (EditText) findViewById(R.id.editUsuario);
+        mPass = (EditText) findViewById(R.id.editPass);
+        mProgressView = findViewById(R.id.login_progressMain);
 
         elMaximo = Integer.parseInt(sacaMaximo().toString()) + 1;
         String elMaximoFecha = String.valueOf(elMaximo);
@@ -267,6 +305,10 @@ public class Entrada extends Activity {
         GPSTracker gps = new GPSTracker(this);
         latitude = gps.getLatitude();
         longitude = gps.getLongitude();
+
+        //inicializa DaoManager
+
+        daoManager = new DaoManager(db2);
 
         if(latitude==0.0){
             latitude=Double.valueOf(sacaLatitud());
@@ -286,24 +328,8 @@ public class Entrada extends Activity {
             //this.finish();
         }
         else{
-
-
             new UpdateBases().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
             new UpdateAudios().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
-
-//				new UpdateBases().execute();
-
-
-            // retrazo de 3 segundos para ejecutar la subida de audios
-//		            new Handler().postDelayed(new Runnable() {
-//		                @Override
-//		                public void run() {
-//
-//		                new UpdateAudios().execute();
-//		                }
-//		            }, 3000);
-
-
         }
         /////////////////////////////////////////////////////////////////////// 7
 
@@ -329,12 +355,13 @@ public class Entrada extends Activity {
         db2 = usdbh2.getReadableDatabase();
 
         continuar.setOnClickListener(new OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.O)
             @SuppressWarnings("null")
             @Override
             public void onClick(View v) {
 //					// TODO Auto-generated method stub Aqui para generar el archivo vacio// hasta la 112
-                final EditText usuario = (EditText) findViewById(R.id.editUsuario);
-                final EditText pass = (EditText) findViewById(R.id.editPass);
+//                final EditText usuario = (EditText) findViewById(R.id.editUsuario);
+//                final EditText pass = (EditText) findViewById(R.id.editPass);
                 File directory;
                 File file;
                 File sdCard;
@@ -354,23 +381,29 @@ public class Entrada extends Activity {
                     e.printStackTrace();
                 }
 
-                String user = usuario.getText().toString();
-                String pssw = pass.getText().toString();
-                sacaUsuario(user, pssw);
-                String paso = sacaUsuario(user, pssw).toString();
 
 
-                if (paso.matches("1")) {
+                if (!verificaConexion(Entrada.this)) {
+                    showToast("Sin conexión");
 
-                    Intent intent = new Intent(Entrada.this, MainActivity.class);
-                    Bundle bundle = new Bundle();
-                    bundle.putString("Nombre", usuario.getText().toString());
-                    intent.putExtras(bundle);
-                    startActivity(intent);
-                    Toast.makeText(v.getContext(), "Acceso OK", Toast.LENGTH_SHORT).show();
+                    loginLocal();
 
-                } else {
-                    Toast.makeText(v.getContext(), "Usuario y/o Contaseña Incorrectos", Toast.LENGTH_SHORT).show();
+                } else{
+
+                    String elMaximoFecha = String.valueOf(elMaximo);
+                    if (elMaximoFecha.matches("1")) {
+
+                        Log.i(TAG, " =====> El numero inicial: " + elMaximoFecha);
+
+                        dialogoFecha();
+
+                        String user = mUsuario.getText().toString();
+                        String pssw = mPass.getText().toString();
+                        loginWS(user,pssw);
+
+                    }else{
+                        loginLocal();
+                    }
                 }
 
             }
@@ -379,6 +412,256 @@ public class Entrada extends Activity {
 
 
     }
+
+
+    private void loginLocal(){
+
+        String user = mUsuario.getText().toString();
+        String pssw = mPass.getText().toString();
+        sacaUsuario(user, pssw);
+        String paso = sacaUsuario(user, pssw).toString();
+
+
+        if (paso.matches("1")) {
+
+            Intent intent = new Intent(Entrada.this, MainActivity.class);
+            Bundle bundle = new Bundle();
+            bundle.putString("Nombre", mUsuario.getText().toString());
+            intent.putExtras(bundle);
+            startActivity(intent);
+            showToast("Acceso OK");
+
+
+        } else {
+            showToast("Usuario y/o Contaseña Incorrectos");
+        }
+    }
+
+
+    @RequiresApi(api = Build.VERSION_CODES.O)
+ public void loginWS(final String user, final String password) {
+
+        showProgress(true);
+
+        RequestParams params = new RequestParams();
+        params.put("api", "loginSemanal");
+        params.put("encuesta", nombreEncuesta);
+        params.put("usuario", user);
+        params.put("pass",password);
+        params.put("latitud", latitude);
+        params.put("longitud", longitude);
+        params.put("imei", sacaChip());
+
+        AsyncHttpClient client = new AsyncHttpClient();
+        client.setSSLSocketFactory(MySSLSocketFactory.getFixedSocketFactory());
+        //client.addHeader("Authorization", "Bearer " + usuario.getToken());
+        client.setTimeout(60000);
+
+        RequestHandle requestHandle = client.post(customURL, params, new AsyncHttpResponseHandler() {
+
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
+                String nombreStr = "";
+                Log.d(TAG, "cqs ----------->> Respuesta OK ");
+                Log.d(TAG, "cqs ----------->> ResponseBody" + new String(responseBody));
+                try {
+
+
+                    String json = new String(responseBody);
+
+                    if (json != null && !json.isEmpty()) {
+
+                        Gson gson = new Gson();
+                        JSONObject jsonObject = new JSONObject(json);
+                        Log.d(TAG, "cqs ----------->> Data: " + jsonObject.get("data"));
+
+                        String login = jsonObject.getJSONObject("response").get("code").toString();
+                        Log.d(TAG, "cqs ----------->> login: " + login);
+                        if (Integer.valueOf(login) == 1) {
+//                            Log.d(TAG, "cqs ----------->> login: " + "Entra");
+                            Log.d(TAG, "cqs ----------->> usuario: " + login);
+                                   showProgress(false);
+
+                            //descarga los catalogos
+                            descargaCatalogosWS(login);
+
+//                                    Intent intent = new Intent(Entrada.this, MainActivity.class);
+//                                    Bundle bundle = new Bundle();
+//                                    bundle.putString("Nombre", login);
+//                                    intent.putExtras(bundle);
+//                                    intent.putExtra(USUARIO,usuario);
+//                                    startActivity(intent);
+//
+//                                    Toast.makeText(Entrada.this, "Acceso OK", Toast.LENGTH_SHORT).show();
+//                                    showProgress(false);
+
+
+
+
+                        } else {
+                            Toast.makeText(Entrada.this, "Usuario y/o Contaseña Incorrectos", Toast.LENGTH_SHORT).show();
+                            Log.d(TAG, "cqs ----------->> Entrada: " + "No entra");
+                        }
+                    }
+
+                } catch (Exception e) {
+                    showProgress(false);
+                    Log.e(TAG, e.getMessage());
+                    Toast.makeText(Entrada.this, "Usuario y/o Contaseña Incorrectos", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
+                showProgress(false);
+                try {
+                    Log.e(TAG, "cqs ----------------->> existe un error en la conexi?n -----> " + error.getMessage());
+                    if (responseBody != null)
+                        Log.d(TAG, "cqs ----------->> " + new String(responseBody));
+
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+
+                if (statusCode != 200) {
+                    Log.e(TAG, "Existe un error en la conexi?n -----> " + error.getMessage());
+                    if (responseBody != null)
+                        Log.d(TAG, "pimc -----------> " + new String(responseBody));
+
+                }
+
+                Toast.makeText(Entrada.this, "Error de conexion, intente de nuevo", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+    }
+
+    public void descargaCatalogosWS(final String user){
+
+        RequestParams params = new RequestParams();
+        params.put("api", "catalogoUsuarios");
+        params.put("encuesta", encuesta);
+
+        AsyncHttpClient client = new AsyncHttpClient();
+        client.setSSLSocketFactory(MySSLSocketFactory.getFixedSocketFactory());
+        //client.addHeader("Authorization", "Bearer " + usuario.getToken());
+        client.setTimeout(60000);
+
+        RequestHandle requestHandle = client.post(customURL, params, new AsyncHttpResponseHandler() {
+
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
+                String nombreStr = "";
+                Log.d(TAG, "cqs ----------->> Respuesta catalogos OK ");
+                Log.d(TAG, "cqs ----------->> ResponseBody catalogos" + new String(responseBody));
+                try {
+
+                    String json = new String(responseBody);
+
+                    if (json != null && !json.isEmpty()) {
+
+                        Gson gson = new Gson();
+                        JSONObject jsonObject = new JSONObject(json);
+                        Log.d(TAG, "cqs ----------->> Data: " + jsonObject.get("data"));
+
+                        String login = jsonObject.getJSONObject("response").get("code").toString();
+                        if (Integer.valueOf(login) == 1) {
+
+                            //obtiene usuarios
+                            String jsonUsuarios = jsonObject.getJSONObject("data").getJSONArray("usuarios").toString();
+                            Type collectionType = new TypeToken<List<Usuarios>>() {}.getType();
+                            List<Usuarios> listaUsuarios = gson.fromJson(jsonUsuarios, collectionType);
+
+                            daoManager = new DaoManager(db2);
+                            if(listaUsuarios != null && !listaUsuarios.isEmpty()){
+                                daoManager.delete(Usuarios.class);
+                                for(Usuarios usuarios :listaUsuarios ){
+                                    daoManager.insert(usuarios);
+                                }
+                            }
+
+            /*
+            //obtiene alcaldias
+            jsonStatus = jsonObject.getJSONObject("data").getJSONArray("alcaldias").toString();
+            collectionType = new TypeToken<List<Alcaldia>>() {}.getType();
+            List<Alcaldia> listaAlcaldias = gson.fromJson(jsonStatus, collectionType);
+
+            if(listaAlcaldias != null && !listaAlcaldias.isEmpty()){
+            daoManager.delete(Alcaldia.class);
+            for(Alcaldia alcaldia : listaAlcaldias ){
+            daoManager.insert(alcaldia);
+            }
+            }
+
+            //obtiene colonia
+            jsonStatus = jsonObject.getJSONObject("data").getJSONArray("colonias").toString();
+            collectionType = new TypeToken<List<Colonia>>() {}.getType();
+            List<Colonia> listaColonias = gson.fromJson(jsonStatus, collectionType);
+
+            if(listaColonias != null && !listaColonias.isEmpty()){
+            daoManager.delete(Colonia.class);
+            for(Colonia colonia : listaColonias){
+            daoManager.insert(colonia);
+            }
+            }
+            */
+                            showProgress(false);
+
+                            Intent intent = new Intent(Entrada.this, MainActivity.class);
+                            Bundle bundle = new Bundle();
+                            bundle.putString("Nombre", user);
+                            intent.putExtras(bundle);
+                            intent.putExtra(USUARIO,usuarios);
+                            startActivity(intent);
+
+                            Toast.makeText(Entrada.this, "Acceso OK", Toast.LENGTH_SHORT).show();
+                            showProgress(false);
+
+
+                        } else {
+                            Toast.makeText(Entrada.this, "Usuario y/o Contase?a Incorrectos", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+
+                } catch (Exception e) {
+                    showProgress(false);
+                    Log.e(TAG, e.getMessage());
+                    Toast.makeText(Entrada.this, "Usuario y/o Contase?a Incorrectos", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
+                showProgress(false);
+                try {
+                    Log.e(TAG, "PIMC-----------------> existe un error en la conexi?n -----> " + error.getMessage());
+                    if (responseBody != null)
+                        Log.d(TAG, "pimc -----------> " + new String(responseBody));
+
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+
+                if (statusCode != 200) {
+                    Log.e(TAG, "Existe un error en la conexi?n -----> " + error.getMessage());
+                    if (responseBody != null)
+                        Log.d(TAG, "pimc -----------> " + new String(responseBody));
+
+                }
+
+                Toast.makeText(Entrada.this, "Error de conexion, intente de nuevo", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+
+    }
+
+
+
+
+
+
 
     /////// METODO PARA VERIFICAR LA CONEXIÓN A INTERNET
     public static boolean verificaConexion(Context ctx) {
@@ -940,6 +1223,34 @@ public class Entrada extends Activity {
             return serverResponseCode;
 
         } // End else block
+    }
+
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB_MR2)
+    private void showProgress(final boolean show) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB_MR2) {
+            int shortAnimTime = getResources().getInteger(android.R.integer.config_shortAnimTime);
+
+            mUsuario.setVisibility(show ? View.GONE : View.VISIBLE);
+            mUsuario.animate().setDuration(shortAnimTime).alpha(
+                    show ? 0 : 1).setListener(new AnimatorListenerAdapter() {
+                @Override
+                public void onAnimationEnd(Animator animation) {
+                    mUsuario.setVisibility(show ? View.GONE : View.VISIBLE);
+                }
+            });
+
+            mProgressView.setVisibility(show ? View.VISIBLE : View.GONE);
+            mProgressView.animate().setDuration(shortAnimTime).alpha(
+                    show ? 1 : 0).setListener(new AnimatorListenerAdapter() {
+                @Override
+                public void onAnimationEnd(Animator animation) {
+                    mProgressView.setVisibility(show ? View.VISIBLE : View.GONE);
+                }
+            });
+        } else {
+            mProgressView.setVisibility(show ? View.VISIBLE : View.GONE);
+            mUsuario.setVisibility(show ? View.GONE : View.VISIBLE);
+        }
     }
 
 }
