@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="semanal_20200822/app" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/semanal_20200822.iml" filepath="$PROJECT_DIR$/.idea/modules/semanal_20200822.iml" group="semanal_20200822" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Biometrico_Semanal.iml" filepath="$PROJECT_DIR$/.idea/modules/Biometrico_Semanal.iml" group="Biometrico_Semanal" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="Biometrico_Semanal/app" />
     </modules>
   </component>
 </project>
