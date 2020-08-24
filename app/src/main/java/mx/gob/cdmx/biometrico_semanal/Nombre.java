@@ -3,7 +3,7 @@ package mx.gob.cdmx.biometrico_semanal;
 public class Nombre  {
 
     public static final String customURL = "https://opinion.cdmx.gob.mx/encuestas/";
-    public static final String encuesta = "semanal_20200822";
+    public static final String encuesta = "biometrico_semanal";
     public static final String USUARIO = "usuario";
     public static final String PADRON = "padron";
     public static final String LATITUDE = "latitude";
@@ -12,13 +12,13 @@ public class Nombre  {
 
     public String nombreEncuesta(){
 
-        final String nombreEncuesta = "semanal_20200822";
+        final String nombreEncuesta = "biometrico_semanal";
         return nombreEncuesta;
     }
 
     public String nombreDatos(){
 
-        final String nombreEncuesta = "datos_semanal_20200822";
+        final String nombreEncuesta = "datos_biometrico_semanal";
         return nombreEncuesta;
     }
 

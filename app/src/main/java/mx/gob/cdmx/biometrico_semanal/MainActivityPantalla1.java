@@ -385,16 +385,16 @@ szImei = Secure.getString(this.getContentResolver(), Secure.ANDROID_ID);// Table
 return szImei;
 }
 
-@SuppressLint("MissingPermission")
-public String sacaImei() {
-    String szImei;
-TelephonyManager TelephonyMgr = (TelephonyManager) getSystemService(TELEPHONY_SERVICE);//Telefono
-szImei = TelephonyMgr.getDeviceId(); // Requires READ_PHONE_STATE
-if (szImei == null) {
-szImei = Secure.getString(this.getContentResolver(), Secure.ANDROID_ID);// Tableta
-}
-return szImei;
-}
+    @SuppressLint("MissingPermission")
+    public String sacaImei() {
+        String szImei;
+        TelephonyManager TelephonyMgr = (TelephonyManager) getSystemService(TELEPHONY_SERVICE);//Telefono
+        szImei = TelephonyMgr.getDeviceId(); // Requires READ_PHONE_STATE
+        if (szImei == null) {
+            szImei = Secure.getString(this.getContentResolver(), Secure.ANDROID_ID);// Tableta
+        }
+        return szImei;
+    }
 
 public String hora() {
 
