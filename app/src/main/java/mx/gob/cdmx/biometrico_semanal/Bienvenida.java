@@ -134,8 +134,9 @@ public class Bienvenida extends AppCompatActivity {
             //this.finish();
         }
         else{
-            new Bienvenida.UpdateBases().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
-            new Bienvenida.UpdateAudios().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+
+            new uploadData.UpdateBases().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+            new uploadData.UpdateAudios().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
         }
 
 
