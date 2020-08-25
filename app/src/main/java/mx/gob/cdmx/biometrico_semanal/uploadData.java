@@ -25,8 +25,6 @@ import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-import static androidx.core.content.ContextCompat.getSystemService;
-
 public class uploadData {
 
 	private static final String TAG="UploadData";
@@ -49,6 +47,18 @@ public class uploadData {
 	static String formattedDate3 = df3.format(c.getTime());
 
 	static Context ctx;
+
+//	public static String sacaImei() {
+//		TelephonyManager TelephonyMgr = (TelephonyManager) ctx.getSystemService(Context.TELEPHONY_SERVICE);
+//		if (ActivityCompat.checkSelfPermission(ctx, Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
+//			String szImei = TelephonyMgr.getDeviceId(); // Requires READ_PHONE_STATE
+//			System.out.println("Mi Número: " + szImei);
+//			return szImei;
+//		}
+//		String szImei = TelephonyMgr.getDeviceId(); // Requires READ_PHONE_STATE
+//		System.out.println("Mi Número: " + szImei);
+//		return szImei;
+//	}
 
 
 
@@ -169,6 +179,7 @@ public class uploadData {
 		@Override
 		protected String doInBackground(String... params) {
 
+			String imei=params[0];
 			File sdCard;
 			sdCard = Environment.getExternalStorageDirectory();
 			final String pathBase = sdCard.getAbsolutePath() + "/Mis_archivos";
@@ -193,8 +204,8 @@ public class uploadData {
 					String[] t = new String[ficheros.length];
 					for (int x = 0; x < ficheros.length; x++) {
 						Log.i(TAG, " =====> lista: " + ficheros[x].getName());
-//						s[x] = pathBase + "/" + nombreEncuesta + "_" + imei;
-						s[x] = pathBase + "/" + nombreEncuesta;
+						s[x] = pathBase + "/" + nombreEncuesta + "_" + imei;
+//						s[x] = pathBase + "/" + nombreEncuesta;
 						Log.i(TAG, " =====> Nombre del Archivo: " + s[x]);
 						uploadBase(s[x]);
 					}
@@ -203,7 +214,7 @@ public class uploadData {
 				}
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
-				Log.i(TAG, " =====> error zip: " + "_" + e.getMessage());
+				Log.i(TAG, " =====> error lista 3: " + "_" + e.getMessage()+" "+imei);
 			}
 			return null;
 		}
