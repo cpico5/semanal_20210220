@@ -151,10 +151,23 @@ public class Bienvenida extends AppCompatActivity {
                 public void onAuthenticationError(int errorCode, @NonNull CharSequence errString) {
                     super.onAuthenticationError(errorCode, errString);
                     if (errorCode == BiometricPrompt.ERROR_NEGATIVE_BUTTON) {
+
+                        Log.i(TAG, "cqs ------->>  Pulse el botón cancelar");
+                        finishAffinity();
+
                     } else {
-                        Log.d(TAG, "A ocurrido un error");
+                        Log.i(TAG, "cqs ------->> A ocurrido un error");
+                        finishAffinity();
                     }
+
+//                    if (errorCode == BiometricPrompt.ERROR_USER_CANCELED) {
+//                        Log.i(TAG, "cqs ------->>  Pulse afuera del cuadro");
+//                    }
+
                 }
+
+
+
 
 
                 @Override
@@ -202,7 +215,7 @@ public class Bienvenida extends AppCompatActivity {
             });
 
             final BiometricPrompt.PromptInfo promptInfo = new BiometricPrompt.PromptInfo.Builder()
-                    .setTitle("Aplicación con biometría")
+                    .setTitle("Use su huella para acceder")
                     .setSubtitle("toca el sensor de huellas digitales")
                     //.setDescription("This is the description")
                     .setNegativeButtonText("Cancelar")
