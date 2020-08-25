@@ -627,7 +627,7 @@ public class MainActivity extends Activity implements OnItemSelectedListener, Ad
 
     public void Salir(View v) {
 
-        finish();
+        finishAffinity();
     }
 
 
