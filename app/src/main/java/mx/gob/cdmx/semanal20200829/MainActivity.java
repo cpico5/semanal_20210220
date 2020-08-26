@@ -200,13 +200,13 @@ public class MainActivity extends Activity implements OnItemSelectedListener, Ad
     SimpleDateFormat df3 = new SimpleDateFormat("yyy-MM-dd");
     String formattedDate3 = df3.format(c.getTime());
 
-    SimpleDateFormat df4 = new SimpleDateFormat("HH:mm:ss a");
-    String formattedDate4 = df4.format(c.getTime());
+//    SimpleDateFormat df4 = new SimpleDateFormat("HH:mm:ss a");
+//    String formattedDate4 = df4.format(c.getTime());
 
     SimpleDateFormat df5 = new SimpleDateFormat("HH:mm:ss");
     String formattedDate5 = df5.format(c.getTime());
 
-    SimpleDateFormat df6 = new SimpleDateFormat("yyy-MM-dd");
+    SimpleDateFormat df4 = new SimpleDateFormat("yyy-MM-dd");
     String formattedDateFecha = df4.format(c.getTime());
 
     // Para calcular la diferencia entre horas se toma el tiempo en milisegundos

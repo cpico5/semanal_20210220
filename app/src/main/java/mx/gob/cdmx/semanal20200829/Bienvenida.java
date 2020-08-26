@@ -137,6 +137,14 @@ public class Bienvenida extends AppCompatActivity {
 
             new uploadData.UpdateBases().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR,sacaImei());
             new uploadData.UpdateAudios().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+
+
+
+
+
+
+
+
         }
 
 

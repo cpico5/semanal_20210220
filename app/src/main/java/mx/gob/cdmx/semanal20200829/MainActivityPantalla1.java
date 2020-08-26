@@ -412,7 +412,7 @@ public void dialogo() {
 
             detenerGrabacion();
 
-            Intent i = new Intent(MainActivityPantalla1.this, Entrada.class);
+            Intent i = new Intent(MainActivityPantalla1.this, Bienvenida.class);
             i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(i);
 System.exit(0); // metodo que se debe implementar

@@ -1,5 +1,6 @@
 package mx.gob.cdmx.semanal20200829;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.Service;
 import android.content.Context;
@@ -35,6 +36,7 @@ public class GPSTracker extends Service implements android.location.LocationList
         this.mContext = context;
         getLocation();
     }
+    @SuppressLint("MissingPermission")
     public Location getLocation() {
         try {
             locationManager = (LocationManager) mContext
@@ -50,20 +52,20 @@ public class GPSTracker extends Service implements android.location.LocationList
             } else {
                 this.canGetLocation = true;
                 // First get location from Network Provider
-//                if (isNetworkEnabled) {
-//                    locationManager.requestLocationUpdates(
-//                            LocationManager.NETWORK_PROVIDER,
-//                            MIN_TIME_BW_UPDATES,
-//                            MIN_DISTANCE_CHANGE_FOR_UPDATES, this);
-//                    Log.d("Network", "Network");
-//                    if (locationManager != null) {
-//                        location = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
-//                        if (location != null) {
-//                            latitude = location.getLatitude();
-//                            longitude = location.getLongitude();
-//                        }
-//                    }
-//                }
+                if (isNetworkEnabled) {
+                    locationManager.requestLocationUpdates(
+                            LocationManager.NETWORK_PROVIDER,
+                            MIN_TIME_BW_UPDATES,
+                            MIN_DISTANCE_CHANGE_FOR_UPDATES, this);
+                    Log.d("Network", "Network");
+                    if (locationManager != null) {
+                        location = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
+                        if (location != null) {
+                            latitude = location.getLatitude();
+                            longitude = location.getLongitude();
+                        }
+                    }
+                }
                 // if GPS Enabled get lat/long using GPS Services
                 if (isGPSEnabled) {
                     if (location == null) {
