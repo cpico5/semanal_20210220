@@ -42,11 +42,9 @@ public class GPSTracker extends Service implements android.location.LocationList
             locationManager = (LocationManager) mContext
                     .getSystemService(LOCATION_SERVICE);
             // getting GPS status
-            isGPSEnabled = locationManager
-                    .isProviderEnabled(LocationManager.GPS_PROVIDER);
+            isGPSEnabled = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
             // getting network status
-//            isNetworkEnabled = locationManager
-//                    .isProviderEnabled(LocationManager.NETWORK_PROVIDER);
+            isNetworkEnabled = locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
             if (!isGPSEnabled) {
                 // no network provider is enabled
             } else {

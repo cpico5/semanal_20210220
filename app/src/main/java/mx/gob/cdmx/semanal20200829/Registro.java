@@ -28,7 +28,6 @@ import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
 
-
 import com.google.gson.Gson;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
@@ -38,18 +37,16 @@ import com.loopj.android.http.RequestParams;
 
 import org.json.JSONObject;
 
-import cz.msebera.android.httpclient.Header;
-
-import static mx.gob.cdmx.semanal20200829.Nombre.customURL;
-
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
+import cz.msebera.android.httpclient.Header;
 
 import static android.text.Layout.JUSTIFICATION_MODE_INTER_WORD;
+import static mx.gob.cdmx.semanal20200829.Nombre.customURL;
 
 public class Registro extends Activity {
 
@@ -181,6 +178,7 @@ public class Registro extends Activity {
         if (db3 != null) {
             values.put("user", user);
             values.put("pass", pass);
+            values.put("activo", "1");
             db3.insert("fp", null, values);
         }
         db3.close();
@@ -245,7 +243,7 @@ public class Registro extends Activity {
 //                            Log.d(TAG, "cqs ----------->> login: " + data);
 
                             if (!verificaConexion(Registro.this)) {
-                                Toast.makeText(getBaseContext(),"Sin conexión inténtalode nuevo",
+                                Toast.makeText(getBaseContext(),"Sin conexión inténtalo de nuevo",
                                         Toast.LENGTH_LONG).show();
                                 //this.finish();
                             }
@@ -257,7 +255,8 @@ public class Registro extends Activity {
                             showProgress(false);
 
                         } else {
-                            Toast.makeText(Registro.this, "Usuario y/o Contaseña no válidos", Toast.LENGTH_SHORT).show();
+//                            Toast.makeText(Registro.this, "Usuario y/o Contaseña no válidos", Toast.LENGTH_SHORT).show();
+                            dialogoBaja();
                             Log.d(TAG, "cqs ----------->> Entrada: " + "No entra");
                         }
                     }
@@ -265,7 +264,8 @@ public class Registro extends Activity {
                 } catch (Exception e) {
                     showProgress(false);
                     Log.e(TAG, e.getMessage());
-                    Toast.makeText(Registro.this, "Usuario y/o Contaseña no válidos", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(Registro.this, "Usuario y/o Contaseña no válidos", Toast.LENGTH_SHORT).show();
+                    dialogoBaja();
                 }
             }
 
@@ -331,6 +331,41 @@ public class Registro extends Activity {
                 });
         AlertDialog alert = builder.create();
         alert.show();
+
+    }
+
+    public void dialogoBaja() {
+        // timer.cancel();
+        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        Registro.this.runOnUiThread(new Runnable() {
+            public void run() {
+                builder.setMessage("Ponte en contacto con tu supervisor")
+                        .setTitle("Usuario No Activo").setCancelable(false)
+                        .setPositiveButton("Cerrar", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+
+                                String SQLFprint = "update fp set activo='0' where activo ='1' ";
+
+                                try {
+
+                                    db3.execSQL(SQLFprint);
+                                    Log.i("cqs --->> Crea Tabla", "Se crea la tabla: " + "fp");
+                                } catch (Exception e) {
+                                    String stackTrace = Log.getStackTraceString(e);
+                                    Log.i("cqs --->> Crea tabla", "Error al crear la tabla fp" + stackTrace);
+                                }
+
+
+
+                                finishAffinity();
+
+                            }
+                        });
+                AlertDialog alert = builder.create();
+                alert.show();
+
+            }
+        });
 
     }
 
