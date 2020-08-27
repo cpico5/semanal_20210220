@@ -49,7 +49,7 @@ android:button="@drawable/radiobutton_selector"
 android:textColor="@drawable/radiobutton_color_selector"
 android:textSize="16sp"
 android:theme="@style/RadioButton"
-android:text="Acuerdo"
+android:text="Una vez por semana"
 />
 
   <RadioButton
@@ -61,7 +61,7 @@ android:button="@drawable/radiobutton_selector"
 android:textColor="@drawable/radiobutton_color_selector"
 android:textSize="16sp"
 android:theme="@style/RadioButton"
-android:text="Acuerdo en parte"
+android:text="2 o 3 veces a la semana"
 />
 
   <RadioButton
@@ -73,7 +73,7 @@ android:button="@drawable/radiobutton_selector"
 android:textColor="@drawable/radiobutton_color_selector"
 android:textSize="16sp"
 android:theme="@style/RadioButton"
-android:text="Desacuerdo en parte"
+android:text="4 o 5 veces a la semana"
 />
 
   <RadioButton
@@ -85,7 +85,31 @@ android:button="@drawable/radiobutton_selector"
 android:textColor="@drawable/radiobutton_color_selector"
 android:textSize="16sp"
 android:theme="@style/RadioButton"
-android:text="Desacuerdo"
+android:text="6 a 7 veces por semana"
+/>
+
+  <RadioButton
+  android:id="@+id/radio5"
+  
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:button="@drawable/radiobutton_selector"
+android:textColor="@drawable/radiobutton_color_selector"
+android:textSize="16sp"
+android:theme="@style/RadioButton"
+android:text="Menos de una vez por semana"
+/>
+
+  <RadioButton
+  android:id="@+id/radio6"
+  
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:button="@drawable/radiobutton_selector"
+android:textColor="@drawable/radiobutton_color_selector"
+android:textSize="16sp"
+android:theme="@style/RadioButton"
+android:text="Nunca"
 />
 
   <RadioButton

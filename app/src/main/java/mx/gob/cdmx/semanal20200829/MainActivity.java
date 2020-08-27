@@ -324,6 +324,25 @@ public class MainActivity extends Activity implements OnItemSelectedListener, Ad
         }
         setContentView(R.layout.activity_main);
 
+        File directory;
+        File file;
+        File sdCard;
+        sdCard = Environment.getExternalStorageDirectory();
+        FileOutputStream fout = null;
+        try {
+            directory = new File(sdCard.getAbsolutePath() + "/Mis_archivos");
+            directory.mkdirs();
+            Nombre nom = new Nombre();
+            String nombreE = nom.nombreEncuesta();
+            directory = new File(sdCard.getAbsolutePath() + "/" + nombreE + "-Audio" + formattedDate1);
+            directory.mkdirs();
+
+
+        } catch (Exception e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
         elMaximo = Integer.parseInt(sacaMaximo().toString()) + 1;
         String elMaximoFecha = String.valueOf(elMaximo);
 
@@ -397,7 +416,6 @@ public class MainActivity extends Activity implements OnItemSelectedListener, Ad
 
         sacaChip();
 
-        File sdCard, directory, file;
 
         sdCard = Environment.getExternalStorageDirectory();
         // directory = new File(sdCard.getAbsolutePath() +
@@ -965,11 +983,11 @@ public class MainActivity extends Activity implements OnItemSelectedListener, Ad
     private void cargaUsuario() {
 
         final String[] datos = new String[] {
-                "ALAN",
-                "BERNACHI",
-                "ENRIQUE",
-                "IRIS",
-                "TABLA"
+                "ARREDONDO",
+                "HUGO",
+                "JASSO",
+                "OSCAR",
+                "SANCHEZ"
         };
 
         // Alternativa 1: Array java
