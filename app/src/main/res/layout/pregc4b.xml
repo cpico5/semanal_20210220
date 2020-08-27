@@ -14,7 +14,7 @@
                 android:layout_alignParentTop="true" >
 
                 <LinearLayout
-                android:id="@+id/layc14"
+                android:id="@+id/layc4b"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="50dp"
@@ -26,16 +26,16 @@
                 android:orientation="vertical" >
                 
                 <TextView
-                android:id="@+id/textPreguntac14"
+                android:id="@+id/textPreguntac4b"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/PREGUNTAc14"
+                android:text="@string/PREGUNTAc4b"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="#002266"
                 android:textStyle="bold" />
                 
                 <RadioGroup
-                android:id="@+id/rdPreguntac14"
+                android:id="@+id/rdPreguntac4b"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical" >
@@ -49,7 +49,7 @@ android:button="@drawable/radiobutton_selector"
 android:textColor="@drawable/radiobutton_color_selector"
 android:textSize="16sp"
 android:theme="@style/RadioButton"
-android:text="Una vez por semana"
+android:text="Menor de 18 años"
 />
 
   <RadioButton
@@ -61,7 +61,7 @@ android:button="@drawable/radiobutton_selector"
 android:textColor="@drawable/radiobutton_color_selector"
 android:textSize="16sp"
 android:theme="@style/RadioButton"
-android:text="2 o 3 veces a la semana"
+android:text="18 a 29"
 />
 
   <RadioButton
@@ -73,7 +73,7 @@ android:button="@drawable/radiobutton_selector"
 android:textColor="@drawable/radiobutton_color_selector"
 android:textSize="16sp"
 android:theme="@style/RadioButton"
-android:text="4 o 5 veces a la semana"
+android:text="30 a 39"
 />
 
   <RadioButton
@@ -85,7 +85,7 @@ android:button="@drawable/radiobutton_selector"
 android:textColor="@drawable/radiobutton_color_selector"
 android:textSize="16sp"
 android:theme="@style/RadioButton"
-android:text="6 a 7 veces por semana"
+android:text="40 a 49"
 />
 
   <RadioButton
@@ -97,7 +97,7 @@ android:button="@drawable/radiobutton_selector"
 android:textColor="@drawable/radiobutton_color_selector"
 android:textSize="16sp"
 android:theme="@style/RadioButton"
-android:text="Menos de una vez por semana"
+android:text="50 a 59"
 />
 
   <RadioButton
@@ -109,7 +109,19 @@ android:button="@drawable/radiobutton_selector"
 android:textColor="@drawable/radiobutton_color_selector"
 android:textSize="16sp"
 android:theme="@style/RadioButton"
-android:text="Nunca"
+android:text="60 a 69"
+/>
+
+  <RadioButton
+  android:id="@+id/radio7"
+  
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:button="@drawable/radiobutton_selector"
+android:textColor="@drawable/radiobutton_color_selector"
+android:textSize="16sp"
+android:theme="@style/RadioButton"
+android:text="70 o más"
 />
 
   <RadioButton

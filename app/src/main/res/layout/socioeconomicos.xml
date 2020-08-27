@@ -799,144 +799,144 @@
                         </LinearLayout>
             </LinearLayout>
 
-<!--            <LinearLayout-->
-<!--                android:id="@+id/layEdad"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginTop="50dp"-->
-<!--                android:orientation="vertical" >-->
+            <LinearLayout
+                android:id="@+id/layEdad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:orientation="vertical" >
 
 
-<!--                        <LinearLayout-->
-<!--                            android:layout_width="match_parent"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:orientation="vertical" >-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" >
 
-<!--                            <TextView-->
-<!--                                android:id="@+id/textPreguntaEdad"-->
-<!--                                android:layout_width="match_parent"-->
-<!--                                android:layout_height="wrap_content"-->
-<!--                                android:text="@string/PREGUNTAEDAD"-->
-<!--                                android:textAppearance="?android:attr/textAppearanceLarge"-->
-<!--                                android:textColor="#002266"-->
-<!--                                android:textStyle="bold" />-->
+                            <TextView
+                                android:id="@+id/textPreguntaEdad"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/PREGUNTAEDAD"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textColor="#002266"
+                                android:textStyle="bold" />
 
-<!--                            <RadioGroup-->
-<!--                                android:id="@+id/rdPreguntaEdad"-->
-<!--                                android:layout_width="match_parent"-->
-<!--                                android:layout_height="wrap_content"-->
-<!--                                android:orientation="vertical" >-->
+                            <RadioGroup
+                                android:id="@+id/rdPreguntaEdad"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical" >
 
-<!--                                <RadioButton  android:button="@drawable/radiobutton_selector" android:textColor="@drawable/radiobutton_color_selector" android:theme="@style/RadioButton"-->
-<!--                                    android:id="@+id/radio1"-->
-<!--                                    android:layout_width="wrap_content"-->
-<!--                                    android:layout_height="wrap_content"-->
-<!--                                    android:text="Menor de 18 años"-->
-<!--                                    android:textSize="16sp" />-->
+                                <RadioButton  android:button="@drawable/radiobutton_selector" android:textColor="@drawable/radiobutton_color_selector" android:theme="@style/RadioButton"
+                                    android:id="@+id/radio1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Menor de 18 años"
+                                    android:textSize="16sp" />
 
-<!--                                <RadioButton  android:button="@drawable/radiobutton_selector" android:textColor="@drawable/radiobutton_color_selector" android:theme="@style/RadioButton"-->
-<!--                                    android:id="@+id/radio2"-->
-<!--                                    android:layout_width="wrap_content"-->
-<!--                                    android:layout_height="wrap_content"-->
-<!--                                    android:text="18 a 29"-->
-<!--                                    android:textSize="16sp" />-->
+                                <RadioButton  android:button="@drawable/radiobutton_selector" android:textColor="@drawable/radiobutton_color_selector" android:theme="@style/RadioButton"
+                                    android:id="@+id/radio2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="18 a 29"
+                                    android:textSize="16sp" />
 
-<!--                                <RadioButton  android:button="@drawable/radiobutton_selector" android:textColor="@drawable/radiobutton_color_selector" android:theme="@style/RadioButton"-->
-<!--                                    android:id="@+id/radio3"-->
-<!--                                    android:layout_width="wrap_content"-->
-<!--                                    android:layout_height="wrap_content"-->
-<!--                                    android:text="30 a 39"-->
-<!--                                    android:textSize="16sp" />-->
+                                <RadioButton  android:button="@drawable/radiobutton_selector" android:textColor="@drawable/radiobutton_color_selector" android:theme="@style/RadioButton"
+                                    android:id="@+id/radio3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="30 a 39"
+                                    android:textSize="16sp" />
 
-<!--                                <RadioButton  android:button="@drawable/radiobutton_selector" android:textColor="@drawable/radiobutton_color_selector" android:theme="@style/RadioButton"-->
-<!--                                    android:id="@+id/radio4"-->
-<!--                                    android:layout_width="wrap_content"-->
-<!--                                    android:layout_height="wrap_content"-->
-<!--                                    android:text="40 a 49"-->
-<!--                                    android:textSize="16sp" />-->
+                                <RadioButton  android:button="@drawable/radiobutton_selector" android:textColor="@drawable/radiobutton_color_selector" android:theme="@style/RadioButton"
+                                    android:id="@+id/radio4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="40 a 49"
+                                    android:textSize="16sp" />
 
-<!--                                <RadioButton  android:button="@drawable/radiobutton_selector" android:textColor="@drawable/radiobutton_color_selector" android:theme="@style/RadioButton"-->
-<!--                                    android:id="@+id/radio5"-->
-<!--                                    android:layout_width="wrap_content"-->
-<!--                                    android:layout_height="wrap_content"-->
-<!--                                    android:text="50 a 59"-->
-<!--                                    android:textSize="16sp" />-->
+                                <RadioButton  android:button="@drawable/radiobutton_selector" android:textColor="@drawable/radiobutton_color_selector" android:theme="@style/RadioButton"
+                                    android:id="@+id/radio5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="50 a 59"
+                                    android:textSize="16sp" />
 
-<!--                                <RadioButton  android:button="@drawable/radiobutton_selector" android:textColor="@drawable/radiobutton_color_selector" android:theme="@style/RadioButton"-->
-<!--                                    android:id="@+id/radio6"-->
-<!--                                    android:layout_width="wrap_content"-->
-<!--                                    android:layout_height="wrap_content"-->
-<!--                                    android:text="60 a 69"-->
-<!--                                    android:textSize="16sp" />-->
+                                <RadioButton  android:button="@drawable/radiobutton_selector" android:textColor="@drawable/radiobutton_color_selector" android:theme="@style/RadioButton"
+                                    android:id="@+id/radio6"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="60 a 69"
+                                    android:textSize="16sp" />
 
-<!--                                <RadioButton  android:button="@drawable/radiobutton_selector" android:textColor="@drawable/radiobutton_color_selector" android:theme="@style/RadioButton"-->
-<!--                                    android:id="@+id/radio7"-->
-<!--                                    android:layout_width="wrap_content"-->
-<!--                                    android:layout_height="wrap_content"-->
-<!--                                    android:text="70 o más"-->
-<!--                                    android:textSize="16sp" />-->
+                                <RadioButton  android:button="@drawable/radiobutton_selector" android:textColor="@drawable/radiobutton_color_selector" android:theme="@style/RadioButton"
+                                    android:id="@+id/radio7"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="70 o más"
+                                    android:textSize="16sp" />
 
-<!--                                <RadioButton  android:button="@drawable/radiobutton_selector" android:textColor="@drawable/radiobutton_color_selector" android:theme="@style/RadioButton"-->
-<!--                                    android:id="@+id/radio0"-->
-<!--                                    android:layout_width="wrap_content"-->
-<!--                                    android:layout_height="wrap_content"-->
-<!--                                    android:text="@string/ns"-->
-<!--                                    android:textSize="16sp" />-->
-<!--                            </RadioGroup>-->
-<!--                        </LinearLayout>-->
-<!--            </LinearLayout>-->
+                                <RadioButton  android:button="@drawable/radiobutton_selector" android:textColor="@drawable/radiobutton_color_selector" android:theme="@style/RadioButton"
+                                    android:id="@+id/radio0"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/ns"
+                                    android:textSize="16sp" />
+                            </RadioGroup>
+                        </LinearLayout>
+            </LinearLayout>
 
-<!--                        <LinearLayout-->
-            <!--                android:id="@+id/layTipoPiso"-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:layout_marginTop="50dp"-->
-            <!--                android:orientation="vertical" >-->
+                        <LinearLayout
+                            android:id="@+id/layTipoPiso"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="50dp"
+                            android:orientation="vertical" >
 
 
-            <!--                        <LinearLayout-->
-            <!--                            android:layout_width="match_parent"-->
-            <!--                            android:layout_height="wrap_content"-->
-            <!--                            android:orientation="vertical" >-->
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical" >
 
-            <!--                            <TextView-->
-            <!--                                android:id="@+id/textPreguntaTipoPiso"-->
-            <!--                                android:layout_width="match_parent"-->
-            <!--                                android:layout_height="wrap_content"-->
-            <!--                                android:text="@string/PREGUNTA_TIPO_PISO"-->
-            <!--                                android:textAppearance="?android:attr/textAppearanceLarge"-->
-            <!--                                android:textColor="#002266"-->
-            <!--                                android:textStyle="bold" />-->
+                                        <TextView
+                                            android:id="@+id/textPreguntaTipoPiso"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/PREGUNTA_TIPO_PISO"
+                                            android:textAppearance="?android:attr/textAppearanceLarge"
+                                            android:textColor="#002266"
+                                            android:textStyle="bold" />
 
-            <!--                            <RadioGroup-->
-            <!--                                android:id="@+id/rdPreguntaTipoPiso"-->
-            <!--                                android:layout_width="match_parent"-->
-            <!--                                android:layout_height="wrap_content"-->
-            <!--                                android:orientation="vertical" >-->
+                                        <RadioGroup
+                                            android:id="@+id/rdPreguntaTipoPiso"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical" >
 
-            <!--                                <RadioButton  android:button="@drawable/radiobutton_selector" android:textColor="@drawable/radiobutton_color_selector" android:theme="@style/RadioButton"-->
-            <!--                                    android:id="@+id/radio1"-->
-            <!--                                    android:layout_width="wrap_content"-->
-            <!--                                    android:layout_height="wrap_content"-->
-            <!--                                    android:text="Tierra o cemento"-->
-            <!--                                    android:textSize="16sp" />-->
+                                            <RadioButton  android:button="@drawable/radiobutton_selector" android:textColor="@drawable/radiobutton_color_selector" android:theme="@style/RadioButton"
+                                                android:id="@+id/radio1"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="Tierra o cemento"
+                                                android:textSize="16sp" />
 
-            <!--                                <RadioButton  android:button="@drawable/radiobutton_selector" android:textColor="@drawable/radiobutton_color_selector" android:theme="@style/RadioButton"-->
-            <!--                                    android:id="@+id/radio2"-->
-            <!--                                    android:layout_width="wrap_content"-->
-            <!--                                    android:layout_height="wrap_content"-->
-            <!--                                    android:text="Cualquier otro"-->
-            <!--                                    android:textSize="16sp" />-->
+                                            <RadioButton  android:button="@drawable/radiobutton_selector" android:textColor="@drawable/radiobutton_color_selector" android:theme="@style/RadioButton"
+                                                android:id="@+id/radio2"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="Cualquier otro"
+                                                android:textSize="16sp" />
 
-            <!--                                <RadioButton  android:button="@drawable/radiobutton_selector" android:textColor="@drawable/radiobutton_color_selector" android:theme="@style/RadioButton"-->
-            <!--                                    android:id="@+id/radio0"-->
-            <!--                                    android:layout_width="wrap_content"-->
-            <!--                                    android:layout_height="wrap_content"-->
-            <!--                                    android:text="@string/ns"-->
-            <!--                                    android:textSize="16sp" />-->
-            <!--                            </RadioGroup>-->
-            <!--                        </LinearLayout>-->
-            <!--            </LinearLayout>-->
+                                            <RadioButton  android:button="@drawable/radiobutton_selector" android:textColor="@drawable/radiobutton_color_selector" android:theme="@style/RadioButton"
+                                                android:id="@+id/radio0"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="@string/ns"
+                                                android:textSize="16sp" />
+                                        </RadioGroup>
+                                    </LinearLayout>
+                        </LinearLayout>
 
 
 

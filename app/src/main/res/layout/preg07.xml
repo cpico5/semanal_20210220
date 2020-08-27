@@ -40,30 +40,54 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical" >
                 
-<!--  <RadioButton-->
-<!--  android:id="@+id/radio0"-->
-<!--  -->
-<!--  -->
-<!--android:layout_width="wrap_content"-->
-<!--android:layout_height="wrap_content"-->
-<!--android:button="@drawable/radiobutton_selector"-->
-<!--android:textColor="@drawable/radiobutton_color_selector"-->
-<!--android:textSize="16sp"-->
-<!--android:theme="@style/RadioButton"-->
-<!--android:text="No sabe / No contestó"-->
-<!--/>-->
-
-
-<Spinner
-android:id="@+id/spinnerCalifica"
-android:layout_width="259dp"
+  <RadioButton
+  android:id="@+id/radio1"
+  
+android:layout_width="wrap_content"
 android:layout_height="wrap_content"
-android:hint="Selecciona"
-android:layout_marginTop="30dp"
-android:spinnerMode="dialog"
-android:singleLine="false"
-android:layout_marginLeft="10dp" />
+android:button="@drawable/radiobutton_selector"
+android:textColor="@drawable/radiobutton_color_selector"
+android:textSize="16sp"
+android:theme="@style/RadioButton"
+android:text="De acuerdo"
+/>
 
+  <RadioButton
+  android:id="@+id/radio2"
+  
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:button="@drawable/radiobutton_selector"
+android:textColor="@drawable/radiobutton_color_selector"
+android:textSize="16sp"
+android:theme="@style/RadioButton"
+android:text="Ni de acuerdo, ni en desacuerdo"
+/>
+
+  <RadioButton
+  android:id="@+id/radio3"
+  
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:button="@drawable/radiobutton_selector"
+android:textColor="@drawable/radiobutton_color_selector"
+android:textSize="16sp"
+android:theme="@style/RadioButton"
+android:text="En desacuerdo"
+/>
+
+  <RadioButton
+  android:id="@+id/radio0"
+  
+  
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:button="@drawable/radiobutton_selector"
+android:textColor="@drawable/radiobutton_color_selector"
+android:textSize="16sp"
+android:theme="@style/RadioButton"
+android:text="No sabe / No contestó"
+/>
 
 </RadioGroup>
 </LinearLayout>

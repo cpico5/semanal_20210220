@@ -14,7 +14,7 @@
                 android:layout_alignParentTop="true" >
 
                 <LinearLayout
-                android:id="@+id/layc17a"
+                android:id="@+id/layc19"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="50dp"
@@ -26,16 +26,16 @@
                 android:orientation="vertical" >
                 
                 <TextView
-                android:id="@+id/textPreguntac17a"
+                android:id="@+id/textPreguntac19"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/PREGUNTAc17a"
+                android:text="@string/PREGUNTAc19"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="#002266"
                 android:textStyle="bold" />
                 
                 <RadioGroup
-                android:id="@+id/rdPreguntac17a"
+                android:id="@+id/rdPreguntac19"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical" >
@@ -49,7 +49,7 @@ android:button="@drawable/radiobutton_selector"
 android:textColor="@drawable/radiobutton_color_selector"
 android:textSize="16sp"
 android:theme="@style/RadioButton"
-android:text="Si fue la mejor"
+android:text="Si"
 />
 
   <RadioButton
@@ -61,19 +61,7 @@ android:button="@drawable/radiobutton_selector"
 android:textColor="@drawable/radiobutton_color_selector"
 android:textSize="16sp"
 android:theme="@style/RadioButton"
-android:text="En parte"
-/>
-
-  <RadioButton
-  android:id="@+id/radio3"
-  
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:button="@drawable/radiobutton_selector"
-android:textColor="@drawable/radiobutton_color_selector"
-android:textSize="16sp"
-android:theme="@style/RadioButton"
-android:text="No fue la mejor"
+android:text="No"
 />
 
   <RadioButton

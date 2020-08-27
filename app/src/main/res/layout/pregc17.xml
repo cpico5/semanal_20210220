@@ -49,7 +49,7 @@ android:button="@drawable/radiobutton_selector"
 android:textColor="@drawable/radiobutton_color_selector"
 android:textSize="16sp"
 android:theme="@style/RadioButton"
-android:text="Claudia Sheinbaum/ Morena/ PT/ Encuentro social"
+android:text="Los siete días"
 />
 
   <RadioButton
@@ -61,7 +61,7 @@ android:button="@drawable/radiobutton_selector"
 android:textColor="@drawable/radiobutton_color_selector"
 android:textSize="16sp"
 android:theme="@style/RadioButton"
-android:text="Alejandra Barrales/ PAN/ PRD/  MC"
+android:text="5 o 6 veces por semana"
 />
 
   <RadioButton
@@ -73,7 +73,7 @@ android:button="@drawable/radiobutton_selector"
 android:textColor="@drawable/radiobutton_color_selector"
 android:textSize="16sp"
 android:theme="@style/RadioButton"
-android:text="Mikel Arriola/ PRI"
+android:text="3 o 4 veces por semana"
 />
 
   <RadioButton
@@ -85,67 +85,7 @@ android:button="@drawable/radiobutton_selector"
 android:textColor="@drawable/radiobutton_color_selector"
 android:textSize="16sp"
 android:theme="@style/RadioButton"
-android:text="Mariana Boy/ PVEM"
-/>
-
-  <RadioButton
-  android:id="@+id/radio5"
-  
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:button="@drawable/radiobutton_selector"
-android:textColor="@drawable/radiobutton_color_selector"
-android:textSize="16sp"
-android:theme="@style/RadioButton"
-android:text="Lorena Osornio/ Independiente"
-/>
-
-  <RadioButton
-  android:id="@+id/radio6"
-  
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:button="@drawable/radiobutton_selector"
-android:textColor="@drawable/radiobutton_color_selector"
-android:textSize="16sp"
-android:theme="@style/RadioButton"
-android:text="Marco Rascón/ PHCDMX"
-/>
-
-  <RadioButton
-  android:id="@+id/radio7"
-  
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:button="@drawable/radiobutton_selector"
-android:textColor="@drawable/radiobutton_color_selector"
-android:textSize="16sp"
-android:theme="@style/RadioButton"
-android:text="Purificación Carpinteyro/ PANAL"
-/>
-
-  <RadioButton
-  android:id="@+id/radio8"
-  
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:button="@drawable/radiobutton_selector"
-android:textColor="@drawable/radiobutton_color_selector"
-android:textSize="16sp"
-android:theme="@style/RadioButton"
-android:text="No voto"
-/>
-
-  <RadioButton
-  android:id="@+id/radio9"
-  
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:button="@drawable/radiobutton_selector"
-android:textColor="@drawable/radiobutton_color_selector"
-android:textSize="16sp"
-android:theme="@style/RadioButton"
-android:text="Anuló su voto"
+android:text="1 o 2 veces por semana"
 />
 
   <RadioButton

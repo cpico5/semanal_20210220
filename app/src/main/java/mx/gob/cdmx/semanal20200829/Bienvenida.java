@@ -1,7 +1,9 @@
 package mx.gob.cdmx.semanal20200829;
 
 import android.Manifest;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
@@ -12,15 +14,27 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
+import android.os.Looper;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.biometric.BiometricPrompt;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.FragmentActivity;
+
+import com.google.gson.Gson;
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.AsyncHttpResponseHandler;
+import com.loopj.android.http.MySSLSocketFactory;
+import com.loopj.android.http.RequestHandle;
+import com.loopj.android.http.RequestParams;
+
+import org.json.JSONObject;
 
 import java.io.DataOutputStream;
 import java.io.File;
@@ -32,6 +46,11 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
+
+import cz.msebera.android.httpclient.Header;
+
+import static mx.gob.cdmx.semanal20200829.Nombre.customURL;
+
 
 public class Bienvenida extends AppCompatActivity {
 
@@ -102,7 +121,7 @@ public class Bienvenida extends AppCompatActivity {
                         1);
             }
 
-        }else{
+        } else {
 
             usdbh3 = new UsuariosSQLiteHelper3(this);
             db3 = usdbh3.getReadableDatabase();
@@ -112,7 +131,8 @@ public class Bienvenida extends AppCompatActivity {
         String SQLFprint = "CREATE TABLE fp (" +
                 "id integer primary key autoincrement," +
                 "user TEXT NOT NULL," +
-                "pass TEXT NOT NULL );";
+                "pass TEXT NOT NULL," +
+                "activo INTEGER NOT NULL );";
 
         try {
 
@@ -125,104 +145,131 @@ public class Bienvenida extends AppCompatActivity {
 
 
         sacaUsuario();
-        Log.i(TAG,"cqs ------------->> Número de usuarios: "+sacaUsuario());
+        Log.i(TAG, "cqs ------------->> Número de usuarios onCreate: " + sacaUsuario());
 
 
         if (!verificaConexion(this)) {
-            Toast.makeText(getBaseContext(),"Sin conexión",
+            Toast.makeText(getBaseContext(), "Sin conexión",
                     Toast.LENGTH_LONG).show();
             //this.finish();
-        }
-        else{
+        } else {
 
-            new uploadData.UpdateBases().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR,sacaImei());
+            new uploadData.UpdateBases().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, sacaImei());
             new uploadData.UpdateAudios().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
         }
 
 
+        Executor newExecutor = Executors.newSingleThreadExecutor();
 
-            Executor newExecutor = Executors.newSingleThreadExecutor();
 
+        FragmentActivity activity = this;
 
-            FragmentActivity activity = this;
+        final BiometricPrompt myBiometricPrompt = new BiometricPrompt(activity, newExecutor, new BiometricPrompt.AuthenticationCallback() {
+            @Override
+            public void onAuthenticationError(int errorCode, @NonNull CharSequence errString) {
+                super.onAuthenticationError(errorCode, errString);
+                if (errorCode == BiometricPrompt.ERROR_NEGATIVE_BUTTON) {
 
-            final BiometricPrompt myBiometricPrompt = new BiometricPrompt(activity, newExecutor, new BiometricPrompt.AuthenticationCallback() {
-                @Override
-                public void onAuthenticationError(int errorCode, @NonNull CharSequence errString) {
-                    super.onAuthenticationError(errorCode, errString);
-                    if (errorCode == BiometricPrompt.ERROR_NEGATIVE_BUTTON) {
+                    Log.i(TAG, "cqs ------->>  Pulse el botón cancelar");
+                    finishAffinity();
 
-                        Log.i(TAG, "cqs ------->>  Pulse el botón cancelar");
-                        finishAffinity();
-
-                    } else {
-                        Log.i(TAG, "cqs ------->> A ocurrido un error");
-                        finishAffinity();
-                    }
+                } else {
+                    Log.i(TAG, "cqs ------->> A ocurrido un error");
+                    finishAffinity();
+                }
 
 //                    if (errorCode == BiometricPrompt.ERROR_USER_CANCELED) {
 //                        Log.i(TAG, "cqs ------->>  Pulse afuera del cuadro");
 //                    }
 
-                }
+            }
 
 
-
-
-
-                @Override
-                public void onAuthenticationSucceeded(@NonNull BiometricPrompt.AuthenticationResult result) {
-                    super.onAuthenticationSucceeded(result);
-                    Log.d(TAG, "Reconocimiento exitoso");
+            @RequiresApi(api = Build.VERSION_CODES.O)
+            @Override
+            public void onAuthenticationSucceeded(@NonNull BiometricPrompt.AuthenticationResult result) {
+                super.onAuthenticationSucceeded(result);
+                Log.d(TAG, "Reconocimiento exitoso");
 //                    Intent intent = new Intent(getApplicationContext(), Entrada.class);
 //                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 //                    startActivity(intent);
 //                    finish();
-                    if(Integer.parseInt(sacaUsuario().toString())==0){
 
-                        Log.i(TAG,"cqs ------------->> Número de usuarios: "+sacaUsuario());
-                        Intent intent = new Intent(getApplicationContext(), Registro.class);
-                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                        startActivity(intent);
-                        finish();
+                /*Si tiene internet y si es activo, pasa a sacar usuario, si no tiene internet, sigue a sacar usuario, si tine internet, verifica que este activo*/
 
-                    }else {
+                if (!verificaConexion(Bienvenida.this)) {
+//                        Toast.makeText(getBaseContext(), "Sin conexión", Toast.LENGTH_LONG).show();
+                    Log.i(TAG, "cqs ------------->> Sin conexión: " + sacaUsuario());
+                    dialogoConexion();
+                } else {
 
-                        Intent intent = new Intent(Bienvenida.this, MainActivity.class);
-                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                        Bundle bundle = new Bundle();
-                        bundle.putString("Nombre", sacaUsr());
-                        intent.putExtras(bundle);
-                        startActivity(intent);
+                    Log.i(TAG, "cqs ------------->> Con conexión: " + sacaUsuario());
 
-                        runOnUiThread(new Runnable() {
-                            public void run() {
-                                showToast("Acceso OK");
+                    Handler mainHandler = new Handler(Looper.getMainLooper());
+                    Runnable myRunnable = new Runnable() {
+                        @Override
+                        public void run() {
+                            try {
+                                usuarioWS(sacaUsr().toString(), sacaPss().toString());
+                            } catch (Exception e) {
+                                Log.i(TAG, "cqs ------------->> Error usuarioWS va para registro: " + sacaUsuario());
+                                Intent intent = new Intent(getApplicationContext(), Registro.class);
+                                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                startActivity(intent);
+                                finish();
                             }
-                        });
-                    }
 
-
-                }
-
-                @Override
-                public void onAuthenticationFailed() {
-                    super.onAuthenticationFailed();
-                    Log.d(TAG, "Huella no reconocida");
+                        }
+                    };
+                    mainHandler.post(myRunnable);
                 }
 
 
-            });
+//                    if(Integer.parseInt(sacaUsuario().toString())==0){
+//
+//                        Log.i(TAG,"cqs ------------->> Número de usuarios: "+sacaUsuario());
+//                        Intent intent = new Intent(getApplicationContext(), Registro.class);
+//                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//                        startActivity(intent);
+//                        finish();
+//
+//                    }else {
+//
+//                        Intent intent = new Intent(Bienvenida.this, MainActivity.class);
+//                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//                        Bundle bundle = new Bundle();
+//                        bundle.putString("Nombre", sacaUsr());
+//                        intent.putExtras(bundle);
+//                        startActivity(intent);
+//
+//                        runOnUiThread(new Runnable() {
+//                            public void run() {
+//                                showToast("Acceso OK");
+//                            }
+//                        });
+//                    }
 
-            final BiometricPrompt.PromptInfo promptInfo = new BiometricPrompt.PromptInfo.Builder()
-                    .setTitle("Use su huella para acceder")
-                    .setSubtitle("toca el sensor de huellas digitales")
-                    //.setDescription("This is the description")
-                    .setNegativeButtonText("Cancelar")
-                    .build();
+
+            }
+
+            @Override
+            public void onAuthenticationFailed() {
+                super.onAuthenticationFailed();
+                Log.d(TAG, "Huella no reconocida");
+            }
 
 
-            myBiometricPrompt.authenticate(promptInfo);
+        });
+
+        final BiometricPrompt.PromptInfo promptInfo = new BiometricPrompt.PromptInfo.Builder()
+                .setTitle("Use su huella para acceder")
+                .setSubtitle("toca el sensor de huellas digitales")
+                //.setDescription("This is the description")
+                .setNegativeButtonText("Cancelar")
+                .build();
+
+
+        myBiometricPrompt.authenticate(promptInfo);
 
 //        findViewById(R.id.launchAuthentication).setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -289,6 +336,24 @@ public class Bienvenida extends AppCompatActivity {
         return pass;
     }
 
+    private Integer sacaActivo() {
+        Integer activo = null;
+        final String F = "File dbfile";
+        // Abrimos la base de datos 'DBUsuarios' en modo escritura
+        usdbh3 = new UsuariosSQLiteHelper3(this);
+        db3 = usdbh3.getReadableDatabase();
+        String selectQuery = "select activo from fp limit 1";
+        Cursor cursor = db3.rawQuery(selectQuery, null);
+        if (cursor.moveToFirst()) {
+            do {
+                activo = cursor.getInt(0);
+            } while (cursor.moveToNext());
+        }
+        cursor.close();
+        db3.close();
+        return activo;
+    }
+
     /////// METODO PARA VERIFICAR LA CONEXIÓN A INTERNET
     public static boolean verificaConexion(Context ctx) {
         boolean bConectado = false;
@@ -304,6 +369,246 @@ public class Bienvenida extends AppCompatActivity {
         }
         return bConectado;
     }
+
+    /*Saca usuario WebService*/
+
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    public void usuarioWS(final String user, final String password) {
+
+//        showProgress(true);
+
+        RequestParams params = new RequestParams();
+        params.put("api", "loginSemanal");
+        params.put("usuario", user);
+        params.put("pass", password);
+        params.put("imei", sacaImei());
+
+        AsyncHttpClient client = new AsyncHttpClient();
+        client.setSSLSocketFactory(MySSLSocketFactory.getFixedSocketFactory());
+        //client.addHeader("Authorization", "Bearer " + usuario.getToken());
+        client.setTimeout(60000);
+
+        RequestHandle requestHandle = client.post(customURL, params, new AsyncHttpResponseHandler() {
+
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
+                String nombreStr = "";
+                Log.d(TAG, "cqs ----------->> Respuesta OK ");
+                Log.d(TAG, "cqs ----------->> ResponseBody" + new String(responseBody));
+                try {
+
+
+                    String json = new String(responseBody);
+
+                    if (json != null && !json.isEmpty()) {
+
+                        Gson gson = new Gson();
+                        JSONObject jsonObject = new JSONObject(json);
+                        Log.d(TAG, "cqs ----------->> Data: " + jsonObject.get("data"));
+
+                        String login = jsonObject.getJSONObject("response").get("code").toString();
+                        Log.d(TAG, "cqs ----------->> login: " + login);
+
+                        String usuario = jsonObject.getJSONObject("data").getJSONObject("user").get("usuario").toString();
+                        Log.d(TAG, "cqs ----------->> usuario: " + usuario);
+                        String password = jsonObject.getJSONObject("data").getJSONObject("user").get("password").toString();
+                        Log.d(TAG, "cqs ----------->> password: " + password);
+
+                        if (Integer.valueOf(login) == 1) {
+                            Log.d(TAG, "cqs ----------->> login: " + "Entra");
+                            if (Integer.parseInt(sacaUsuario().toString()) == 0) {
+
+                                Log.i(TAG, "cqs ------------->> Número de usuarios: " + sacaUsuario());
+                                Intent intent = new Intent(getApplicationContext(), Registro.class);
+                                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                startActivity(intent);
+                                finish();
+
+                            } else if (Integer.parseInt(sacaUsuario().toString()) != 0) {
+
+                                Integer activo = sacaActivo();
+
+                                if (activo == 0) {
+                                    activ();
+                                    pasaEncuesta();
+                                } else {
+
+                                    pasaEncuesta();
+                                }
+
+
+                            }
+                        } else {
+                            dialogoBaja();
+                            Log.d(TAG, "cqs ----------->> Entrada: " + "No entra");
+                        }
+                    }
+
+                } catch (Exception e) {
+//                    showProgress(false);
+                    Log.e(TAG, e.getMessage());
+                    Toast.makeText(Bienvenida.this, "Usuario y/o Contaseña no válidos", Toast.LENGTH_SHORT).show();
+                    dialogoBaja();
+                }
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
+//                showProgress(false);
+                try {
+                    Log.e(TAG, "cqs ----------------->> existe un error en la conexión -----> " + error.getMessage());
+                    if (responseBody != null)
+                        Log.d(TAG, "cqs ----------->> " + new String(responseBody));
+
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+
+                if (statusCode != 200) {
+                    Log.e(TAG, "Existe un error en la conexión -----> " + error.getMessage());
+                    if (responseBody != null)
+                        Log.d(TAG, "pimc -----------> " + new String(responseBody));
+
+                }
+
+                Toast.makeText(Bienvenida.this, "Error de conexión, intente de nuevo", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+    }
+
+    public void dialogoBaja() {
+        // timer.cancel();
+        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        Bienvenida.this.runOnUiThread(new Runnable() {
+            public void run() {
+                builder.setMessage("Ponte en contacto con tu supervisor")
+                        .setTitle("El usuario no esta Activo").setCancelable(false)
+                        .setPositiveButton("Cerrar", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+
+                                Log.i("cqs --->> Actualiza", "Entra P: " + "dialogo");
+                                noActiv();
+                                finishAffinity();
+
+                            }
+                        });
+                AlertDialog alert = builder.create();
+                alert.show();
+
+            }
+        });
+
+    }
+
+    public void dialogoConexion() {
+        // timer.cancel();
+        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        Bienvenida.this.runOnUiThread(new Runnable() {
+            public void run() {
+                builder.setMessage("Sin conexiòn a internet")
+                        .setTitle("Importante").setCancelable(false)
+                        .setPositiveButton("Cerrar", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+
+                                if (Integer.parseInt(sacaUsuario().toString()) == 0) {
+
+                                    Log.i(TAG, "cqs ------------->> Número de usuarios: " + sacaUsuario());
+                                    Intent intent = new Intent(getApplicationContext(), Registro.class);
+                                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                    startActivity(intent);
+                                    finish();
+
+                                } else {
+
+                                    pasaEncuesta();
+                                }
+
+                            }
+                        });
+                AlertDialog alert = builder.create();
+                alert.show();
+
+            }
+        });
+
+    }
+
+    public void pasaEncuesta() {
+        Intent intent = new Intent(Bienvenida.this, MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        Bundle bundle = new Bundle();
+        bundle.putString("Nombre", sacaUsr());
+        intent.putExtras(bundle);
+        startActivity(intent);
+
+        runOnUiThread(new Runnable() {
+            public void run() {
+                showToast("Acceso OK");
+            }
+        });
+    }
+
+//    @TargetApi(Build.VERSION_CODES.HONEYCOMB_MR2)
+//    private void showProgress(final boolean show) {
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB_MR2) {
+//            int shortAnimTime = getResources().getInteger(android.R.integer.config_shortAnimTime);
+//
+//            mUsuario.setVisibility(show ? View.GONE : View.VISIBLE);
+//            mUsuario.animate().setDuration(shortAnimTime).alpha(
+//                    show ? 0 : 1).setListener(new AnimatorListenerAdapter() {
+//                @Override
+//                public void onAnimationEnd(Animator animation) {
+//                    mUsuario.setVisibility(show ? View.GONE : View.VISIBLE);
+//                }
+//            });
+//
+//            mProgressView.setVisibility(show ? View.VISIBLE : View.GONE);
+//            mProgressView.animate().setDuration(shortAnimTime).alpha(
+//                    show ? 1 : 0).setListener(new AnimatorListenerAdapter() {
+//                @Override
+//                public void onAnimationEnd(Animator animation) {
+//                    mProgressView.setVisibility(show ? View.VISIBLE : View.GONE);
+//                }
+//            });
+//        } else {
+//            mProgressView.setVisibility(show ? View.VISIBLE : View.GONE);
+//            mUsuario.setVisibility(show ? View.GONE : View.VISIBLE);
+//        }
+//    }
+
+    public void activ() {
+        String SQLFprint = "update fp set activo='1' where activo ='0' ";
+
+        try {
+
+            usdbh3 = new UsuariosSQLiteHelper3(Bienvenida.this);
+            db3 = usdbh3.getReadableDatabase();
+
+            db3.execSQL(SQLFprint);
+            Log.i("cqs --->> Actualiza", "Se Actualiza el usuario: " + "fp");
+        } catch (Exception e) {
+            String stackTrace = Log.getStackTraceString(e);
+            Log.i("cqs --->>", "Error al actualizar el usuario" + stackTrace);
+        }
+    }
+
+    public void noActiv() {
+        String SQLFprint = "update fp set activo='0' where activo ='1' ";
+
+        try {
+
+            usdbh3 = new UsuariosSQLiteHelper3(Bienvenida.this);
+            db3 = usdbh3.getReadableDatabase();
+
+            db3.execSQL(SQLFprint);
+            Log.i("cqs --->> Actualiza", "Se Actualiza el usuario: " + "fp");
+        } catch (Exception e) {
+            String stackTrace = Log.getStackTraceString(e);
+            Log.i("cqs --->>", "Error al actualizar el usuario" + stackTrace);
+        }
+    }
+
 
     //Enviar Base
     public int uploadBase(String sourceFileUri) {
@@ -336,9 +641,7 @@ public class Bienvenida extends AppCompatActivity {
 
             return 0;
 
-        }
-        else
-        {
+        } else {
             try {
                 // open a URL connection to the Servlet
                 FileInputStream fileInputStream = new FileInputStream(sourceFile);
@@ -382,16 +685,16 @@ public class Bienvenida extends AppCompatActivity {
                 serverResponseCode = conn.getResponseCode();
                 String serverResponseMessage = conn.getResponseMessage();
 
-                Log.i("TAG", "HTTP Response is : "+ serverResponseMessage + ": " + serverResponseCode);
+                Log.i("TAG", "HTTP Response is : " + serverResponseMessage + ": " + serverResponseCode);
 
-                if(serverResponseCode == 200){
+                if (serverResponseCode == 200) {
 
                     runOnUiThread(new Runnable() {
                         public void run() {
 
                             String msg = "File Upload Completed.\n\n See uploaded file here : \n\n"
-                                    +" http://www.androidexample.com/media/uploads/"
-                                    +"20161124_002_359083065132816_1.jpg";
+                                    + " http://www.androidexample.com/media/uploads/"
+                                    + "20161124_002_359083065132816_1.jpg";
 
 //				                              Toast.makeText(Entrada.this, "File Upload Complete."+msg,Toast.LENGTH_SHORT).show();
                         }
@@ -409,8 +712,7 @@ public class Bienvenida extends AppCompatActivity {
                 ex.printStackTrace();
 
 
-
-                Log.i(TAG, " =====> archivo:  El Archivo no existe... :" + "Upload file to server "+ "error: " + ex.getMessage());
+                Log.i(TAG, " =====> archivo:  El Archivo no existe... :" + "Upload file to server " + "error: " + ex.getMessage());
 
 //				                Log.e("Upload file to server", "error: " + ex.getMessage(), ex);
             } catch (Exception e) {
@@ -418,7 +720,7 @@ public class Bienvenida extends AppCompatActivity {
 //				                dialog.dismiss();
                 e.printStackTrace();
 
-                Log.i(TAG, " =====> archivo:  El Archivo no existe... :" + "Upload file to server Exception "+ "Exception : "+ e.getMessage());
+                Log.i(TAG, " =====> archivo:  El Archivo no existe... :" + "Upload file to server Exception " + "Exception : " + e.getMessage());
 
 //				                Log.e("Upload file to server Exception", "Exception : "
 //				                                                 + e.getMessage(), e);
@@ -506,14 +808,14 @@ public class Bienvenida extends AppCompatActivity {
             File sdCard;
             sdCard = Environment.getExternalStorageDirectory();
 //						final String pathAudios = sdCard.getAbsolutePath() + "/" + nombreEncuesta+"-Audio"+date2;
-            final String pathAudios = sdCard.getAbsolutePath() + "/" + nombreEncuesta +"-Audio" + formattedDate3 + "/";
+            final String pathAudios = sdCard.getAbsolutePath() + "/" + nombreEncuesta + "-Audio" + formattedDate3 + "/";
 
             String sDirectorio = pathAudios;
             final File f = new File(sDirectorio);
-            Log.i(TAG,"lista"+pathAudios);
+            Log.i(TAG, "lista" + pathAudios);
 
 //						final String customURL = "https://opinion.cdmx.gob.mx/cgi-bin/fotos/programas_sociales/";
-            final String customURL = "https://opinion.cdmx.gob.mx/audios/"+nombreEncuesta+ "/";
+            final String customURL = "https://opinion.cdmx.gob.mx/audios/" + nombreEncuesta + "/";
 
             Log.i(TAG, " =====> URL audios: " + customURL);
             Log.i(TAG, " =====> lista audios 1: " + pathAudios);
@@ -526,14 +828,15 @@ public class Bienvenida extends AppCompatActivity {
 
                     File[] ficheros = F.listFiles();
 
-                    for (int i = 0; i <ficheros.length; i++) {
+                    for (int i = 0; i < ficheros.length; i++) {
                         //Simulamos cierto retraso
-                        try {Thread.sleep(500); }
-                        catch (InterruptedException e) {}
+                        try {
+                            Thread.sleep(500);
+                        } catch (InterruptedException e) {
+                        }
 
-                        publishProgress(i/(float)(ficheros.length)); //Actualizamos los valores
+                        publishProgress(i / (float) (ficheros.length)); //Actualizamos los valores
                     }
-
 
 
                     String[] s = new String[ficheros.length];
@@ -546,22 +849,22 @@ public class Bienvenida extends AppCompatActivity {
 //								 uploadFotos(s[x],date2);
 
 
-                        URL u = new URL (customURL+t[x]);
-                        Log.i(TAG, " =====> Archivo Audios custom: "+customURL+t[x] );
-                        HttpURLConnection huc =  ( HttpURLConnection )  u.openConnection ();
-                        huc.setRequestMethod ("GET");  //OR  huc.setRequestMethod ("HEAD");
-                        huc.connect () ;
+                        URL u = new URL(customURL + t[x]);
+                        Log.i(TAG, " =====> Archivo Audios custom: " + customURL + t[x]);
+                        HttpURLConnection huc = (HttpURLConnection) u.openConnection();
+                        huc.setRequestMethod("GET");  //OR  huc.setRequestMethod ("HEAD");
+                        huc.connect();
                         huc.getResponseCode();
                         Log.i(TAG, " =====> Archivo:  lista De Audios ==>" + huc.getResponseCode());
-                        if(huc.getResponseCode()==200){
+                        if (huc.getResponseCode() == 200) {
 
                             //moveFile(pathFotosN, t[x], pathFotosF);
-                            Log.i(TAG, " =====> Archivo:  En el servidor custom no hace nada==>" + t[x] );
+                            Log.i(TAG, " =====> Archivo:  En el servidor custom no hace nada==>" + t[x]);
 
-                        }else if(huc.getResponseCode()==404){
+                        } else if (huc.getResponseCode() == 404) {
 
                             uploadAudios(s[x]);
-                            Log.i(TAG, " =====> Archivo:  Enviado al servidor custom==>" + t[x] );
+                            Log.i(TAG, " =====> Archivo:  Enviado al servidor custom==>" + t[x]);
 
 
                         }
@@ -576,7 +879,7 @@ public class Bienvenida extends AppCompatActivity {
 
             } catch (Exception e) {
                 String stackTrace = Log.getStackTraceString(e);
-                Log.i("Manda Audios","Error Manda Audios"+ stackTrace);
+                Log.i("Manda Audios", "Error Manda Audios" + stackTrace);
             }
 
 
@@ -609,7 +912,7 @@ public class Bienvenida extends AppCompatActivity {
         File sdCard;
         sdCard = Environment.getExternalStorageDirectory();
         //final String pathFotos = sdCard.getAbsolutePath() + "/"+ nombreEncuesta+"-Audio"+fech;
-        final String pathAudios = sdCard.getAbsolutePath() + nombreEncuesta +"-Audio" + formattedDate3 + "/";
+        final String pathAudios = sdCard.getAbsolutePath() + nombreEncuesta + "-Audio" + formattedDate3 + "/";
 
         String fileName = sourceFileUri;
 
@@ -635,9 +938,7 @@ public class Bienvenida extends AppCompatActivity {
 
             return 0;
 
-        }
-        else
-        {
+        } else {
             try {
                 // open a URL connection to the Servlet
                 FileInputStream fileInputStream = new FileInputStream(sourceFile);
@@ -681,16 +982,16 @@ public class Bienvenida extends AppCompatActivity {
                 serverResponseCode = conn.getResponseCode();
                 String serverResponseMessage = conn.getResponseMessage();
 
-                Log.i("uploadFile", "HTTP Response is : "+ serverResponseMessage + ": " + serverResponseCode);
+                Log.i("uploadFile", "HTTP Response is : " + serverResponseMessage + ": " + serverResponseCode);
 
-                if(serverResponseCode == 200){
+                if (serverResponseCode == 200) {
 
                     runOnUiThread(new Runnable() {
                         public void run() {
 
                             String msg = "File Upload Completed.\n\n See uploaded file here : \n\n"
-                                    +" http://www.androidexample.com/media/uploads/"
-                                    +"20161124_002_359083065132816_1.jpg";
+                                    + " http://www.androidexample.com/media/uploads/"
+                                    + "20161124_002_359083065132816_1.jpg";
 
 //			                      Toast.makeText(Entrada.this, "File Upload Complete."+msg,Toast.LENGTH_SHORT).show();
                         }
@@ -715,7 +1016,7 @@ public class Bienvenida extends AppCompatActivity {
                     }
                 });
 
-                Log.i(TAG, " =====> archivo:  El Archivo no existe... :" + "Upload file to server "+ "error: " + ex.getMessage());
+                Log.i(TAG, " =====> archivo:  El Archivo no existe... :" + "Upload file to server " + "error: " + ex.getMessage());
 
 //			        Log.e("Upload file to server", "error: " + ex.getMessage(), ex);
             } catch (Exception e) {
@@ -730,7 +1031,7 @@ public class Bienvenida extends AppCompatActivity {
 //			                        Toast.LENGTH_SHORT).show();
                     }
                 });
-                Log.i(TAG, " =====> archivo:  El Archivo no existe... :" + "Upload file to server Exception "+ "Exception : "+ e.getMessage());
+                Log.i(TAG, " =====> archivo:  El Archivo no existe... :" + "Upload file to server Exception " + "Exception : " + e.getMessage());
 
 //			        Log.e("Upload file to server Exception", "Exception : "
 //			                                         + e.getMessage(), e);
@@ -739,8 +1040,6 @@ public class Bienvenida extends AppCompatActivity {
 
         } // End else block
     }
-
-
 
 
 }

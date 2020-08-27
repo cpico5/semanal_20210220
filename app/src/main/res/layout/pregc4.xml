@@ -49,7 +49,7 @@ android:button="@drawable/radiobutton_selector"
 android:textColor="@drawable/radiobutton_color_selector"
 android:textSize="16sp"
 android:theme="@style/RadioButton"
-android:text="Bien"
+android:text="Permaneció en casa"
 />
 
   <RadioButton
@@ -61,19 +61,7 @@ android:button="@drawable/radiobutton_selector"
 android:textColor="@drawable/radiobutton_color_selector"
 android:textSize="16sp"
 android:theme="@style/RadioButton"
-android:text="Regular"
-/>
-
-  <RadioButton
-  android:id="@+id/radio3"
-  
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:button="@drawable/radiobutton_selector"
-android:textColor="@drawable/radiobutton_color_selector"
-android:textSize="16sp"
-android:theme="@style/RadioButton"
-android:text="Mal"
+android:text="Fue internado en un hospital"
 />
 
   <RadioButton
