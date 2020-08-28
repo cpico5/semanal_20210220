@@ -22,7 +22,7 @@
             android:background="@drawable/gradient_box"
             android:onClick="subeCenso"
             android:text="Envia Información"
-            android:textColor="@color/AZUL" />
+            android:textColor="@color/BLANCO" />
 
         <Button
             android:id="@+id/button4"
@@ -35,7 +35,7 @@
             android:onClick="sube"
             android:text="Button"
             android:visibility="invisible"
-            android:textColor="@color/AZUL" />
+            android:textColor="@color/BLANCO" />
 
         <Button
             android:id="@+id/btnAudios"
@@ -47,7 +47,7 @@
             android:background="@drawable/gradient_box"
             android:onClick="subeAudios"
             android:text="Envia Audios"
-            android:textColor="@color/AZUL" />
+            android:textColor="@color/BLANCO" />
 
         <Button
             android:id="@+id/btnInicio"
@@ -57,8 +57,8 @@
             android:layout_below="@+id/button4"
             android:background="@drawable/gradient_box"
             android:onClick="inicio"
-            android:text="Finalizar"
-            android:textColor="@color/AZUL" />
+            android:text="Cerrar aplicación"
+            android:textColor="@color/BLANCO" />
 
     </RelativeLayout>
 

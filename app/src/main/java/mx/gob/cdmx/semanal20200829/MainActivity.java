@@ -986,7 +986,7 @@ public class MainActivity extends Activity implements OnItemSelectedListener, Ad
                 "ARREDONDO",
                 "HUGO",
                 "JASSO",
-                "OSCAR",
+                "SAUL",
                 "SANCHEZ"
         };
 
