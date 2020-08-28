@@ -82,9 +82,9 @@
     <string name="PREGUNTAc7b">Tamizaje/ pruebas de COVID 19</string>
     <string name="PREGUNTAc7c">Apoyos económicos y alimentarios para familias con casos de COVID 19</string>
     <string name="PREGUNTAc8">¿Usted o algún familiar que viva con usted ha asistido a alguno de estos kioscos?</string>
-    <string name="PREGUNTAc9">¿Usted ha oído del programa de "Salud en tu vida"?</string>
-    <string name="PREGUNTAc10">En este programa usted manda un SMS con la palabra "CUIDATE" al 51515 y se le aplica un cuestionario para determinar su posibilidad de padecer diabetes, hipertensión, etcétera y le dan seguimiento y sugerencias para el cuidado de su salud ¿había oído hablar de este programa?</string>
-    <string name="PREGUNTAc11">¿Usted o algún familiar que viva con usted ha mandando el SMS "Cuídate" al 51515?</string>
+    <string name="PREGUNTAc9">¿Usted ha oído del programa de \"Salud en tu vida\"?</string>
+    <string name="PREGUNTAc10">En este programa usted manda un SMS con la palabra \"CUIDATE\" al 51515 y se le aplica un cuestionario para determinar su posibilidad de padecer diabetes, hipertensión, etcétera y le dan seguimiento y sugerencias para el cuidado de su salud ¿había oído hablar de este programa?</string>
+    <string name="PREGUNTAc11">¿Usted o algún familiar que viva con usted ha mandando el SMS \"Cuídate\" al 51515?</string>
     <string name="PREGUNTAc12">¿Qué tan efectivos le parecen estos programas mediante mensajes para prevenir enfermedades crónico degenerativas, muy efectivos, poco efectivos, nada efectivos?</string>
     <string name="PREGUNTAc13">¿Cuántas veces a la semana consume usted refrescos y bebidas embotelladas? (espontánea)</string>
     <string name="PREGUNTAc14">¿Cuántas veces por semana consume botanas, frituras o pan previamente empacado? (espontánea)</string>
@@ -95,7 +95,7 @@
     <string name="PREGUNTAc18">Usted o algún familiar que viva con usted tienen algún problema de obesidad, hipertensión o diabetes que haya sido diagnosticado por un médico?</string>
     <string name="PREGUNTAc19">En los últimos dos meses, ¿ha visitado su hogar personal del Gobierno de la Ciudad para informarle a usted o algún familiar sobre medidas de prevención y cuidado durante la pandemia de Coronavirus?</string>
     <string name="PREGUNTAc20">¿Usted ha visto en su colonia trípticos, folletos o carteles del Gobierno de la Ciudad para informar sobre medidas de prevención y cuidado durante la pandemia de Coronavirus?</string>
-    <string name="PREGUNTAc21">Solo para estadística, ¿me podría decir por quien voto para Jefe de Gobierno en las elecciones de 2018? 8espontánea)</string>
+    <string name="PREGUNTAc21">Solo para estadística, ¿me podría decir por quien voto para Jefe de Gobierno en las elecciones de 2018? (espontánea)</string>
     <string name="PREGUNTAc21a">A dos años de la elección ¿sigue pensando que fue la mejor elección para la Jefatura de Gobierno? (espontáneo)</string>
     <string name="PREGUNTAc21b">Después de dos años de la elección ¿cómo cree que está haciendo su trabajo la Jefa de Gobierno, Claudia Sheinbaum, bien o mal? (no leer regular)</string>
     <string name="PREGUNTAc22">Si hoy fueran las elecciones para elegir alcaldes y diputados ¿por qué partido votaría usted? (espontáneo)</string>
