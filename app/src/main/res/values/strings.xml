@@ -87,26 +87,7 @@
     <string name="PREGUNTAc11">¿Usted o algún familiar que viva con usted ha mandando el SMS \"Cuídate\" al 51515?</string>
     <string name="PREGUNTAc12">¿Qué tan efectivos le parecen estos programas mediante mensajes para prevenir enfermedades crónico degenerativas, muy efectivos, poco efectivos, nada efectivos?</string>
     <string name="PREGUNTAc13">¿Cuántas veces a la semana consume usted refrescos y bebidas embotelladas? (espontánea)</string>
-    <string name="PREGUNTAc14">¿Cuántas veces por semana consume botanas, frituras o pan previamente empacado? (espontánea)</string>
-    <string name="PREGUNTAc15">Aparte de el ejercicio que pueda hacer para llegar a su lugar de trabajo o en las tareas diarias ¿Cuántas veces por semana hace ejercicio, como caminar, correr, andar en bicicleta o practicar algún deporte? (espontánea)</string>
-    <string name="PREGUNTAc15a">Cada vez que realiza ejercicio, ¿durante cuánto tiempo lo hace?</string>
-    <string name="PREGUNTAc16">En una semana normal usted acostumbra hacer alguna de sus tres comidas en la calle (desayuno, comida o cena)?</string>
-    <string name="PREGUNTAc17">De los siete días de la semana cuantos realiza alguna comida en la calle (desayuno, comida o cena)</string>
-    <string name="PREGUNTAc18">Usted o algún familiar que viva con usted tienen algún problema de obesidad, hipertensión o diabetes que haya sido diagnosticado por un médico?</string>
-    <string name="PREGUNTAc19">En los últimos dos meses, ¿ha visitado su hogar personal del Gobierno de la Ciudad para informarle a usted o algún familiar sobre medidas de prevención y cuidado durante la pandemia de Coronavirus?</string>
-    <string name="PREGUNTAc20">¿Usted ha visto en su colonia trípticos, folletos o carteles del Gobierno de la Ciudad para informar sobre medidas de prevención y cuidado durante la pandemia de Coronavirus?</string>
-    <string name="PREGUNTAc21">Solo para estadística, ¿me podría decir por quien voto para Jefe de Gobierno en las elecciones de 2018? (espontánea)</string>
-    <string name="PREGUNTAc21a">A dos años de la elección ¿sigue pensando que fue la mejor elección para la Jefatura de Gobierno? (espontáneo)</string>
-    <string name="PREGUNTAc21b">Después de dos años de la elección ¿cómo cree que está haciendo su trabajo la Jefa de Gobierno, Claudia Sheinbaum, bien o mal? (no leer regular)</string>
-    <string name="PREGUNTAc22">Si hoy fueran las elecciones para elegir alcaldes y diputados ¿por qué partido votaría usted? (espontáneo)</string>
-
-
-<string name="PREGUNTAATRIBUTOS">De los siguientes atributos personales, ¿cuáles cree usted que sí o que no tiene la Jefa de Gobierno, Claudia Sheinbaum?</string>
-    <string name="PREGUNTAEST">Para terminar le voy a realizar algunas preguntas para la estadística</string>
-    <string name="PREGUNTAHIJOS">Tiene hijos</string>
-    <string name="PREGUNTAAPORTA">Pensando en el jefe o jefa de hogar, ¿cuál fue el último año de estudios que aprobó en la escuela?</string>
-    <string name="PREGUNTAOCUPACION">¿Cuál es la principal ocupación o actividad en la semana?</string>
-    <string name="PREGUNTACOCHE">¿Tiene automóvil propio?</string>
+    <string name="PREGUNTAc14">¿Cuántas veces por semana consume botanas, frituras o pan previamente empacado? (espontánea)</strin
     <string name="PREGUNTACUANTOSCOCHES">¿Cuántos coches tienen en su vivienda?</string>
     <string name="PREGUNTACUARTOS">Sin contar baño ni cocina, ¿cuántos cuartos tiene su vivienda?</string>
     <string name="PREGUNTACUARTOSDORMIR">En esta vivienda, ¿cuántos cuartos se usan para dormir, sin contar pasillos ni baños?</string>
