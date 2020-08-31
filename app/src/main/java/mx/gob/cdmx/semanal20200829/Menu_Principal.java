@@ -6,6 +6,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 import mx.gob.cdmx.semanal20200829.R;
+import mx.gob.cdmx.semanal20200829.model.Usuario;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -18,17 +19,25 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.provider.Settings.Secure;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
-
+import static mx.gob.cdmx.semanal20200829.Nombre.USUARIO;
+import static android.text.Layout.JUSTIFICATION_MODE_INTER_WORD;
+import static mx.gob.cdmx.semanal20200829.Nombre.USUARIO;
+import static mx.gob.cdmx.semanal20200829.Nombre.customURL;
+import static mx.gob.cdmx.semanal20200829.Nombre.encuesta;
 
 public class Menu_Principal extends Activity {
 	
 	private static final String LOG_TAG = "Grabadora";          
 	private MediaRecorder mediaRecorder;
 	private MediaPlayer mediaPlayer;
+
+    private Usuario usuario;
 	
 	final Context context = this;
 	public MediaRecorder recorder = new MediaRecorder();
@@ -286,12 +295,27 @@ public class Menu_Principal extends Activity {
 
     public void inicio(View view){
 
-
-		this.finish();
+        Intent i = new Intent(Menu_Principal.this, Bienvenida.class);
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(i);
+        System.exit(0); // metodo que se debe implementar
 
     }
-   
 
-    
+    // EVENTO AL PULSAR EL BOTON ATRAS
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {
+// Esto es lo que hace mi botón al pulsar ir a atrás
+            Toast.makeText(getApplicationContext(), "No puedo ir hacia atrás, finaliza con el Botón", Toast.LENGTH_SHORT)
+                    .show();
+
+// dialogoAbandono();
+
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
 
 }
