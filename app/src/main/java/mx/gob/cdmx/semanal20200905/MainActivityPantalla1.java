@@ -2486,7 +2486,7 @@ public void valores() {
     String strc2 = opc2;
     String strc3 = strTextc3;
     String strc4 = opc4;
-    String strc5 = opc5;
+    String strc5 = "pregunta";
     String strc5a = opc5a;
     String strc5b = opc5b;
     String strc5c = opc5c;
@@ -2495,7 +2495,7 @@ public void valores() {
     String strc5f = opc5f;
     String strc5g = opc5g;
     String strc6 = opc6;
-    String strc7 = opc7;
+    String strc7 = "pregunta";
     String strc7a = opc7a;
     String strc7b = opc7b;
     String strc7c = opc7c;
