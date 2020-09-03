@@ -69,35 +69,6 @@
     <string name="PREGUNTA7">Hablando ahora de la Ciudad de México y de su gobierno, con lo que Ud. sabe, ¿está de acuerdo o en desacuerdo con el trabajo realizado hasta ahora por la Jefa de Gobierno, Claudia Sheinbaum?</string>
     <string name="PREGUNTA8">En una escala del 1 al 10, donde 1 es muy mala y 10 muy buena, ¿cómo califica la labor realizada hasta hoy por la Jefa de Gobierno, Claudia Sheinbaum, en la Ciudad de México?</string>
     <string name="PREGUNTA9">En su opinión, ¿la Jefa de Gobierno Claudia Sheinbaum tiene mucha, poca o ninguna capacidad para resolver los problemas de la Ciudad de México?</string>
-    <string name="PREGUNTAc1">¿Qué tan probable cree sea contagiarse de coronavirus en algún momento de este año, muy probable, probable, poco probable o nada probable? </string>
-    <string name="PREGUNTAc2">En este momento ¿qué le preocupa más el coronavirus o su situación económica? (no leer ambos) </string>
-    <string name="PREGUNTAc3">De marzo a la fecha ¿usted o algún familiar que viva con usted ha tenido COVID 19 o síntomas de COVID 19? </string>
-    <string name="PREGUNTAc4">La persona que tuvo Covid o sus síntomas ¿se quedó en casa o fue internada en algún hospital?</string>
-    <string name="PREGUNTAc4a">A la persona que le díó Covid ¿es hombre o mujer?</string>
-    <string name="PREGUNTAc4b">Y ¿qué edad tiene?</string>
-    <string name="PREGUNTAc5">Y actualmente la persona que tuvo Covid o sus síntomas ¿cómo se encuentra? (espontánea)</string>
-    <string name="PREGUNTAc6">¿Usted ha oído de los Kioscos de la salud que se instalaron en diversas colonias de la Ciudad?</string>
-    <string name="PREGUNTAc7">Con lo que sabe o ha escuchado que tipo de servicios dan en estos kioscos? (espontáneo)</string>
-    <string name="PREGUNTAc7a">Orientación de cuidado y prevención de COVID</string>
-    <string name="PREGUNTAc7b">Tamizaje/ pruebas de COVID 19</string>
-    <string name="PREGUNTAc7c">Apoyos económicos y alimentarios para familias con casos de COVID 19</string>
-    <string name="PREGUNTAc8">¿Usted o algún familiar que viva con usted ha asistido a alguno de estos kioscos?</string>
-    <string name="PREGUNTAc9">¿Usted ha oído del programa de \"Salud en tu vida\"?</string>
-    <string name="PREGUNTAc10">En este programa usted manda un SMS con la palabra \"CUIDATE\" al 51515 y se le aplica un cuestionario para determinar su posibilidad de padecer diabetes, hipertensión, etcétera y le dan seguimiento y sugerencias para el cuidado de su salud ¿había oído hablar de este programa?</string>
-    <string name="PREGUNTAc11">¿Usted o algún familiar que viva con usted ha mandando el SMS \"Cuídate\" al 51515?</string>
-    <string name="PREGUNTAc12">¿Qué tan efectivos le parecen estos programas mediante mensajes para prevenir enfermedades crónico degenerativas, muy efectivos, poco efectivos, nada efectivos?</string>
-    <string name="PREGUNTAc13">¿Cuántas veces a la semana consume usted refrescos y bebidas embotelladas? (espontánea)</string>
-    <string name="PREGUNTAc14">¿Cuántas veces por semana consume botanas, frituras o pan previamente empacado? (espontánea)</string>
-
-    <string name="PREGUNTA1">¿Cómo se entera Usted de las noticias regularmente?</string>
-    <string name="PREGUNTA2">Sólo como información, NO le voy a solicitar datos o sus cuentas ¿Usted tiene cuenta personal en Facebook?</string>
-    <string name="PREGUNTA3">¿Tiene cuenta personal en Twitter?</string>
-    <string name="PREGUNTA4">¿Usted utiliza WhatsApp?</string>
-    <string name="PREGUNTA5">Con lo que usted sabe ¿está de acuerdo, o en desacuerdo con el trabajo realizado hasta ahora por el Presidente de la República, Andrés Manuel López Obrador?</string>
-    <string name="PREGUNTA6">Con lo que usted sabe, ¿piensa que el presidente Andrés Manuel López Obrador tiene las riendas del país en la mano?</string>
-    <string name="PREGUNTA7">Hablando ahora de la Ciudad de México y de su gobierno, con lo que Ud. sabe, ¿está de acuerdo o en desacuerdo con el trabajo realizado hasta ahora por la Jefa de Gobierno, Claudia Sheinbaum?</string>
-    <string name="PREGUNTA8">En una escala del 1 al 10, donde 1 es muy mala y 10 muy buena, ¿cómo califica la labor realizada hasta hoy por la Jefa de Gobierno, Claudia Sheinbaum, en la Ciudad de México?</string>
-    <string name="PREGUNTA9">En su opinión, ¿la Jefa de Gobierno Claudia Sheinbaum tiene mucha, poca o ninguna capacidad para resolver los problemas de la Ciudad de México?</string>
     <string name="PREGUNTAc1">¿Se enteró usted de que el pasado 1 de septiembre el Presidente, Andrés Manuel López Obrador dio un mensaje por su primer informe de gobierno?</string>
     <string name="PREGUNTAc2">¿Usted vio o escuchó el mensaje por el 2do informe de gobierno de Andrés Manuel López Obrador? (no leer solo una parte)</string>
     <string name="PREGUNTAc3">¿Qué es lo que usted recuerda más del mensaje del presidente Andrés Manuel López Obrador?</string>
@@ -127,7 +98,12 @@
     <string name="PREGUNTAc11">Si hoy fueran las elecciones para elegir alcaldes y diputados ¿por qué partido votaría usted? (espontáneo)</string>
 
 
-
+    <string name="PREGUNTAATRIBUTOS">De los siguientes atributos personales, ¿cuáles cree usted que sí o que no tiene la Jefa de Gobierno, Claudia Sheinbaum?</string>
+    <string name="PREGUNTAEST">Para terminar le voy a realizar algunas preguntas para la estadística</string>
+    <string name="PREGUNTAHIJOS">Tiene hijos</string>
+    <string name="PREGUNTAAPORTA">Pensando en el jefe o jefa de hogar, ¿cuál fue el último año de estudios que aprobó en la escuela?</string>
+    <string name="PREGUNTAOCUPACION">¿Cuál es la principal ocupación o actividad en la semana?</string>
+    <string name="PREGUNTACOCHE">¿Tiene automóvil propio?</string>
     <string name="PREGUNTACUANTOSCOCHES">¿Cuántos coches tienen en su vivienda?</string>
     <string name="PREGUNTACUARTOS">Sin contar baño ni cocina, ¿cuántos cuartos tiene su vivienda?</string>
     <string name="PREGUNTACUARTOSDORMIR">En esta vivienda, ¿cuántos cuartos se usan para dormir, sin contar pasillos ni baños?</string>

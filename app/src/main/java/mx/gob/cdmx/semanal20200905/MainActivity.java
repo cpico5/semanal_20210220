@@ -987,15 +987,15 @@ public class MainActivity extends Activity implements OnItemSelectedListener, Ad
                 "ARREDONDO",
                 "BERNACHI",
                 "DANIEL",
-                "SANCHEZ",
+                "EDUARDO S",
                 "ENRIQUE",
                 "IRIS",
+                "LUJANO",
                 "OSCAR",
                 "POLANCO",
                 "HUGO",
                 "SAUL",
                 "TABLA"
-
         };
 
         // Alternativa 1: Array java
