@@ -614,15 +614,15 @@ public String elTiempo() {
 
 private Integer[] mLinearLayoutIds = {
             R.layout.activity_pantalla1,
-//            R.layout.activity_pantalla2,
-//            R.layout.activity_pantalla3,
-//            R.layout.activity_pantalla4,
-//            R.layout.activity_pantalla5,
-//            R.layout.activity_pantalla6,
-//            R.layout.activity_pantalla7,
-//            R.layout.activity_pantalla8,
-//            R.layout.activity_pantalla9,
-//            R.layout.activity_pantalla10,
+            R.layout.activity_pantalla2,
+            R.layout.activity_pantalla3,
+            R.layout.activity_pantalla4,
+            R.layout.activity_pantalla5,
+            R.layout.activity_pantalla6,
+            R.layout.activity_pantalla7,
+            R.layout.activity_pantalla8,
+            R.layout.activity_pantalla9,
+            R.layout.activity_pantalla10,
 ////// R.layout.activity_pantalla11,
 //// R.layout.activity_pantalla12,
 //// R.layout.activity_pantalla13,
@@ -651,7 +651,7 @@ private Integer[] mLinearLayoutIds = {
 protected void onCreate(Bundle savedInstanceState) {
 // TODO Auto-generated method stub
     super.onCreate(savedInstanceState);
-setContentView(R.layout.activity_pantalla1); // COMENTAR ESTA CUANDO ES ALEATORIO
+//setContentView(R.layout.activity_pantalla1); // COMENTAR ESTA CUANDO ES ALEATORIO
 
 Intent startingIntent = getIntent();
 if (startingIntent == null) {
@@ -670,9 +670,9 @@ if (startingIntent == null) {
 random = new java.util.Random();
 //
 /*DESCOMENTAR ESTAS 3 LINEAS CUANDO YA ESTA EL NUMERO DE HOJAS ALEATORIO */
-//        rand = random.nextInt(9);
-//        setContentView(mLinearLayoutIds[rand]);
-//        Log.i(null, "El aleatorio: " + rand); // si rand= 11 en el layoud corresponde a uno mas
+        rand = random.nextInt(9);
+        setContentView(mLinearLayoutIds[rand]);
+        Log.i(null, "El aleatorio: " + rand); // si rand= 11 en el layoud corresponde a uno mas
 
 
 /*activity_pantalla12*/
@@ -3062,7 +3062,7 @@ public void guardar(View v) {
             else if (layc2.getVisibility() == View.VISIBLE && opc2.matches("sin datos")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac2,Toast.LENGTH_LONG).show();}
             else if (layc3.getVisibility() == View.VISIBLE && opc3.matches("sin datos") && editPreguntac3.getText().toString().trim().length() == 0 ){Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac3,Toast.LENGTH_LONG).show();}
             else if (layc4.getVisibility() == View.VISIBLE && opc4.matches("sin datos")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac4,Toast.LENGTH_LONG).show();}
-            else if (layc5.getVisibility() == View.VISIBLE && opc5.matches("sin datos")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac5,Toast.LENGTH_LONG).show();}
+//            else if (layc5.getVisibility() == View.VISIBLE && opc5.matches("sin datos")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac5,Toast.LENGTH_LONG).show();}
             else if (layc5a.getVisibility() == View.VISIBLE && opc5a.matches("sin datos")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac5a,Toast.LENGTH_LONG).show();}
             else if (layc5b.getVisibility() == View.VISIBLE && opc5b.matches("sin datos")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac5b,Toast.LENGTH_LONG).show();}
             else if (layc5c.getVisibility() == View.VISIBLE && opc5c.matches("sin datos")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac5c,Toast.LENGTH_LONG).show();}
@@ -3071,7 +3071,7 @@ public void guardar(View v) {
             else if (layc5f.getVisibility() == View.VISIBLE && opc5f.matches("sin datos")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac5f,Toast.LENGTH_LONG).show();}
             else if (layc5g.getVisibility() == View.VISIBLE && opc5g.matches("sin datos")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac5g,Toast.LENGTH_LONG).show();}
             else if (layc6.getVisibility() == View.VISIBLE && opc6.matches("sin datos")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac6,Toast.LENGTH_LONG).show();}
-            else if (layc7.getVisibility() == View.VISIBLE && opc7.matches("sin datos")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac7,Toast.LENGTH_LONG).show();}
+//            else if (layc7.getVisibility() == View.VISIBLE && opc7.matches("sin datos")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac7,Toast.LENGTH_LONG).show();}
             else if (layc7a.getVisibility() == View.VISIBLE && opc7a.matches("sin datos")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac7a,Toast.LENGTH_LONG).show();}
             else if (layc7b.getVisibility() == View.VISIBLE && opc7b.matches("sin datos")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac7b,Toast.LENGTH_LONG).show();}
             else if (layc7c.getVisibility() == View.VISIBLE && opc7c.matches("sin datos")){Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac7c,Toast.LENGTH_LONG).show();}
