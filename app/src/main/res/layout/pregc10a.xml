@@ -14,7 +14,7 @@
                 android:layout_alignParentTop="true" >
 
                 <LinearLayout
-                android:id="@+id/layc12"
+                android:id="@+id/layc10a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="50dp"
@@ -26,16 +26,16 @@
                 android:orientation="vertical" >
                 
                 <TextView
-                android:id="@+id/textPreguntac12"
+                android:id="@+id/textPreguntac10a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/PREGUNTAc12"
+                android:text="@string/PREGUNTAc10a"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="#002266"
                 android:textStyle="bold" />
                 
                 <RadioGroup
-                android:id="@+id/rdPreguntac12"
+                android:id="@+id/rdPreguntac10a"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical" >
@@ -49,7 +49,7 @@ android:button="@drawable/radiobutton_selector"
 android:textColor="@drawable/radiobutton_color_selector"
 android:textSize="16sp"
 android:theme="@style/RadioButton"
-android:text="Muy efectivos"
+android:text="Si fue la mejor"
 />
 
   <RadioButton
@@ -61,7 +61,7 @@ android:button="@drawable/radiobutton_selector"
 android:textColor="@drawable/radiobutton_color_selector"
 android:textSize="16sp"
 android:theme="@style/RadioButton"
-android:text="Poco efectivos"
+android:text="En parte"
 />
 
   <RadioButton
@@ -73,7 +73,7 @@ android:button="@drawable/radiobutton_selector"
 android:textColor="@drawable/radiobutton_color_selector"
 android:textSize="16sp"
 android:theme="@style/RadioButton"
-android:text="Nada efectivos"
+android:text="No fue la mejor"
 />
 
   <RadioButton

@@ -88,6 +88,46 @@
     <string name="PREGUNTAc12">¿Qué tan efectivos le parecen estos programas mediante mensajes para prevenir enfermedades crónico degenerativas, muy efectivos, poco efectivos, nada efectivos?</string>
     <string name="PREGUNTAc13">¿Cuántas veces a la semana consume usted refrescos y bebidas embotelladas? (espontánea)</string>
     <string name="PREGUNTAc14">¿Cuántas veces por semana consume botanas, frituras o pan previamente empacado? (espontánea)</string>
+
+    <string name="PREGUNTA1">¿Cómo se entera Usted de las noticias regularmente?</string>
+    <string name="PREGUNTA2">Sólo como información, NO le voy a solicitar datos o sus cuentas ¿Usted tiene cuenta personal en Facebook?</string>
+    <string name="PREGUNTA3">¿Tiene cuenta personal en Twitter?</string>
+    <string name="PREGUNTA4">¿Usted utiliza WhatsApp?</string>
+    <string name="PREGUNTA5">Con lo que usted sabe ¿está de acuerdo, o en desacuerdo con el trabajo realizado hasta ahora por el Presidente de la República, Andrés Manuel López Obrador?</string>
+    <string name="PREGUNTA6">Con lo que usted sabe, ¿piensa que el presidente Andrés Manuel López Obrador tiene las riendas del país en la mano?</string>
+    <string name="PREGUNTA7">Hablando ahora de la Ciudad de México y de su gobierno, con lo que Ud. sabe, ¿está de acuerdo o en desacuerdo con el trabajo realizado hasta ahora por la Jefa de Gobierno, Claudia Sheinbaum?</string>
+    <string name="PREGUNTA8">En una escala del 1 al 10, donde 1 es muy mala y 10 muy buena, ¿cómo califica la labor realizada hasta hoy por la Jefa de Gobierno, Claudia Sheinbaum, en la Ciudad de México?</string>
+    <string name="PREGUNTA9">En su opinión, ¿la Jefa de Gobierno Claudia Sheinbaum tiene mucha, poca o ninguna capacidad para resolver los problemas de la Ciudad de México?</string>
+    <string name="PREGUNTAc1">¿Se enteró usted de que el pasado 1 de septiembre el Presidente, Andrés Manuel López Obrador dio un mensaje por su primer informe de gobierno?</string>
+    <string name="PREGUNTAc2">¿Usted vio o escuchó el mensaje por el 2do informe de gobierno de Andrés Manuel López Obrador? (no leer solo una parte)</string>
+    <string name="PREGUNTAc3">¿Qué es lo que usted recuerda más del mensaje del presidente Andrés Manuel López Obrador?</string>
+    <string name="PREGUNTAc4">De lo que recuerda que informó el presidente ¿Usted le cree o no? (no leer en parte)</string>
+    <string name="PREGUNTAc5">A dos años de gobierno de Andrés Manuel López Obrador ¿Cómo cree usted que este el país en general en los siguientes aspectos… mejor o peor que hace dos años? (no leer, igual)</string>
+    <string name="PREGUNTAc5a">Seguridad</string>
+    <string name="PREGUNTAc5b">Pobreza</string>
+    <string name="PREGUNTAc5c">Combate a la corrupción</string>
+    <string name="PREGUNTAc5d">Creación de empleos</string>
+    <string name="PREGUNTAc5e">Educación</string>
+    <string name="PREGUNTAc5f">Cultura</string>
+    <string name="PREGUNTAc5g">Salud</string>
+    <string name="PREGUNTAc6">Dígame por favor si ya estaba usted enterado de que recientemente se entregó al Congreso de la Ciudad el Primer Informe de Gobierno de la Jefa de Gobierno, Claudia Sheinbaum?</string>
+    <string name="PREGUNTAc7">A dos años de gobierno de Claudia Sheinbaum ¿Cómo cree usted que este la ciudad en general en los siguientes aspectos… mejor o peor que hace dos años? (no leer, igual)</string>
+    <string name="PREGUNTAc7a">Seguridad</string>
+    <string name="PREGUNTAc7b">Pobreza</string>
+    <string name="PREGUNTAc7c">Combate a la corrupción</string>
+    <string name="PREGUNTAc7d">Creación de empleos</string>
+    <string name="PREGUNTAc7e">Educación</string>
+    <string name="PREGUNTAc7f">Cultura</string>
+    <string name="PREGUNTAc7g">Salud</string>
+    <string name="PREGUNTAc8">En los últimos dos meses, ¿ha visitado su hogar personal del Gobierno de la Ciudad para informarle a usted o algún familiar sobre medidas de prevención y cuidado durante la pandemia de Coronavirus?</string>
+    <string name="PREGUNTAc9">¿Usted ha visto en su colonia trípticos, folletos o carteles del Gobierno de la Ciudad para informar sobre medidas de prevención y cuidado durante la pandemia de Coronavirus?</string>
+    <string name="PREGUNTAc10">Solo para estadística, ¿me podría decir por quién votó para Jefe de Gobierno en las elecciones de 2018? Espontáneo</string>
+    <string name="PREGUNTAc10a">A dos años de la elección ¿sigue pensando que fue la mejor elección para la Jefatura de Gobierno? (espontáneo)</string>
+    <string name="PREGUNTAc10b">Después de dos años de la elección ¿cómo cree que está haciendo su trabajo la Jefa de Gobierno, Claudia Sheinbaum, bien o mal? (no leer regular)</string>
+    <string name="PREGUNTAc11">Si hoy fueran las elecciones para elegir alcaldes y diputados ¿por qué partido votaría usted? (espontáneo)</string>
+
+
+
     <string name="PREGUNTACUANTOSCOCHES">¿Cuántos coches tienen en su vivienda?</string>
     <string name="PREGUNTACUARTOS">Sin contar baño ni cocina, ¿cuántos cuartos tiene su vivienda?</string>
     <string name="PREGUNTACUARTOSDORMIR">En esta vivienda, ¿cuántos cuartos se usan para dormir, sin contar pasillos ni baños?</string>

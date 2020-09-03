@@ -295,7 +295,7 @@ public class MainActivity extends Activity implements OnItemSelectedListener, Ad
             } while (c.moveToNext());
         }
         c.close();
-//		db.close();
+		db.close();
         return set;
     }
 
@@ -1068,7 +1068,7 @@ public class MainActivity extends Activity implements OnItemSelectedListener, Ad
         }
 
         c.close();
-//		db.close();
+		db.close();
         // here i used Set Because Set doesn't allow duplicates.
         Set<String> set1 = set;
         List<String> list = new ArrayList<String>(set1);
@@ -1121,7 +1121,7 @@ public class MainActivity extends Activity implements OnItemSelectedListener, Ad
         }
 
         cursor.close();
-//		db.close();
+		db.close();
 
         return maximo;
     }
@@ -1152,7 +1152,7 @@ public class MainActivity extends Activity implements OnItemSelectedListener, Ad
         }
 
         cursor.close();
-//		db.close();
+		db.close();
 
         return maximo;
     }
@@ -1235,7 +1235,7 @@ public class MainActivity extends Activity implements OnItemSelectedListener, Ad
                     consecutivoObtenido = db.insert("encuestas", null, values);
                 }
             }
-//			db.close();
+			db.close();
 
             values.put("consecutivo", consecutivoObtenido);
 //
@@ -1333,7 +1333,7 @@ public class MainActivity extends Activity implements OnItemSelectedListener, Ad
                     consecutivoObtenido = db.insert("encuestas", null, values);
                 }
             }
-//			db.close();
+			db.close();
 
             values.put("consecutivo", consecutivoObtenido);
 //
@@ -1430,7 +1430,7 @@ public class MainActivity extends Activity implements OnItemSelectedListener, Ad
                     consecutivoObtenido = db.insert("encuestas", null, values);
                 }
             }
-//			db.close();
+			db.close();
 
             values.put("consecutivo", consecutivoObtenido);
 //
@@ -1529,7 +1529,7 @@ public class MainActivity extends Activity implements OnItemSelectedListener, Ad
 
 
             }
-//			db.close();
+			db.close();
 
             values.put("consecutivo", consecutivoObtenido);
 //
@@ -1815,7 +1815,7 @@ usuario = gson.fromJson(jsonUser.toString(), collectionType);*/
 
         finally {
 
-//			db.close();
+			db.close();
 
         }
     }
@@ -1848,7 +1848,7 @@ usuario = gson.fromJson(jsonUser.toString(), collectionType);*/
             } while (cursor.moveToNext());
         }
         cursor.close();
-//		db.close();
+		db.close();
 
         return acceso;
     }
@@ -1868,7 +1868,7 @@ usuario = gson.fromJson(jsonUser.toString(), collectionType);*/
             } while (cursor.moveToNext());
         }
         cursor.close();
-//		db.close();
+		db.close();
 
         return acceso;
     }
