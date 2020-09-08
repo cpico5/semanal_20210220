@@ -1128,8 +1128,8 @@ rdPregunta3.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 
             else if (checkedId == R.id.radio3) {
                 opc2 = "Solo una parte";
-                layc3 .setVisibility(View.GONE);	rdPreguntac3.clearCheck();	opc3="No aplica";
-                layc4 .setVisibility(View.GONE);	rdPreguntac4.clearCheck();	opc4="No aplica";
+                layc3 .setVisibility(View.VISIBLE);	rdPreguntac3.clearCheck();	opc3="sin datos";
+                layc4 .setVisibility(View.VISIBLE);	rdPreguntac4.clearCheck();	opc4="sin datos";
             }
 
             else if (checkedId == R.id.radio0) {

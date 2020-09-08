@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Semanal_20200905 v1.0</string>
+    <string name="app_name">Semanal_20200905 v3Z.0</string>
     <string name="action_settings">Settings</string>
 
     <string name="url_aplicacion">https://opinion.cdmx.gob.mx</string>
@@ -69,7 +69,7 @@
     <string name="PREGUNTA7">Hablando ahora de la Ciudad de México y de su gobierno, con lo que Ud. sabe, ¿está de acuerdo o en desacuerdo con el trabajo realizado hasta ahora por la Jefa de Gobierno, Claudia Sheinbaum?</string>
     <string name="PREGUNTA8">En una escala del 1 al 10, donde 1 es muy mala y 10 muy buena, ¿cómo califica la labor realizada hasta hoy por la Jefa de Gobierno, Claudia Sheinbaum, en la Ciudad de México?</string>
     <string name="PREGUNTA9">En su opinión, ¿la Jefa de Gobierno Claudia Sheinbaum tiene mucha, poca o ninguna capacidad para resolver los problemas de la Ciudad de México?</string>
-    <string name="PREGUNTAc1">¿Se enteró usted de que el pasado 1 de septiembre el Presidente, Andrés Manuel López Obrador dio un mensaje por su primer informe de gobierno?</string>
+    <string name="PREGUNTAc1">¿Se enteró usted de que el pasado 1 de septiembre el Presidente, Andrés Manuel López Obrador dio un mensaje por su Segundo informe de gobierno?</string>
     <string name="PREGUNTAc2">¿Usted vio o escuchó el mensaje por el 2do informe de gobierno de Andrés Manuel López Obrador? (no leer solo una parte)</string>
     <string name="PREGUNTAc3">¿Qué es lo que usted recuerda más del mensaje del presidente Andrés Manuel López Obrador?</string>
     <string name="PREGUNTAc4">De lo que recuerda que informó el presidente ¿Usted le cree o no? (no leer en parte)</string>
@@ -81,7 +81,7 @@
     <string name="PREGUNTAc5e">Educación</string>
     <string name="PREGUNTAc5f">Cultura</string>
     <string name="PREGUNTAc5g">Salud</string>
-    <string name="PREGUNTAc6">Dígame por favor si ya estaba usted enterado de que recientemente se entregó al Congreso de la Ciudad el Primer Informe de Gobierno de la Jefa de Gobierno, Claudia Sheinbaum?</string>
+    <string name="PREGUNTAc6">Dígame por favor si ya estaba usted enterado de que recientemente se entregó al Congreso de la Ciudad el Segundo Informe de Gobierno de la Jefa de Gobierno, Claudia Sheinbaum?</string>
     <string name="PREGUNTAc7">A dos años de gobierno de Claudia Sheinbaum ¿Cómo cree usted que este la ciudad en general en los siguientes aspectos… mejor o peor que hace dos años? (no leer, igual)</string>
     <string name="PREGUNTAc7a">Seguridad</string>
     <string name="PREGUNTAc7b">Pobreza</string>
