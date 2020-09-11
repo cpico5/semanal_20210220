@@ -39,43 +39,49 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical" >
-                
-  <RadioButton
-  android:id="@+id/radio1"
-  
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:button="@drawable/radiobutton_selector"
-android:textColor="@drawable/radiobutton_color_selector"
-android:textSize="16sp"
-android:theme="@style/RadioButton"
-android:text="Si"
-/>
 
-  <RadioButton
-  android:id="@+id/radio2"
-  
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:button="@drawable/radiobutton_selector"
-android:textColor="@drawable/radiobutton_color_selector"
-android:textSize="16sp"
-android:theme="@style/RadioButton"
-android:text="No"
-/>
-
-  <RadioButton
-  android:id="@+id/radio0"
-  
-  
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:button="@drawable/radiobutton_selector"
-android:textColor="@drawable/radiobutton_color_selector"
-android:textSize="16sp"
-android:theme="@style/RadioButton"
-android:text="No sabe / No contestó"
-/>
+                    <CheckBox
+                        android:id="@+id/checkcseis_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Televisión"
+                        />
+                    <CheckBox
+                        android:id="@+id/checkcseis_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Radio"
+                        />
+                    <CheckBox
+                        android:id="@+id/checkcseis_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Periódico"
+                        />
+                    <CheckBox
+                        android:id="@+id/checkcseis_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Redes sociales"
+                        />
+                    <CheckBox
+                        android:id="@+id/checkcseis_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Internet"
+                        />
+                    <CheckBox
+                        android:id="@+id/checkcseis_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Otra"
+                        />
+                    <CheckBox
+                        android:id="@+id/checkcseis_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No sabe / No contestó"
+                        />
 
 </RadioGroup>
 </LinearLayout>

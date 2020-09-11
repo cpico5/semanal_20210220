@@ -39,32 +39,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical" >
-
-                    <EditText
-                        android:id="@+id/editPreguntac3"
-                        android:layout_width="320dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="30dp"
-                        android:layout_marginTop="30dp"
-                        android:ems="10"
-                        android:hint="Registrar"
-                        android:inputType="text"
-                        android:focusable="false"
-                        android:focusableInTouchMode="false"
-                        android:textSize="16sp" />
                 
-  <RadioButton
-  android:id="@+id/radio1"
-  
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:button="@drawable/radiobutton_selector"
-android:textColor="@drawable/radiobutton_color_selector"
-android:textSize="16sp"
-android:theme="@style/RadioButton"
-android:text="No Recuerda"
-/>
-
   <RadioButton
   android:id="@+id/radio0"
   
@@ -78,8 +53,6 @@ android:theme="@style/RadioButton"
 android:text="No sabe / No contestó"
 />
 
-
-  
 </RadioGroup>
 </LinearLayout>
 </LinearLayout>

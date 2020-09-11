@@ -41,42 +41,6 @@
                 android:orientation="vertical" >
                 
   <RadioButton
-  android:id="@+id/radio1"
-  
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:button="@drawable/radiobutton_selector"
-android:textColor="@drawable/radiobutton_color_selector"
-android:textSize="16sp"
-android:theme="@style/RadioButton"
-android:text="Le cree"
-/>
-
-  <RadioButton
-  android:id="@+id/radio2"
-  
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:button="@drawable/radiobutton_selector"
-android:textColor="@drawable/radiobutton_color_selector"
-android:textSize="16sp"
-android:theme="@style/RadioButton"
-android:text="Le cree en parte"
-/>
-
-  <RadioButton
-  android:id="@+id/radio3"
-  
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:button="@drawable/radiobutton_selector"
-android:textColor="@drawable/radiobutton_color_selector"
-android:textSize="16sp"
-android:theme="@style/RadioButton"
-android:text="No le cree"
-/>
-
-  <RadioButton
   android:id="@+id/radio0"
   
   
