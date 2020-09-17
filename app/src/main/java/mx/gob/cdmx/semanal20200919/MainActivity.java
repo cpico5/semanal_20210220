@@ -121,6 +121,7 @@ public class MainActivity extends Activity implements OnItemSelectedListener, Ad
     private Button btnRechazo2;
     private Button btnInformacion;
     public ProgressBar progressBar;
+    private Button btnCatalogos;
 
     private SQLiteDatabase db;
 
@@ -449,8 +450,10 @@ public class MainActivity extends Activity implements OnItemSelectedListener, Ad
         // btnActualizar = (Button)findViewById(R.id.btnActualizar);
         // btnEliminar = (Button)findViewById(R.id.btnEliminar);
         btnConsultar = (Button) findViewById(R.id.btnConsultar);
+        btnCatalogos = (Button) findViewById(R.id.btnActualiza);
         btnSiguiente = (Button) findViewById(R.id.btnSiguiente);
         btnSiguiente.setEnabled(false);
+
 
 
         progressBar = (ProgressBar) findViewById(R.id.progressbar);
@@ -600,6 +603,16 @@ public class MainActivity extends Activity implements OnItemSelectedListener, Ad
 
         sqlite_obj.close();
     }
+
+
+    public void catalogos(View view){
+
+        Log.i(TAG, " =====> El nombre de la encuesta: " + nombreEncuesta);
+        catalogoSeccionesWS(nombreEncuesta);
+        finishAffinity();
+    }
+
+
 
     public void Siguiente(View view) {
 
@@ -1953,7 +1966,7 @@ usuario = gson.fromJson(jsonUser.toString(), collectionType);*/
 
                 }
 
-                Toast.makeText(MainActivity.this, "Error de conexion al servidor", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Error de conexion al servidor\n inténtelo de nuevo", Toast.LENGTH_SHORT).show();
 
             }
         });
