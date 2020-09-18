@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Semanal_20200919 v1.0</string>
+    <string name="app_name">Semanal_20200919 v3.0</string>
     <string name="action_settings">Settings</string>
 
     <string name="url_aplicacion">https://opinion.cdmx.gob.mx</string>
@@ -97,7 +97,7 @@
     <string name="PREGUNTAc9"> Con lo que usted sabe o ha escuchado, ¿qué es lo que recuerda más del mensaje de la Jefa de Gobierno, Claudia Sheinbaum? </string>
     <string name="PREGUNTAc10">De lo que recuerda que informó la Jefa de Gobierno, Claudia Sheinbaum, ¿usted le cree o no? ( no leer le cree en parte)</string>
     <string name="PREGUNTAc11">¿Se enteró usted de que el pasado 14 de septiembre la Jefa de Gobierno, Claudia Sheinbaum, dio un informe sobre la estrategia de la Ciudad de México frente al COVID-19?</string>
-    <string name="PREGUNTAc12"> Con lo que usted sabe o ha escuchado, ¿qué es lo que recuerda más del mensaje de la Jefa de Gobierno, Claudia Sheinbaum sobre la estrategia frente al COVID? </string>
+    <string name="PREGUNTAc12"> Con lo que usted sabe o ha escuchado, ¿qué es lo que recuerda más del mensaje de la Jefa de Gobierno, Claudia Sheinbaum sobre la estrategia frente al COVID-19? </string>
     <string name="PREGUNTAc13">De lo que recuerda que informó la Jefa de Gobierno, sobre la estrategia frente al Covid 19 ¿usted le cree o no? (no leer le cree en parte)</string>
     <string name="PREGUNTAc14">En los últimos tres meses,  ¿ha visitado su hogar personal del Gobierno de la Ciudad para informarle a usted o algún familiar sobre medidas de prevención y cuidado durante la pandemia de Coronavirus?</string>
     <string name="PREGUNTAc15">En los últimos tres meses ¿Usted ha visto en su colonia trípticos, folletos o carteles del Gobierno de la Ciudad para informar sobre medidas de prevención y cuidado durante la pandemia de Coronavirus?</string>

@@ -147,7 +147,7 @@ public class Bienvenida extends AppCompatActivity {
 
         mProgressView = findViewById(R.id.login_progressMain);
 
-        showProgress(true);
+//        showProgress(true);
 
         String SQLFprint = "CREATE TABLE fp (" +
                 "id integer primary key autoincrement," +
@@ -227,7 +227,7 @@ public class Bienvenida extends AppCompatActivity {
                 if (!verificaConexion(Bienvenida.this)) {
 //                        Toast.makeText(getBaseContext(), "Sin conexión", Toast.LENGTH_LONG).show();
                     Log.i(TAG, "cqs ------------->> Sin conexión: " + sacaUsuario());
-                    showProgress(false);
+//                    showProgress(false);
                     dialogoConexion();
                 } else {
 
@@ -573,7 +573,7 @@ public class Bienvenida extends AppCompatActivity {
                 }
 
                 Toast.makeText(Bienvenida.this, "Error de conexión, intente de nuevo", Toast.LENGTH_SHORT).show();
-                showProgress(true);
+//                showProgress(true);
                 dialogoErrorConexion();
 //                finishAffinity();
 

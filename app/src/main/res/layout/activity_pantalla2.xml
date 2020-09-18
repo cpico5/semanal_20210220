@@ -96,7 +96,6 @@
             <include layout="@layout/pregc7f"/>
             <include layout="@layout/pregc7b"/>
             <include layout="@layout/pregc7e"/>
-            <include layout="@layout/pregc7a"/>
             <include layout="@layout/pregc7d"/>
             <include layout="@layout/pregc7c"/>
 
