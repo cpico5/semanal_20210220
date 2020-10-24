@@ -4,20 +4,20 @@
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108"
-    android:tint="#DBDCD7">
-  <group android:scaleX="0.27"
-      android:scaleY="0.27"
+    android:tint="#FFFFFF">
+  <group android:scaleX="0.24472906"
+      android:scaleY="0.24472906"
       android:translateX="29.16"
-      android:translateY="30.981445">
+      android:translateY="33.13589">
     <group android:translateY="141.67969">
       <path android:pathData="M20,-0L10,-0L10,-77L6,-77L6,-77.25L12.125,-110L20,-110L20,-0Z"
-          android:fillColor="#DBDCD7"/>
+          android:fillColor="#FFFFFF"/>
       <path android:pathData="M83,-8.15625Q83,-4.8125,80.625,-2.40625Q78.25,0,74.84375,0L46.15625,0Q42.6875,0,40.34375,-2.40625Q38,-4.8125,38,-8.15625L38,-101.84375Q38,-105.1875,40.34375,-107.59375Q42.6875,-110,46.15625,-110L74.84375,-110Q78.25,-110,80.625,-107.59375Q83,-105.1875,83,-101.84375L83,-8.15625ZM73,-9L73,-101L48,-101L48,-9L73,-9Z"
-          android:fillColor="#DBDCD7"/>
-      <path android:pathData="M112,0L102,0L102,-77L98,-77L98,-77.25L104.125,-110L112,-110L112,0Z"
-          android:fillColor="#DBDCD7"/>
-      <path android:pathData="M175,-8.15625Q175,-4.8125,172.625,-2.40625Q170.25,0,166.84375,0L138.15625,0Q134.6875,0,132.34375,-2.40625Q130,-4.8125,130,-8.15625L130,-101.84375Q130,-105.1875,132.34375,-107.59375Q134.6875,-110,138.15625,-110L166.84375,-110Q170.25,-110,172.625,-107.59375Q175,-105.1875,175,-101.84375L175,-8.15625ZM165,-9L165,-101L140,-101L140,-9L165,-9Z"
-          android:fillColor="#DBDCD7"/>
+          android:fillColor="#FFFFFF"/>
+      <path android:pathData="M141,0L98,0L98,-5L131,-74.96875L131,-101L109,-101L109,-77L99,-77L99,-101.84375Q99,-105.0625,101.28125,-107.53125Q103.5625,-110,107.15625,-110L132.84375,-110Q136.3125,-110,138.65625,-107.59375Q141,-105.1875,141,-101.84375L141,-79.234375Q141,-75.015625,138.45312,-69.609375L110,-9L141,-9L141,0Z"
+          android:fillColor="#FFFFFF"/>
+      <path android:pathData="M199,-29L191,-29L191,0L182,0L182,-29L151,-29L151,-33.96875L177.64062,-110L186.64062,-110Q186.64062,-109.578125,186.64062,-109.578125L161.32812,-37L182,-37L182,-77L191,-77L191,-37L199,-37L199,-29Z"
+          android:fillColor="#FFFFFF"/>
     </group>
   </group>
 </vector>

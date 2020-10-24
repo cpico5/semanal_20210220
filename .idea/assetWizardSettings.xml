@@ -96,8 +96,8 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="color" value="dbdcd7" />
-                                                <entry key="text" value="1010" />
+                                                <entry key="color" value="ffffff" />
+                                                <entry key="text" value="1024" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -108,8 +108,8 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="color" value="dbdcd7" />
-                                                <entry key="text" value="1010" />
+                                                <entry key="color" value="ffffff" />
+                                                <entry key="text" value="1024" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -120,7 +120,7 @@
                                   <option name="values">
                                     <map>
                                       <entry key="backgroundAssetType" value="COLOR" />
-                                      <entry key="backgroundColor" value="3a8ddc" />
+                                      <entry key="backgroundColor" value="2e8bdc" />
                                       <entry key="foregroundAssetType" value="TEXT" />
                                     </map>
                                   </option>
