@@ -1,10 +1,11 @@
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/r1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:onClick="Salir"
-    tools:context=".MainActivity">
+    tools:context=".MainActivityPantalla1">
 
     <ScrollView
         android:id="@+id/scrollView1"
@@ -25,31 +26,31 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp" >
 
-                   <LinearLayout
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/textView1"
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal" >
+                        android:layout_height="wrap_content"
+                        android:text="Sección"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textSize="16sp" />
 
-                        <TextView
-                            android:id="@+id/textView1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Sección"
-                            android:textAppearance="?android:attr/textAppearanceLarge"
-                            android:textSize="16sp" />
-
-                        <EditText
-                            android:id="@+id/txtSeccion"
-                            android:layout_width="100dp"
-                            android:layout_height="50dp"
-                            android:layout_weight="1"
-                            android:ems="10"
-                            android:inputType="number"
-                            android:maxLength="4"
-                            android:textSize="16sp" />
+                    <EditText
+                        android:id="@+id/txtSeccion"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:textSize="16sp" />
 
 
-                    </LinearLayout>
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -75,41 +76,116 @@
 
             <!-- /////////////////////////////////////// -->
 
-            <include layout="@layout/preg01"/>
-            <include layout="@layout/preg02"/>
-            <include layout="@layout/preg03"/>
-            <include layout="@layout/preg04"/>
-            <include layout="@layout/preg05"/>
-            <include layout="@layout/preg06"/>
-            <include layout="@layout/preg07"/>
-            <include layout="@layout/preg08"/>
-            <include layout="@layout/preg09"/>
-            <include layout="@layout/preg10"/>
-            <include layout="@layout/preg11"/>
-            <include layout="@layout/preg12"/>
-            <include layout="@layout/preg13"/>
-            <include layout="@layout/preg14"/>
-            <include layout="@layout/atributos"/>
-            <include layout="@layout/preg15"/>
-            <include layout="@layout/preg16"/>
-            <include layout="@layout/preg17"/>
-            <include layout="@layout/preg18"/>
-            <include layout="@layout/preg19"/>
-            <include layout="@layout/preg20"/>
-            <include layout="@layout/preg21"/>
-            <include layout="@layout/preg22"/>
+
+            <include layout="@layout/preg1"/>
+
+
+            <include layout="@layout/preg2"/>
+
+
+            <include layout="@layout/preg3"/>
+
+
+            <include layout="@layout/preg4"/>
+
+
+            <include layout="@layout/preg5"/>
+
+
+            <include layout="@layout/preg6"/>
+
+
+            <include layout="@layout/preg7"/>
+
+
+            <include layout="@layout/preg8"/>
+
+
+            <include layout="@layout/preg9"/>
+
+
             <include layout="@layout/pregc1"/>
+
+
             <include layout="@layout/pregc2"/>
+
+
             <include layout="@layout/pregc3"/>
+
+
+            <include layout="@layout/pregc3a"/>
+
+
             <include layout="@layout/pregc4"/>
+
+
+            <include layout="@layout/pregc4a"/>
+
+
+            <include layout="@layout/pregc4b"/>
+
+
+            <include layout="@layout/pregc4c"/>
+
+
+            <include layout="@layout/pregc4d"/>
+
+
             <include layout="@layout/pregc5"/>
+
+
+            <include layout="@layout/pregc5a"/>
+
+
+            <include layout="@layout/pregc5b"/>
+
+
+            <include layout="@layout/pregc5c"/>
+
+
+            <include layout="@layout/pregc5d"/>
+
+
+            <include layout="@layout/pregc5e"/>
+
+
+            <include layout="@layout/pregc5f"/>
+
+
+            <include layout="@layout/pregc5g"/>
+
+
             <include layout="@layout/pregc6"/>
+
+
+            <include layout="@layout/pregc6a"/>
+
+
             <include layout="@layout/pregc7"/>
+
+
             <include layout="@layout/pregc8"/>
-            <include layout="@layout/pregc8a"/>
-            <include layout="@layout/pregc8b"/>
+
+
             <include layout="@layout/pregc9"/>
 
+
+            <include layout="@layout/pregc9a"/>
+
+
+            <include layout="@layout/pregc9b"/>
+
+
+            <include layout="@layout/pregc10"/>
+
+
+            <include layout="@layout/pregc10a"/>
+
+
+            <include layout="@layout/pregc10b"/>
+
+
+            <include layout="@layout/pregc11"/>
 
 
             <include layout="@layout/socioeconomicos" />
@@ -175,3 +251,4 @@
     </ScrollView>
 
 </RelativeLayout>
+
