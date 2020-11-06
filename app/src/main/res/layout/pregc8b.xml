@@ -14,7 +14,7 @@
       android:layout_alignParentTop="true" >
 
       <LinearLayout
-      android:id="@+id/layc5f"
+      android:id="@+id/layc8b"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginTop="50dp"
@@ -26,16 +26,16 @@
       android:orientation="vertical" >
       
       <TextView
-      android:id="@+id/textPreguntac5f"
+      android:id="@+id/textPreguntac8b"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:text="@string/PREGUNTAc5f"
+      android:text="@string/PREGUNTAc8b"
       android:textAppearance="?android:attr/textAppearanceLarge"
       android:textColor="#002266"
       android:textStyle="bold" />
       
       <RadioGroup
-      android:id="@+id/rdPreguntac5f"
+      android:id="@+id/rdPreguntac8b"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:orientation="vertical" >
@@ -62,7 +62,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="c5f"
+            android:text="c8b"
             android:visibility="gone"
             />
             
@@ -75,7 +75,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="Sí, piensa ir"
+            android:text="Si, sin importar el candidato"
             />
             
           <RadioButton
@@ -87,7 +87,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="Depende"
+            android:text="Depende del candidato"
             />
             
           <RadioButton
@@ -99,7 +99,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="No"
+            android:text="Nunca votaría para que alguien se reeligiera"
             />
             
           <RadioButton

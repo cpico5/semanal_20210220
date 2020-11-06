@@ -14,7 +14,7 @@
       android:layout_alignParentTop="true" >
 
       <LinearLayout
-      android:id="@+id/layc10a"
+      android:id="@+id/layc8a"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginTop="50dp"
@@ -26,16 +26,16 @@
       android:orientation="vertical" >
       
       <TextView
-      android:id="@+id/textPreguntac10a"
+      android:id="@+id/textPreguntac8a"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:text="@string/PREGUNTAc10a"
+      android:text="@string/PREGUNTAc8a"
       android:textAppearance="?android:attr/textAppearanceLarge"
       android:textColor="#002266"
       android:textStyle="bold" />
       
       <RadioGroup
-      android:id="@+id/rdPreguntac10a"
+      android:id="@+id/rdPreguntac8a"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:orientation="vertical" >
@@ -62,7 +62,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="c10a"
+            android:text="c8a"
             android:visibility="gone"
             />
             
@@ -75,7 +75,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="Si, fue la mejor"
+            android:text="Acuerdo"
             />
             
           <RadioButton
@@ -87,7 +87,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="En parte"
+            android:text="Ni de acuerdo ni en desacuerdo"
             />
             
           <RadioButton
@@ -99,7 +99,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="No fue la mejor"
+            android:text="Desacuerdo"
             />
             
           <RadioButton
