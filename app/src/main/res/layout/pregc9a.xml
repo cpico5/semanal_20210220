@@ -75,7 +75,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="Acuerdo"
+            android:text="Si, fue la mejor"
             />
             
           <RadioButton
@@ -87,7 +87,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="Ni de acuerdo ni en desacuerdo"
+            android:text="En parte"
             />
             
           <RadioButton
@@ -99,7 +99,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="Desacuerdo"
+            android:text="No fue la mejor"
             />
             
           <RadioButton

@@ -75,7 +75,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="Si, sin importar el candidato"
+            android:text="Bien"
             />
             
           <RadioButton
@@ -87,7 +87,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="Depende del candidato"
+            android:text="Regular"
             />
             
           <RadioButton
@@ -99,7 +99,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="Nunca votaría para que alguien se reeligiera"
+            android:text="Mal"
             />
             
           <RadioButton
