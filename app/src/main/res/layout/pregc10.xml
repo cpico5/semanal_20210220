@@ -75,7 +75,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="Morena"
+            android:text="Claudia Sheinbaum/ Morena/ PT/ Encuentro social"
             />
             
           <RadioButton
@@ -87,7 +87,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="PRI"
+            android:text="Alejandra Barrales/ PAN/ PRD/  MC"
             />
             
           <RadioButton
@@ -99,7 +99,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="PAN"
+            android:text="Mikel Arriola/ PRI"
             />
             
           <RadioButton
@@ -111,7 +111,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="PRD"
+            android:text="Mariana Boy/ PVEM"
             />
             
           <RadioButton
@@ -123,7 +123,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="PT"
+            android:text="Lorena Osornio/ Independiente"
             />
             
           <RadioButton
@@ -135,7 +135,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="PVEM"
+            android:text="Marco Rascón/ PHCDMX"
             />
             
           <RadioButton
@@ -147,7 +147,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="Movimiento Ciudadano"
+            android:text="Purificación Carpinteyro/ PANAL"
             />
             
           <RadioButton
@@ -159,7 +159,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="Candidato Independiente"
+            android:text="No voto"
             />
             
           <RadioButton
@@ -171,7 +171,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="Otro"
+            android:text="Anuló su voto"
             />
             
           <RadioButton
@@ -183,34 +183,36 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="No votaría"
+            android:text="No sabe/ no contestó"
             />
             
           <RadioButton
           android:id="@+id/radio13"
           
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:button="@drawable/radiobutton_selector"
-            android:textColor="@drawable/radiobutton_color_selector"
-            android:textSize="16sp"
-            android:theme="@style/RadioButton"
-            android:text="Anularía su voto"
-            />
-            
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:button="@drawable/radiobutton_selector"
+          android:textColor="@drawable/radiobutton_color_selector"
+          android:textSize="16sp"
+          android:theme="@style/RadioButton"
+          android:text=""
+          android:visibility="gone"
+          />
+          
           <RadioButton
           android:id="@+id/radio0"
           
           
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:button="@drawable/radiobutton_selector"
-            android:textColor="@drawable/radiobutton_color_selector"
-            android:textSize="16sp"
-            android:theme="@style/RadioButton"
-            android:text="No sabe / No contestó"
-            />
-            
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:button="@drawable/radiobutton_selector"
+          android:textColor="@drawable/radiobutton_color_selector"
+          android:textSize="16sp"
+          android:theme="@style/RadioButton"
+          android:text=""
+          android:visibility="gone"
+          />
+          
       </RadioGroup>
       </LinearLayout>
       </LinearLayout>
