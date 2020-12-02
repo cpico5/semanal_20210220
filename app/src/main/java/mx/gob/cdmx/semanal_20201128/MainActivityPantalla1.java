@@ -707,7 +707,7 @@ public class MainActivityPantalla1 extends Activity implements AdapterView.OnIte
     radio_abandono3 = (RadioButton) findViewById(R.id.radio_abandono3);
     radio_abandono4 = (RadioButton) findViewById(R.id.radio_abandono4);
 
-    spinnerCalifica =(Spinner) findViewById(R.id.spinner8);
+//    spinnerCalifica =(Spinner) findViewById(R.id.spinner8);
 
 
     rdPreguntaAporta        = (RadioGroup) findViewById(R.id.rdPreguntaAporta);
