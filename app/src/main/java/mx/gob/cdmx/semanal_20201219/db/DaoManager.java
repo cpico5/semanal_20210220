@@ -157,7 +157,6 @@ public class DaoManager {
 
                             if(fields[i].isAnnotationPresent(PrimaryKey.class))
                                 id = cursor.getInt(cursor.getColumnIndex(fields[i].getName()));
-
                             if (fields[i].getType() == int.class)
                                 fields[i].set(o, cursor.getInt(cursor.getColumnIndex(fields[i].getName())));
                             else if (fields[i].getType() == String.class)
@@ -169,14 +168,10 @@ public class DaoManager {
                             else if (fields[i].getType() == double.class)
                                 fields[i].set(o, cursor.getDouble(cursor.getColumnIndex(fields[i].getName())));
                             else if(fields[i].getType() == List.class){
-
-
                             }
                             else{
                                 fields[i].set(o, null);
                             }
-
-
                         }
                     }
                 }
