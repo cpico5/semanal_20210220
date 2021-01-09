@@ -6,7 +6,7 @@ android {
     compileOptions.encoding = 'iso-8859-1' // write your encoding here
 
     defaultConfig {
-        applicationId 'mx.gob.cdmx.semanal_20201219'
+        applicationId 'mx.gob.cdmx.semanal_20210109'
         minSdkVersion 21
         targetSdkVersion 28
     }

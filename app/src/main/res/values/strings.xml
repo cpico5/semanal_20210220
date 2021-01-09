@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Semanal_20201219 v1.0</string>
+    <string name="app_name">Semanal_20210109 v3.0</string>
     <string name="action_settings">Settings</string>
 
     <string name="url_aplicacion">https://opinion.cdmx.gob.mx</string>
@@ -74,7 +74,6 @@
     <string name="ENTRADA">Buenos días/tardes. Me presento, mi nombre es: _____________ y vengo de Estudios.mx. En este momento estamos realizando un estudio de opinión, me permite unos minutos por favor, seré breve. En ningún momento le voy a solicitar datos personales.</string>
 
 <!--    <string name="PREGUNTAc10a">A dos años de la elección ¿sigue pensando que fue la mejor elección para la Jefatura de Gobierno? <font color="#FF0000">(espontáneo)</font></string>    -->
-
     <string name="PREGUNTA1">¿Cómo se entera Usted de las noticias regularmente?</string>
     <string name="PREGUNTA2">Sólo como información, NO le voy a solicitar datos o sus cuentas ¿Usted tiene cuenta personal en Facebook?</string>
     <string name="PREGUNTA3">¿Tiene cuenta personal en Twitter?</string>
@@ -84,30 +83,32 @@
     <string name="PREGUNTA7">Hablando ahora de la Ciudad de México y de su gobierno, con lo que Ud. sabe, ¿está de acuerdo o en desacuerdo con el trabajo realizado hasta ahora por la Jefa de Gobierno, Claudia Sheinbaum?</string>
     <string name="PREGUNTA8">En una escala del 1 al 10, donde 1 es muy mala y 10 muy buena, ¿cómo califica la labor realizada hasta hoy por la Jefa de Gobierno, Claudia Sheinbaum, en la Ciudad de México?</string>
     <string name="PREGUNTA9">En su opinión, ¿la Jefa de Gobierno Claudia Sheinbaum tiene mucha, poca o ninguna capacidad para resolver los problemas de la Ciudad de México?</string>
-    <string name="PREGUNTAc1">¿Usted piensa asistir a celebrar el próximo 12 de diciembre el Día de la Virgen ?</string>
-    <string name="PREGUNTAc2">¿Cómo piensa celebrarlo…?</string>
-    <string name="PREGUNTAc2a">En casa</string>
-    <string name="PREGUNTAc2b">En alguna iglesia cercana a su domicilio</string>
-    <string name="PREGUNTAc2c">Asistiendo a la Basílica</string>
-    <string name="PREGUNTAc3">¿Usted estaba enterado(a) o no de que la Basílica de Guadalupe permanecerá cerrada del 10 al 13 de diciembre para evitar contagios de coronavirus?</string>
-    <string name="PREGUNTAc4">¿Usted piensa que esta medida es adecuada o inadecuada?</string>
-    <string name="PREGUNTAc5">¿Usted ha visto o ha escuchado sobre los "Kioscos de la salud" donde se hacen pruebas para COVID y dan medidas de salud?</string>
-    <string name="PREGUNTAc6">¿Usted o alguien que viva con usted ha asistido a estos Kioscos?</string>
-    <string name="PREGUNTAc7">¿Qué opina de la atención en estos Kioscos fue…?</string>
-    <string name="PREGUNTAc7a">fue…?</string>
-    <string name="PREGUNTAc7b">fue…?</string>
-    <string name="PREGUNTAc7c">fue…?</string>
-    <string name="PREGUNTAc7d">fue…?</string>
-    <string name="PREGUNTAc8">Aparte de las medidas que ya hay ¿Qué medida cree usted sería útil que implementara el Gobierno  de la Ciudad para disminuir los contagios por COVID 19 en el la Ciudad?</string>
-    <string name="PREGUNTAc9">En los últimos cinco meses, ¿ha visitado su hogar personal del Gobierno de la Ciudad para informarle a usted o algún familiar sobre medidas de prevención y cuidado durante la pandemia de Coronavirus?</string>
-    <string name="PREGUNTAc10">En los últimos cinco meses ¿Usted ha visto en su colonia trípticos, folletos o carteles del Gobierno de la Ciudad para informar sobre medidas de prevención y cuidado durante la pandemia de Coronavirus?</string>
-    <string name="PREGUNTAc11">Antes de que yo se lo mencionara, ¿usted sabía que ya se permite que haya reelección de cargos populares?</string>
-    <string name="PREGUNTAc11a">En general ¿está usted de acuerdo o no con la reelección de alcaldes y diputados? (No leer ni de acuerdo ni en desacuerdo)</string>
-    <string name="PREGUNTAc11b">¿Usted votaría por algún candidato que buscara la reelección para alcalde o diputado: Si, sin importar el candidato, Si, dependiendo del candidato, No, nunca votaría para que alguien se reeligiera?</string>
-    <string name="PREGUNTAc12">Solo para estadística, ¿me podría decir por quién votó para Jefe de Gobierno en las elecciones de 2018? Espontáneo</string>
-    <string name="PREGUNTAc12a">A dos años de la elección ¿sigue pensando que fue la mejor elección para la Jefatura de Gobierno? (espontáneo)</string>
-    <string name="PREGUNTAc13">Después de dos años de la elección  ¿cómo cree que está haciendo su trabajo la Jefa de Gobierno, Claudia Sheinbaum, bien o mal? (no leer regular)</string>
-    <string name="PREGUNTAc14">Si hoy fueran las elecciones para elegir alcaldes y diputados ¿por qué partido votaría usted? (espontáneo)</string>
+    <string name="PREGUNTAc1">¿Se enteró usted de que la Ciudad de México y el Estado de México continuaràn en Semáforo Rojo hasta el 17 de enero?</string>
+    <string name="PREGUNTAc2">Usted cree que esta medida es…</string>
+    <string name="PREGUNTAc2a">esta medida es…</string>
+    <string name="PREGUNTAc2b">esta medida es…</string>
+    <string name="PREGUNTAc2c">esta medida es…</string>
+    <string name="PREGUNTAc3">¿Usted esta de acuerdo o en desacuerdo que se continúe el Semáforo rojo en la Ciudad de México? (no se lee en parte)</string>
+    <string name="PREGUNTAc4">¿A usted y su familia le afecta directamente el semáforo rojo?</string>
+    <string name="PREGUNTAc4a">¿En qué? (registrar primera actividad/ situación que le afecta)</string>
+    <string name="PREGUNTAc5">¡Usted cree que hay personas infectadas de COVID-19 cerca de su entorno o por los lugares donde se mueve?</string>
+    <string name="PREGUNTAc6">¿Què tanto miedo tiene de contagiarse de COVID-19  usted o su familia?</string>
+    <string name="PREGUNTAc7">Por favor digame, si tuviera la posibilidad de ponerse la vacuna contra COVID-19 usted...</string>
+    <string name="PREGUNTAc7a">usted...</string>
+    <string name="PREGUNTAc7b">usted...</string>
+    <string name="PREGUNTAc7c">usted...</string>
+    <string name="PREGUNTAc8">En los últimos seis meses, ¿ha visitado su hogar personal del Gobierno de la Ciudad para informarle a usted o algún familiar sobre medidas de prevención y cuidado durante la pandemia de Coronavirus?</string>
+    <string name="PREGUNTAc9">Estaría usted de acuerdo o en desacuerdo que el Semáforo rojo en la Ciudad de México continuara hasta finales de enero? (no se lee en parte)</string>
+    <string name="PREGUNTAc10">¿A usted y a su familia en que les afectaría que el semáforo rojo continúe hasta finales de enero?</string>
+    <string name="PREGUNTAc11">Con lo que usted sabe o ha escuchado ¿usted cree que la Jefa de Gobierno debería de extender el Semáforo rojo hasta finales de enero?</string>
+    <string name="PREGUNTAc12">En los últimos seis meses ¿Usted ha visto en su colonia trípticos, folletos o carteles del Gobierno de la Ciudad para informar sobre medidas de prevención y cuidado durante la pandemia de Coronavirus?</string>
+    <string name="PREGUNTAc13">Antes de que yo se lo mencionara, ¿usted sabía que ya se permite que haya reelección de cargos populares?</string>
+    <string name="PREGUNTAc14">En general ¿está usted de acuerdo o no con la reelección de alcaldes y diputados? (No leer ni de acuerdo ni en desacuerdo)</string>
+    <string name="PREGUNTAc15">¿Usted votaría por algún candidato que buscara la reelección para alcalde o diputado: Si, sin importar el candidato, Si, dependiendo del candidato, No, nunca votaría para que alguien se reeligiera?</string>
+    <string name="PREGUNTAc16">Solo para estadística, ¿me podría decir por quién votó para Jefe de Gobierno en las elecciones de 2018? Espontáneo</string>
+    <string name="PREGUNTAc16a">A dos años de la elección ¿sigue pensando que fue la mejor elección para la Jefatura de Gobierno? (espontáneo)</string>
+    <string name="PREGUNTAc16b">Después de dos años de la elección  ¿cómo cree que está haciendo su trabajo la Jefa de Gobierno, Claudia Sheinbaum, bien o mal? (no leer regular)</string>
+    <string name="PREGUNTAc17">Si hoy fueran las elecciones para elegir alcaldes y diputados ¿por qué partido votaría usted? (espontáneo)</string>
 
     <string name="PREGUNTAATRIBUTOS">De los siguientes atributos personales, ¿cuáles cree usted que sí o que no tiene la Jefa de Gobierno, Claudia Sheinbaum?</string>
     <string name="PREGUNTAEST">Para terminar le voy a realizar algunas preguntas para la estadística</string>

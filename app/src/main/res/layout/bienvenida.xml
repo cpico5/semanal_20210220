@@ -34,7 +34,7 @@
             android:layout_height="100dp"
             android:layout_gravity="center_horizontal"
             android:layout_weight="0.48"
-            android:src="@drawable/analisis_estrategico_bienvenida" />
+            android:src="@drawable/emx" />
 
     </LinearLayout>
 
