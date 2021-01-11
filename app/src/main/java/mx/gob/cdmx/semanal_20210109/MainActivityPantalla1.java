@@ -1,4 +1,5 @@
 
+
 package mx.gob.cdmx.semanal_20210109;
 
 import java.io.File;
@@ -105,6 +106,20 @@ public class MainActivityPantalla1 extends Activity implements AdapterView.OnIte
   private Button btnSalir;
 
   private TextView textPreguntaEntrada;
+  private TextView textPreguntaAporta;
+  private TextView textPreguntaOcupacion;
+  private TextView textPreguntaCuantosCoches;
+  private TextView textPreguntaCuartos;
+  private TextView textPreguntaCuartosDormir;
+  private TextView textPreguntaFocos;
+  private TextView textPreguntaBanos;
+  private TextView textPreguntaRegadera;
+  private TextView textPreguntaEstufa;
+  private TextView textPreguntaEdad;
+  private TextView textPreguntaTipoPiso;
+  private TextView textPreguntaTipoVivienda;
+  private TextView textPreguntaGenero;
+
 
   double latitude;
   double longitude;
@@ -170,216 +185,76 @@ public class MainActivityPantalla1 extends Activity implements AdapterView.OnIte
   public String opTipoPiso="sin datos";
 
 
-  public String op1 = "sin datos";
-  public RadioGroup rdPregunta1;
-  public EditText editPregunta1;
-  public String captura1;
-  LinearLayout lay1;
-  private Spinner spinner1;
-  public String op2 = "sin datos";
-  public RadioGroup rdPregunta2;
-  public EditText editPregunta2;
-  public String captura2;
-  LinearLayout lay2;
-  private Spinner spinner2;
-  public String op3 = "sin datos";
-  public RadioGroup rdPregunta3;
-  public EditText editPregunta3;
-  public String captura3;
-  LinearLayout lay3;
-  private Spinner spinner3;
-  public String op4 = "sin datos";
-  public RadioGroup rdPregunta4;
-  public EditText editPregunta4;
-  public String captura4;
-  LinearLayout lay4;
-  private Spinner spinner4;
-  public String op5 = "sin datos";
-  public RadioGroup rdPregunta5;
-  public EditText editPregunta5;
-  public String captura5;
-  LinearLayout lay5;
-  private Spinner spinner5;
-  public String op6 = "sin datos";
-  public RadioGroup rdPregunta6;
-  public EditText editPregunta6;
-  public String captura6;
-  LinearLayout lay6;
-  private Spinner spinner6;
-  public String op7 = "sin datos";
-  public RadioGroup rdPregunta7;
-  public EditText editPregunta7;
-  public String captura7;
-  LinearLayout lay7;
-  private Spinner spinner7;
-  public String op8 = "sin datos";
-  public RadioGroup rdPregunta8;
-  public EditText editPregunta8;
-  public String captura8;
-  LinearLayout lay8;
-  private Spinner spinner8;
-  public String op9 = "sin datos";
-  public RadioGroup rdPregunta9;
-  public EditText editPregunta9;
-  public String captura9;
-  LinearLayout lay9;
-  private Spinner spinner9;
-  public String opc1 = "sin datos";
-  public RadioGroup rdPreguntac1;
-  public EditText editPreguntac1;
-  public String capturac1;
-  LinearLayout layc1;
-  private Spinner spinnerc1;
-  public String opc2 = "sin datos";
-  public RadioGroup rdPreguntac2;
-  public EditText editPreguntac2;
-  public String capturac2;
-  LinearLayout layc2;
-  private Spinner spinnerc2;
-  public String opc2a = "sin datos";
-  public RadioGroup rdPreguntac2a;
-  public EditText editPreguntac2a;
-  public String capturac2a;
-  LinearLayout layc2a;
-  private Spinner spinnerc2a;
-  public String opc2b = "sin datos";
-  public RadioGroup rdPreguntac2b;
-  public EditText editPreguntac2b;
-  public String capturac2b;
-  LinearLayout layc2b;
-  private Spinner spinnerc2b;
-  public String opc2c = "sin datos";
-  public RadioGroup rdPreguntac2c;
-  public EditText editPreguntac2c;
-  public String capturac2c;
-  LinearLayout layc2c;
-  private Spinner spinnerc2c;
-  public String opc3 = "sin datos";
-  public RadioGroup rdPreguntac3;
-  public EditText editPreguntac3;
-  public String capturac3;
-  LinearLayout layc3;
-  private Spinner spinnerc3;
-  public String opc4 = "sin datos";
-  public RadioGroup rdPreguntac4;
-  public EditText editPreguntac4;
-  public String capturac4;
-  LinearLayout layc4;
-  private Spinner spinnerc4;
-  public String opc4a = "sin datos";
-  public RadioGroup rdPreguntac4a;
-  public EditText editPreguntac4a;
-  public String capturac4a;
-  LinearLayout layc4a;
-  private Spinner spinnerc4a;
-  public String opc5 = "sin datos";
-  public RadioGroup rdPreguntac5;
-  public EditText editPreguntac5;
-  public String capturac5;
-  LinearLayout layc5;
-  private Spinner spinnerc5;
-  public String opc6 = "sin datos";
-  public RadioGroup rdPreguntac6;
-  public EditText editPreguntac6;
-  public String capturac6;
-  LinearLayout layc6;
-  private Spinner spinnerc6;
-  public String opc7 = "sin datos";
-  public RadioGroup rdPreguntac7;
-  public EditText editPreguntac7;
-  public String capturac7;
-  LinearLayout layc7;
-  private Spinner spinnerc7;
-  public String opc7a = "sin datos";
-  public RadioGroup rdPreguntac7a;
-  public EditText editPreguntac7a;
-  public String capturac7a;
-  LinearLayout layc7a;
-  private Spinner spinnerc7a;
-  public String opc7b = "sin datos";
-  public RadioGroup rdPreguntac7b;
-  public EditText editPreguntac7b;
-  public String capturac7b;
-  LinearLayout layc7b;
-  private Spinner spinnerc7b;
-  public String opc7c = "sin datos";
-  public RadioGroup rdPreguntac7c;
-  public EditText editPreguntac7c;
-  public String capturac7c;
-  LinearLayout layc7c;
-  private Spinner spinnerc7c;
-  public String opc8 = "sin datos";
-  public RadioGroup rdPreguntac8;
-  public EditText editPreguntac8;
-  public String capturac8;
-  LinearLayout layc8;
-  private Spinner spinnerc8;
-  public String opc9 = "sin datos";
-  public RadioGroup rdPreguntac9;
-  public EditText editPreguntac9;
-  public String capturac9;
-  LinearLayout layc9;
-  private Spinner spinnerc9;
-  public String opc10 = "sin datos";
-  public RadioGroup rdPreguntac10;
-  public EditText editPreguntac10;
-  public String capturac10;
-  LinearLayout layc10;
-  private Spinner spinnerc10;
-  public String opc11 = "sin datos";
-  public RadioGroup rdPreguntac11;
-  public EditText editPreguntac11;
-  public String capturac11;
-  LinearLayout layc11;
-  private Spinner spinnerc11;
-  public String opc12 = "sin datos";
-  public RadioGroup rdPreguntac12;
-  public EditText editPreguntac12;
-  public String capturac12;
-  LinearLayout layc12;
-  private Spinner spinnerc12;
-  public String opc13 = "sin datos";
-  public RadioGroup rdPreguntac13;
-  public EditText editPreguntac13;
-  public String capturac13;
-  LinearLayout layc13;
-  private Spinner spinnerc13;
-  public String opc14 = "sin datos";
-  public RadioGroup rdPreguntac14;
-  public EditText editPreguntac14;
-  public String capturac14;
-  LinearLayout layc14;
-  private Spinner spinnerc14;
-  public String opc15 = "sin datos";
-  public RadioGroup rdPreguntac15;
-  public EditText editPreguntac15;
-  public String capturac15;
-  LinearLayout layc15;
-  private Spinner spinnerc15;
-  public String opc16 = "sin datos";
-  public RadioGroup rdPreguntac16;
-  public EditText editPreguntac16;
-  public String capturac16;
-  LinearLayout layc16;
-  private Spinner spinnerc16;
-  public String opc16a = "sin datos";
-  public RadioGroup rdPreguntac16a;
-  public EditText editPreguntac16a;
-  public String capturac16a;
-  LinearLayout layc16a;
-  private Spinner spinnerc16a;
-  public String opc16b = "sin datos";
-  public RadioGroup rdPreguntac16b;
-  public EditText editPreguntac16b;
-  public String capturac16b;
-  LinearLayout layc16b;
-  private Spinner spinnerc16b;
-  public String opc17 = "sin datos";
-  public RadioGroup rdPreguntac17;
-  public EditText editPreguntac17;
-  public String capturac17;
-  LinearLayout layc17;
-  private Spinner spinnerc17;
+  public String op1="sin datos";   public RadioGroup rdPregunta1;   public EditText editPregunta1;   public String captura1;  LinearLayout lay1;  private Spinner spinner1;
+  private TextView textPregunta1;
+  public String op2="sin datos";   public RadioGroup rdPregunta2;   public EditText editPregunta2;   public String captura2;  LinearLayout lay2;  private Spinner spinner2;
+  private TextView textPregunta2;
+  public String op3="sin datos";   public RadioGroup rdPregunta3;   public EditText editPregunta3;   public String captura3;  LinearLayout lay3;  private Spinner spinner3;
+  private TextView textPregunta3;
+  public String op4="sin datos";   public RadioGroup rdPregunta4;   public EditText editPregunta4;   public String captura4;  LinearLayout lay4;  private Spinner spinner4;
+  private TextView textPregunta4;
+  public String op5="sin datos";   public RadioGroup rdPregunta5;   public EditText editPregunta5;   public String captura5;  LinearLayout lay5;  private Spinner spinner5;
+  private TextView textPregunta5;
+  public String op6="sin datos";   public RadioGroup rdPregunta6;   public EditText editPregunta6;   public String captura6;  LinearLayout lay6;  private Spinner spinner6;
+  private TextView textPregunta6;
+  public String op7="sin datos";   public RadioGroup rdPregunta7;   public EditText editPregunta7;   public String captura7;  LinearLayout lay7;  private Spinner spinner7;
+  private TextView textPregunta7;
+  public String op8="sin datos";   public RadioGroup rdPregunta8;   public EditText editPregunta8;   public String captura8;  LinearLayout lay8;  private Spinner spinner8;
+  private TextView textPregunta8;
+  public String op9="sin datos";   public RadioGroup rdPregunta9;   public EditText editPregunta9;   public String captura9;  LinearLayout lay9;  private Spinner spinner9;
+  private TextView textPregunta9;
+  public String opc1="sin datos";   public RadioGroup rdPreguntac1;   public EditText editPreguntac1;   public String capturac1;  LinearLayout layc1;  private Spinner spinnerc1;
+  private TextView textPreguntac1;
+  public String opc2="sin datos";   public RadioGroup rdPreguntac2;   public EditText editPreguntac2;   public String capturac2;  LinearLayout layc2;  private Spinner spinnerc2;
+  private TextView textPreguntac2;
+  public String opc2a="sin datos";   public RadioGroup rdPreguntac2a;   public EditText editPreguntac2a;   public String capturac2a;  LinearLayout layc2a;  private Spinner spinnerc2a;
+  private TextView textPreguntac2a;
+  public String opc2b="sin datos";   public RadioGroup rdPreguntac2b;   public EditText editPreguntac2b;   public String capturac2b;  LinearLayout layc2b;  private Spinner spinnerc2b;
+  private TextView textPreguntac2b;
+  public String opc2c="sin datos";   public RadioGroup rdPreguntac2c;   public EditText editPreguntac2c;   public String capturac2c;  LinearLayout layc2c;  private Spinner spinnerc2c;
+  private TextView textPreguntac2c;
+  public String opc3="sin datos";   public RadioGroup rdPreguntac3;   public EditText editPreguntac3;   public String capturac3;  LinearLayout layc3;  private Spinner spinnerc3;
+  private TextView textPreguntac3;
+  public String opc4="sin datos";   public RadioGroup rdPreguntac4;   public EditText editPreguntac4;   public String capturac4;  LinearLayout layc4;  private Spinner spinnerc4;
+  private TextView textPreguntac4;
+  public String opc4a="sin datos";   public RadioGroup rdPreguntac4a;   public EditText editPreguntac4a;   public String capturac4a;  LinearLayout layc4a;  private Spinner spinnerc4a;
+  private TextView textPreguntac4a;
+  public String opc5="sin datos";   public RadioGroup rdPreguntac5;   public EditText editPreguntac5;   public String capturac5;  LinearLayout layc5;  private Spinner spinnerc5;
+  private TextView textPreguntac5;
+  public String opc6="sin datos";   public RadioGroup rdPreguntac6;   public EditText editPreguntac6;   public String capturac6;  LinearLayout layc6;  private Spinner spinnerc6;
+  private TextView textPreguntac6;
+  public String opc7="sin datos";   public RadioGroup rdPreguntac7;   public EditText editPreguntac7;   public String capturac7;  LinearLayout layc7;  private Spinner spinnerc7;
+  private TextView textPreguntac7;
+  public String opc7a="sin datos";   public RadioGroup rdPreguntac7a;   public EditText editPreguntac7a;   public String capturac7a;  LinearLayout layc7a;  private Spinner spinnerc7a;
+  private TextView textPreguntac7a;
+  public String opc7b="sin datos";   public RadioGroup rdPreguntac7b;   public EditText editPreguntac7b;   public String capturac7b;  LinearLayout layc7b;  private Spinner spinnerc7b;
+  private TextView textPreguntac7b;
+  public String opc7c="sin datos";   public RadioGroup rdPreguntac7c;   public EditText editPreguntac7c;   public String capturac7c;  LinearLayout layc7c;  private Spinner spinnerc7c;
+  private TextView textPreguntac7c;
+  public String opc8="sin datos";   public RadioGroup rdPreguntac8;   public EditText editPreguntac8;   public String capturac8;  LinearLayout layc8;  private Spinner spinnerc8;
+  private TextView textPreguntac8;
+  public String opc9="sin datos";   public RadioGroup rdPreguntac9;   public EditText editPreguntac9;   public String capturac9;  LinearLayout layc9;  private Spinner spinnerc9;
+  private TextView textPreguntac9;
+  public String opc10="sin datos";   public RadioGroup rdPreguntac10;   public EditText editPreguntac10;   public String capturac10;  LinearLayout layc10;  private Spinner spinnerc10;
+  private TextView textPreguntac10;
+  public String opc11="sin datos";   public RadioGroup rdPreguntac11;   public EditText editPreguntac11;   public String capturac11;  LinearLayout layc11;  private Spinner spinnerc11;
+  private TextView textPreguntac11;
+  public String opc12="sin datos";   public RadioGroup rdPreguntac12;   public EditText editPreguntac12;   public String capturac12;  LinearLayout layc12;  private Spinner spinnerc12;
+  private TextView textPreguntac12;
+  public String opc13="sin datos";   public RadioGroup rdPreguntac13;   public EditText editPreguntac13;   public String capturac13;  LinearLayout layc13;  private Spinner spinnerc13;
+  private TextView textPreguntac13;
+  public String opc14="sin datos";   public RadioGroup rdPreguntac14;   public EditText editPreguntac14;   public String capturac14;  LinearLayout layc14;  private Spinner spinnerc14;
+  private TextView textPreguntac14;
+  public String opc15="sin datos";   public RadioGroup rdPreguntac15;   public EditText editPreguntac15;   public String capturac15;  LinearLayout layc15;  private Spinner spinnerc15;
+  private TextView textPreguntac15;
+  public String opc16="sin datos";   public RadioGroup rdPreguntac16;   public EditText editPreguntac16;   public String capturac16;  LinearLayout layc16;  private Spinner spinnerc16;
+  private TextView textPreguntac16;
+  public String opc16a="sin datos";   public RadioGroup rdPreguntac16a;   public EditText editPreguntac16a;   public String capturac16a;  LinearLayout layc16a;  private Spinner spinnerc16a;
+  private TextView textPreguntac16a;
+  public String opc16b="sin datos";   public RadioGroup rdPreguntac16b;   public EditText editPreguntac16b;   public String capturac16b;  LinearLayout layc16b;  private Spinner spinnerc16b;
+  private TextView textPreguntac16b;
+  public String opc17="sin datos";   public RadioGroup rdPreguntac17;   public EditText editPreguntac17;   public String capturac17;  LinearLayout layc17;  private Spinner spinnerc17;
+  private TextView textPreguntac17;
 
   LinearLayout laySocioE;
   LinearLayout layEst;
@@ -638,16 +513,16 @@ public class MainActivityPantalla1 extends Activity implements AdapterView.OnIte
 
 
   private Integer[] mLinearLayoutIds = {
-            R.layout.activity_pantalla1,
-            R.layout.activity_pantalla2,
-            R.layout.activity_pantalla3,
-            R.layout.activity_pantalla4,
-            R.layout.activity_pantalla5,
-            R.layout.activity_pantalla6,
-            R.layout.activity_pantalla7,
-            R.layout.activity_pantalla8,
-            R.layout.activity_pantalla9,
-            R.layout.activity_pantalla10,
+//            R.layout.activity_pantalla1,
+//            R.layout.activity_pantalla2,
+//            R.layout.activity_pantalla3,
+//            R.layout.activity_pantalla4,
+//            R.layout.activity_pantalla5,
+//            R.layout.activity_pantalla6,
+//            R.layout.activity_pantalla7,
+//            R.layout.activity_pantalla8,
+//            R.layout.activity_pantalla9,
+//            R.layout.activity_pantalla10,
 ////// R.layout.activity_pantalla11,
 //// R.layout.activity_pantalla12,
 //// R.layout.activity_pantalla13,
@@ -676,7 +551,7 @@ public class MainActivityPantalla1 extends Activity implements AdapterView.OnIte
   protected void onCreate(Bundle savedInstanceState) {
 // TODO Auto-generated method stub
     super.onCreate(savedInstanceState);
-//    setContentView(R.layout.activity_pantalla1); // COMENTAR ESTA CUANDO ES ALEATORIO
+    setContentView(R.layout.activity_pantalla1); // COMENTAR ESTA CUANDO ES ALEATORIO
 
     Intent startingIntent = getIntent();
     if (startingIntent == null) {
@@ -695,9 +570,9 @@ public class MainActivityPantalla1 extends Activity implements AdapterView.OnIte
     random = new java.util.Random();
 //
     /*DESCOMENTAR ESTAS 3 LINEAS CUANDO YA ESTA EL NUMERO DE HOJAS ALEATORIO */
-        rand = random.nextInt(9);
-        setContentView(mLinearLayoutIds[rand]);
-        Log.i(null, "El aleatorio: " + rand); // si rand= 11 en el layoud corresponde a uno mas
+//        rand = random.nextInt(9);
+//        setContentView(mLinearLayoutIds[rand]);
+//        Log.i(null, "El aleatorio: " + rand); // si rand= 11 en el layoud corresponde a uno mas
 
 
     /*activity_pantalla12*/
@@ -753,14 +628,112 @@ public class MainActivityPantalla1 extends Activity implements AdapterView.OnIte
     txtSeccion.setEnabled(false);
 
     textPreguntaEntrada = (TextView) findViewById(R.id.textPreguntaEntrada);
+    textPregunta1 = (TextView) findViewById(R.id.textPregunta1);
+    textPregunta2 = (TextView) findViewById(R.id.textPregunta2);
+    textPregunta3 = (TextView) findViewById(R.id.textPregunta3);
+    textPregunta4 = (TextView) findViewById(R.id.textPregunta4);
+    textPregunta5 = (TextView) findViewById(R.id.textPregunta5);
+    textPregunta6 = (TextView) findViewById(R.id.textPregunta6);
+    textPregunta7 = (TextView) findViewById(R.id.textPregunta7);
+    textPregunta8 = (TextView) findViewById(R.id.textPregunta8);
+    textPregunta9 = (TextView) findViewById(R.id.textPregunta9);
+    textPreguntac1 = (TextView) findViewById(R.id.textPreguntac1);
+    textPreguntac2 = (TextView) findViewById(R.id.textPreguntac2);
+    textPreguntac2a = (TextView) findViewById(R.id.textPreguntac2a);
+    textPreguntac2b = (TextView) findViewById(R.id.textPreguntac2b);
+    textPreguntac2c = (TextView) findViewById(R.id.textPreguntac2c);
+    textPreguntac3 = (TextView) findViewById(R.id.textPreguntac3);
+    textPreguntac4 = (TextView) findViewById(R.id.textPreguntac4);
+    textPreguntac4a = (TextView) findViewById(R.id.textPreguntac4a);
+    textPreguntac5 = (TextView) findViewById(R.id.textPreguntac5);
+    textPreguntac6 = (TextView) findViewById(R.id.textPreguntac6);
+    textPreguntac7 = (TextView) findViewById(R.id.textPreguntac7);
+    textPreguntac7a = (TextView) findViewById(R.id.textPreguntac7a);
+    textPreguntac7b = (TextView) findViewById(R.id.textPreguntac7b);
+    textPreguntac7c = (TextView) findViewById(R.id.textPreguntac7c);
+    textPreguntac8 = (TextView) findViewById(R.id.textPreguntac8);
+    textPreguntac9 = (TextView) findViewById(R.id.textPreguntac9);
+    textPreguntac10 = (TextView) findViewById(R.id.textPreguntac10);
+    textPreguntac11 = (TextView) findViewById(R.id.textPreguntac11);
+    textPreguntac12 = (TextView) findViewById(R.id.textPreguntac12);
+    textPreguntac13 = (TextView) findViewById(R.id.textPreguntac13);
+    textPreguntac14 = (TextView) findViewById(R.id.textPreguntac14);
+    textPreguntac15 = (TextView) findViewById(R.id.textPreguntac15);
+    textPreguntac16 = (TextView) findViewById(R.id.textPreguntac16);
+    textPreguntac16a = (TextView) findViewById(R.id.textPreguntac16a);
+    textPreguntac16b = (TextView) findViewById(R.id.textPreguntac16b);
+    textPreguntac17 = (TextView) findViewById(R.id.textPreguntac17);
 
-// justificar el texto
+    textPreguntaAporta= (TextView) findViewById(R.id.textPreguntaAporta);
+    textPreguntaOcupacion= (TextView) findViewById(R.id.textPreguntaOcupacion);
+    textPreguntaCuantosCoches= (TextView) findViewById(R.id.textPreguntaCuantosCoches);
+    textPreguntaCuartos= (TextView) findViewById(R.id.textPreguntaCuartos);
+    textPreguntaCuartosDormir= (TextView) findViewById(R.id.textPreguntaCuartosDormir);
+    textPreguntaFocos= (TextView) findViewById(R.id.textPreguntaFocos);
+    textPreguntaBanos= (TextView) findViewById(R.id.textPreguntaBanos);
+    textPreguntaRegadera= (TextView) findViewById(R.id.textPreguntaRegadera);
+    textPreguntaEstufa= (TextView) findViewById(R.id.textPreguntaEstufa);
+    textPreguntaEdad= (TextView) findViewById(R.id.textPreguntaEdad);
+    textPreguntaTipoPiso= (TextView) findViewById(R.id.textPreguntaTipoPiso);
+    textPreguntaTipoVivienda= (TextView) findViewById(R.id.textPreguntaTipoVivienda);
+    textPreguntaGenero= (TextView) findViewById(R.id.textPreguntaGenero);
+
+    // justificar el texto
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
       textPreguntaEntrada.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD);
+      textPregunta1.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD);
+      textPregunta2.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD);
+      textPregunta3.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD);
+      textPregunta4.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD);
+      textPregunta5.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD);
+      textPregunta6.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD);
+      textPregunta7.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD);
+      textPregunta8.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD);
+      textPregunta9.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD);
+      textPreguntac1.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD);
+      textPreguntac2.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD);
+      textPreguntac2a.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD);
+      textPreguntac2b.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD);
+      textPreguntac2c.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD);
+      textPreguntac3.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD);
+      textPreguntac4.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD);
+      textPreguntac4a.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD);
+      textPreguntac5.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD);
+      textPreguntac6.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD);
+      textPreguntac7.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD);
+      textPreguntac7a.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD);
+      textPreguntac7b.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD);
+      textPreguntac7c.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD);
+      textPreguntac8.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD);
+      textPreguntac9.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD);
+      textPreguntac10.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD);
+      textPreguntac11.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD);
+      textPreguntac12.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD);
+      textPreguntac13.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD);
+      textPreguntac14.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD);
+      textPreguntac15.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD);
+      textPreguntac16.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD);
+      textPreguntac16a.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD);
+      textPreguntac16b.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD);
+      textPreguntac17.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD);
+
+
+      textPreguntaAporta.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD);
+      textPreguntaOcupacion.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD);
+      textPreguntaCuantosCoches.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD);
+      textPreguntaCuartos.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD);
+      textPreguntaCuartosDormir.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD);
+      textPreguntaFocos.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD);
+      textPreguntaBanos.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD);
+      textPreguntaRegadera.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD);
+      textPreguntaEstufa.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD);
+      textPreguntaEdad.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD);
+      textPreguntaTipoPiso.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD);
+      textPreguntaTipoVivienda.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD);
+      textPreguntaGenero.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD);
+
+
     }
-
-
-
     res = getResources();
 
 
@@ -799,17 +772,76 @@ public class MainActivityPantalla1 extends Activity implements AdapterView.OnIte
     rdPreguntac16a = (RadioGroup)findViewById(R.id.rdPreguntac16a); capturac16a =res.getString(R.string.PREGUNTAc16a);  layc16a = (LinearLayout) findViewById(R.id.layc16a);
     rdPreguntac16b = (RadioGroup)findViewById(R.id.rdPreguntac16b); capturac16b =res.getString(R.string.PREGUNTAc16b);  layc16b = (LinearLayout) findViewById(R.id.layc16b);
     rdPreguntac17 = (RadioGroup)findViewById(R.id.rdPreguntac17); capturac17 =res.getString(R.string.PREGUNTAc17);  layc17 = (LinearLayout) findViewById(R.id.layc17);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     editPreguntac10= (EditText)findViewById(R.id.editPreguntac10);
-    editPreguntac4a= (EditText)findViewById(R.id.editPreguntac4a);
-    spinner1 =(Spinner) findViewById(R.id.spinner1);
-    spinner2 =(Spinner) findViewById(R.id.spinner2);
-    spinner3 =(Spinner) findViewById(R.id.spinner3);
-    spinner4 =(Spinner) findViewById(R.id.spinner4);
-    spinner5 =(Spinner) findViewById(R.id.spinner5);
-    spinner6 =(Spinner) findViewById(R.id.spinner6);
-    spinner7 =(Spinner) findViewById(R.id.spinner7);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     spinner8 =(Spinner) findViewById(R.id.spinner8);
-    spinner9 =(Spinner) findViewById(R.id.spinner9);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     laySocioE        = (LinearLayout) findViewById(R.id.laySocioE);
     layEst           = (LinearLayout) findViewById(R.id.layEst);
@@ -925,7 +957,7 @@ public class MainActivityPantalla1 extends Activity implements AdapterView.OnIte
 //
 //        }
 
-    CargaSpinner8();
+    CargaSpinnerEscala();
 
 //CargaSpinner9();
 
@@ -1319,19 +1351,24 @@ public class MainActivityPantalla1 extends Activity implements AdapterView.OnIte
       public void onCheckedChanged(RadioGroup group, int checkedId) {
 
         if (checkedId == R.id.radio1) {
-          opc2 = "0";
+          opc2 = "3";
+          spinnerc2.setSelection(0);
         }
 
         else if (checkedId == R.id.radio2) {
           opc2 = "c2";
+          spinnerc2.setSelection(0);
         }
 
         else if (checkedId == R.id.radio3) {
           opc2 = "Usted cree que esta medida es?";
+          spinnerc2.setSelection(0);
         }
 
       }
+
     });
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -1499,18 +1536,14 @@ public class MainActivityPantalla1 extends Activity implements AdapterView.OnIte
 
         else if (checkedId == R.id.radio4) {
           opc4 = "Si";
-          layc4a .setVisibility(View.VISIBLE);	rdPreguntac4a.clearCheck();	opc4a="sin datos";
-
         }
 
         else if (checkedId == R.id.radio5) {
           opc4 = "No";
-          layc4a .setVisibility(View.GONE);	rdPreguntac4a.clearCheck();	opc4a="No aplica";
         }
 
         else if (checkedId == R.id.radio6) {
           opc4 = "No sabe / No contestó";
-          layc4a .setVisibility(View.GONE);	rdPreguntac4a.clearCheck();	opc4a="No aplica";
         }
 
       }
@@ -1542,33 +1575,8 @@ public class MainActivityPantalla1 extends Activity implements AdapterView.OnIte
 
         else if (checkedId == R.id.radio5) {
           opc4a = "No sabe / No contestó";
-          editPreguntac4a.setText("");
         }
 
-      }
-    });
-
-    editPreguntac4a.setOnTouchListener(new View.OnTouchListener() {
-      @Override
-      public boolean onTouch(View v, MotionEvent event) {
-        v.setFocusable(true);
-        v.setFocusableInTouchMode(true);
-        return false;
-      }
-    });
-
-
-    editPreguntac4a.addTextChangedListener(new TextWatcher() {
-      @Override
-      public void afterTextChanged(Editable s) {}
-      @Override
-      public void beforeTextChanged(CharSequence s, int start,int count, int after) {
-      }
-      @Override
-      public void onTextChanged(CharSequence s, int start,int before, int count) {
-        if(s.length() != 0){
-          rdPreguntac4a.clearCheck();
-        }
       }
     });
 
@@ -1659,19 +1667,24 @@ public class MainActivityPantalla1 extends Activity implements AdapterView.OnIte
       public void onCheckedChanged(RadioGroup group, int checkedId) {
 
         if (checkedId == R.id.radio1) {
-          opc7 = "0";
+          opc7 = "3";
+          spinnerc7.setSelection(0);
         }
 
         else if (checkedId == R.id.radio2) {
           opc7 = "c7";
+          spinnerc7.setSelection(0);
         }
 
         else if (checkedId == R.id.radio3) {
           opc7 = "Por favor digame, si tuviera la posibilidad de ponerse la vacuna contra COVID-19 usted...";
+          spinnerc7.setSelection(0);
         }
 
       }
+
     });
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -2124,53 +2137,42 @@ public class MainActivityPantalla1 extends Activity implements AdapterView.OnIte
 
         else if (checkedId == R.id.radio4) {
           opc16 = "Claudia Sheinbaum/ Morena/ PT/ Encuentro social";
-          layc16a .setVisibility(View.VISIBLE);	rdPreguntac16a.clearCheck();	opc16a="sin datos";
-
         }
 
         else if (checkedId == R.id.radio5) {
           opc16 = "Alejandra Barrales/ PAN/ PRD/  MC";
-          layc16a .setVisibility(View.GONE);	rdPreguntac16a.clearCheck();	opc16a="No aplica";
         }
 
         else if (checkedId == R.id.radio6) {
           opc16 = "Mikel Arriola/ PRI";
-          layc16a .setVisibility(View.GONE);	rdPreguntac16a.clearCheck();	opc16a="No aplica";
         }
 
         else if (checkedId == R.id.radio7) {
           opc16 = "Mariana Boy/ PVEM";
-          layc16a .setVisibility(View.GONE);	rdPreguntac16a.clearCheck();	opc16a="No aplica";
         }
 
         else if (checkedId == R.id.radio8) {
           opc16 = "Lorena Osornio/ Independiente";
-          layc16a .setVisibility(View.GONE);	rdPreguntac16a.clearCheck();	opc16a="No aplica";
         }
 
         else if (checkedId == R.id.radio9) {
           opc16 = "Marco Rascón/ PHCDMX";
-          layc16a .setVisibility(View.GONE);	rdPreguntac16a.clearCheck();	opc16a="No aplica";
         }
 
         else if (checkedId == R.id.radio10) {
           opc16 = "Purificación Carpinteyro/ PANAL";
-          layc16a .setVisibility(View.GONE);	rdPreguntac16a.clearCheck();	opc16a="No aplica";
         }
 
         else if (checkedId == R.id.radio11) {
           opc16 = "No voto";
-          layc16a .setVisibility(View.GONE);	rdPreguntac16a.clearCheck();	opc16a="No aplica";
         }
 
         else if (checkedId == R.id.radio12) {
           opc16 = "Anuló su voto";
-          layc16a .setVisibility(View.GONE);	rdPreguntac16a.clearCheck();	opc16a="No aplica";
         }
 
         else if (checkedId == R.id.radio13) {
           opc16 = "No sabe/ no contestó";
-          layc16a .setVisibility(View.GONE);	rdPreguntac16a.clearCheck();	opc16a="No aplica";
         }
 
       }
@@ -2331,24 +2333,6 @@ public class MainActivityPantalla1 extends Activity implements AdapterView.OnIte
 
 
 ///////////////////////////////////// SOCIOECONOMICOS  /////////////////////////////////////
-//        rdPreguntaHijos.setOnCheckedChangeListener(new OnCheckedChangeListener() {
-//
-//            @Override
-//            public void onCheckedChanged(RadioGroup group, int checkedId) {
-//
-//                if (checkedId == R.id.radio1) {
-//                    opHijos = "Si";
-//                } else if (checkedId == R.id.radio2) {
-//                    opHijos = "No";
-//                } else if (checkedId == R.id.radio0) {
-//                    opHijos = "No sabe / No contestó";
-//                } else {
-//                    opHijos = "";
-//
-//                }
-//
-//            }
-//        });
 
     rdPreguntaAporta.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 
@@ -2407,35 +2391,6 @@ public class MainActivityPantalla1 extends Activity implements AdapterView.OnIte
 
       }
     });
-
-//    rdPreguntaCoche.setOnCheckedChangeListener(new OnCheckedChangeListener() {
-//
-//        @Override
-//        public void onCheckedChanged(RadioGroup group, int checkedId) {
-//
-//            if (checkedId == R.id.radio1) {
-//                opCoche = "Si";
-//                layCuantosCoches.setVisibility(View.VISIBLE);
-//                opCuantosCoches = "sin datos";
-//            } else if (checkedId == R.id.radio2) {
-//                opCoche = "No";
-//                layCuantosCoches.setVisibility(View.GONE);
-//                rdPreguntaCuantosCoches.clearCheck();
-//                opCuantosCoches = "Ninguno";
-//
-//            } else if (checkedId == R.id.radio0) {
-//                opCoche = "No contestó";
-//                layCuantosCoches.setVisibility(View.GONE);
-//                rdPreguntaCuantosCoches.clearCheck();
-//                opCuantosCoches = "Ninguno";
-//
-//            } else {
-//                opCoche = "";
-//
-//            }
-//
-//        }
-//    });
 
 
     rdPreguntaCuantosCoches.setOnCheckedChangeListener(new OnCheckedChangeListener() {
@@ -2600,68 +2555,6 @@ public class MainActivityPantalla1 extends Activity implements AdapterView.OnIte
 
       }
     });
-
-//    rdPreguntaInternet.setOnCheckedChangeListener(new OnCheckedChangeListener() {
-//
-//        @Override
-//        public void onCheckedChanged(RadioGroup group, int checkedId) {
-//
-//
-//            if (checkedId == R.id.radio1) {
-//                opInternet="Si";
-//
-//            }
-//            else if (checkedId == R.id.radio2) {
-//                opInternet="No";
-//            }
-//            else if (checkedId == R.id.radio0) {
-//                opInternet="No sabe / no contestó";
-//            }
-//            else{
-//                opInternet="";
-//
-//            }
-//
-//
-//        }
-//    });
-//
-//
-//
-//    rdPreguntaTrabajaron.setOnCheckedChangeListener(new OnCheckedChangeListener() {
-//
-//        @Override
-//        public void onCheckedChanged(RadioGroup group, int checkedId) {
-//
-//
-//            if (checkedId == R.id.radio1) {
-//                opTrabajaron="Ninguno";
-//
-//            }
-//            else if (checkedId == R.id.radio2) {
-//                opTrabajaron="Uno";
-//            }
-//            else if (checkedId == R.id.radio3) {
-//                opTrabajaron="Dos";
-//            }
-//            else if (checkedId == R.id.radio4) {
-//                opTrabajaron="Tres";
-//            }
-//            else if (checkedId == R.id.radio5) {
-//                opTrabajaron="Cuatro o más";
-//            }
-//            else if (checkedId == R.id.radio0) {
-//                opTrabajaron="No sabe / no contestó";
-//            }
-//            else{
-//                opTrabajaron="";
-//
-//            }
-//
-//
-//        }
-//    });
-
 
     rdPreguntaEstufa.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 
@@ -2871,6 +2764,12 @@ public class MainActivityPantalla1 extends Activity implements AdapterView.OnIte
     elMaximo = Integer.parseInt(sacaMaximo().toString()) + 1;
     elMaximoConsecutivo = Integer.parseInt(sacaMaximoConsecutivo().toString()) + 1;
 
+
+
+
+
+
+
     String strText8;
     if(spinner8.getSelectedItem().toString().equals("Selecciona")){
       strText8=op8;
@@ -2879,13 +2778,20 @@ public class MainActivityPantalla1 extends Activity implements AdapterView.OnIte
       rdPregunta8.clearCheck();
     }
 
-    String strTextc4a;
-    if (editPreguntac4a.getText().toString().trim().length() == 0) {
-      strTextc4a = opc4a;
-    } else {
-      strTextc4a = editPreguntac4a.getText().toString().trim();
-      rdPreguntac4a.clearCheck();
-    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     String strTextc10;
@@ -2895,6 +2801,13 @@ public class MainActivityPantalla1 extends Activity implements AdapterView.OnIte
       strTextc10 = editPreguntac10.getText().toString().trim();
       rdPreguntac10.clearCheck();
     }
+
+
+
+
+
+
+
 
 
     String str1 = op1;
@@ -2907,16 +2820,16 @@ public class MainActivityPantalla1 extends Activity implements AdapterView.OnIte
     String str8 = strText8;
     String str9 = op9;
     String strc1 = opc1;
-    String strc2 = opc2;
+    String strc2 = "pregunta";
     String strc2a = opc2a;
     String strc2b = opc2b;
     String strc2c = opc2c;
     String strc3 = opc3;
     String strc4 = opc4;
-    String strc4a = strTextc4a;
+    String strc4a = opc4a;
     String strc5 = opc5;
     String strc6 = opc6;
-    String strc7 = opc7;
+    String strc7 = "pregunta";
     String strc7a = opc7a;
     String strc7b = opc7b;
     String strc7c = opc7c;
@@ -3196,7 +3109,7 @@ public class MainActivityPantalla1 extends Activity implements AdapterView.OnIte
         values.put("pregunta_8",str8);
         values.put("pregunta_9",str9);
         values.put("pregunta_c1",strc1);
-        values.put("pregunta_c2","Pregunta");
+        values.put("pregunta_c2",strc2);
         values.put("pregunta_c2a",strc2a);
         values.put("pregunta_c2b",strc2b);
         values.put("pregunta_c2c",strc2c);
@@ -3205,7 +3118,7 @@ public class MainActivityPantalla1 extends Activity implements AdapterView.OnIte
         values.put("pregunta_c4a",strc4a);
         values.put("pregunta_c5",strc5);
         values.put("pregunta_c6",strc6);
-        values.put("pregunta_c7","Pregunta");
+        values.put("pregunta_c7",strc7);
         values.put("pregunta_c7a",strc7a);
         values.put("pregunta_c7b",strc7b);
         values.put("pregunta_c7c",strc7c);
@@ -3243,7 +3156,7 @@ public class MainActivityPantalla1 extends Activity implements AdapterView.OnIte
         values.put("tiempo", elTiempo());
         values.put("tipo_captura", tipoEncuesta);
 
-        if (!Utils.verificaConexion(this)) {
+        if (!verificaConexion(this)) {
           Toast.makeText(getBaseContext(),"Sin conexión",Toast.LENGTH_LONG).show();
           values.put("enviado", "0");
           db.insert("encuestas", null, values);
@@ -3259,70 +3172,70 @@ public class MainActivityPantalla1 extends Activity implements AdapterView.OnIte
       guardaEncuestaWS(values);
 
 
-      System.out.println("consecutivo_diario " + elMaximo);
-      System.out.println("usuario " + cachaNombre().toUpperCase());
-      System.out.println("nombre_encuesta " + nombreE.toUpperCase());
-      System.out.println("fecha " + formattedDate1);
-      System.out.println("hora " + formattedDate5);
-      System.out.println("imei " + sacaImei());
-      System.out.println("Seccion " + str);
-      System.out.println("Latitud  " + strLatitud);
-      System.out.println("Longitud  " + strLongitud);
-      System.out.println("pregunta_1  " + str1);
-      System.out.println("pregunta_2  " + str2);
-      System.out.println("pregunta_3  " + str3);
-      System.out.println("pregunta_4  " + str4);
-      System.out.println("pregunta_5  " + str5);
-      System.out.println("pregunta_6  " + str6);
-      System.out.println("pregunta_7  " + str7);
-      System.out.println("pregunta_8  " + str8);
-      System.out.println("pregunta_9  " + str9);
-      System.out.println("pregunta_c1  " + strc1);
-      System.out.println("pregunta_c2  " + strc2);
-      System.out.println("pregunta_c2a  " + strc2a);
-      System.out.println("pregunta_c2b  " + strc2b);
-      System.out.println("pregunta_c2c  " + strc2c);
-      System.out.println("pregunta_c3  " + strc3);
-      System.out.println("pregunta_c4  " + strc4);
-      System.out.println("pregunta_c4a  " + strc4a);
-      System.out.println("pregunta_c5  " + strc5);
-      System.out.println("pregunta_c6  " + strc6);
-      System.out.println("pregunta_c7  " + strc7);
-      System.out.println("pregunta_c7a  " + strc7a);
-      System.out.println("pregunta_c7b  " + strc7b);
-      System.out.println("pregunta_c7c  " + strc7c);
-      System.out.println("pregunta_c8  " + strc8);
-      System.out.println("pregunta_c9  " + strc9);
-      System.out.println("pregunta_c10  " + strc10);
-      System.out.println("pregunta_c11  " + strc11);
-      System.out.println("pregunta_c12  " + strc12);
-      System.out.println("pregunta_c13  " + strc13);
-      System.out.println("pregunta_c14  " + strc14);
-      System.out.println("pregunta_c15  " + strc15);
-      System.out.println("pregunta_c16  " + strc16);
-      System.out.println("pregunta_c16a  " + strc16a);
-      System.out.println("pregunta_c16b  " + strc16b);
-      System.out.println("pregunta_c17  " + strc17);
+      System.out.println("consecutivo_diario "+ elMaximo);
+      System.out.println("usuario "           + cachaNombre().toUpperCase());
+      System.out.println("nombre_encuesta "   + nombreE.toUpperCase());
+      System.out.println("fecha "             + formattedDate1);
+      System.out.println("hora "              + formattedDate5);
+      System.out.println("imei "              + sacaImei());
+      System.out.println("Seccion "           + str);
+      System.out.println("Latitud  "          + strLatitud);
+      System.out.println("Longitud  "         + strLongitud);
+      System.out.println("pregunta_1  " +   str1);
+      System.out.println("pregunta_2  " +   str2);
+      System.out.println("pregunta_3  " +   str3);
+      System.out.println("pregunta_4  " +   str4);
+      System.out.println("pregunta_5  " +   str5);
+      System.out.println("pregunta_6  " +   str6);
+      System.out.println("pregunta_7  " +   str7);
+      System.out.println("pregunta_8  " +   str8);
+      System.out.println("pregunta_9  " +   str9);
+      System.out.println("pregunta_c1  " +   strc1);
+      System.out.println("pregunta_c2  " +   strc2);
+      System.out.println("pregunta_c2a  " +   strc2a);
+      System.out.println("pregunta_c2b  " +   strc2b);
+      System.out.println("pregunta_c2c  " +   strc2c);
+      System.out.println("pregunta_c3  " +   strc3);
+      System.out.println("pregunta_c4  " +   strc4);
+      System.out.println("pregunta_c4a  " +   strc4a);
+      System.out.println("pregunta_c5  " +   strc5);
+      System.out.println("pregunta_c6  " +   strc6);
+      System.out.println("pregunta_c7  " +   strc7);
+      System.out.println("pregunta_c7a  " +   strc7a);
+      System.out.println("pregunta_c7b  " +   strc7b);
+      System.out.println("pregunta_c7c  " +   strc7c);
+      System.out.println("pregunta_c8  " +   strc8);
+      System.out.println("pregunta_c9  " +   strc9);
+      System.out.println("pregunta_c10  " +   strc10);
+      System.out.println("pregunta_c11  " +   strc11);
+      System.out.println("pregunta_c12  " +   strc12);
+      System.out.println("pregunta_c13  " +   strc13);
+      System.out.println("pregunta_c14  " +   strc14);
+      System.out.println("pregunta_c15  " +   strc15);
+      System.out.println("pregunta_c16  " +   strc16);
+      System.out.println("pregunta_c16a  " +   strc16a);
+      System.out.println("pregunta_c16b  " +   strc16b);
+      System.out.println("pregunta_c17  " +   strc17);
 
-      System.out.println(" aporta   " + strAporta);
-      System.out.println(" ocupacion   " + strOcupacion);
-      System.out.println(" cuantos_coches   " + strCuantosCoches);
-      System.out.println(" cuartos   " + strCuartos);
-      System.out.println(" cuartos_dormir   " + strCuartosDormir);
-      System.out.println(" focos   " + strFocos);
+      System.out.println(" aporta   "        + strAporta);
+      System.out.println(" ocupacion   "     + strOcupacion);
+      System.out.println(" cuantos_coches   "+ strCuantosCoches);
+      System.out.println(" cuartos   "       + strCuartos);
+      System.out.println(" cuartos_dormir   "+ strCuartosDormir);
+      System.out.println(" focos   "         + strFocos);
 
-      System.out.println(" baños   " + strBanos);
-      System.out.println(" regadera   " + strRegadera);
-      System.out.println(" estufa   " + strEstufa);
-      System.out.println(" edad   " + strEdad);
-      System.out.println(" genero   " + strGenero);
+      System.out.println(" baños   "         + strBanos);
+      System.out.println(" regadera   "      + strRegadera);
+      System.out.println(" estufa   "        + strEstufa);
+      System.out.println(" edad   "          + strEdad);
+      System.out.println(" genero   "        + strGenero);
       System.out.println(" tipo_vivienda   " + strTipoVivienda);
-      System.out.println(" tipo_piso   " + strTipoPiso);
+      System.out.println(" tipo_piso   "     + strTipoPiso);
 
-      System.out.println("abandono  " + strAbandono);
+      System.out.println("abandono  "        + strAbandono);
 
-      System.out.println("suma  " + suma);
-      System.out.println("status  " + status);
+      System.out.println("suma  "            + suma);
+      System.out.println("status  "          + status);
 
 // FIN INSERTA BASE DE DATOS //
 
@@ -3408,14 +3321,14 @@ finish();*/
 
 
             } else {
-              Utils.toast(MainActivityPantalla1.this,"Error al subir los datos");
+              Toast.makeText(MainActivityPantalla1.this, "Error al subir los datos", Toast.LENGTH_SHORT).show();
             }
           }
 
         } catch (Exception e) {
           showProgress(false);
           Log.e(TAG, e.getMessage());
-          Utils.toast(MainActivityPantalla1.this,"Catch Error al subir los datos");
+          Toast.makeText(MainActivityPantalla1.this, "Error al subir los datos", Toast.LENGTH_SHORT).show();
         }
       }
 
@@ -3438,8 +3351,7 @@ finish();*/
 
         }
 
-        Utils.toast(context,"Error de conexion, Se guarda en la base interna");
-//        Toast.makeText(MainActivityPantalla1.this, "Error de conexion, Se guarda en la base interna", Toast.LENGTH_SHORT).show();
+        Toast.makeText(MainActivityPantalla1.this, "Error de conexion, Se guarda en la base interna", Toast.LENGTH_SHORT).show();
         btnGuardar.setEnabled(true);
 
         dialogo();
@@ -3467,66 +3379,66 @@ finish();*/
       case 1:
 
 
-           if (lay1.getVisibility() == View.VISIBLE && op1.matches("sin datos")){ lay1.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  captura1,Toast.LENGTH_LONG).show();}
-      else if (lay2.getVisibility() == View.VISIBLE && op2.matches("sin datos")){ lay2.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  captura2,Toast.LENGTH_LONG).show();}
-      else if (lay3.getVisibility() == View.VISIBLE && op3.matches("sin datos")){ lay3.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  captura3,Toast.LENGTH_LONG).show();}
-      else if (lay4.getVisibility() == View.VISIBLE && op4.matches("sin datos")){ lay4.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  captura4,Toast.LENGTH_LONG).show();}
-      else if (lay5.getVisibility() == View.VISIBLE && op5.matches("sin datos")){ lay5.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  captura5,Toast.LENGTH_LONG).show();}
-      else if (lay6.getVisibility() == View.VISIBLE && op6.matches("sin datos")){ lay6.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  captura6,Toast.LENGTH_LONG).show();}
-      else if (lay7.getVisibility() == View.VISIBLE && op7.matches("sin datos")){ lay7.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  captura7,Toast.LENGTH_LONG).show();}
-      else if (lay8.getVisibility() == View.VISIBLE && op8.matches("sin datos") && spinner8.getSelectedItem().toString().equals("Selecciona")) {lay8.requestFocus(); Toast.makeText(getBaseContext(), "CAPTURA:  " + captura8, Toast.LENGTH_LONG).show();}
-      else if (lay9.getVisibility() == View.VISIBLE && op9.matches("sin datos")){ lay9.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  captura9,Toast.LENGTH_LONG).show();}
-      else if (layc1.getVisibility() == View.VISIBLE && opc1.matches("sin datos")){ layc1.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac1,Toast.LENGTH_LONG).show();}
-//      else if (layc2.getVisibility() == View.VISIBLE && opc2.matches("sin datos")){ layc2.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac2,Toast.LENGTH_LONG).show();}
-      else if (layc2a.getVisibility() == View.VISIBLE && opc2a.matches("sin datos")){ layc2a.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac2a,Toast.LENGTH_LONG).show();}
-      else if (layc2b.getVisibility() == View.VISIBLE && opc2b.matches("sin datos")){ layc2b.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac2b,Toast.LENGTH_LONG).show();}
-      else if (layc2c.getVisibility() == View.VISIBLE && opc2c.matches("sin datos")){ layc2c.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac2c,Toast.LENGTH_LONG).show();}
-      else if (layc3.getVisibility() == View.VISIBLE && opc3.matches("sin datos")){ layc3.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac3,Toast.LENGTH_LONG).show();}
-      else if (layc4.getVisibility() == View.VISIBLE && opc4.matches("sin datos")){ layc4.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac4,Toast.LENGTH_LONG).show();}
-      else if (layc4a.getVisibility() == View.VISIBLE && opc4a.matches("sin datos")&& editPreguntac4a.getText().toString().trim().length() == 0){ layc4a.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac4a,Toast.LENGTH_LONG).show();}
-      else if (layc5.getVisibility() == View.VISIBLE && opc5.matches("sin datos")){ layc5.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac5,Toast.LENGTH_LONG).show();}
-      else if (layc6.getVisibility() == View.VISIBLE && opc6.matches("sin datos")){ layc6.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac6,Toast.LENGTH_LONG).show();}
-//      else if (layc7.getVisibility() == View.VISIBLE && opc7.matches("sin datos")){ layc7.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac7,Toast.LENGTH_LONG).show();}
-      else if (layc7a.getVisibility() == View.VISIBLE && opc7a.matches("sin datos")){ layc7a.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac7a,Toast.LENGTH_LONG).show();}
-      else if (layc7b.getVisibility() == View.VISIBLE && opc7b.matches("sin datos")){ layc7b.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac7b,Toast.LENGTH_LONG).show();}
-      else if (layc7c.getVisibility() == View.VISIBLE && opc7c.matches("sin datos")){ layc7c.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac7c,Toast.LENGTH_LONG).show();}
-      else if (layc8.getVisibility() == View.VISIBLE && opc8.matches("sin datos")){ layc8.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac8,Toast.LENGTH_LONG).show();}
-      else if (layc9.getVisibility() == View.VISIBLE && opc9.matches("sin datos")){ layc9.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac9,Toast.LENGTH_LONG).show();}
-      else if (layc10.getVisibility() == View.VISIBLE && opc10.matches("sin datos") && editPreguntac10.getText().toString().trim().length() == 0) { layc10.requestFocus(); Toast.makeText(getBaseContext(), "CAPTURA:  " + capturac10, Toast.LENGTH_LONG).show();}
-      else if (layc11.getVisibility() == View.VISIBLE && opc11.matches("sin datos")){ layc11.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac11,Toast.LENGTH_LONG).show();}
-      else if (layc12.getVisibility() == View.VISIBLE && opc12.matches("sin datos")){ layc12.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac12,Toast.LENGTH_LONG).show();}
-      else if (layc13.getVisibility() == View.VISIBLE && opc13.matches("sin datos")){ layc13.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac13,Toast.LENGTH_LONG).show();}
-      else if (layc14.getVisibility() == View.VISIBLE && opc14.matches("sin datos")){ layc14.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac14,Toast.LENGTH_LONG).show();}
-      else if (layc15.getVisibility() == View.VISIBLE && opc15.matches("sin datos")){ layc15.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac15,Toast.LENGTH_LONG).show();}
-      else if (layc16.getVisibility() == View.VISIBLE && opc16.matches("sin datos")){ layc16.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac16,Toast.LENGTH_LONG).show();}
-      else if (layc16a.getVisibility() == View.VISIBLE && opc16a.matches("sin datos")){ layc16a.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac16a,Toast.LENGTH_LONG).show();}
-      else if (layc16b.getVisibility() == View.VISIBLE && opc16b.matches("sin datos")){ layc16b.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac16b,Toast.LENGTH_LONG).show();}
-      else if (layc17.getVisibility() == View.VISIBLE && opc17.matches("sin datos")){ layc17.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac17,Toast.LENGTH_LONG).show();}
+        if (lay1.getVisibility() == View.VISIBLE && op1.matches("sin datos")){ lay1.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  captura1,Toast.LENGTH_LONG).show();}
+        else if (lay2.getVisibility() == View.VISIBLE && op2.matches("sin datos")){ lay2.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  captura2,Toast.LENGTH_LONG).show();}
+        else if (lay3.getVisibility() == View.VISIBLE && op3.matches("sin datos")){ lay3.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  captura3,Toast.LENGTH_LONG).show();}
+        else if (lay4.getVisibility() == View.VISIBLE && op4.matches("sin datos")){ lay4.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  captura4,Toast.LENGTH_LONG).show();}
+        else if (lay5.getVisibility() == View.VISIBLE && op5.matches("sin datos")){ lay5.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  captura5,Toast.LENGTH_LONG).show();}
+        else if (lay6.getVisibility() == View.VISIBLE && op6.matches("sin datos")){ lay6.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  captura6,Toast.LENGTH_LONG).show();}
+        else if (lay7.getVisibility() == View.VISIBLE && op7.matches("sin datos")){ lay7.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  captura7,Toast.LENGTH_LONG).show();}
+        else if (lay8.getVisibility() == View.VISIBLE && op8.matches("sin datos") && spinner8.getSelectedItem().toString().equals("Selecciona")) {lay8.requestFocus(); Toast.makeText(getBaseContext(), "CAPTURA:  " + captura8, Toast.LENGTH_LONG).show();}
+        else if (lay9.getVisibility() == View.VISIBLE && op9.matches("sin datos")){ lay9.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  captura9,Toast.LENGTH_LONG).show();}
+        else if (layc1.getVisibility() == View.VISIBLE && opc1.matches("sin datos")){ layc1.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac1,Toast.LENGTH_LONG).show();}
+// else if (layc2.getVisibility() == View.VISIBLE && ) {layc2.requestFocus(); Toast.makeText(getBaseContext(), "CAPTURA:  " + capturac2, Toast.LENGTH_LONG).show();}
+        else if (layc2a.getVisibility() == View.VISIBLE && opc2a.matches("sin datos")){ layc2a.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac2a,Toast.LENGTH_LONG).show();}
+        else if (layc2b.getVisibility() == View.VISIBLE && opc2b.matches("sin datos")){ layc2b.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac2b,Toast.LENGTH_LONG).show();}
+        else if (layc2c.getVisibility() == View.VISIBLE && opc2c.matches("sin datos")){ layc2c.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac2c,Toast.LENGTH_LONG).show();}
+        else if (layc3.getVisibility() == View.VISIBLE && opc3.matches("sin datos")){ layc3.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac3,Toast.LENGTH_LONG).show();}
+        else if (layc4.getVisibility() == View.VISIBLE && opc4.matches("sin datos")){ layc4.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac4,Toast.LENGTH_LONG).show();}
+        else if (layc4a.getVisibility() == View.VISIBLE && opc4a.matches("sin datos")){ layc4a.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac4a,Toast.LENGTH_LONG).show();}
+        else if (layc5.getVisibility() == View.VISIBLE && opc5.matches("sin datos")){ layc5.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac5,Toast.LENGTH_LONG).show();}
+        else if (layc6.getVisibility() == View.VISIBLE && opc6.matches("sin datos")){ layc6.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac6,Toast.LENGTH_LONG).show();}
+// else if (layc7.getVisibility() == View.VISIBLE && ) {layc7.requestFocus(); Toast.makeText(getBaseContext(), "CAPTURA:  " + capturac7, Toast.LENGTH_LONG).show();}
+        else if (layc7a.getVisibility() == View.VISIBLE && opc7a.matches("sin datos")){ layc7a.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac7a,Toast.LENGTH_LONG).show();}
+        else if (layc7b.getVisibility() == View.VISIBLE && opc7b.matches("sin datos")){ layc7b.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac7b,Toast.LENGTH_LONG).show();}
+        else if (layc7c.getVisibility() == View.VISIBLE && opc7c.matches("sin datos")){ layc7c.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac7c,Toast.LENGTH_LONG).show();}
+        else if (layc8.getVisibility() == View.VISIBLE && opc8.matches("sin datos")){ layc8.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac8,Toast.LENGTH_LONG).show();}
+        else if (layc9.getVisibility() == View.VISIBLE && opc9.matches("sin datos")){ layc9.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac9,Toast.LENGTH_LONG).show();}
+        else if (layc10.getVisibility() == View.VISIBLE && opc10.matches("sin datos") && editPreguntac10.getText().toString().trim().length() == 0) { layc10.requestFocus(); Toast.makeText(getBaseContext(), "CAPTURA:  " + capturac10, Toast.LENGTH_LONG).show();}
+        else if (layc11.getVisibility() == View.VISIBLE && opc11.matches("sin datos")){ layc11.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac11,Toast.LENGTH_LONG).show();}
+        else if (layc12.getVisibility() == View.VISIBLE && opc12.matches("sin datos")){ layc12.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac12,Toast.LENGTH_LONG).show();}
+        else if (layc13.getVisibility() == View.VISIBLE && opc13.matches("sin datos")){ layc13.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac13,Toast.LENGTH_LONG).show();}
+        else if (layc14.getVisibility() == View.VISIBLE && opc14.matches("sin datos")){ layc14.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac14,Toast.LENGTH_LONG).show();}
+        else if (layc15.getVisibility() == View.VISIBLE && opc15.matches("sin datos")){ layc15.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac15,Toast.LENGTH_LONG).show();}
+        else if (layc16.getVisibility() == View.VISIBLE && opc16.matches("sin datos")){ layc16.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac16,Toast.LENGTH_LONG).show();}
+        else if (layc16a.getVisibility() == View.VISIBLE && opc16a.matches("sin datos")){ layc16a.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac16a,Toast.LENGTH_LONG).show();}
+        else if (layc16b.getVisibility() == View.VISIBLE && opc16b.matches("sin datos")){ layc16b.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac16b,Toast.LENGTH_LONG).show();}
+        else if (layc17.getVisibility() == View.VISIBLE && opc17.matches("sin datos")){ layc17.requestFocus(); Toast.makeText(getBaseContext(),"CAPTURA:  " +  capturac17,Toast.LENGTH_LONG).show();}
 
-      else if (opAporta.matches("sin datos")) {Toast.makeText(getBaseContext(), "CAPTURA         :  " + capturaAporta, Toast.LENGTH_LONG).show();
-      } else if (opOcupacion.matches("sin datos")) {Toast.makeText(getBaseContext(), "CAPTURA    :  " + capturaOcupacion, Toast.LENGTH_LONG).show();
-      } else if (layCuantosCoches.getVisibility()                                                == View.VISIBLE && opCuantosCoches.matches("sin datos")) {Toast.makeText(getBaseContext(), "CAPTURA:  " + capturaCuantosCoches, Toast.LENGTH_LONG).show();
-      } else if (opCuartos.matches("sin datos")) {Toast.makeText(getBaseContext(), "CAPTURA      :  " + capturaCuartos, Toast.LENGTH_LONG).show();
-      } else if (opCuartosDormir.matches("sin datos")) {Toast.makeText(getBaseContext(), "CAPTURA:  " + capturaCuartosDormir, Toast.LENGTH_LONG).show();
-      } else if (opFocos.matches("sin datos")) {Toast.makeText(getBaseContext(), "CAPTURA        :  " + capturaFocos, Toast.LENGTH_LONG).show();
-      } else if (opBanos.matches("sin datos")) {Toast.makeText(getBaseContext(), "CAPTURA        :  " + capturaBanos, Toast.LENGTH_LONG).show();
-      } else if (opEstufa.matches("sin datos")) {Toast.makeText(getBaseContext(), "CAPTURA       :  " + capturaEstufa, Toast.LENGTH_LONG).show();
-      } else if (opEdad.matches("sin datos")) {Toast.makeText(getBaseContext(), "CAPTURA         :  " + capturaEdad, Toast.LENGTH_LONG).show();
-      } else if (opGenero.matches("sin datos")) {Toast.makeText(getBaseContext(), "CAPTURA       :  " + capturaGenero, Toast.LENGTH_LONG).show();
-      } else if (opTipoVivienda.matches("sin datos")) {Toast.makeText(getBaseContext(), "CAPTURA :  " + capturaTipoVivienda, Toast.LENGTH_LONG).show();
-      } else if (opTipoPiso.matches("sin datos")) {Toast.makeText(getBaseContext(), "CAPTURA     :  " + capturaTipoPiso, Toast.LENGTH_LONG).show();
-      } else {
+        else if (opAporta.matches("sin datos")) {Toast.makeText(getBaseContext(), "CAPTURA         :  " + capturaAporta, Toast.LENGTH_LONG).show();
+        } else if (opOcupacion.matches("sin datos")) {Toast.makeText(getBaseContext(), "CAPTURA    :  " + capturaOcupacion, Toast.LENGTH_LONG).show();
+        } else if (layCuantosCoches.getVisibility() == View.VISIBLE && opCuantosCoches.matches("sin datos")) {Toast.makeText(getBaseContext(), "CAPTURA:  " + capturaCuantosCoches, Toast.LENGTH_LONG).show();
+        } else if (opCuartos.matches("sin datos")) {Toast.makeText(getBaseContext(), "CAPTURA      :  " + capturaCuartos, Toast.LENGTH_LONG).show();
+        } else if (opCuartosDormir.matches("sin datos")) {Toast.makeText(getBaseContext(), "CAPTURA:  " + capturaCuartosDormir, Toast.LENGTH_LONG).show();
+        } else if (opFocos.matches("sin datos")) {Toast.makeText(getBaseContext(), "CAPTURA        :  " + capturaFocos, Toast.LENGTH_LONG).show();
+        } else if (opBanos.matches("sin datos")) {Toast.makeText(getBaseContext(), "CAPTURA        :  " + capturaBanos, Toast.LENGTH_LONG).show();
+        } else if (opEstufa.matches("sin datos")) {Toast.makeText(getBaseContext(), "CAPTURA       :  " + capturaEstufa, Toast.LENGTH_LONG).show();
+        } else if (opEdad.matches("sin datos")) {Toast.makeText(getBaseContext(), "CAPTURA         :  " + capturaEdad, Toast.LENGTH_LONG).show();
+        } else if (opGenero.matches("sin datos")) {Toast.makeText(getBaseContext(), "CAPTURA       :  " + capturaGenero, Toast.LENGTH_LONG).show();
+        } else if (opTipoVivienda.matches("sin datos")) {Toast.makeText(getBaseContext(), "CAPTURA :  " + capturaTipoVivienda, Toast.LENGTH_LONG).show();
+        } else if (opTipoPiso.matches("sin datos")) {Toast.makeText(getBaseContext(), "CAPTURA     :  " + capturaTipoPiso, Toast.LENGTH_LONG).show();
+        } else {
 
 // para valor por default
-        if (opAbandono.matches("sin datos")) {
-          opAbandono = "1";
-        }
+          if (opAbandono.matches("sin datos")) {
+            opAbandono = "1";
+          }
 
-        valores();
-        btnGuardar.setEnabled(false);
+          valores();
+          btnGuardar.setEnabled(false);
 //            dialogo();
 
-      } // Finaliza else
+        } // Finaliza else
         break;
 
       case 2:
@@ -3659,42 +3571,8 @@ finish();*/
     return consecutivo;
   }
 
-//  public void CargaSpinnerMeses() {
-//    String var = "Selecciona";
-//    if (var == null) {
-//      var = "";
-//    }
-//    final String[] datos = new String[] { "" + var + "",
-//        "Enero 2019",
-//        "Febrero 2019",
-//        "Marzo 2019",
-//        "Abril 2019",
-//        "Mayo 2019",
-//        "Junio 2019",
-//        "Julio 2019",
-//        "Agosto 2019",
-//        "Septiembre 2019",
-//        "Octubre 2019",
-//        "Noviembre 2019",
-//        "Diciembre 2019",
-//        "Enero 2020",
-//        "Febrero 20"
-//    };
-//    ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, datos);
-//    adaptador.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-//    spinnerMeses.setAdapter(adaptador);
-//    spinnerMeses.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-//      public void onItemSelected(AdapterView<?> parent, android.view.View v, int position, long id) {
-//        rdPregunta42.clearCheck();
-//
-//      }
-//
-//      public void onNothingSelected(AdapterView<?> parent) {
-//      }
-//    });
-//  }
 
-  public void CargaSpinner8() {
+  public void CargaSpinnerEscala() {
     String var = "Selecciona";
     if (var == null) {
       var = "";
@@ -3704,53 +3582,17 @@ finish();*/
     ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this, R.layout.multiline_spinner_dropdown_item,
             datos);
     adaptador.setDropDownViewResource(R.layout.multiline_spinner_dropdown_item);
-    spinner8.setAdapter(adaptador);
-    spinner8.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+    spinnerCalifica.setAdapter(adaptador);
+    spinnerCalifica.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
       public void onItemSelected(AdapterView<?> parent, android.view.View v, int position, long id) {
 
+        //       Log.i(TAG ,"cqs ----------->>"+spinnerCalifica.getSelectedItem().toString());
       }
 
       public void onNothingSelected(AdapterView<?> parent) {
       }
     });
   }
-
-  public void CargaSpinnerc3a() {
-    String var = "Selecciona";
-    if (var == null) {
-      var = "";
-    }
-    final String[] datos = new String[]{"" + var + "", "1", "2", "3", "4", "5", "6", "7","No sabe / No contestó"};
-    ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this, R.layout.multiline_spinner_dropdown_item,
-            datos);
-    adaptador.setDropDownViewResource(R.layout.multiline_spinner_dropdown_item);
-    spinnerc3a.setAdapter(adaptador);
-    spinnerc3a.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-      public void onItemSelected(AdapterView<?> parent, android.view.View v, int position, long id) {
-//
-//                rdPreguntac3a.clearCheck();
-//
-//                String dia=spinnerc3a.getSelectedItem().toString();
-//
-//                if(dia.equals("Selecciona")){
-//                    layc3b .setVisibility(View.GONE); rdPreguntac3b.clearCheck();
-//                }else{
-//                    layc3b .setVisibility(View.VISIBLE);  rdPreguntac3b.clearCheck();
-//
-//                }
-//
-
-
-      }
-
-      public void onNothingSelected(AdapterView<?> parent) {
-      }
-    });
-  }
-
-
-
-
 
   public void CargaSpinnerSemana() {
     String var = "Selecciona";
@@ -3802,134 +3644,9 @@ finish();*/
   }
 
 
-//public void CargaSpinner9() {
-//    String var = "Selecciona";
-//    if (var == null) {
-//        var = "";
-//    }
-//    final String[] datos = new String[]{"" + var + "",
-//    "1", "2", "3",
-//    "4", "5", "6", "7", "8", "9",
-//    "10"
-//};
-//ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, datos);
-//adaptador.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-//spinner9.setAdapter(adaptador);
-//spinner9.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-//    public void onItemSelected(AdapterView<?> parent, android.view.View v, int position, long id) {
-//
-//        rdPregunta9.clearCheck();
-//        op9 = "sin datos";
-//    }
-//
-//    public void onNothingSelected(AdapterView<?> parent) {
-//    }
-//});
-//}
 
-//
-//public void CargaSpinner0() {
-//    String var = "Selecciona";
-//    if (var == null) {
-//        var = "";
-//    }
-//    final String[] datos = new String[]{"" + var + "", "ALVARO OBREGON", "AZCAPOTZALCO", "BENITO JUAREZ",
-//    "COYOACAN", "CUAJIMALPA DE MORELOS", "CUAUHTEMOC", "GUSTAVO A. MADERO", "IZTACALCO", "IZTAPALAPA",
-//    "MAGDALENA CONTRERAS", "MIGUEL HIDALGO", "MILPA ALTA", "TLAHUAC", "TLALPAN", "VENUSTIANO CARRANZA",
-//    "XOCHIMILCO"};
-//    ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, datos);
-//    adaptador.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-//    spinner0.setAdapter(adaptador);
-//    spinner0.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-//        public void onItemSelected(AdapterView<?> parent, android.view.View v, int position, long id) {
-//
-//
-//            rdPregunta0.clearCheck();
-//            op0 = "sin datos";
-//
-//            radio_abandono1.setVisibility(View.VISIBLE);
-//            radio_abandono2.setVisibility(View.VISIBLE);
-//            radio_abandono3.setVisibility(View.VISIBLE);
-//            radio_abandono4.setVisibility(View.GONE);
-//            radio_abandono4.setChecked(false);
-//            radio_abandono1.setChecked(true);
-//
-//            lay1 .setVisibility(View.VISIBLE);
-//            lay2 .setVisibility(View.VISIBLE);
-//            lay3 .setVisibility(View.VISIBLE);
-//            lay4 .setVisibility(View.VISIBLE);
-//            lay5 .setVisibility(View.VISIBLE);
-//            lay6 .setVisibility(View.VISIBLE);
-//            lay7 .setVisibility(View.VISIBLE);
-//            layc1 .setVisibility(View.VISIBLE);
-//            layc2 .setVisibility(View.VISIBLE);
-//            layc3 .setVisibility(View.VISIBLE);
-//            layc4 .setVisibility(View.VISIBLE);
-//            layc5 .setVisibility(View.VISIBLE);
-//            layc6 .setVisibility(View.VISIBLE);
-//            layc6a .setVisibility(View.VISIBLE);
-//            layc6b .setVisibility(View.VISIBLE);
-//            layc7 .setVisibility(View.VISIBLE);
-//            layc7a .setVisibility(View.VISIBLE);
-//            layc8 .setVisibility(View.VISIBLE);
-//            layc8a .setVisibility(View.VISIBLE);
-//            layc9 .setVisibility(View.VISIBLE);
-//            layc9a .setVisibility(View.VISIBLE);
-//            layc10 .setVisibility(View.VISIBLE);
-//            layc10a .setVisibility(View.VISIBLE);
-//            layc11 .setVisibility(View.VISIBLE);
-//            layc11a .setVisibility(View.VISIBLE);
-//            layc12 .setVisibility(View.VISIBLE);
-//            layc12a .setVisibility(View.VISIBLE);
-//            layc13 .setVisibility(View.VISIBLE);
-//            layc13a .setVisibility(View.VISIBLE);
-//
-//            laySocioE.setVisibility(View.VISIBLE);
-//            layEst.setVisibility(View.VISIBLE);
-//            layAporta.setVisibility(View.VISIBLE);
-//            layOcupacion.setVisibility(View.VISIBLE);
-//            layCuantosCoches.setVisibility(View.VISIBLE);
-//            layCuartos.setVisibility(View.VISIBLE);
-//            layCuartosDormir.setVisibility(View.VISIBLE);
-//            layFocos.setVisibility(View.VISIBLE);
-//            layBanos.setVisibility(View.VISIBLE);
-//            layRegadera.setVisibility(View.VISIBLE);
-//            layEstufa.setVisibility(View.VISIBLE);
-//            layEdad.setVisibility(View.VISIBLE);
-//            layTipoPiso.setVisibility(View.VISIBLE);
-//            layTipoVivienda.setVisibility(View.VISIBLE);
-//            layGenero.setVisibility(View.VISIBLE);
-//
-//        }
-//
-//        public void onNothingSelected(AdapterView<?> parent) {
-//        }
-//    });
-//}
 
-//  public void CargaSpinner63() {
-//    String var = "Selecciona";
-//    if (var == null) {
-//      var = "";
-//    }
-//    final String[] datos = new String[] { "" + var + "", "ÁLVARO OBREGÓN", "AZCAPOTZALCO", "BENITO JUÁREZ",
-//        "COYOACÁN", "CUAJIMALPA DE MORELOS", "CUAUHTÉMOC", "GUSTAVO A. MADERO", "IZTACALCO", "IZTAPALAPA",
-//        "MAGDALENA CONTRERAS", "MIGUEL HIDALGO", "MILPA ALTA", "TLÁHUAC", "TLALPAN", "VENUSTIANO CARRANZA",
-//        "XOCHIMILCO" };
-//    ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, datos);
-//    adaptador.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-//    spinner63.setAdapter(adaptador);
-//    spinner63.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-//      public void onItemSelected(AdapterView<?> parent, android.view.View v, int position, long id) {
-//
-//        rdPregunta63.clearCheck();
-//
-//      }
-//
-//      public void onNothingSelected(AdapterView<?> parent) {
-//      }
-//    });
-//  }
+
 
 ///////////// FIN SPINNER /////////////
 
@@ -4049,6 +3766,21 @@ finish();*/
     thread.start();
   }
 
+  /////// METODO PARA VERIFICAR LA CONEXIÓN A INTERNET
+  public static boolean verificaConexion(Context ctx) {
+    boolean bConectado = false;
+    ConnectivityManager connec = (ConnectivityManager) ctx.getSystemService(Context.CONNECTIVITY_SERVICE);
+    // No sólo wifi, también GPRS
+    NetworkInfo[] redes = connec.getAllNetworkInfo();
+    // este bucle debería no ser tan ñapa
+    for (int i = 0; i < 2; i++) {
+      // ¿Tenemos conexión? ponemos a true
+      if (redes[i].getState() == NetworkInfo.State.CONNECTED) {
+        bConectado = true;
+      }
+    }
+    return bConectado;
+  }
 
   @TargetApi(Build.VERSION_CODES.HONEYCOMB_MR2)
   private void showProgress(final boolean show) {

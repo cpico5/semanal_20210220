@@ -138,8 +138,7 @@ public class DaoManager {
         return a;
     }
 
-    public <T> Object findOne(Class aClass, String selection,
-                                     String[] selectionArgs, String groupBy, String having, String orderBy, String limit) {
+    public <T> Object findOne(Class aClass, String selection,String[] selectionArgs, String groupBy, String having, String orderBy, String limit) {
         Cursor cursor = db.query(aClass.getSimpleName(), null, selection, selectionArgs, groupBy, having, orderBy, limit);
         Object a = null;
         int id = 0;
