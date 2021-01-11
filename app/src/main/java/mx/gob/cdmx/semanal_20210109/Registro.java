@@ -242,7 +242,7 @@ public class Registro extends Activity {
 //                            Log.d(TAG, "cqs ----------->> login: " + "Entra");
 //                            Log.d(TAG, "cqs ----------->> login: " + data);
 
-                            if (!verificaConexion(Registro.this)) {
+                            if (!Utils.verificaConexion(Registro.this)) {
                                 Toast.makeText(getBaseContext(),"Sin conexión inténtalo de nuevo",
                                         Toast.LENGTH_LONG).show();
                                 //this.finish();
@@ -396,22 +396,6 @@ public class Registro extends Activity {
             mProgressView.setVisibility(show ? View.VISIBLE : View.GONE);
             mUsuario.setVisibility(show ? View.GONE : View.VISIBLE);
         }
-    }
-
-    /////// METODO PARA VERIFICAR LA CONEXIÓN A INTERNET
-    public static boolean verificaConexion(Context ctx) {
-        boolean bConectado = false;
-        ConnectivityManager connec = (ConnectivityManager) ctx.getSystemService(Context.CONNECTIVITY_SERVICE);
-        // No sólo wifi, también GPRS
-        NetworkInfo[] redes = connec.getAllNetworkInfo();
-        // este bucle debería no ser tan ñapa
-        for (int i = 0; i < 2; i++) {
-            // ¿Tenemos conexión? ponemos a true
-            if (redes[i].getState() == NetworkInfo.State.CONNECTED) {
-                bConectado = true;
-            }
-        }
-        return bConectado;
     }
 
 

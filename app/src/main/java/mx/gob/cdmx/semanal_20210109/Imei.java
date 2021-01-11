@@ -1,21 +1,25 @@
 package mx.gob.cdmx.semanal_20210109;
 
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.os.Build;
 import android.provider.Settings;
 import android.telephony.TelephonyManager;
 
+import androidx.core.app.ActivityCompat;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class Imei  {
+public class Imei {
 
 	Context ctx;
+
 	public Imei(Context context) {
 		this.ctx = context;
 	}
 
-	public String getImei(){
+	public String getImei() {
 		String Imei = "";
 
 		//Getting the Object of TelephonyManager
@@ -23,9 +27,12 @@ public class Imei  {
 		//Getting IMEI Number of Devide
 
 
-			//Imei = tManager.getImei().toString();
+		//Imei = tManager.getImei().toString();
 
-			Imei = tManager.getDeviceId();
+		if (ActivityCompat.checkSelfPermission(ctx, android.Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
+
+		}
+		Imei = tManager.getDeviceId();
 
 			if(Imei==null){
 

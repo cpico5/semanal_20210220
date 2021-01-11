@@ -170,41 +170,216 @@ public class MainActivityPantalla1 extends Activity implements AdapterView.OnIte
   public String opTipoPiso="sin datos";
 
 
-  public String op1="sin datos";   public RadioGroup rdPregunta1;   public EditText editPregunta1;   public String captura1;  LinearLayout lay1;  private Spinner spinner1;
-  public String op2="sin datos";   public RadioGroup rdPregunta2;   public EditText editPregunta2;   public String captura2;  LinearLayout lay2;  private Spinner spinner2;
-  public String op3="sin datos";   public RadioGroup rdPregunta3;   public EditText editPregunta3;   public String captura3;  LinearLayout lay3;  private Spinner spinner3;
-  public String op4="sin datos";   public RadioGroup rdPregunta4;   public EditText editPregunta4;   public String captura4;  LinearLayout lay4;  private Spinner spinner4;
-  public String op5="sin datos";   public RadioGroup rdPregunta5;   public EditText editPregunta5;   public String captura5;  LinearLayout lay5;  private Spinner spinner5;
-  public String op6="sin datos";   public RadioGroup rdPregunta6;   public EditText editPregunta6;   public String captura6;  LinearLayout lay6;  private Spinner spinner6;
-  public String op7="sin datos";   public RadioGroup rdPregunta7;   public EditText editPregunta7;   public String captura7;  LinearLayout lay7;  private Spinner spinner7;
-  public String op8="sin datos";   public RadioGroup rdPregunta8;   public EditText editPregunta8;   public String captura8;  LinearLayout lay8;  private Spinner spinner8;
-  public String op9="sin datos";   public RadioGroup rdPregunta9;   public EditText editPregunta9;   public String captura9;  LinearLayout lay9;  private Spinner spinner9;
-  public String opc1="sin datos";   public RadioGroup rdPreguntac1;   public EditText editPreguntac1;   public String capturac1;  LinearLayout layc1;  private Spinner spinnerc1;
-  public String opc2="sin datos";   public RadioGroup rdPreguntac2;   public EditText editPreguntac2;   public String capturac2;  LinearLayout layc2;  private Spinner spinnerc2;
-  public String opc2a="sin datos";   public RadioGroup rdPreguntac2a;   public EditText editPreguntac2a;   public String capturac2a;  LinearLayout layc2a;  private Spinner spinnerc2a;
-  public String opc2b="sin datos";   public RadioGroup rdPreguntac2b;   public EditText editPreguntac2b;   public String capturac2b;  LinearLayout layc2b;  private Spinner spinnerc2b;
-  public String opc2c="sin datos";   public RadioGroup rdPreguntac2c;   public EditText editPreguntac2c;   public String capturac2c;  LinearLayout layc2c;  private Spinner spinnerc2c;
-  public String opc3="sin datos";   public RadioGroup rdPreguntac3;   public EditText editPreguntac3;   public String capturac3;  LinearLayout layc3;  private Spinner spinnerc3;
-  public String opc4="sin datos";   public RadioGroup rdPreguntac4;   public EditText editPreguntac4;   public String capturac4;  LinearLayout layc4;  private Spinner spinnerc4;
-  public String opc4a="sin datos";   public RadioGroup rdPreguntac4a;   public EditText editPreguntac4a;   public String capturac4a;  LinearLayout layc4a;  private Spinner spinnerc4a;
-  public String opc5="sin datos";   public RadioGroup rdPreguntac5;   public EditText editPreguntac5;   public String capturac5;  LinearLayout layc5;  private Spinner spinnerc5;
-  public String opc6="sin datos";   public RadioGroup rdPreguntac6;   public EditText editPreguntac6;   public String capturac6;  LinearLayout layc6;  private Spinner spinnerc6;
-  public String opc7="sin datos";   public RadioGroup rdPreguntac7;   public EditText editPreguntac7;   public String capturac7;  LinearLayout layc7;  private Spinner spinnerc7;
-  public String opc7a="sin datos";   public RadioGroup rdPreguntac7a;   public EditText editPreguntac7a;   public String capturac7a;  LinearLayout layc7a;  private Spinner spinnerc7a;
-  public String opc7b="sin datos";   public RadioGroup rdPreguntac7b;   public EditText editPreguntac7b;   public String capturac7b;  LinearLayout layc7b;  private Spinner spinnerc7b;
-  public String opc7c="sin datos";   public RadioGroup rdPreguntac7c;   public EditText editPreguntac7c;   public String capturac7c;  LinearLayout layc7c;  private Spinner spinnerc7c;
-  public String opc8="sin datos";   public RadioGroup rdPreguntac8;   public EditText editPreguntac8;   public String capturac8;  LinearLayout layc8;  private Spinner spinnerc8;
-  public String opc9="sin datos";   public RadioGroup rdPreguntac9;   public EditText editPreguntac9;   public String capturac9;  LinearLayout layc9;  private Spinner spinnerc9;
-  public String opc10="sin datos";   public RadioGroup rdPreguntac10;   public EditText editPreguntac10;   public String capturac10;  LinearLayout layc10;  private Spinner spinnerc10;
-  public String opc11="sin datos";   public RadioGroup rdPreguntac11;   public EditText editPreguntac11;   public String capturac11;  LinearLayout layc11;  private Spinner spinnerc11;
-  public String opc12="sin datos";   public RadioGroup rdPreguntac12;   public EditText editPreguntac12;   public String capturac12;  LinearLayout layc12;  private Spinner spinnerc12;
-  public String opc13="sin datos";   public RadioGroup rdPreguntac13;   public EditText editPreguntac13;   public String capturac13;  LinearLayout layc13;  private Spinner spinnerc13;
-  public String opc14="sin datos";   public RadioGroup rdPreguntac14;   public EditText editPreguntac14;   public String capturac14;  LinearLayout layc14;  private Spinner spinnerc14;
-  public String opc15="sin datos";   public RadioGroup rdPreguntac15;   public EditText editPreguntac15;   public String capturac15;  LinearLayout layc15;  private Spinner spinnerc15;
-  public String opc16="sin datos";   public RadioGroup rdPreguntac16;   public EditText editPreguntac16;   public String capturac16;  LinearLayout layc16;  private Spinner spinnerc16;
-  public String opc16a="sin datos";   public RadioGroup rdPreguntac16a;   public EditText editPreguntac16a;   public String capturac16a;  LinearLayout layc16a;  private Spinner spinnerc16a;
-  public String opc16b="sin datos";   public RadioGroup rdPreguntac16b;   public EditText editPreguntac16b;   public String capturac16b;  LinearLayout layc16b;  private Spinner spinnerc16b;
-  public String opc17="sin datos";   public RadioGroup rdPreguntac17;   public EditText editPreguntac17;   public String capturac17;  LinearLayout layc17;  private Spinner spinnerc17;
+  public String op1 = "sin datos";
+  public RadioGroup rdPregunta1;
+  public EditText editPregunta1;
+  public String captura1;
+  LinearLayout lay1;
+  private Spinner spinner1;
+  public String op2 = "sin datos";
+  public RadioGroup rdPregunta2;
+  public EditText editPregunta2;
+  public String captura2;
+  LinearLayout lay2;
+  private Spinner spinner2;
+  public String op3 = "sin datos";
+  public RadioGroup rdPregunta3;
+  public EditText editPregunta3;
+  public String captura3;
+  LinearLayout lay3;
+  private Spinner spinner3;
+  public String op4 = "sin datos";
+  public RadioGroup rdPregunta4;
+  public EditText editPregunta4;
+  public String captura4;
+  LinearLayout lay4;
+  private Spinner spinner4;
+  public String op5 = "sin datos";
+  public RadioGroup rdPregunta5;
+  public EditText editPregunta5;
+  public String captura5;
+  LinearLayout lay5;
+  private Spinner spinner5;
+  public String op6 = "sin datos";
+  public RadioGroup rdPregunta6;
+  public EditText editPregunta6;
+  public String captura6;
+  LinearLayout lay6;
+  private Spinner spinner6;
+  public String op7 = "sin datos";
+  public RadioGroup rdPregunta7;
+  public EditText editPregunta7;
+  public String captura7;
+  LinearLayout lay7;
+  private Spinner spinner7;
+  public String op8 = "sin datos";
+  public RadioGroup rdPregunta8;
+  public EditText editPregunta8;
+  public String captura8;
+  LinearLayout lay8;
+  private Spinner spinner8;
+  public String op9 = "sin datos";
+  public RadioGroup rdPregunta9;
+  public EditText editPregunta9;
+  public String captura9;
+  LinearLayout lay9;
+  private Spinner spinner9;
+  public String opc1 = "sin datos";
+  public RadioGroup rdPreguntac1;
+  public EditText editPreguntac1;
+  public String capturac1;
+  LinearLayout layc1;
+  private Spinner spinnerc1;
+  public String opc2 = "sin datos";
+  public RadioGroup rdPreguntac2;
+  public EditText editPreguntac2;
+  public String capturac2;
+  LinearLayout layc2;
+  private Spinner spinnerc2;
+  public String opc2a = "sin datos";
+  public RadioGroup rdPreguntac2a;
+  public EditText editPreguntac2a;
+  public String capturac2a;
+  LinearLayout layc2a;
+  private Spinner spinnerc2a;
+  public String opc2b = "sin datos";
+  public RadioGroup rdPreguntac2b;
+  public EditText editPreguntac2b;
+  public String capturac2b;
+  LinearLayout layc2b;
+  private Spinner spinnerc2b;
+  public String opc2c = "sin datos";
+  public RadioGroup rdPreguntac2c;
+  public EditText editPreguntac2c;
+  public String capturac2c;
+  LinearLayout layc2c;
+  private Spinner spinnerc2c;
+  public String opc3 = "sin datos";
+  public RadioGroup rdPreguntac3;
+  public EditText editPreguntac3;
+  public String capturac3;
+  LinearLayout layc3;
+  private Spinner spinnerc3;
+  public String opc4 = "sin datos";
+  public RadioGroup rdPreguntac4;
+  public EditText editPreguntac4;
+  public String capturac4;
+  LinearLayout layc4;
+  private Spinner spinnerc4;
+  public String opc4a = "sin datos";
+  public RadioGroup rdPreguntac4a;
+  public EditText editPreguntac4a;
+  public String capturac4a;
+  LinearLayout layc4a;
+  private Spinner spinnerc4a;
+  public String opc5 = "sin datos";
+  public RadioGroup rdPreguntac5;
+  public EditText editPreguntac5;
+  public String capturac5;
+  LinearLayout layc5;
+  private Spinner spinnerc5;
+  public String opc6 = "sin datos";
+  public RadioGroup rdPreguntac6;
+  public EditText editPreguntac6;
+  public String capturac6;
+  LinearLayout layc6;
+  private Spinner spinnerc6;
+  public String opc7 = "sin datos";
+  public RadioGroup rdPreguntac7;
+  public EditText editPreguntac7;
+  public String capturac7;
+  LinearLayout layc7;
+  private Spinner spinnerc7;
+  public String opc7a = "sin datos";
+  public RadioGroup rdPreguntac7a;
+  public EditText editPreguntac7a;
+  public String capturac7a;
+  LinearLayout layc7a;
+  private Spinner spinnerc7a;
+  public String opc7b = "sin datos";
+  public RadioGroup rdPreguntac7b;
+  public EditText editPreguntac7b;
+  public String capturac7b;
+  LinearLayout layc7b;
+  private Spinner spinnerc7b;
+  public String opc7c = "sin datos";
+  public RadioGroup rdPreguntac7c;
+  public EditText editPreguntac7c;
+  public String capturac7c;
+  LinearLayout layc7c;
+  private Spinner spinnerc7c;
+  public String opc8 = "sin datos";
+  public RadioGroup rdPreguntac8;
+  public EditText editPreguntac8;
+  public String capturac8;
+  LinearLayout layc8;
+  private Spinner spinnerc8;
+  public String opc9 = "sin datos";
+  public RadioGroup rdPreguntac9;
+  public EditText editPreguntac9;
+  public String capturac9;
+  LinearLayout layc9;
+  private Spinner spinnerc9;
+  public String opc10 = "sin datos";
+  public RadioGroup rdPreguntac10;
+  public EditText editPreguntac10;
+  public String capturac10;
+  LinearLayout layc10;
+  private Spinner spinnerc10;
+  public String opc11 = "sin datos";
+  public RadioGroup rdPreguntac11;
+  public EditText editPreguntac11;
+  public String capturac11;
+  LinearLayout layc11;
+  private Spinner spinnerc11;
+  public String opc12 = "sin datos";
+  public RadioGroup rdPreguntac12;
+  public EditText editPreguntac12;
+  public String capturac12;
+  LinearLayout layc12;
+  private Spinner spinnerc12;
+  public String opc13 = "sin datos";
+  public RadioGroup rdPreguntac13;
+  public EditText editPreguntac13;
+  public String capturac13;
+  LinearLayout layc13;
+  private Spinner spinnerc13;
+  public String opc14 = "sin datos";
+  public RadioGroup rdPreguntac14;
+  public EditText editPreguntac14;
+  public String capturac14;
+  LinearLayout layc14;
+  private Spinner spinnerc14;
+  public String opc15 = "sin datos";
+  public RadioGroup rdPreguntac15;
+  public EditText editPreguntac15;
+  public String capturac15;
+  LinearLayout layc15;
+  private Spinner spinnerc15;
+  public String opc16 = "sin datos";
+  public RadioGroup rdPreguntac16;
+  public EditText editPreguntac16;
+  public String capturac16;
+  LinearLayout layc16;
+  private Spinner spinnerc16;
+  public String opc16a = "sin datos";
+  public RadioGroup rdPreguntac16a;
+  public EditText editPreguntac16a;
+  public String capturac16a;
+  LinearLayout layc16a;
+  private Spinner spinnerc16a;
+  public String opc16b = "sin datos";
+  public RadioGroup rdPreguntac16b;
+  public EditText editPreguntac16b;
+  public String capturac16b;
+  LinearLayout layc16b;
+  private Spinner spinnerc16b;
+  public String opc17 = "sin datos";
+  public RadioGroup rdPreguntac17;
+  public EditText editPreguntac17;
+  public String capturac17;
+  LinearLayout layc17;
+  private Spinner spinnerc17;
 
   LinearLayout laySocioE;
   LinearLayout layEst;
@@ -2696,12 +2871,6 @@ public class MainActivityPantalla1 extends Activity implements AdapterView.OnIte
     elMaximo = Integer.parseInt(sacaMaximo().toString()) + 1;
     elMaximoConsecutivo = Integer.parseInt(sacaMaximoConsecutivo().toString()) + 1;
 
-
-
-
-
-
-
     String strText8;
     if(spinner8.getSelectedItem().toString().equals("Selecciona")){
       strText8=op8;
@@ -2709,19 +2878,6 @@ public class MainActivityPantalla1 extends Activity implements AdapterView.OnIte
       strText8=spinner8.getSelectedItem().toString();
       rdPregunta8.clearCheck();
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     String strTextc4a;
     if (editPreguntac4a.getText().toString().trim().length() == 0) {
@@ -2739,13 +2895,6 @@ public class MainActivityPantalla1 extends Activity implements AdapterView.OnIte
       strTextc10 = editPreguntac10.getText().toString().trim();
       rdPreguntac10.clearCheck();
     }
-
-
-
-
-
-
-
 
 
     String str1 = op1;
@@ -3094,7 +3243,7 @@ public class MainActivityPantalla1 extends Activity implements AdapterView.OnIte
         values.put("tiempo", elTiempo());
         values.put("tipo_captura", tipoEncuesta);
 
-        if (!verificaConexion(this)) {
+        if (!Utils.verificaConexion(this)) {
           Toast.makeText(getBaseContext(),"Sin conexión",Toast.LENGTH_LONG).show();
           values.put("enviado", "0");
           db.insert("encuestas", null, values);
@@ -3110,70 +3259,70 @@ public class MainActivityPantalla1 extends Activity implements AdapterView.OnIte
       guardaEncuestaWS(values);
 
 
-      System.out.println("consecutivo_diario "+ elMaximo);
-      System.out.println("usuario "           + cachaNombre().toUpperCase());
-      System.out.println("nombre_encuesta "   + nombreE.toUpperCase());
-      System.out.println("fecha "             + formattedDate1);
-      System.out.println("hora "              + formattedDate5);
-      System.out.println("imei "              + sacaImei());
-      System.out.println("Seccion "           + str);
-      System.out.println("Latitud  "          + strLatitud);
-      System.out.println("Longitud  "         + strLongitud);
-      System.out.println("pregunta_1  " +   str1);
-      System.out.println("pregunta_2  " +   str2);
-      System.out.println("pregunta_3  " +   str3);
-      System.out.println("pregunta_4  " +   str4);
-      System.out.println("pregunta_5  " +   str5);
-      System.out.println("pregunta_6  " +   str6);
-      System.out.println("pregunta_7  " +   str7);
-      System.out.println("pregunta_8  " +   str8);
-      System.out.println("pregunta_9  " +   str9);
-      System.out.println("pregunta_c1  " +   strc1);
-      System.out.println("pregunta_c2  " +   strc2);
-      System.out.println("pregunta_c2a  " +   strc2a);
-      System.out.println("pregunta_c2b  " +   strc2b);
-      System.out.println("pregunta_c2c  " +   strc2c);
-      System.out.println("pregunta_c3  " +   strc3);
-      System.out.println("pregunta_c4  " +   strc4);
-      System.out.println("pregunta_c4a  " +   strc4a);
-      System.out.println("pregunta_c5  " +   strc5);
-      System.out.println("pregunta_c6  " +   strc6);
-      System.out.println("pregunta_c7  " +   strc7);
-      System.out.println("pregunta_c7a  " +   strc7a);
-      System.out.println("pregunta_c7b  " +   strc7b);
-      System.out.println("pregunta_c7c  " +   strc7c);
-      System.out.println("pregunta_c8  " +   strc8);
-      System.out.println("pregunta_c9  " +   strc9);
-      System.out.println("pregunta_c10  " +   strc10);
-      System.out.println("pregunta_c11  " +   strc11);
-      System.out.println("pregunta_c12  " +   strc12);
-      System.out.println("pregunta_c13  " +   strc13);
-      System.out.println("pregunta_c14  " +   strc14);
-      System.out.println("pregunta_c15  " +   strc15);
-      System.out.println("pregunta_c16  " +   strc16);
-      System.out.println("pregunta_c16a  " +   strc16a);
-      System.out.println("pregunta_c16b  " +   strc16b);
-      System.out.println("pregunta_c17  " +   strc17);
+      System.out.println("consecutivo_diario " + elMaximo);
+      System.out.println("usuario " + cachaNombre().toUpperCase());
+      System.out.println("nombre_encuesta " + nombreE.toUpperCase());
+      System.out.println("fecha " + formattedDate1);
+      System.out.println("hora " + formattedDate5);
+      System.out.println("imei " + sacaImei());
+      System.out.println("Seccion " + str);
+      System.out.println("Latitud  " + strLatitud);
+      System.out.println("Longitud  " + strLongitud);
+      System.out.println("pregunta_1  " + str1);
+      System.out.println("pregunta_2  " + str2);
+      System.out.println("pregunta_3  " + str3);
+      System.out.println("pregunta_4  " + str4);
+      System.out.println("pregunta_5  " + str5);
+      System.out.println("pregunta_6  " + str6);
+      System.out.println("pregunta_7  " + str7);
+      System.out.println("pregunta_8  " + str8);
+      System.out.println("pregunta_9  " + str9);
+      System.out.println("pregunta_c1  " + strc1);
+      System.out.println("pregunta_c2  " + strc2);
+      System.out.println("pregunta_c2a  " + strc2a);
+      System.out.println("pregunta_c2b  " + strc2b);
+      System.out.println("pregunta_c2c  " + strc2c);
+      System.out.println("pregunta_c3  " + strc3);
+      System.out.println("pregunta_c4  " + strc4);
+      System.out.println("pregunta_c4a  " + strc4a);
+      System.out.println("pregunta_c5  " + strc5);
+      System.out.println("pregunta_c6  " + strc6);
+      System.out.println("pregunta_c7  " + strc7);
+      System.out.println("pregunta_c7a  " + strc7a);
+      System.out.println("pregunta_c7b  " + strc7b);
+      System.out.println("pregunta_c7c  " + strc7c);
+      System.out.println("pregunta_c8  " + strc8);
+      System.out.println("pregunta_c9  " + strc9);
+      System.out.println("pregunta_c10  " + strc10);
+      System.out.println("pregunta_c11  " + strc11);
+      System.out.println("pregunta_c12  " + strc12);
+      System.out.println("pregunta_c13  " + strc13);
+      System.out.println("pregunta_c14  " + strc14);
+      System.out.println("pregunta_c15  " + strc15);
+      System.out.println("pregunta_c16  " + strc16);
+      System.out.println("pregunta_c16a  " + strc16a);
+      System.out.println("pregunta_c16b  " + strc16b);
+      System.out.println("pregunta_c17  " + strc17);
 
-      System.out.println(" aporta   "        + strAporta);
-      System.out.println(" ocupacion   "     + strOcupacion);
-      System.out.println(" cuantos_coches   "+ strCuantosCoches);
-      System.out.println(" cuartos   "       + strCuartos);
-      System.out.println(" cuartos_dormir   "+ strCuartosDormir);
-      System.out.println(" focos   "         + strFocos);
+      System.out.println(" aporta   " + strAporta);
+      System.out.println(" ocupacion   " + strOcupacion);
+      System.out.println(" cuantos_coches   " + strCuantosCoches);
+      System.out.println(" cuartos   " + strCuartos);
+      System.out.println(" cuartos_dormir   " + strCuartosDormir);
+      System.out.println(" focos   " + strFocos);
 
-      System.out.println(" baños   "         + strBanos);
-      System.out.println(" regadera   "      + strRegadera);
-      System.out.println(" estufa   "        + strEstufa);
-      System.out.println(" edad   "          + strEdad);
-      System.out.println(" genero   "        + strGenero);
+      System.out.println(" baños   " + strBanos);
+      System.out.println(" regadera   " + strRegadera);
+      System.out.println(" estufa   " + strEstufa);
+      System.out.println(" edad   " + strEdad);
+      System.out.println(" genero   " + strGenero);
       System.out.println(" tipo_vivienda   " + strTipoVivienda);
-      System.out.println(" tipo_piso   "     + strTipoPiso);
+      System.out.println(" tipo_piso   " + strTipoPiso);
 
-      System.out.println("abandono  "        + strAbandono);
+      System.out.println("abandono  " + strAbandono);
 
-      System.out.println("suma  "            + suma);
-      System.out.println("status  "          + status);
+      System.out.println("suma  " + suma);
+      System.out.println("status  " + status);
 
 // FIN INSERTA BASE DE DATOS //
 
@@ -3259,14 +3408,14 @@ finish();*/
 
 
             } else {
-              Toast.makeText(MainActivityPantalla1.this, "Error al subir los datos", Toast.LENGTH_SHORT).show();
+              Utils.toast(MainActivityPantalla1.this,"Error al subir los datos");
             }
           }
 
         } catch (Exception e) {
           showProgress(false);
           Log.e(TAG, e.getMessage());
-          Toast.makeText(MainActivityPantalla1.this, "Error al subir los datos", Toast.LENGTH_SHORT).show();
+          Utils.toast(MainActivityPantalla1.this,"Catch Error al subir los datos");
         }
       }
 
@@ -3289,7 +3438,8 @@ finish();*/
 
         }
 
-        Toast.makeText(MainActivityPantalla1.this, "Error de conexion, Se guarda en la base interna", Toast.LENGTH_SHORT).show();
+        Utils.toast(context,"Error de conexion, Se guarda en la base interna");
+//        Toast.makeText(MainActivityPantalla1.this, "Error de conexion, Se guarda en la base interna", Toast.LENGTH_SHORT).show();
         btnGuardar.setEnabled(true);
 
         dialogo();
@@ -3899,21 +4049,6 @@ finish();*/
     thread.start();
   }
 
-  /////// METODO PARA VERIFICAR LA CONEXIÓN A INTERNET
-  public static boolean verificaConexion(Context ctx) {
-    boolean bConectado = false;
-    ConnectivityManager connec = (ConnectivityManager) ctx.getSystemService(Context.CONNECTIVITY_SERVICE);
-    // No sólo wifi, también GPRS
-    NetworkInfo[] redes = connec.getAllNetworkInfo();
-    // este bucle debería no ser tan ñapa
-    for (int i = 0; i < 2; i++) {
-      // ¿Tenemos conexión? ponemos a true
-      if (redes[i].getState() == NetworkInfo.State.CONNECTED) {
-        bConectado = true;
-      }
-    }
-    return bConectado;
-  }
 
   @TargetApi(Build.VERSION_CODES.HONEYCOMB_MR2)
   private void showProgress(final boolean show) {

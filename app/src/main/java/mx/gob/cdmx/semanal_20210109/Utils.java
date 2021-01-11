@@ -3,6 +3,9 @@ package mx.gob.cdmx.semanal_20210109;
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.util.Log;
+import android.view.Gravity;
+import android.widget.Toast;
 
 public class Utils {
 
@@ -197,4 +200,21 @@ public class Utils {
         }
         return bConectado;
     }
+
+    public static Void info(String TAG,String mensaje,String aMostrar){
+        Log.e(TAG, "cqs -->>  "+ mensaje +": "+String.valueOf(aMostrar));
+        return null;
+    }
+
+    public static Void toast(Context ctx,String mensaje){
+        Toast toast=Toast.makeText(ctx, mensaje, Toast.LENGTH_SHORT);
+        toast.setGravity(Gravity.CENTER | Gravity.CENTER, 0, 0);
+        toast.show();
+        return null;
+    }
+
+
+
+
+
 }

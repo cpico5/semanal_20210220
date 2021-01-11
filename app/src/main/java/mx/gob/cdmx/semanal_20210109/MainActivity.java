@@ -375,6 +375,8 @@ public class MainActivity extends Activity implements OnItemSelectedListener, Ad
         elMaximo = Integer.parseInt(sacaMaximo().toString()) + 1;
         String elMaximoFecha = String.valueOf(elMaximo);
 
+        Utils.info(TAG,"El numero inicial antes del if",String.valueOf(elMaximoFecha));
+
         if (elMaximoFecha.matches("1")) {
             Log.i(TAG, " =====> El numero inicial: " + elMaximoFecha);
             Log.i(TAG, " =====> El nombre de la encuesta: " + nombreEncuesta);
@@ -1188,7 +1190,7 @@ public class MainActivity extends Activity implements OnItemSelectedListener, Ad
                 values.put("tiempo", "00:00");
                 values.put("tipo_captura", "RECHAZO");
 
-                if (!verificaConexion(this)) {
+                if (!Utils.verificaConexion(this)) {
                     Toast.makeText(getBaseContext(), "Sin conexion", Toast.LENGTH_LONG).show();
                     values.put("enviado", "0");
                     db.insert("encuestas", null, values);
@@ -1286,7 +1288,7 @@ public class MainActivity extends Activity implements OnItemSelectedListener, Ad
                 values.put("tiempo", "00:00");
                 values.put("tipo_captura", "RECHAZO");
 
-                if (!verificaConexion(this)) {
+                if (!Utils.verificaConexion(this)) {
                     Toast.makeText(getBaseContext(), "Sin conexión", Toast.LENGTH_LONG).show();
                     values.put("enviado", "0");
                     db.insert("encuestas", null, values);
@@ -1383,7 +1385,7 @@ public class MainActivity extends Activity implements OnItemSelectedListener, Ad
                 values.put("tiempo", "00:00");
                 values.put("tipo_captura", "RECHAZO TEMOR A CONTAGIO");
 
-                if (!verificaConexion(this)) {
+                if (!Utils.verificaConexion(this)) {
                     Toast.makeText(getBaseContext(), "Sin conexión", Toast.LENGTH_LONG).show();
                     values.put("enviado", "0");
                     db.insert("encuestas", null, values);
@@ -1480,7 +1482,7 @@ public class MainActivity extends Activity implements OnItemSelectedListener, Ad
                 values.put("tiempo", "00:00");
                 values.put("tipo_captura", "RECHAZO TEMOR A CONTAGIO");
 
-                if (!verificaConexion(this)) {
+                if (!Utils.verificaConexion(this)) {
                     Toast.makeText(getBaseContext(), "Sin conexión", Toast.LENGTH_LONG).show();
                     values.put("enviado", "0");
                     db.insert("encuestas", null, values);
@@ -2096,45 +2098,6 @@ usuario = gson.fromJson(jsonUser.toString(), collectionType);*/
         db.close();
 
         return acceso;
-    }
-    // public void grabar() {
-    // mediaRecorder = new MediaRecorder();
-    // mediaRecorder.setOutputFile(fichero);
-    // mediaRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
-    // mediaRecorder.setOutputFormat(MediaRecorder.
-    // OutputFormat.THREE_GPP);
-    // mediaRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.
-    // AMR_NB);
-    // try {
-    // mediaRecorder.prepare();
-    // } catch (IOException e) {
-    // Log.e(LOG_TAG, "Fallo en grabación");
-    // }
-    // mediaRecorder.start();
-    // }
-    //
-    //
-    // public void detenerGrabacion() {
-    // mediaRecorder.stop();
-    // mediaRecorder.release();
-    // finish();
-    // }
-    //
-
-    /////// METODO PARA VERIFICAR LA CONEXIÓN A INTERNET
-    public static boolean verificaConexion(Context ctx) {
-        boolean bConectado = false;
-        ConnectivityManager connec = (ConnectivityManager) ctx.getSystemService(Context.CONNECTIVITY_SERVICE);
-        // No sólo wifi, también GPRS
-        NetworkInfo[] redes = connec.getAllNetworkInfo();
-        // este bucle debería no ser tan ñapa
-        for (int i = 0; i < 2; i++) {
-            // ¿Tenemos conexión? ponemos a true
-            if (redes[i].getState() == NetworkInfo.State.CONNECTED) {
-                bConectado = true;
-            }
-        }
-        return bConectado;
     }
 
     @TargetApi(Build.VERSION_CODES.HONEYCOMB_MR2)

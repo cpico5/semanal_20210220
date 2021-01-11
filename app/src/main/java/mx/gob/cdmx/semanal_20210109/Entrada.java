@@ -293,6 +293,7 @@ public class Entrada extends Activity {
 //        Thread.setDefaultUncaughtExceptionHandler(new UnCaughtException(this,this));
 
         Log.i(TAG, " =====> la latitud: " + latitude);
+        Utils.info(TAG,"la latitud",String.valueOf(latitude));
 
         mUsuario = (EditText) findViewById(R.id.editUsuario);
         mPass = (EditText) findViewById(R.id.editPass);
@@ -321,7 +322,7 @@ public class Entrada extends Activity {
 
 //			dialog = ProgressDialog.show(Entrada.this, "", "Actualizando...", true);
 
-        if (!verificaConexion(this)) {
+        if (!Utils.verificaConexion(this)) {
             Toast.makeText(getBaseContext(),"Sin conexión",
                     Toast.LENGTH_LONG).show();
             //this.finish();
@@ -382,7 +383,7 @@ public class Entrada extends Activity {
 
 
 
-                if (!verificaConexion(Entrada.this)) {
+                if (!Utils.verificaConexion(Entrada.this)) {
                     showToast("Sin conexión");
 
                     loginLocal();
@@ -656,27 +657,6 @@ public class Entrada extends Activity {
 
     }
 
-
-
-
-
-
-
-    /////// METODO PARA VERIFICAR LA CONEXIÓN A INTERNET
-    public static boolean verificaConexion(Context ctx) {
-        boolean bConectado = false;
-        ConnectivityManager connec = (ConnectivityManager) ctx.getSystemService(Context.CONNECTIVITY_SERVICE);
-        // No sólo wifi, también GPRS
-        NetworkInfo[] redes = connec.getAllNetworkInfo();
-        // este bucle debería no ser tan ñapa
-        for (int i = 0; i < 2; i++) {
-            // ¿Tenemos conexión? ponemos a true
-            if (redes[i].getState() == NetworkInfo.State.CONNECTED) {
-                bConectado = true;
-            }
-        }
-        return bConectado;
-    }
 
     public void salir() {
         Salir = (Button) findViewById(R.id.btnSalir);
