@@ -17,6 +17,7 @@ import java.util.Date;
 
 import mx.gob.cdmx.semanal_20210109.Nombre;
 import mx.gob.cdmx.semanal_20210109.UsuariosSQLiteHelper;
+import mx.gob.cdmx.semanal_20210109.Utils;
 import mx.gob.cdmx.semanal_20210109.db.DaoManager;
 import mx.gob.cdmx.semanal_20210109.model.Usuario;
 import mx.gob.cdmx.semanal_20210109.UsuariosSQLiteHelper3;
@@ -119,6 +120,8 @@ public class SignupActivity extends AsyncTask<String, Void, String> {
             imei = new Imei(this.context);
             Nombre nom = new Nombre();
             String nombreEncuesta = nom.nombreEncuesta();
+
+            Utils.info(TAG,"Entro a SignupActivity","Repitiendo");
 
 //            String DATABASE_NAME = Environment.getExternalStorageDirectory() + "/Mis_archivos/" + nombreEncuesta + "_"+ imei.getImei() + "";
 //

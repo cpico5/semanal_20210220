@@ -202,7 +202,7 @@ public class Utils {
     }
 
     public static Void info(String TAG,String mensaje,String aMostrar){
-        Log.e(TAG, "cqs -->>  "+ mensaje +": "+String.valueOf(aMostrar));
+        Log.e(TAG, "cqs -->>  "+ mensaje +": "+ String.valueOf(aMostrar));
         return null;
     }
 
