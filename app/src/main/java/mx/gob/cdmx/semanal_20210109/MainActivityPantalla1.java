@@ -75,7 +75,7 @@ import org.json.JSONObject;
 
 import cz.msebera.android.httpclient.Header;
 import mx.gob.cdmx.semanal_20210109.model.DatoContent;
-import mx.gob.cdmx.semanal_20210109.model.Usuario;
+import mx.gob.cdmx.semanal_20210109.model.Usuarios;
 
 import static android.text.Layout.JUSTIFICATION_MODE_INTER_WORD;
 import static mx.gob.cdmx.semanal_20210109.Nombre.USUARIO;
@@ -88,7 +88,7 @@ public class MainActivityPantalla1 extends Activity implements AdapterView.OnIte
     private static final String LOG_TAG = "Grabadora";
     private static final String TAG = "Pantalla1";
     private View mProgressView;
-    private Usuario usuario;
+    private Usuarios usuario;
 
     final Context context = this;
 
@@ -154,7 +154,6 @@ public class MainActivityPantalla1 extends Activity implements AdapterView.OnIte
     private Spinner spinner0;
 
     Timer timer;
-    private Imei imei;
 
     public String laDelegacion;
     public EditText txtSeccion;
@@ -366,27 +365,27 @@ public class MainActivityPantalla1 extends Activity implements AdapterView.OnIte
 
 
 
-    // @SuppressLint("MissingPermission")
-    // public String sacaChip() {
-    //   String szImei;
-    //   TelephonyManager TelephonyMgr = (TelephonyManager) getSystemService(TELEPHONY_SERVICE);//Telefono
-    //   szImei = TelephonyMgr.getDeviceId(); // Requires READ_PHONE_STATE
-    //   if (szImei == null) {
-    //     szImei = Secure.getString(this.getContentResolver(), Secure.ANDROID_ID);// Tableta
-    //   }
-    //   return szImei;
-    // }
+    @SuppressLint("MissingPermission")
+    public String sacaChip() {
+        String szImei;
+        TelephonyManager TelephonyMgr = (TelephonyManager) getSystemService(TELEPHONY_SERVICE);//Telefono
+        szImei = TelephonyMgr.getDeviceId(); // Requires READ_PHONE_STATE
+        if (szImei == null) {
+            szImei = Secure.getString(this.getContentResolver(), Secure.ANDROID_ID);// Tableta
+        }
+        return szImei;
+    }
 
-    // @SuppressLint("MissingPermission")
-    // public String sacaImei() {
-    //   String szImei;
-    //   TelephonyManager TelephonyMgr = (TelephonyManager) getSystemService(TELEPHONY_SERVICE);//Telefono
-    //   szImei = TelephonyMgr.getDeviceId(); // Requires READ_PHONE_STATE
-    //   if (szImei == null) {
-    //     szImei = Secure.getString(this.getContentResolver(), Secure.ANDROID_ID);// Tableta
-    //   }
-    //   return szImei;
-    // }
+    @SuppressLint("MissingPermission")
+    public String sacaImei() {
+        String szImei;
+        TelephonyManager TelephonyMgr = (TelephonyManager) getSystemService(TELEPHONY_SERVICE);//Telefono
+        szImei = TelephonyMgr.getDeviceId(); // Requires READ_PHONE_STATE
+        if (szImei == null) {
+            szImei = Secure.getString(this.getContentResolver(), Secure.ANDROID_ID);// Tableta
+        }
+        return szImei;
+    }
 
 
     public void dialogo() {
@@ -491,7 +490,7 @@ public class MainActivityPantalla1 extends Activity implements AdapterView.OnIte
         } else {
             usuario = cachaNombre();
         }
-        final String nombreAudio = nombreEncuesta + "_" + date + "_" + imei + "_" + cachaNombre() + "_" + elConsecutivo + ".mp3";
+        final String nombreAudio = nombreEncuesta + "_" + date + "_" + sacaImei() + "_" + cachaNombre() + "_" + elConsecutivo + ".mp3";
         return nombreAudio;
     }
 
@@ -561,9 +560,9 @@ public class MainActivityPantalla1 extends Activity implements AdapterView.OnIte
         }
 
         if (savedInstanceState != null) {
-            usuario = (Usuario) savedInstanceState.getSerializable(USUARIO);
+            usuario = (Usuarios) savedInstanceState.getSerializable(USUARIO);
         } else {
-            usuario = (Usuario) startingIntent.getSerializableExtra(USUARIO);
+            usuario = (Usuarios) startingIntent.getSerializableExtra(USUARIO);
         }
 
 // Carga las pantallas aleatoriamente
@@ -586,10 +585,6 @@ public class MainActivityPantalla1 extends Activity implements AdapterView.OnIte
 
         Log.i(TAG,"cqs -->> Alcalde: "+Alcalde);
         Log.i(TAG,"cqs -->> id_alcaldia: "+id_alcaldia);
-
-
-        imei = new Imei(this.context);
-        Utils.info(TAG,"imei", String.valueOf(imei));
 
         cachaNombre(); // llamado al metodo para obtener el numero del
 // encuestador
@@ -976,53 +971,43 @@ public class MainActivityPantalla1 extends Activity implements AdapterView.OnIte
             public void onCheckedChanged(RadioGroup group, int checkedId) {
 
                 if (checkedId == R.id.radio1) {
-                    op1 = "0";
-                    spinner1.setSelection(0);
+                    op1 = "?0";
                 }
 
                 else if (checkedId == R.id.radio2) {
                     op1 = "1";
-                    spinner1.setSelection(0);
                 }
 
                 else if (checkedId == R.id.radio3) {
                     op1 = "¿Cómo se entera Usted de las noticias regularmente?";
-                    spinner1.setSelection(0);
                 }
 
                 else if (checkedId == R.id.radio4) {
                     op1 = "Televisión ";
-                    spinner1.setSelection(0);
                 }
 
                 else if (checkedId == R.id.radio5) {
                     op1 = "Radio";
-                    spinner1.setSelection(0);
                 }
 
                 else if (checkedId == R.id.radio6) {
                     op1 = "Periódico";
-                    spinner1.setSelection(0);
                 }
 
                 else if (checkedId == R.id.radio7) {
                     op1 = "Redes sociales";
-                    spinner1.setSelection(0);
                 }
 
                 else if (checkedId == R.id.radio8) {
                     op1 = "Internet";
-                    spinner1.setSelection(0);
                 }
 
                 else if (checkedId == R.id.radio9) {
                     op1 = "Otra";
-                    spinner1.setSelection(0);
                 }
 
                 else if (checkedId == R.id.radio10) {
                     op1 = "No sabe / No contestó";
-                    spinner1.setSelection(0);
                 }
 
             }
@@ -2755,7 +2740,7 @@ public class MainActivityPantalla1 extends Activity implements AdapterView.OnIte
 
         String seg = formattedDate5.substring(7);
         System.out.println("El segundo: " + seg);
-        System.out.println("El IMEI" + imei);
+        System.out.println("El IMEI" + sacaImei());
 
         String mes = formattedDate6.toString();
         System.out.println("El mes" + mes);
@@ -2763,7 +2748,7 @@ public class MainActivityPantalla1 extends Activity implements AdapterView.OnIte
         String dia = formattedDate7.toString();
         System.out.println("El dia" + dia);
 
-//        sacaChip();
+        sacaChip();
 
         cachaNombre();
 
@@ -3065,7 +3050,7 @@ public class MainActivityPantalla1 extends Activity implements AdapterView.OnIte
             final String F = "File dbfile";
 
             String DATABASE_NAME = Environment.getExternalStorageDirectory() + "/Mis_archivos/" + nombreEncuesta + "_"
-                    + imei + "";
+                    + sacaImei() + "";
 
 // Abrimos la base de datos 'DBUsuarios\ en modo escritura
             usdbh = new UsuariosSQLiteHelper(this, "F", null, 1, DATABASE_NAME);
@@ -3081,16 +3066,16 @@ public class MainActivityPantalla1 extends Activity implements AdapterView.OnIte
             longitude = gps.getLongitude();
 
             if (latitude == 0.0) {
-                if (sacaLatitud() != null) {
-                    latitude = Double.valueOf(sacaLatitud());
+                if (Utils.sacaLatitud(this) != null) {
+                    latitude = Double.valueOf(Utils.sacaLatitud(this));
                 } else {
                     latitude = 0.0;
                 }
             }
 
             if (longitude == 0.0) {
-                if (sacaLongitud() != null) {
-                    longitude = Double.valueOf(sacaLongitud());
+                if (Utils.sacaLongitud(this) != null) {
+                    longitude = Double.valueOf(Utils.sacaLongitud(this));
                 } else {
                     longitude = 0.0;
                 }
@@ -3108,7 +3093,7 @@ public class MainActivityPantalla1 extends Activity implements AdapterView.OnIte
                 values.put("nombre_encuesta", nombreE.toUpperCase());
                 values.put("fecha", formattedDate1);
                 values.put("hora", formattedDate5);
-                values.put("imei", String.valueOf(imei));
+                values.put("imei", sacaImei());
                 values.put("seccion", strSecc);
                 values.put("latitud", strLatitud);
                 values.put("longitud", strLongitud);
@@ -3190,7 +3175,7 @@ public class MainActivityPantalla1 extends Activity implements AdapterView.OnIte
             System.out.println("nombre_encuesta "   + nombreE.toUpperCase());
             System.out.println("fecha "             + formattedDate1);
             System.out.println("hora "              + formattedDate5);
-            System.out.println("imei "              + imei);
+            System.out.println("imei "              + sacaImei());
             System.out.println("Seccion "           + str);
             System.out.println("Latitud  "          + strLatitud);
             System.out.println("Longitud  "         + strLongitud);
@@ -3494,7 +3479,7 @@ finish();*/
 
 // Abrimos la base de datos 'DBUsuarios' en modo escritura
         String DATABASE_NAME = Environment.getExternalStorageDirectory() + "/Mis_archivos/" + nombreEncuesta + "_"
-                + imei + "";
+                + sacaImei() + "";
         usdbh = new UsuariosSQLiteHelper(this, "F", null, 1, DATABASE_NAME);
 
         db = usdbh.getReadableDatabase();
@@ -3526,7 +3511,7 @@ finish();*/
 
 // Abrimos la base de datos 'DBUsuarios' en modo escritura
         String DATABASE_NAME = Environment.getExternalStorageDirectory() + "/Mis_archivos/" + nombreEncuesta + "_"
-                + imei + "";
+                + sacaImei() + "";
         usdbh = new UsuariosSQLiteHelper(this, "F", null, 1, DATABASE_NAME);
 
         db = usdbh.getReadableDatabase();
@@ -3561,7 +3546,7 @@ finish();*/
 // Abrimos la base de datos 'DBUsuarios' en modo escritura
 
         String DATABASE_NAME = Environment.getExternalStorageDirectory() + "/Mis_archivos/" + nombreEncuesta + "_"
-                + imei + "";
+                + sacaImei() + "";
         usdbh = new UsuariosSQLiteHelper(this, "F", null, 1, DATABASE_NAME);
 
         db = usdbh.getReadableDatabase();
@@ -3595,8 +3580,8 @@ finish();*/
         ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this, R.layout.multiline_spinner_dropdown_item,
                 datos);
         adaptador.setDropDownViewResource(R.layout.multiline_spinner_dropdown_item);
-        spinnerCalifica.setAdapter(adaptador);
-        spinnerCalifica.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        spinner8.setAdapter(adaptador);
+        spinner8.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             public void onItemSelected(AdapterView<?> parent, android.view.View v, int position, long id) {
 
                 //       Log.i(TAG ,"cqs ----------->>"+spinnerCalifica.getSelectedItem().toString());

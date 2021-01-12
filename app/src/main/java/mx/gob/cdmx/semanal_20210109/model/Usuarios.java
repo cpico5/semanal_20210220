@@ -8,8 +8,6 @@ import mx.gob.cdmx.semanal_20210109.db.Anotaciones.PrimaryKey;
 
 public class Usuarios implements Serializable {
 
-
-
     @PrimaryKey
 
     @SerializedName("usuario")

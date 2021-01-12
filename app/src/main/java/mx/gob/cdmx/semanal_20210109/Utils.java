@@ -1,13 +1,21 @@
 package mx.gob.cdmx.semanal_20210109;
 
 import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.util.Log;
 import android.view.Gravity;
 import android.widget.Toast;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class Utils {
+
+    static UsuariosSQLiteHelper3 usdbh3;
+    private static SQLiteDatabase db3;
 
     public static String getAlcaldia(int idAlcaldia){
         String nombre = "";
@@ -211,6 +219,46 @@ public class Utils {
         toast.setGravity(Gravity.CENTER | Gravity.CENTER, 0, 0);
         toast.show();
         return null;
+    }
+
+    public static String sacaLatitud(Context ctx) {
+        Set<String> set = new HashSet<String>();
+        String acceso = null;
+        final String F = "File dbfile";
+        // Abrimos la base de datos 'DBUsuarios' en modo escritura
+        usdbh3 = new UsuariosSQLiteHelper3(ctx);
+        db3 = usdbh3.getReadableDatabase();
+        String selectQuery = "select latitud from ubicacion order by id desc limit 1";
+        Cursor cursor = db3.rawQuery(selectQuery, null);
+        if (cursor.moveToFirst()) {
+            do {
+                acceso = cursor.getString(0);
+            } while (cursor.moveToNext());
+        }
+        cursor.close();
+        db3.close();
+
+        return acceso;
+    }
+
+    public static String sacaLongitud(Context ctx) {
+        Set<String> set = new HashSet<String>();
+        String acceso = null;
+        final String F = "File dbfile";
+        // Abrimos la base de datos 'DBUsuarios' en modo escritura
+        usdbh3 = new UsuariosSQLiteHelper3(ctx);
+        db3 = usdbh3.getReadableDatabase();
+        String selectQuery = "select longitud from ubicacion order by id desc limit 1";
+        Cursor cursor = db3.rawQuery(selectQuery, null);
+        if (cursor.moveToFirst()) {
+            do {
+                acceso = cursor.getString(0);
+            } while (cursor.moveToNext());
+        }
+        cursor.close();
+        db3.close();
+
+        return acceso;
     }
 
 

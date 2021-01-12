@@ -64,7 +64,9 @@ import java.util.concurrent.Executors;
 import cz.msebera.android.httpclient.Header;
 import mx.gob.cdmx.semanal_20210109.db.DaoManager;
 import mx.gob.cdmx.semanal_20210109.model.Datos;
+import mx.gob.cdmx.semanal_20210109.model.Usuarios;
 
+import static mx.gob.cdmx.semanal_20210109.Nombre.USUARIO;
 import static mx.gob.cdmx.semanal_20210109.Nombre.customURL;
 import static mx.gob.cdmx.semanal_20210109.Nombre.ALCALDIA;
 import static mx.gob.cdmx.semanal_20210109.Nombre.customURLcatalogos;
@@ -974,10 +976,14 @@ public class Bienvenida extends AppCompatActivity {
     }
 
     public void pasaEncuesta() {
+
+        Usuarios usu=new Usuarios();
+        usu.setUsuario(sacaUsr());
         Intent intent = new Intent(Bienvenida.this, MainActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         Bundle bundle = new Bundle();
-        bundle.putString("Nombre", sacaUsr());
+        bundle.putString("Nombre", String.valueOf(usu.getUsuario()));
+        intent.putExtra(USUARIO, usu);//PASO TODO EL OBJETO
         intent.putExtras(bundle);
         startActivity(intent);
 

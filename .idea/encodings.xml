@@ -4,7 +4,17 @@
     <file url="file://$PROJECT_DIR$/app/build.gradle" charset="ISO-8859-1" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/mx/gob/cdmx/semanal20200919/service/WifiState.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/mx/gob/cdmx/semanal_20210109/MainActivityPantalla1.java" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/font/quicksand.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/font/quicksand_bold.ttf" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/font/quicksand_medium.ttf" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/font/roboto.ttf" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/font/roboto_bold.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/font/roboto_light.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/font/roboto_medium.ttf" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/font/roboto_thin.xml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/layout/bienvenida.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/values-sw720dp-land/font_certs.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/values-sw720dp-land/preloaded_fonts.xml" charset="UTF-8" />
     <file url="PROJECT" charset="ISO-8859-1" />
   </component>
 </project>

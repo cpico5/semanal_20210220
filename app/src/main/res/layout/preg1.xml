@@ -31,8 +31,8 @@
       android:layout_height="wrap_content"
       android:text="@string/PREGUNTA1"
       android:textAppearance="?android:attr/textAppearanceLarge"
-      android:textColor="#002266"
-      android:textStyle="bold" />
+      android:textColor="#008000"
+      android:fontFamily="@font/quicksand_bold"/>
       
       <RadioGroup
       android:id="@+id/rdPregunta1"

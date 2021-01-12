@@ -81,6 +81,7 @@ import cz.msebera.android.httpclient.Header;
 import mx.gob.cdmx.semanal_20210109.db.DaoManager;
 import mx.gob.cdmx.semanal_20210109.model.DatoContent;
 import mx.gob.cdmx.semanal_20210109.model.Datos;
+import mx.gob.cdmx.semanal_20210109.model.Usuario;
 import mx.gob.cdmx.semanal_20210109.model.Usuarios;
 import mx.gob.cdmx.semanal_20210109.service.Alarm;
 import mx.gob.cdmx.semanal_20210109.service.WifiState;
@@ -203,6 +204,8 @@ public class MainActivity extends Activity implements OnItemSelectedListener, Ad
     ArrayAdapter<String> adapter;
     ArrayAdapter<String> adapter2;
     private WifiState wifiState;
+
+    private Usuarios usuario;
 
     Calendar c = Calendar.getInstance();
 
@@ -351,6 +354,33 @@ public class MainActivity extends Activity implements OnItemSelectedListener, Ad
         }
         setContentView(R.layout.activity_main);
 
+        if (cachaNombre() == null) {
+
+            encuestaQuien = cachaNombre2();
+
+        } else {
+
+            cachaNombre();
+
+            encuestaQuien = cachaNombre();
+
+        }
+
+        Intent startingIntent = getIntent();
+        if (startingIntent == null) {
+            Log.e(TAG, "No Intent?  We´re not supposed to be here...");
+            finish();
+            return;
+        }
+
+        if (savedInstanceState != null) {
+            usuario = (mx.gob.cdmx.semanal_20210109.model.Usuarios) savedInstanceState.getSerializable(USUARIO);
+        } else {
+            usuario = (mx.gob.cdmx.semanal_20210109.model.Usuarios) startingIntent.getSerializableExtra(USUARIO);
+        }
+
+        Utils.info(TAG,"usuario: ",usuario.getUsuario());
+
         sqlite_obj = new UsuariosSQLiteHelper2(MainActivity.this);
 
         File directory;
@@ -401,11 +431,19 @@ public class MainActivity extends Activity implements OnItemSelectedListener, Ad
         longitude = gps.getLongitude();
 
         if (latitude == 0.0) {
-            latitude = Double.valueOf(sacaLatitud());
+            if (Utils.sacaLatitud(this) != null) {
+                latitude = Double.valueOf(Utils.sacaLatitud(this));
+            } else {
+                latitude = 0.0;
+            }
         }
 
         if (longitude == 0.0) {
-            longitude = Double.valueOf(sacaLongitud());
+            if (Utils.sacaLongitud(this) != null) {
+                longitude = Double.valueOf(Utils.sacaLongitud(this));
+            } else {
+                longitude = 0.0;
+            }
         }
 
         Log.i("GPS", "Latitud sin GPS: " + latitude);
@@ -491,17 +529,7 @@ public class MainActivity extends Activity implements OnItemSelectedListener, Ad
         btnRechazo.setEnabled(false);
         btnRechazo2.setEnabled(false);
 
-        if (cachaNombre() == null) {
 
-            encuestaQuien = cachaNombre2();
-
-        } else {
-
-            cachaNombre();
-
-            encuestaQuien = cachaNombre();
-
-        }
 
 
         startAlarm();
@@ -948,6 +976,7 @@ public class MainActivity extends Activity implements OnItemSelectedListener, Ad
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         intent.putExtra("Seccion", autoCompleteTextView.getText().toString());
         intent.putExtra("Nombre", encuestaQuien);
+        intent.putExtra(USUARIO, usuario);//PASO TODO EL OBJETO
         intent.putExtra("equipo", equipo());// para pasar la variable a la otra
         intent.putExtra("t1", milis1);
         startActivity(intent);
@@ -1142,11 +1171,19 @@ public class MainActivity extends Activity implements OnItemSelectedListener, Ad
         longitude = gps.getLongitude();
 
         if (latitude == 0.0) {
-            latitude = Double.valueOf(sacaLatitud());
+            if (Utils.sacaLatitud(this) != null) {
+                latitude = Double.valueOf(Utils.sacaLatitud(this));
+            } else {
+                latitude = 0.0;
+            }
         }
 
         if (longitude == 0.0) {
-            longitude = Double.valueOf(sacaLongitud());
+            if (Utils.sacaLongitud(this) != null) {
+                longitude = Double.valueOf(Utils.sacaLongitud(this));
+            } else {
+                longitude = 0.0;
+            }
         }
 
         String strLatitud = String.valueOf(latitude);
@@ -1230,11 +1267,19 @@ public class MainActivity extends Activity implements OnItemSelectedListener, Ad
         longitude = gps.getLongitude();
 
         if (latitude == 0.0) {
-            latitude = Double.valueOf(sacaLatitud());
+            if (Utils.sacaLatitud(this) != null) {
+                latitude = Double.valueOf(Utils.sacaLatitud(this));
+            } else {
+                latitude = 0.0;
+            }
         }
 
         if (longitude == 0.0) {
-            longitude = Double.valueOf(sacaLongitud());
+            if (Utils.sacaLongitud(this) != null) {
+                longitude = Double.valueOf(Utils.sacaLongitud(this));
+            } else {
+                longitude = 0.0;
+            }
         }
 
         String strLatitud = String.valueOf(latitude);
@@ -1337,11 +1382,19 @@ public class MainActivity extends Activity implements OnItemSelectedListener, Ad
         longitude = gps.getLongitude();
 
         if (latitude == 0.0) {
-            latitude = Double.valueOf(sacaLatitud());
+            if (Utils.sacaLatitud(this) != null) {
+                latitude = Double.valueOf(Utils.sacaLatitud(this));
+            } else {
+                latitude = 0.0;
+            }
         }
 
         if (longitude == 0.0) {
-            longitude = Double.valueOf(sacaLongitud());
+            if (Utils.sacaLongitud(this) != null) {
+                longitude = Double.valueOf(Utils.sacaLongitud(this));
+            } else {
+                longitude = 0.0;
+            }
         }
 
         String strLatitud = String.valueOf(latitude);
@@ -1425,11 +1478,19 @@ public class MainActivity extends Activity implements OnItemSelectedListener, Ad
         longitude = gps.getLongitude();
 
         if (latitude == 0.0) {
-            latitude = Double.valueOf(sacaLatitud());
+            if (Utils.sacaLatitud(this) != null) {
+                latitude = Double.valueOf(Utils.sacaLatitud(this));
+            } else {
+                latitude = 0.0;
+            }
         }
 
         if (longitude == 0.0) {
-            longitude = Double.valueOf(sacaLongitud());
+            if (Utils.sacaLongitud(this) != null) {
+                longitude = Double.valueOf(Utils.sacaLongitud(this));
+            } else {
+                longitude = 0.0;
+            }
         }
 
         String strLatitud = String.valueOf(latitude);
@@ -2059,46 +2120,6 @@ usuario = gson.fromJson(jsonUser.toString(), collectionType);*/
 
     }
 
-
-    private String sacaLatitud() {
-        Set<String> set = new HashSet<String>();
-        String acceso = null;
-        final String F = "File dbfile";
-        // Abrimos la base de datos 'DBUsuarios' en modo escritura
-        usdbh3 = new UsuariosSQLiteHelper3(this);
-        db3 = usdbh3.getReadableDatabase();
-        String selectQuery = "select latitud from ubicacion order by id desc limit 1";
-        Cursor cursor = db3.rawQuery(selectQuery, null);
-        if (cursor.moveToFirst()) {
-            do {
-                acceso = cursor.getString(0);
-            } while (cursor.moveToNext());
-        }
-        cursor.close();
-        db.close();
-
-        return acceso;
-    }
-
-    private String sacaLongitud() {
-        Set<String> set = new HashSet<String>();
-        String acceso = null;
-        final String F = "File dbfile";
-        // Abrimos la base de datos 'DBUsuarios' en modo escritura
-        usdbh3 = new UsuariosSQLiteHelper3(this);
-        db3 = usdbh3.getReadableDatabase();
-        String selectQuery = "select longitud from ubicacion order by id desc limit 1";
-        Cursor cursor = db3.rawQuery(selectQuery, null);
-        if (cursor.moveToFirst()) {
-            do {
-                acceso = cursor.getString(0);
-            } while (cursor.moveToNext());
-        }
-        cursor.close();
-        db.close();
-
-        return acceso;
-    }
 
     @TargetApi(Build.VERSION_CODES.HONEYCOMB_MR2)
     private void showProgress(final boolean show) {
