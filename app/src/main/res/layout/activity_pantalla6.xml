@@ -92,28 +92,32 @@
             <include layout="@layout/pregc4b"/>
             <include layout="@layout/pregc5"/>
 
-            <include layout="@layout/pregc5a"/>
+
             <include layout="@layout/pregc5b"/>
             <include layout="@layout/pregc5c"/>
+            <include layout="@layout/pregc5a"/>
 
             <include layout="@layout/pregc6"/>
 
-            <include layout="@layout/pregc6a"/>
+
             <include layout="@layout/pregc6b"/>
             <include layout="@layout/pregc6c"/>
+            <include layout="@layout/pregc6a"/>
 
             <include layout="@layout/pregc7"/>
 
-            <include layout="@layout/pregc7a"/>
+
             <include layout="@layout/pregc7b"/>
             <include layout="@layout/pregc7c"/>
+            <include layout="@layout/pregc7a"/>
 
             <include layout="@layout/pregc8"/>
             <include layout="@layout/pregc9"/>
 
-            <include layout="@layout/pregc9a"/>
+
             <include layout="@layout/pregc9b"/>
             <include layout="@layout/pregc9c"/>
+            <include layout="@layout/pregc9a"/>
 
             <include layout="@layout/pregc10"/>
             <include layout="@layout/pregc11"/>

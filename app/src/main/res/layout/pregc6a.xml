@@ -102,6 +102,7 @@
             android:textSize="16sp"
             android:theme="@style/RadioButton"
             android:text="o"
+              android:visibility="gone"
             />
             
           <RadioButton

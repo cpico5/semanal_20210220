@@ -90,6 +90,7 @@
             android:textSize="16sp"
             android:theme="@style/RadioButton"
             android:text="Combo 1 al 10"
+              android:visibility="gone"
             />
             
           <RadioButton
@@ -102,6 +103,7 @@
             android:textSize="16sp"
             android:theme="@style/RadioButton"
             android:text="No sabe / No contestó"
+              android:visibility="gone"
             />
             
           <RadioButton

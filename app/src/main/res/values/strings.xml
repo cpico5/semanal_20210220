@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Semanal_20210116 v1.0</string>
+    <string name="app_name">Semanal_20210116 v2.0</string>
     <string name="action_settings">Settings</string>
 
     <string name="url_aplicacion">https://opinion.cdmx.gob.mx</string>
@@ -99,7 +99,7 @@
     <string name="PREGUNTAc7a">como ha sido hasta ahora las medidas provisionales...</string>
     <string name="PREGUNTAc7b">como ha sido hasta ahora las medidas provisionales...</string>
     <string name="PREGUNTAc7c">como ha sido hasta ahora las medidas provisionales...</string>
-    <string name="PREGUNTAc8">¿Se enteró usted de que la Ciudad de México y el Estado de México continuarán en Semáforo Rojo hasta el 18 de enero?</string>
+    <string name="PREGUNTAc8">¿Se enteró usted de que la Ciudad de México y el Estado de México continuarán en Semáforo Rojo hasta el 25 de enero?</string>
     <string name="PREGUNTAc9">Usted cree que esta medida es…</string>
     <string name="PREGUNTAc9a">esta medida es…</string>
     <string name="PREGUNTAc9b">esta medida es…</string>

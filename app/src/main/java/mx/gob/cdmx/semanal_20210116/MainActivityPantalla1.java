@@ -536,16 +536,16 @@ public class MainActivityPantalla1 extends Activity implements AdapterView.OnIte
 
 
     private Integer[] mLinearLayoutIds = {
-//            R.layout.activity_pantalla1,
-//            R.layout.activity_pantalla2,
-//            R.layout.activity_pantalla3,
-//            R.layout.activity_pantalla4,
-//            R.layout.activity_pantalla5,
-//            R.layout.activity_pantalla6,
-//            R.layout.activity_pantalla7,
-//            R.layout.activity_pantalla8,
-//            R.layout.activity_pantalla9,
-//            R.layout.activity_pantalla10,
+            R.layout.activity_pantalla1,
+            R.layout.activity_pantalla2,
+            R.layout.activity_pantalla3,
+            R.layout.activity_pantalla4,
+            R.layout.activity_pantalla5,
+            R.layout.activity_pantalla6,
+            R.layout.activity_pantalla7,
+            R.layout.activity_pantalla8,
+            R.layout.activity_pantalla9,
+            R.layout.activity_pantalla10,
 ////// R.layout.activity_pantalla11,
 //// R.layout.activity_pantalla12,
 //// R.layout.activity_pantalla13,
@@ -574,7 +574,7 @@ public class MainActivityPantalla1 extends Activity implements AdapterView.OnIte
     protected void onCreate(Bundle savedInstanceState) {
 // TODO Auto-generated method stub
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pantalla1); // COMENTAR ESTA CUANDO ES ALEATORIO
+//        setContentView(R.layout.activity_pantalla1); // COMENTAR ESTA CUANDO ES ALEATORIO
 
         Intent startingIntent = getIntent();
         if (startingIntent == null) {
@@ -593,9 +593,9 @@ public class MainActivityPantalla1 extends Activity implements AdapterView.OnIte
         random = new java.util.Random();
 //
         /*DESCOMENTAR ESTAS 3 LINEAS CUANDO YA ESTA EL NUMERO DE HOJAS ALEATORIO */
-//        rand = random.nextInt(9);
-//        setContentView(mLinearLayoutIds[rand]);
-//        Log.i(null, "El aleatorio: " + rand); // si rand= 11 en el layoud corresponde a uno mas
+        rand = random.nextInt(9);
+        setContentView(mLinearLayoutIds[rand]);
+        Log.i(null, "El aleatorio: " + rand); // si rand= 11 en el layoud corresponde a uno mas
 
 
         /*activity_pantalla12*/
@@ -831,99 +831,12 @@ public class MainActivityPantalla1 extends Activity implements AdapterView.OnIte
         rdPreguntac20b = (RadioGroup)findViewById(R.id.rdPreguntac20b); capturac20b =res.getString(R.string.PREGUNTAc20b);  layc20b = (LinearLayout) findViewById(R.id.layc20b);
         rdPreguntac21 = (RadioGroup)findViewById(R.id.rdPreguntac21); capturac21 =res.getString(R.string.PREGUNTAc21);  layc21 = (LinearLayout) findViewById(R.id.layc21);
 
-
-
-
-
-
-
-
-
-
-
-
-
         editPreguntac4a= (EditText)findViewById(R.id.editPreguntac4a);
         editPreguntac4b= (EditText)findViewById(R.id.editPreguntac4b);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         editPreguntac11a= (EditText)findViewById(R.id.editPreguntac11a);
-
         editPreguntac13= (EditText)findViewById(R.id.editPreguntac13);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         spinner8 =(Spinner) findViewById(R.id.spinner8);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         laySocioE        = (LinearLayout) findViewById(R.id.laySocioE);
         layEst           = (LinearLayout) findViewById(R.id.layEst);
@@ -1038,56 +951,7 @@ public class MainActivityPantalla1 extends Activity implements AdapterView.OnIte
 //
 //
 //        }
-
-
-
-
-
-
-
-
-
         CargaSpinner8();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //CargaSpinner9();
 
 //
@@ -1527,16 +1391,20 @@ public class MainActivityPantalla1 extends Activity implements AdapterView.OnIte
                 else if (checkedId == R.id.radio4) {
                     opc1 = "Sí";
                     textPreguntac1.setTextColor(Color.parseColor("#008000"));
+                    layc2 .setVisibility(View.VISIBLE);	rdPreguntac2.clearCheck();	opc2="sin datos";
+
                 }
 
                 else if (checkedId == R.id.radio5) {
                     opc1 = "No";
                     textPreguntac1.setTextColor(Color.parseColor("#008000"));
+                    layc2 .setVisibility(View.GONE);	rdPreguntac2.clearCheck();	opc2="No aplica";
                 }
 
                 else if (checkedId == R.id.radio6) {
                     opc1 = "No sabe / No contestó";
                     textPreguntac1.setTextColor(Color.parseColor("#008000"));
+                    layc2 .setVisibility(View.GONE);	rdPreguntac2.clearCheck();	opc2="No aplica";
                 }
 
             }
@@ -1624,16 +1492,64 @@ public class MainActivityPantalla1 extends Activity implements AdapterView.OnIte
                 else if (checkedId == R.id.radio4) {
                     opc3 = "Si";
                     textPreguntac3.setTextColor(Color.parseColor("#008000"));
+                    layc4 .setVisibility(View.VISIBLE);	rdPreguntac4.clearCheck();	opc4="sin datos";
+                    layc4a .setVisibility(View.VISIBLE);	rdPreguntac4a.clearCheck();	opc4a="sin datos";
+                    layc4b .setVisibility(View.VISIBLE);	rdPreguntac4b.clearCheck();	opc4b="sin datos";
+                    layc5 .setVisibility(View.VISIBLE);	rdPreguntac5.clearCheck();	opc5="sin datos";
+                    layc5a .setVisibility(View.VISIBLE);	rdPreguntac5a.clearCheck();	opc5a="sin datos";
+                    layc5b .setVisibility(View.VISIBLE);	rdPreguntac5b.clearCheck();	opc5b="sin datos";
+                    layc5c .setVisibility(View.VISIBLE);	rdPreguntac5c.clearCheck();	opc5c="sin datos";
+                    layc6 .setVisibility(View.VISIBLE);	rdPreguntac6.clearCheck();	opc6="sin datos";
+                    layc6a .setVisibility(View.VISIBLE);	rdPreguntac6a.clearCheck();	opc6a="sin datos";
+                    layc6b .setVisibility(View.VISIBLE);	rdPreguntac6b.clearCheck();	opc6b="sin datos";
+                    layc6c .setVisibility(View.VISIBLE);	rdPreguntac6c.clearCheck();	opc6c="sin datos";
+                    layc7 .setVisibility(View.VISIBLE);	rdPreguntac7.clearCheck();	opc7="sin datos";
+                    layc7a .setVisibility(View.VISIBLE);	rdPreguntac7a.clearCheck();	opc7a="sin datos";
+                    layc7b .setVisibility(View.VISIBLE);	rdPreguntac7b.clearCheck();	opc7b="sin datos";
+                    layc7c .setVisibility(View.VISIBLE);	rdPreguntac7c.clearCheck();	opc7c="sin datos";
+
                 }
 
                 else if (checkedId == R.id.radio5) {
                     opc3 = "No";
                     textPreguntac3.setTextColor(Color.parseColor("#008000"));
+                    layc4 .setVisibility(View.GONE);	rdPreguntac4.clearCheck();	opc4="No aplica";
+                    layc4a .setVisibility(View.GONE);	rdPreguntac4a.clearCheck();	opc4a="No aplica";
+                    layc4b .setVisibility(View.GONE);	rdPreguntac4b.clearCheck();	opc4b="No aplica";
+                    layc5 .setVisibility(View.GONE);	rdPreguntac5.clearCheck();	opc5="No aplica";
+                    layc5a .setVisibility(View.GONE);	rdPreguntac5a.clearCheck();	opc5a="No aplica";
+                    layc5b .setVisibility(View.GONE);	rdPreguntac5b.clearCheck();	opc5b="No aplica";
+                    layc5c .setVisibility(View.GONE);	rdPreguntac5c.clearCheck();	opc5c="No aplica";
+                    layc6 .setVisibility(View.GONE);	rdPreguntac6.clearCheck();	opc6="No aplica";
+                    layc6a .setVisibility(View.GONE);	rdPreguntac6a.clearCheck();	opc6a="No aplica";
+                    layc6b .setVisibility(View.GONE);	rdPreguntac6b.clearCheck();	opc6b="No aplica";
+                    layc6c .setVisibility(View.GONE);	rdPreguntac6c.clearCheck();	opc6c="No aplica";
+                    layc7 .setVisibility(View.GONE);	rdPreguntac7.clearCheck();	opc7="No aplica";
+                    layc7a .setVisibility(View.GONE);	rdPreguntac7a.clearCheck();	opc7a="No aplica";
+                    layc7b .setVisibility(View.GONE);	rdPreguntac7b.clearCheck();	opc7b="No aplica";
+                    layc7c .setVisibility(View.GONE);	rdPreguntac7c.clearCheck();	opc7c="No aplica";
+
                 }
 
                 else if (checkedId == R.id.radio6) {
                     opc3 = "No sabe / No contestó";
                     textPreguntac3.setTextColor(Color.parseColor("#008000"));
+                    layc4 .setVisibility(View.GONE);	rdPreguntac4.clearCheck();	opc4="No aplica";
+                    layc4a .setVisibility(View.GONE);	rdPreguntac4a.clearCheck();	opc4a="No aplica";
+                    layc4b .setVisibility(View.GONE);	rdPreguntac4b.clearCheck();	opc4b="No aplica";
+                    layc5 .setVisibility(View.GONE);	rdPreguntac5.clearCheck();	opc5="No aplica";
+                    layc5a .setVisibility(View.GONE);	rdPreguntac5a.clearCheck();	opc5a="No aplica";
+                    layc5b .setVisibility(View.GONE);	rdPreguntac5b.clearCheck();	opc5b="No aplica";
+                    layc5c .setVisibility(View.GONE);	rdPreguntac5c.clearCheck();	opc5c="No aplica";
+                    layc6 .setVisibility(View.GONE);	rdPreguntac6.clearCheck();	opc6="No aplica";
+                    layc6a .setVisibility(View.GONE);	rdPreguntac6a.clearCheck();	opc6a="No aplica";
+                    layc6b .setVisibility(View.GONE);	rdPreguntac6b.clearCheck();	opc6b="No aplica";
+                    layc6c .setVisibility(View.GONE);	rdPreguntac6c.clearCheck();	opc6c="No aplica";
+                    layc7 .setVisibility(View.GONE);	rdPreguntac7.clearCheck();	opc7="No aplica";
+                    layc7a .setVisibility(View.GONE);	rdPreguntac7a.clearCheck();	opc7a="No aplica";
+                    layc7b .setVisibility(View.GONE);	rdPreguntac7b.clearCheck();	opc7b="No aplica";
+                    layc7c .setVisibility(View.GONE);	rdPreguntac7c.clearCheck();	opc7c="No aplica";
+
                 }
 
             }
@@ -1665,16 +1581,25 @@ public class MainActivityPantalla1 extends Activity implements AdapterView.OnIte
                 else if (checkedId == R.id.radio4) {
                     opc4 = "Si";
                     textPreguntac4.setTextColor(Color.parseColor("#008000"));
+                    layc4a .setVisibility(View.VISIBLE);	rdPreguntac4a.clearCheck();	opc4a="sin datos";
+                    layc4b .setVisibility(View.VISIBLE);	rdPreguntac4b.clearCheck();	opc4b="sin datos";
+
                 }
 
                 else if (checkedId == R.id.radio5) {
                     opc4 = "No";
                     textPreguntac4.setTextColor(Color.parseColor("#008000"));
+                    layc4a .setVisibility(View.GONE);	rdPreguntac4a.clearCheck();	opc4a="No aplica";
+                    layc4b .setVisibility(View.GONE);	rdPreguntac4b.clearCheck();	opc4b="No aplica";
+
                 }
 
                 else if (checkedId == R.id.radio6) {
                     opc4 = "No sabe / No contestó";
                     textPreguntac4.setTextColor(Color.parseColor("#008000"));
+                    layc4a .setVisibility(View.GONE);	rdPreguntac4a.clearCheck();	opc4a="No aplica";
+                    layc4b .setVisibility(View.GONE);	rdPreguntac4b.clearCheck();	opc4b="No aplica";
+
                 }
 
             }
@@ -2653,16 +2578,20 @@ public class MainActivityPantalla1 extends Activity implements AdapterView.OnIte
                 else if (checkedId == R.id.radio4) {
                     opc11 = "Si";
                     textPreguntac11.setTextColor(Color.parseColor("#008000"));
+                    layc11a .setVisibility(View.VISIBLE);	rdPreguntac11a.clearCheck();	opc11a="sin datos";
+
                 }
 
                 else if (checkedId == R.id.radio5) {
                     opc11 = "No";
                     textPreguntac11.setTextColor(Color.parseColor("#008000"));
+                    layc11a .setVisibility(View.GONE);	rdPreguntac11a.clearCheck();	opc11a="No aplica";
                 }
 
                 else if (checkedId == R.id.radio6) {
                     opc11 = "No sabe / No contestó";
                     textPreguntac11.setTextColor(Color.parseColor("#008000"));
+                    layc11a .setVisibility(View.GONE);	rdPreguntac11a.clearCheck();	opc11a="No aplica";
                 }
 
             }
@@ -3138,51 +3067,61 @@ public class MainActivityPantalla1 extends Activity implements AdapterView.OnIte
                 else if (checkedId == R.id.radio4) {
                     opc20 = "Claudia Sheinbaum/ Morena/ PT/ Encuentro social";
                     textPreguntac20.setTextColor(Color.parseColor("#008000"));
+                    layc20a .setVisibility(View.VISIBLE);	rdPreguntac20a.clearCheck();	opc20a="sin datos";
                 }
 
                 else if (checkedId == R.id.radio5) {
                     opc20 = "Alejandra Barrales/ PAN/ PRD/  MC";
                     textPreguntac20.setTextColor(Color.parseColor("#008000"));
+                    layc20a .setVisibility(View.GONE);	rdPreguntac20a.clearCheck();	opc20a="No aplica";
                 }
 
                 else if (checkedId == R.id.radio6) {
                     opc20 = "Mikel Arriola/ PRI";
                     textPreguntac20.setTextColor(Color.parseColor("#008000"));
+                    layc20a .setVisibility(View.GONE);	rdPreguntac20a.clearCheck();	opc20a="No aplica";
                 }
 
                 else if (checkedId == R.id.radio7) {
                     opc20 = "Mariana Boy/ PVEM";
                     textPreguntac20.setTextColor(Color.parseColor("#008000"));
+                    layc20a .setVisibility(View.GONE);	rdPreguntac20a.clearCheck();	opc20a="No aplica";
                 }
 
                 else if (checkedId == R.id.radio8) {
                     opc20 = "Lorena Osornio/ Independiente";
                     textPreguntac20.setTextColor(Color.parseColor("#008000"));
+                    layc20a .setVisibility(View.GONE);	rdPreguntac20a.clearCheck();	opc20a="No aplica";
                 }
 
                 else if (checkedId == R.id.radio9) {
                     opc20 = "Marco Rascón/ PHCDMX";
                     textPreguntac20.setTextColor(Color.parseColor("#008000"));
+                    layc20a .setVisibility(View.GONE);	rdPreguntac20a.clearCheck();	opc20a="No aplica";
                 }
 
                 else if (checkedId == R.id.radio10) {
                     opc20 = "Purificación Carpinteyro/ PANAL";
                     textPreguntac20.setTextColor(Color.parseColor("#008000"));
+                    layc20a .setVisibility(View.GONE);	rdPreguntac20a.clearCheck();	opc20a="No aplica";
                 }
 
                 else if (checkedId == R.id.radio11) {
                     opc20 = "No voto";
                     textPreguntac20.setTextColor(Color.parseColor("#008000"));
+                    layc20a .setVisibility(View.GONE);	rdPreguntac20a.clearCheck();	opc20a="No aplica";
                 }
 
                 else if (checkedId == R.id.radio12) {
                     opc20 = "Anuló su voto";
                     textPreguntac20.setTextColor(Color.parseColor("#008000"));
+                    layc20a .setVisibility(View.GONE);	rdPreguntac20a.clearCheck();	opc20a="No aplica";
                 }
 
                 else if (checkedId == R.id.radio13) {
                     opc20 = "No sabe/ no contestó";
                     textPreguntac20.setTextColor(Color.parseColor("#008000"));
+                    layc20a .setVisibility(View.GONE);	rdPreguntac20a.clearCheck();	opc20a="No aplica";
                 }
 
             }

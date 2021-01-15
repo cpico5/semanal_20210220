@@ -96,6 +96,7 @@ public class MainActivity extends Activity implements OnItemSelectedListener, Ad
 
     UsuariosSQLiteHelper2 sqlite_obj;
     List<String> listUsuario, listPassword;
+    private Usuarios usuario;
 
     Nombre nom = new Nombre();
     String nombreEncuesta = nom.nombreEncuesta();
@@ -201,7 +202,7 @@ public class MainActivity extends Activity implements OnItemSelectedListener, Ad
     ArrayAdapter<String> adapter2;
     private WifiState wifiState;
 
-    private Usuarios usuario;
+//    private Usuarios usuario;
 
     Calendar c = Calendar.getInstance();
 
@@ -370,12 +371,12 @@ public class MainActivity extends Activity implements OnItemSelectedListener, Ad
         }
 
         if (savedInstanceState != null) {
-            usuario = (mx.gob.cdmx.semanal_20210116.model.Usuarios) savedInstanceState.getSerializable(USUARIO);
+            usuario = (Usuarios) savedInstanceState.getSerializable(USUARIO);
         } else {
-            usuario = (mx.gob.cdmx.semanal_20210116.model.Usuarios) startingIntent.getSerializableExtra(USUARIO);
+            usuario = (Usuarios) startingIntent.getSerializableExtra(USUARIO);
         }
 
-        Utils.info(TAG,"usuario: ",usuario.getUsuario());
+        Utils.info(TAG,"usuario: ",encuestaQuien);
 
         sqlite_obj = new UsuariosSQLiteHelper2(MainActivity.this);
 
@@ -1638,7 +1639,7 @@ usuario = gson.fromJson(jsonUser.toString(), collectionType);*/
                             Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                             intent.putExtra("Nombre", encuestaQuien);
-                            intent.putExtra(USUARIO, cachaNombre());
+                            intent.putExtra(USUARIO, usuario);
                             startActivity(intent);
                             finish();
 

@@ -40,7 +40,7 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:orientation="vertical" >
-      
+
           <RadioButton
           android:id="@+id/radio1"
           
@@ -90,8 +90,22 @@
             android:textSize="16sp"
             android:theme="@style/RadioButton"
             android:text="Registrar"
+              android:visibility="gone"
             />
-            
+
+          <EditText
+              android:id="@+id/editPreguntac13"
+              android:layout_width="320dp"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="30dp"
+              android:layout_marginBottom="30dp"
+              android:ems="10"
+              android:focusable="false"
+              android:focusableInTouchMode="false"
+              android:hint="Registar"
+              android:inputType="text"
+              android:textSize="16sp" />
+
           <RadioButton
           android:id="@+id/radio5"
           
@@ -233,20 +247,7 @@
           android:text=""
           android:visibility="gone"
           />
-          
-        <EditText
-        android:id="@+id/editPreguntac13"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
-        android:layout_marginTop="30dp"
-        android:ems="10"
-        android:hint="Otro"
-        android:inputType="text"
-        android:focusable="false"
-        android:focusableInTouchMode="false"
-        android:textSize="16sp" />
-        
+
       </RadioGroup>
       </LinearLayout>
       </LinearLayout>
