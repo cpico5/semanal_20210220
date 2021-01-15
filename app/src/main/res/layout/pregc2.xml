@@ -32,8 +32,8 @@
       android:layout_height="wrap_content"
       android:text="@string/PREGUNTAc2"
       android:textAppearance="?android:attr/textAppearanceLarge"
-      android:textColor="#002266"
-      android:textStyle="bold" />
+      android:textColor="#008000"
+      android:fontFamily="@font/quicksand_bold"/>
       
       <RadioGroup
       android:id="@+id/rdPreguntac2"
@@ -76,88 +76,82 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="Usted cree que esta medida es…"
+            android:text="¿Cuántas veces por semana lo usa, regularmente…?"
             android:visibility="gone"
             />
             
           <RadioButton
           android:id="@+id/radio4"
           
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:button="@drawable/radiobutton_selector"
-          android:textColor="@drawable/radiobutton_color_selector"
-          android:textSize="16sp"
-          android:theme="@style/RadioButton"
-          android:text=""
-          android:visibility="gone"
-          />
-          
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/radiobutton_selector"
+            android:textColor="@drawable/radiobutton_color_selector"
+            android:textSize="16sp"
+            android:theme="@style/RadioButton"
+            android:text="12 o más veces por semana"
+            />
+            
           <RadioButton
           android:id="@+id/radio5"
           
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:button="@drawable/radiobutton_selector"
-          android:textColor="@drawable/radiobutton_color_selector"
-          android:textSize="16sp"
-          android:theme="@style/RadioButton"
-          android:text=""
-          android:visibility="gone"
-          />
-          
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/radiobutton_selector"
+            android:textColor="@drawable/radiobutton_color_selector"
+            android:textSize="16sp"
+            android:theme="@style/RadioButton"
+            android:text="8 a 11 veces por semana"
+            />
+            
           <RadioButton
           android:id="@+id/radio6"
           
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:button="@drawable/radiobutton_selector"
-          android:textColor="@drawable/radiobutton_color_selector"
-          android:textSize="16sp"
-          android:theme="@style/RadioButton"
-          android:text=""
-          android:visibility="gone"
-          />
-          
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/radiobutton_selector"
+            android:textColor="@drawable/radiobutton_color_selector"
+            android:textSize="16sp"
+            android:theme="@style/RadioButton"
+            android:text="4 a 7 veces por semana"
+            />
+            
           <RadioButton
           android:id="@+id/radio7"
           
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:button="@drawable/radiobutton_selector"
-          android:textColor="@drawable/radiobutton_color_selector"
-          android:textSize="16sp"
-          android:theme="@style/RadioButton"
-          android:text=""
-          android:visibility="gone"
-          />
-          
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/radiobutton_selector"
+            android:textColor="@drawable/radiobutton_color_selector"
+            android:textSize="16sp"
+            android:theme="@style/RadioButton"
+            android:text="Una a tres veces por semana"
+            />
+            
           <RadioButton
           android:id="@+id/radio8"
           
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:button="@drawable/radiobutton_selector"
-          android:textColor="@drawable/radiobutton_color_selector"
-          android:textSize="16sp"
-          android:theme="@style/RadioButton"
-          android:text=""
-          android:visibility="gone"
-          />
-          
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/radiobutton_selector"
+            android:textColor="@drawable/radiobutton_color_selector"
+            android:textSize="16sp"
+            android:theme="@style/RadioButton"
+            android:text="Menos de una vez por semana"
+            />
+            
           <RadioButton
           android:id="@+id/radio9"
           
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:button="@drawable/radiobutton_selector"
-          android:textColor="@drawable/radiobutton_color_selector"
-          android:textSize="16sp"
-          android:theme="@style/RadioButton"
-          android:text=""
-          android:visibility="gone"
-          />
-          
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/radiobutton_selector"
+            android:textColor="@drawable/radiobutton_color_selector"
+            android:textSize="16sp"
+            android:theme="@style/RadioButton"
+            android:text="No sabe / No contestó"
+            />
+            
           <RadioButton
           android:id="@+id/radio10"
           

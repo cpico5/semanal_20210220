@@ -32,8 +32,8 @@
       android:layout_height="wrap_content"
       android:text="@string/PREGUNTAc16"
       android:textAppearance="?android:attr/textAppearanceLarge"
-      android:textColor="#002266"
-      android:textStyle="bold" />
+      android:textColor="#008000"
+      android:fontFamily="@font/quicksand_bold"/>
       
       <RadioGroup
       android:id="@+id/rdPreguntac16"
@@ -76,7 +76,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="Solo para estadística, ¿me podría decir por quién votó para Jefe de Gobierno en las elecciones de 2018? Espontáneo"
+            android:text="En los últimos seis meses ¿Usted ha visto en su colonia trípticos, folletos o carteles del Gobierno de la Ciudad para informar sobre medidas de prevención y cuidado durante la pandemia de Coronavirus?"
             android:visibility="gone"
             />
             
@@ -89,7 +89,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="Claudia Sheinbaum/ Morena/ PT/ Encuentro social"
+            android:text="Si"
             />
             
           <RadioButton
@@ -101,7 +101,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="Alejandra Barrales/ PAN/ PRD/  MC"
+            android:text="No"
             />
             
           <RadioButton
@@ -113,93 +113,100 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="Mikel Arriola/ PRI"
+            android:text="No sabe / No contestó"
             />
             
           <RadioButton
           android:id="@+id/radio7"
           
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:button="@drawable/radiobutton_selector"
-            android:textColor="@drawable/radiobutton_color_selector"
-            android:textSize="16sp"
-            android:theme="@style/RadioButton"
-            android:text="Mariana Boy/ PVEM"
-            />
-            
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:button="@drawable/radiobutton_selector"
+          android:textColor="@drawable/radiobutton_color_selector"
+          android:textSize="16sp"
+          android:theme="@style/RadioButton"
+          android:text=""
+          android:visibility="gone"
+          />
+          
           <RadioButton
           android:id="@+id/radio8"
           
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:button="@drawable/radiobutton_selector"
-            android:textColor="@drawable/radiobutton_color_selector"
-            android:textSize="16sp"
-            android:theme="@style/RadioButton"
-            android:text="Lorena Osornio/ Independiente"
-            />
-            
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:button="@drawable/radiobutton_selector"
+          android:textColor="@drawable/radiobutton_color_selector"
+          android:textSize="16sp"
+          android:theme="@style/RadioButton"
+          android:text=""
+          android:visibility="gone"
+          />
+          
           <RadioButton
           android:id="@+id/radio9"
           
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:button="@drawable/radiobutton_selector"
-            android:textColor="@drawable/radiobutton_color_selector"
-            android:textSize="16sp"
-            android:theme="@style/RadioButton"
-            android:text="Marco Rascón/ PHCDMX"
-            />
-            
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:button="@drawable/radiobutton_selector"
+          android:textColor="@drawable/radiobutton_color_selector"
+          android:textSize="16sp"
+          android:theme="@style/RadioButton"
+          android:text=""
+          android:visibility="gone"
+          />
+          
           <RadioButton
           android:id="@+id/radio10"
           
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:button="@drawable/radiobutton_selector"
-            android:textColor="@drawable/radiobutton_color_selector"
-            android:textSize="16sp"
-            android:theme="@style/RadioButton"
-            android:text="Purificación Carpinteyro/ PANAL"
-            />
-            
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:button="@drawable/radiobutton_selector"
+          android:textColor="@drawable/radiobutton_color_selector"
+          android:textSize="16sp"
+          android:theme="@style/RadioButton"
+          android:text=""
+          android:visibility="gone"
+          />
+          
           <RadioButton
           android:id="@+id/radio11"
           
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:button="@drawable/radiobutton_selector"
-            android:textColor="@drawable/radiobutton_color_selector"
-            android:textSize="16sp"
-            android:theme="@style/RadioButton"
-            android:text="No voto"
-            />
-            
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:button="@drawable/radiobutton_selector"
+          android:textColor="@drawable/radiobutton_color_selector"
+          android:textSize="16sp"
+          android:theme="@style/RadioButton"
+          android:text=""
+          android:visibility="gone"
+          />
+          
           <RadioButton
           android:id="@+id/radio12"
           
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:button="@drawable/radiobutton_selector"
-            android:textColor="@drawable/radiobutton_color_selector"
-            android:textSize="16sp"
-            android:theme="@style/RadioButton"
-            android:text="Anuló su voto"
-            />
-            
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:button="@drawable/radiobutton_selector"
+          android:textColor="@drawable/radiobutton_color_selector"
+          android:textSize="16sp"
+          android:theme="@style/RadioButton"
+          android:text=""
+          android:visibility="gone"
+          />
+          
           <RadioButton
           android:id="@+id/radio13"
           
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:button="@drawable/radiobutton_selector"
-            android:textColor="@drawable/radiobutton_color_selector"
-            android:textSize="16sp"
-            android:theme="@style/RadioButton"
-            android:text="No sabe/ no contestó"
-            />
-            
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:button="@drawable/radiobutton_selector"
+          android:textColor="@drawable/radiobutton_color_selector"
+          android:textSize="16sp"
+          android:theme="@style/RadioButton"
+          android:text=""
+          android:visibility="gone"
+          />
+          
           <RadioButton
           android:id="@+id/radio14"
           

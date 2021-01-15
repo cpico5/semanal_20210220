@@ -32,8 +32,8 @@
       android:layout_height="wrap_content"
       android:text="@string/PREGUNTAc12"
       android:textAppearance="?android:attr/textAppearanceLarge"
-      android:textColor="#002266"
-      android:textStyle="bold" />
+      android:textColor="#008000"
+      android:fontFamily="@font/quicksand_bold"/>
       
       <RadioGroup
       android:id="@+id/rdPreguntac12"
@@ -76,7 +76,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="En los últimos seis meses ¿Usted ha visto en su colonia trípticos, folletos o carteles del Gobierno de la Ciudad para informar sobre medidas de prevención y cuidado durante la pandemia de Coronavirus?"
+            android:text="Estaría usted de acuerdo o en desacuerdo que el Semáforo rojo en la Ciudad de México continuara hasta finales de enero? (no se lee en parte)"
             android:visibility="gone"
             />
             
@@ -89,7 +89,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="Si"
+            android:text="Acuerdo"
             />
             
           <RadioButton
@@ -101,7 +101,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="No"
+            android:text="Desacuerdo"
             />
             
           <RadioButton
@@ -113,22 +113,21 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="No sabe / No contestó"
+            android:text="En parte"
             />
             
           <RadioButton
           android:id="@+id/radio7"
           
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:button="@drawable/radiobutton_selector"
-          android:textColor="@drawable/radiobutton_color_selector"
-          android:textSize="16sp"
-          android:theme="@style/RadioButton"
-          android:text=""
-          android:visibility="gone"
-          />
-          
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/radiobutton_selector"
+            android:textColor="@drawable/radiobutton_color_selector"
+            android:textSize="16sp"
+            android:theme="@style/RadioButton"
+            android:text="No sabe / No contestó"
+            />
+            
           <RadioButton
           android:id="@+id/radio8"
           

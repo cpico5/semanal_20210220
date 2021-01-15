@@ -32,8 +32,8 @@
       android:layout_height="wrap_content"
       android:text="@string/PREGUNTAc1"
       android:textAppearance="?android:attr/textAppearanceLarge"
-      android:textColor="#002266"
-      android:textStyle="bold" />
+      android:textColor="#008000"
+      android:fontFamily="@font/quicksand_bold"/>
       
       <RadioGroup
       android:id="@+id/rdPreguntac1"
@@ -76,7 +76,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="¿Se enteró usted de que la Ciudad de México y el Estado de México continuaràn en Semáforo Rojo hasta el 24 de enero?"
+            android:text="¿Usted usa regularmente el metro de la Ciudad de México…?"
             android:visibility="gone"
             />
             

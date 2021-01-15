@@ -32,8 +32,8 @@
       android:layout_height="wrap_content"
       android:text="@string/PREGUNTAc8"
       android:textAppearance="?android:attr/textAppearanceLarge"
-      android:textColor="#002266"
-      android:textStyle="bold" />
+      android:textColor="#008000"
+      android:fontFamily="@font/quicksand_bold"/>
       
       <RadioGroup
       android:id="@+id/rdPreguntac8"
@@ -76,7 +76,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="En los últimos seis meses, ¿ha visitado su hogar personal del Gobierno de la Ciudad para informarle a usted o algún familiar sobre medidas de prevención y cuidado durante la pandemia de Coronavirus?"
+            android:text="¿Se enteró usted de que la Ciudad de México y el Estado de México continuarán en Semáforo Rojo hasta el 18 de enero?"
             android:visibility="gone"
             />
             
@@ -89,7 +89,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="Si"
+            android:text="Sí"
             />
             
           <RadioButton

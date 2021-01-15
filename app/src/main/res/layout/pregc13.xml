@@ -32,8 +32,8 @@
       android:layout_height="wrap_content"
       android:text="@string/PREGUNTAc13"
       android:textAppearance="?android:attr/textAppearanceLarge"
-      android:textColor="#002266"
-      android:textStyle="bold" />
+      android:textColor="#008000"
+      android:fontFamily="@font/quicksand_bold"/>
       
       <RadioGroup
       android:id="@+id/rdPreguntac13"
@@ -50,7 +50,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="0"
+            android:text="1"
             android:visibility="gone"
             />
             
@@ -76,7 +76,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="Antes de que yo se lo mencionara, ¿usted sabía que ya se permite que haya reelección de cargos populares?"
+            android:text="¿A usted y a su familia en que les afectaría que el semáforo rojo continúe hasta finales de enero?"
             android:visibility="gone"
             />
             
@@ -89,7 +89,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="Si sabía"
+            android:text="Registrar"
             />
             
           <RadioButton
@@ -101,7 +101,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="No sabia"
+            android:text="En nada/ no me afectaría"
             />
             
           <RadioButton
@@ -234,6 +234,19 @@
           android:visibility="gone"
           />
           
+        <EditText
+        android:id="@+id/editPreguntac13"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="Otro"
+        android:inputType="text"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:textSize="16sp" />
+        
       </RadioGroup>
       </LinearLayout>
       </LinearLayout>

@@ -32,8 +32,8 @@
       android:layout_height="wrap_content"
       android:text="@string/PREGUNTAc4a"
       android:textAppearance="?android:attr/textAppearanceLarge"
-      android:textColor="#002266"
-      android:textStyle="bold" />
+      android:textColor="#008000"
+      android:fontFamily="@font/quicksand_bold"/>
       
       <RadioGroup
       android:id="@+id/rdPreguntac4a"
@@ -50,7 +50,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="0"
+            android:text="1"
             android:visibility="gone"
             />
             
@@ -90,21 +90,7 @@
             android:textSize="16sp"
             android:theme="@style/RadioButton"
             android:text="Registrar"
-              android:visibility="gone"
             />
-
-          <EditText
-              android:id="@+id/editPreguntac4a"
-              android:layout_width="320dp"
-              android:layout_height="wrap_content"
-              android:layout_marginTop="30dp"
-              android:layout_marginBottom="30dp"
-              android:ems="10"
-              android:focusable="false"
-              android:focusableInTouchMode="false"
-              android:hint="Registrar"
-              android:inputType="text"
-              android:textSize="16sp" />
             
           <RadioButton
           android:id="@+id/radio5"
@@ -249,6 +235,19 @@
           android:visibility="gone"
           />
           
+        <EditText
+        android:id="@+id/editPreguntac4a"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="Otro"
+        android:inputType="text"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:textSize="16sp" />
+        
       </RadioGroup>
       </LinearLayout>
       </LinearLayout>

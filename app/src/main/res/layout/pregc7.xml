@@ -32,8 +32,8 @@
       android:layout_height="wrap_content"
       android:text="@string/PREGUNTAc7"
       android:textAppearance="?android:attr/textAppearanceLarge"
-      android:textColor="#002266"
-      android:textStyle="bold" />
+      android:textColor="#008000"
+      android:fontFamily="@font/quicksand_bold"/>
       
       <RadioGroup
       android:id="@+id/rdPreguntac7"
@@ -50,7 +50,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="0"
+            android:text="3"
             android:visibility="gone"
             />
             
@@ -76,7 +76,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="Por favor digame, si tuviera la posibilidad de ponerse la vacuna contra COVID-19 usted..."
+            android:text="Con lo que ha visto o escuchado como ha sido hasta ahora las medidas provisionales de transporte para remplazar las líneas del Metro dañadas…"
             android:visibility="gone"
             />
             

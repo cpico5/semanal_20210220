@@ -32,8 +32,8 @@
       android:layout_height="wrap_content"
       android:text="@string/PREGUNTAc6"
       android:textAppearance="?android:attr/textAppearanceLarge"
-      android:textColor="#002266"
-      android:textStyle="bold" />
+      android:textColor="#008000"
+      android:fontFamily="@font/quicksand_bold"/>
       
       <RadioGroup
       android:id="@+id/rdPreguntac6"
@@ -50,7 +50,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="0"
+            android:text="3"
             android:visibility="gone"
             />
             
@@ -76,70 +76,75 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="¿Què tanto miedo tiene de contagiarse de COVID-19  usted o su familia?"
+            android:text="Con lo que ha visto o escuchado ¿Cómo ha sido hasta ahora la respuesta del  gobierno de la ciudad al incendio en el puesto central de control del Metro…?"
             android:visibility="gone"
             />
             
           <RadioButton
           android:id="@+id/radio4"
           
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:button="@drawable/radiobutton_selector"
-            android:textColor="@drawable/radiobutton_color_selector"
-            android:textSize="16sp"
-            android:theme="@style/RadioButton"
-            android:text="Mucho"
-            />
-            
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:button="@drawable/radiobutton_selector"
+          android:textColor="@drawable/radiobutton_color_selector"
+          android:textSize="16sp"
+          android:theme="@style/RadioButton"
+          android:text=""
+          android:visibility="gone"
+          />
+          
           <RadioButton
           android:id="@+id/radio5"
           
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:button="@drawable/radiobutton_selector"
-            android:textColor="@drawable/radiobutton_color_selector"
-            android:textSize="16sp"
-            android:theme="@style/RadioButton"
-            android:text="Algo"
-            />
-            
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:button="@drawable/radiobutton_selector"
+          android:textColor="@drawable/radiobutton_color_selector"
+          android:textSize="16sp"
+          android:theme="@style/RadioButton"
+          android:text=""
+          android:visibility="gone"
+          />
+          
           <RadioButton
           android:id="@+id/radio6"
           
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:button="@drawable/radiobutton_selector"
-            android:textColor="@drawable/radiobutton_color_selector"
-            android:textSize="16sp"
-            android:theme="@style/RadioButton"
-            android:text="Poco"
-            />
-            
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:button="@drawable/radiobutton_selector"
+          android:textColor="@drawable/radiobutton_color_selector"
+          android:textSize="16sp"
+          android:theme="@style/RadioButton"
+          android:text=""
+          android:visibility="gone"
+          />
+          
           <RadioButton
           android:id="@+id/radio7"
           
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:button="@drawable/radiobutton_selector"
-            android:textColor="@drawable/radiobutton_color_selector"
-            android:textSize="16sp"
-            android:theme="@style/RadioButton"
-            android:text="Nada"
-            />
-            
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:button="@drawable/radiobutton_selector"
+          android:textColor="@drawable/radiobutton_color_selector"
+          android:textSize="16sp"
+          android:theme="@style/RadioButton"
+          android:text=""
+          android:visibility="gone"
+          />
+          
           <RadioButton
           android:id="@+id/radio8"
           
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:button="@drawable/radiobutton_selector"
-            android:textColor="@drawable/radiobutton_color_selector"
-            android:textSize="16sp"
-            android:theme="@style/RadioButton"
-            android:text="No sabe / No contestó"
-            />
-            
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:button="@drawable/radiobutton_selector"
+          android:textColor="@drawable/radiobutton_color_selector"
+          android:textSize="16sp"
+          android:theme="@style/RadioButton"
+          android:text=""
+          android:visibility="gone"
+          />
+          
           <RadioButton
           android:id="@+id/radio9"
           

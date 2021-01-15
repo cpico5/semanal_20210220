@@ -32,8 +32,8 @@
       android:layout_height="wrap_content"
       android:text="@string/PREGUNTAc7a"
       android:textAppearance="?android:attr/textAppearanceLarge"
-      android:textColor="#002266"
-      android:textStyle="bold" />
+      android:textColor="#008000"
+      android:fontFamily="@font/quicksand_bold"/>
       
       <RadioGroup
       android:id="@+id/rdPreguntac7a"
@@ -76,7 +76,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="Por favor digame, si tuviera la posibilidad de ponerse la vacuna contra COVID-19 usted..."
+            android:text="como ha sido hasta ahora las medidas provisionales de transporte para remplazar las líneas del Metro dañadas"
             android:visibility="gone"
             />
             
@@ -89,17 +89,8 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="Se la pondría de inmediato"
+            android:text="Suficientes"
             />
-
-          <TextView
-              android:id="@+id/textPreguntac2R"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:layout_marginStart="60dp"
-              android:text="ó"
-              android:textAppearance="?android:attr/textAppearanceLarge"
-              />
             
           <RadioButton
           android:id="@+id/radio5"
@@ -110,7 +101,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="Esperaría un tiempo para ver como reaccionan otras personas"
+            android:text="o"
             />
             
           <RadioButton
@@ -122,22 +113,21 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="No sabe / No contestó"
+            android:text="Insuficientes"
             />
             
           <RadioButton
           android:id="@+id/radio7"
           
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:button="@drawable/radiobutton_selector"
-          android:textColor="@drawable/radiobutton_color_selector"
-          android:textSize="16sp"
-          android:theme="@style/RadioButton"
-          android:text=""
-          android:visibility="gone"
-          />
-          
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/radiobutton_selector"
+            android:textColor="@drawable/radiobutton_color_selector"
+            android:textSize="16sp"
+            android:theme="@style/RadioButton"
+            android:text="No sabe / No contestó"
+            />
+            
           <RadioButton
           android:id="@+id/radio8"
           
