@@ -40,7 +40,21 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:orientation="vertical" >
-      
+
+          <EditText
+              android:id="@+id/editPreguntac5a"
+              android:layout_width="320dp"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="30dp"
+              android:layout_marginBottom="30dp"
+              android:ems="10"
+              android:focusable="false"
+              android:focusableInTouchMode="false"
+              android:hint="Anotar número"
+              android:inputType="number"
+              android:maxLength="2"
+              android:textSize="16sp" />
+
           <RadioButton
           android:id="@+id/radio1"
           
@@ -50,7 +64,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="0"
+            android:text="1"
             android:visibility="gone"
             />
             
@@ -76,7 +90,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="La Jefa de Gobierno Claudia Sheinbaum"
+            android:text="¿Cuántos familiares (incluido el entrevistado) conoce que hayan enfermado?"
             android:visibility="gone"
             />
             
@@ -89,45 +103,48 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="Buena"
+            android:text="No sabe / No contestó"
             />
             
           <RadioButton
           android:id="@+id/radio5"
           
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:button="@drawable/radiobutton_selector"
-            android:textColor="@drawable/radiobutton_color_selector"
-            android:textSize="16sp"
-            android:theme="@style/RadioButton"
-            android:text="Regular"
-            />
-            
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:button="@drawable/radiobutton_selector"
+          android:textColor="@drawable/radiobutton_color_selector"
+          android:textSize="16sp"
+          android:theme="@style/RadioButton"
+          android:text=""
+          android:visibility="gone"
+          />
+          
           <RadioButton
           android:id="@+id/radio6"
           
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:button="@drawable/radiobutton_selector"
-            android:textColor="@drawable/radiobutton_color_selector"
-            android:textSize="16sp"
-            android:theme="@style/RadioButton"
-            android:text="Mala"
-            />
-            
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:button="@drawable/radiobutton_selector"
+          android:textColor="@drawable/radiobutton_color_selector"
+          android:textSize="16sp"
+          android:theme="@style/RadioButton"
+          android:text=""
+          android:visibility="gone"
+          />
+          
           <RadioButton
           android:id="@+id/radio7"
           
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:button="@drawable/radiobutton_selector"
-            android:textColor="@drawable/radiobutton_color_selector"
-            android:textSize="16sp"
-            android:theme="@style/RadioButton"
-            android:text="No sabe / No contestó"
-            />
-            
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:button="@drawable/radiobutton_selector"
+          android:textColor="@drawable/radiobutton_color_selector"
+          android:textSize="16sp"
+          android:theme="@style/RadioButton"
+          android:text=""
+          android:visibility="gone"
+          />
+          
           <RadioButton
           android:id="@+id/radio8"
           
@@ -181,45 +198,6 @@
           />
           
           <RadioButton
-          android:id="@+id/radio12"
-          
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:button="@drawable/radiobutton_selector"
-          android:textColor="@drawable/radiobutton_color_selector"
-          android:textSize="16sp"
-          android:theme="@style/RadioButton"
-          android:text=""
-          android:visibility="gone"
-          />
-          
-          <RadioButton
-          android:id="@+id/radio13"
-          
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:button="@drawable/radiobutton_selector"
-          android:textColor="@drawable/radiobutton_color_selector"
-          android:textSize="16sp"
-          android:theme="@style/RadioButton"
-          android:text=""
-          android:visibility="gone"
-          />
-          
-          <RadioButton
-          android:id="@+id/radio14"
-          
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:button="@drawable/radiobutton_selector"
-          android:textColor="@drawable/radiobutton_color_selector"
-          android:textSize="16sp"
-          android:theme="@style/RadioButton"
-          android:text=""
-          android:visibility="gone"
-          />
-          
-          <RadioButton
           android:id="@+id/radio0"
           
           
@@ -232,7 +210,7 @@
           android:text=""
           android:visibility="gone"
           />
-          
+
       </RadioGroup>
       </LinearLayout>
       </LinearLayout>

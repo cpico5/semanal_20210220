@@ -47,14 +47,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" >
 
-                     <AutoCompleteTextView
+                    <AutoCompleteTextView
                         android:id="@+id/actv"
                         android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/tvRestaurant"
                         android:layout_marginTop="10dp"
-                         android:inputType="number"
-                         android:maxLength="4"
+                        android:inputType="number"
+                        android:maxLength="4"
                         android:completionThreshold="1"/>
 
                     <Spinner
@@ -71,8 +71,9 @@
                 android:id="@+id/btnConsultar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/gradient_box2"
+                android:background="@drawable/gradient_box_verde"
                 android:text="Consultar"
+                android:textColor="@color/BLANCO"
                 android:textSize="30dp" />
 
             <TextView
@@ -94,9 +95,10 @@
                 android:id="@+id/btnSiguiente"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/gradient_box2"
+                android:background="@drawable/gradient_box_verde"
                 android:onClick="Siguiente"
                 android:text="Siguiente"
+                android:textColor="@color/BLANCO"
                 android:textSize="30dp" />
 
             <ProgressBar
@@ -113,9 +115,10 @@
                 android:layout_height="50dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="20dp"
-                android:background="@drawable/gradient_box2"
+                android:background="@drawable/gradient_box_verde"
                 android:onClick="Rechazo"
                 android:text="Rechazo"
+                android:textColor="@color/BLANCO"
                 android:textSize="20dp" />
 
             <Button
@@ -124,9 +127,10 @@
                 android:layout_height="50dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="20dp"
-                android:background="@drawable/gradient_box2"
+                android:background="@drawable/gradient_box_verde"
                 android:onClick="Rechazo2"
                 android:text="Rechazo por temor a Contagio"
+                android:textColor="@color/BLANCO"
                 android:textSize="20dp" />
 
             <Button
@@ -135,9 +139,10 @@
                 android:layout_height="50dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="20dp"
-                android:background="@drawable/gradient_box2"
+                android:background="@drawable/gradient_box_verde"
                 android:onClick="Info"
                 android:text="Manda Información"
+                android:textColor="@color/BLANCO"
                 android:textSize="20dp" />
 
 
@@ -147,7 +152,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_marginTop="20dp"
->
+                >
 
                 <ProgressBar
                     android:id="@+id/login_progressMain2"
@@ -166,9 +171,10 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="20dp"
                     android:layout_marginStart="40dp"
-                    android:background="@drawable/gradient_box2"
+                    android:background="@drawable/gradient_box_verde"
                     android:onClick="catalogos"
                     android:text="Actualiza Catálogos"
+                    android:textColor="@color/BLANCO"
                     android:textSize="20dp" />
             </LinearLayout>
 
@@ -184,9 +190,10 @@
                 android:layout_height="50dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="20dp"
-                android:background="@drawable/gradient_box2"
+                android:background="@drawable/gradient_box_verde"
                 android:onClick="Salir"
                 android:text="Salir"
+                android:textColor="@color/BLANCO"
                 android:textSize="20dp" />
         </LinearLayout>
     </ScrollView>
