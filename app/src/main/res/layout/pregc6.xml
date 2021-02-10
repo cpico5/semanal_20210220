@@ -76,7 +76,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="La persona enferma, actualmente ¿cómo se encuentra de salud… (espontánea, si son varias personas preguntar por la más cercana: él, familiar que vive en casa)"
+            android:text="De las vacunas disponibles hasta hoy en México, ¿cuál le genera más confianza? (no leer ninguna, no conoce las vacunas)"
             android:visibility="gone"
             />
             
@@ -89,7 +89,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="Falleció"
+            android:text="Pfizer-BioNTech"
             />
             
           <RadioButton
@@ -101,7 +101,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="Grave en el hospital"
+            android:text="CanSino Bio"
             />
             
           <RadioButton
@@ -113,7 +113,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="Estable en el hospital"
+            android:text="Sputnik V"
             />
             
           <RadioButton
@@ -125,7 +125,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="Enferma y delicada en casa"
+            android:text="AstraZeneca"
             />
             
           <RadioButton
@@ -137,7 +137,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="Enferma pero estable en casa"
+            android:text="No conoce las vacunas/ le falta información"
             />
             
           <RadioButton
@@ -149,7 +149,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="Ya se recuperó"
+            android:text="Todas"
             />
             
           <RadioButton
@@ -161,11 +161,49 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="No sabe / No contestó"
+            android:text="Ninguna"
             />
             
           <RadioButton
           android:id="@+id/radio11"
+          
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/radiobutton_selector"
+            android:textColor="@drawable/radiobutton_color_selector"
+            android:textSize="16sp"
+            android:theme="@style/RadioButton"
+            android:text="No contestó"
+            />
+            
+          <RadioButton
+          android:id="@+id/radio12"
+          
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:button="@drawable/radiobutton_selector"
+          android:textColor="@drawable/radiobutton_color_selector"
+          android:textSize="16sp"
+          android:theme="@style/RadioButton"
+          android:text=""
+          android:visibility="gone"
+          />
+          
+          <RadioButton
+          android:id="@+id/radio13"
+          
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:button="@drawable/radiobutton_selector"
+          android:textColor="@drawable/radiobutton_color_selector"
+          android:textSize="16sp"
+          android:theme="@style/RadioButton"
+          android:text=""
+          android:visibility="gone"
+          />
+          
+          <RadioButton
+          android:id="@+id/radio14"
           
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"

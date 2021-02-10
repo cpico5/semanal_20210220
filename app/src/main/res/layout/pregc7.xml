@@ -76,7 +76,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="La persona enferma ¿se atendió en la Ciudad de México, Estado de México o en otro estado? "
+            android:text="De las vacunas disponibles hasta hoy en México, ¿cuál le genera menos confianza? (no leer todas, no conoce las vacunas)"
             android:visibility="gone"
             />
             
@@ -89,7 +89,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="CDMX"
+            android:text="Pfizer-BioNTech"
             />
             
           <RadioButton
@@ -101,7 +101,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="EDO MEX"
+            android:text="CanSino Bio"
             />
             
           <RadioButton
@@ -113,7 +113,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="Otro estado"
+            android:text="Sputnik V"
             />
             
           <RadioButton
@@ -125,38 +125,60 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="No sabe / No contestó"
+            android:text="AstraZeneca"
             />
             
           <RadioButton
           android:id="@+id/radio8"
           
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:button="@drawable/radiobutton_selector"
-          android:textColor="@drawable/radiobutton_color_selector"
-          android:textSize="16sp"
-          android:theme="@style/RadioButton"
-          android:text=""
-          android:visibility="gone"
-          />
-          
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/radiobutton_selector"
+            android:textColor="@drawable/radiobutton_color_selector"
+            android:textSize="16sp"
+            android:theme="@style/RadioButton"
+            android:text="No conoce las vacunas/ le falta información"
+            />
+            
           <RadioButton
           android:id="@+id/radio9"
           
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:button="@drawable/radiobutton_selector"
-          android:textColor="@drawable/radiobutton_color_selector"
-          android:textSize="16sp"
-          android:theme="@style/RadioButton"
-          android:text=""
-          android:visibility="gone"
-          />
-          
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/radiobutton_selector"
+            android:textColor="@drawable/radiobutton_color_selector"
+            android:textSize="16sp"
+            android:theme="@style/RadioButton"
+            android:text="Todas"
+            />
+            
           <RadioButton
           android:id="@+id/radio10"
           
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/radiobutton_selector"
+            android:textColor="@drawable/radiobutton_color_selector"
+            android:textSize="16sp"
+            android:theme="@style/RadioButton"
+            android:text="Ninguna"
+            />
+            
+          <RadioButton
+          android:id="@+id/radio11"
+          
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/radiobutton_selector"
+            android:textColor="@drawable/radiobutton_color_selector"
+            android:textSize="16sp"
+            android:theme="@style/RadioButton"
+            android:text="No sabe / No contestó"
+            />
+            
+          <RadioButton
+          android:id="@+id/radio12"
+          
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:button="@drawable/radiobutton_selector"
@@ -168,7 +190,20 @@
           />
           
           <RadioButton
-          android:id="@+id/radio11"
+          android:id="@+id/radio13"
+          
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:button="@drawable/radiobutton_selector"
+          android:textColor="@drawable/radiobutton_color_selector"
+          android:textSize="16sp"
+          android:theme="@style/RadioButton"
+          android:text=""
+          android:visibility="gone"
+          />
+          
+          <RadioButton
+          android:id="@+id/radio14"
           
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"

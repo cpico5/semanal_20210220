@@ -14,7 +14,7 @@
       android:layout_alignParentTop="true" >
 
       <LinearLayout
-      android:id="@+id/layc6b"
+      android:id="@+id/layc6"
       android:focusableInTouchMode="true"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
@@ -27,29 +27,30 @@
       android:orientation="vertical" >
       
       <TextView
-      android:id="@+id/textPreguntac6b"
+      android:id="@+id/textPreguntac6"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:text="@string/PREGUNTAc6b"
+      android:text="@string/PREGUNTAc6"
       android:textAppearance="?android:attr/textAppearanceLarge"
       android:textColor="#008000"
       android:fontFamily="@font/quicksand_bold"/>
       
       <RadioGroup
-      android:id="@+id/rdPreguntac6b"
+      android:id="@+id/rdPreguntac6"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:orientation="vertical" >
 
-          <Spinner
-              android:id="@+id/spinnerc6b"
-              android:layout_width="259dp"
+          <RadioButton
+              android:id="@+id/radio6"
+
+              android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:layout_marginLeft="10dp"
-              android:layout_marginTop="30dp"
-              android:hint="Selecciona"
-              android:singleLine="false"
-              android:spinnerMode="dialog" />
+              android:button="@drawable/radiobutton_selector"
+              android:text="Sputnik V"
+              android:textColor="@drawable/radiobutton_color_selector"
+              android:textSize="16sp"
+              android:theme="@style/RadioButton" />
 
           <RadioButton
           android:id="@+id/radio1"
@@ -60,7 +61,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="2"
+            android:text="0"
             android:visibility="gone"
             />
             
@@ -73,7 +74,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="c6b"
+            android:text="c6"
             android:visibility="gone"
             />
             
@@ -86,22 +87,10 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="Desde que sospecho estar contagiado ¿Cuántos días estuvo enfermo?"
+            android:text="De las vacunas disponibles hasta hoy en México, ¿cuál le genera más confianza? (no leer ninguna, no conoce las vacunas)"
             android:visibility="gone"
             />
-            
-          <RadioButton
-          android:id="@+id/radio4"
-          
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:button="@drawable/radiobutton_selector"
-            android:textColor="@drawable/radiobutton_color_selector"
-            android:textSize="16sp"
-            android:theme="@style/RadioButton"
-            android:text="60 o más días"
-            />
-            
+
           <RadioButton
           android:id="@+id/radio5"
           
@@ -111,64 +100,83 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="No sabe / No contestó"
+            android:text="CanSino Bio"
             />
-            
-          <RadioButton
-          android:id="@+id/radio6"
-          
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:button="@drawable/radiobutton_selector"
-          android:textColor="@drawable/radiobutton_color_selector"
-          android:textSize="16sp"
-          android:theme="@style/RadioButton"
-          android:text=""
-          android:visibility="gone"
-          />
-          
+
           <RadioButton
           android:id="@+id/radio7"
           
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:button="@drawable/radiobutton_selector"
-          android:textColor="@drawable/radiobutton_color_selector"
-          android:textSize="16sp"
-          android:theme="@style/RadioButton"
-          android:text=""
-          android:visibility="gone"
-          />
-          
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/radiobutton_selector"
+            android:textColor="@drawable/radiobutton_color_selector"
+            android:textSize="16sp"
+            android:theme="@style/RadioButton"
+            android:text="AstraZeneca"
+            />
+
+          <RadioButton
+              android:id="@+id/radio4"
+
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:button="@drawable/radiobutton_selector"
+              android:text="Pfizer-BioNTech"
+              android:textColor="@drawable/radiobutton_color_selector"
+              android:textSize="16sp"
+              android:theme="@style/RadioButton" />
+
           <RadioButton
           android:id="@+id/radio8"
           
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:button="@drawable/radiobutton_selector"
-          android:textColor="@drawable/radiobutton_color_selector"
-          android:textSize="16sp"
-          android:theme="@style/RadioButton"
-          android:text=""
-          android:visibility="gone"
-          />
-          
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/radiobutton_selector"
+            android:textColor="@drawable/radiobutton_color_selector"
+            android:textSize="16sp"
+            android:theme="@style/RadioButton"
+            android:text="No conoce las vacunas/ le falta información"
+            />
+            
           <RadioButton
           android:id="@+id/radio9"
           
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:button="@drawable/radiobutton_selector"
-          android:textColor="@drawable/radiobutton_color_selector"
-          android:textSize="16sp"
-          android:theme="@style/RadioButton"
-          android:text=""
-          android:visibility="gone"
-          />
-          
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/radiobutton_selector"
+            android:textColor="@drawable/radiobutton_color_selector"
+            android:textSize="16sp"
+            android:theme="@style/RadioButton"
+            android:text="Todas"
+            />
+            
           <RadioButton
           android:id="@+id/radio10"
           
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/radiobutton_selector"
+            android:textColor="@drawable/radiobutton_color_selector"
+            android:textSize="16sp"
+            android:theme="@style/RadioButton"
+            android:text="Ninguna"
+            />
+            
+          <RadioButton
+          android:id="@+id/radio11"
+          
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/radiobutton_selector"
+            android:textColor="@drawable/radiobutton_color_selector"
+            android:textSize="16sp"
+            android:theme="@style/RadioButton"
+            android:text="No contestó"
+            />
+            
+          <RadioButton
+          android:id="@+id/radio12"
+          
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:button="@drawable/radiobutton_selector"
@@ -180,7 +188,20 @@
           />
           
           <RadioButton
-          android:id="@+id/radio11"
+          android:id="@+id/radio13"
+          
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:button="@drawable/radiobutton_selector"
+          android:textColor="@drawable/radiobutton_color_selector"
+          android:textSize="16sp"
+          android:theme="@style/RadioButton"
+          android:text=""
+          android:visibility="gone"
+          />
+          
+          <RadioButton
+          android:id="@+id/radio14"
           
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
@@ -205,8 +226,7 @@
           android:text=""
           android:visibility="gone"
           />
-
-
+          
       </RadioGroup>
       </LinearLayout>
       </LinearLayout>

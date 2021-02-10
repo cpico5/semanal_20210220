@@ -14,7 +14,7 @@
       android:layout_alignParentTop="true" >
 
       <LinearLayout
-      android:id="@+id/layc11c"
+      android:id="@+id/layc11"
       android:focusableInTouchMode="true"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
@@ -27,16 +27,16 @@
       android:orientation="vertical" >
       
       <TextView
-      android:id="@+id/textPreguntac11c"
+      android:id="@+id/textPreguntac11"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:text="@string/PREGUNTAc11c"
+      android:text="@string/PREGUNTAc11"
       android:textAppearance="?android:attr/textAppearanceLarge"
       android:textColor="#008000"
       android:fontFamily="@font/quicksand_bold"/>
       
       <RadioGroup
-      android:id="@+id/rdPreguntac11c"
+      android:id="@+id/rdPreguntac11"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:orientation="vertical" >
@@ -50,7 +50,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="0"
+            android:text="1"
             android:visibility="gone"
             />
             
@@ -63,7 +63,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="c11c"
+            android:text="c11"
             android:visibility="gone"
             />
             
@@ -76,22 +76,10 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="usted piensa que fue…"
+            android:text="¿Por qué razón no desea vacunarse esta(s) persona(s) mayor(es)? (registrar primera respuesta espontánea)"
             android:visibility="gone"
             />
-            
-          <RadioButton
-          android:id="@+id/radio4"
-          
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:button="@drawable/radiobutton_selector"
-            android:textColor="@drawable/radiobutton_color_selector"
-            android:textSize="16sp"
-            android:theme="@style/RadioButton"
-            android:text="Dieron seguimiento"
-            />
-            
+
           <RadioButton
           android:id="@+id/radio5"
           
@@ -101,8 +89,7 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="o"
-              android:visibility="gone"
+            android:text="Esperará a ver como funcionan/ otras reacciones"
             />
             
           <RadioButton
@@ -114,9 +101,33 @@
             android:textColor="@drawable/radiobutton_color_selector"
             android:textSize="16sp"
             android:theme="@style/RadioButton"
-            android:text="No le dieron seguimiento"
+            android:text="No cree en el COVID"
             />
-            
+
+          <RadioButton
+              android:id="@+id/radio4"
+
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:button="@drawable/radiobutton_selector"
+              android:text="No tiene confianza en las vacunas"
+              android:textColor="@drawable/radiobutton_color_selector"
+              android:textSize="16sp"
+              android:theme="@style/RadioButton" />
+
+          <EditText
+              android:id="@+id/editPreguntac11"
+              android:layout_width="320dp"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="30dp"
+              android:layout_marginBottom="30dp"
+              android:ems="10"
+              android:focusable="false"
+              android:focusableInTouchMode="false"
+              android:hint="Otro (registrar)"
+              android:inputType="text"
+              android:textSize="16sp" />
+
           <RadioButton
           android:id="@+id/radio7"
           
@@ -182,6 +193,45 @@
           />
           
           <RadioButton
+          android:id="@+id/radio12"
+          
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:button="@drawable/radiobutton_selector"
+          android:textColor="@drawable/radiobutton_color_selector"
+          android:textSize="16sp"
+          android:theme="@style/RadioButton"
+          android:text=""
+          android:visibility="gone"
+          />
+          
+          <RadioButton
+          android:id="@+id/radio13"
+          
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:button="@drawable/radiobutton_selector"
+          android:textColor="@drawable/radiobutton_color_selector"
+          android:textSize="16sp"
+          android:theme="@style/RadioButton"
+          android:text=""
+          android:visibility="gone"
+          />
+          
+          <RadioButton
+          android:id="@+id/radio14"
+          
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:button="@drawable/radiobutton_selector"
+          android:textColor="@drawable/radiobutton_color_selector"
+          android:textSize="16sp"
+          android:theme="@style/RadioButton"
+          android:text=""
+          android:visibility="gone"
+          />
+          
+          <RadioButton
           android:id="@+id/radio0"
           
           
@@ -194,7 +244,7 @@
           android:text=""
           android:visibility="gone"
           />
-          
+
       </RadioGroup>
       </LinearLayout>
       </LinearLayout>
