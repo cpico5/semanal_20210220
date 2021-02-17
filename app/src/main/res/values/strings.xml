@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Semanal_20210220 v1.0</string>
+    <string name="app_name">Federal 10 v5.0</string>
     <string name="action_settings">Settings</string>
 
     <string name="url_aplicacion">https://opinion.cdmx.gob.mx</string>
@@ -76,37 +76,62 @@
     <string name="PREGUNTA2">Sólo como información, NO le voy a solicitar datos o sus cuentas ¿Usted tiene cuenta personal en Facebook?</string>
     <string name="PREGUNTA3">¿Tiene cuenta personal en Twitter?</string>
     <string name="PREGUNTA4">¿Usted utiliza WhatsApp?</string>
-    <string name="PREGUNTA5">Con lo que usted sabe ¿está de acuerdo, o en desacuerdo con el trabajo realizado hasta ahora por el Presidente de la República, Andrés Manuel López Obrador?</string>
-    <string name="PREGUNTA6">Con lo que usted sabe, ¿piensa que el presidente Andrés Manuel López Obrador tiene las riendas del país en la mano?</string>
-    <string name="PREGUNTA7">Hablando ahora de la Ciudad de México y de su gobierno, con lo que Ud. sabe, ¿está de acuerdo o en desacuerdo con el trabajo realizado hasta ahora por la Jefa de Gobierno, Claudia Sheinbaum?</string>
-    <string name="PREGUNTA8">En una escala del 1 al 10, donde 1 es muy mala y 10 muy buena, ¿cómo califica la labor realizada hasta hoy por la Jefa de Gobierno, Claudia Sheinbaum, en la Ciudad de México?</string>
-    <string name="PREGUNTA9">En su opinión, ¿la Jefa de Gobierno, Claudia Sheinbaum tiene mucha, poca o ninguna capacidad para resolver los problemas de la Ciudad de México?</string>
-    <string name="PREGUNTAc1">¿En estos momentos a que le tiene más miedo…? (leer opciones)</string>
-    <string name="PREGUNTAc2">¿Qué tanto miedo tiene de contagiarse usted o su familia de coronavirus...? (leer opciones)</string>
-    <string name="PREGUNTAc3">¿Qué tanto miedo tiene a morir a causa de coronavirus...?  (leer opciones)</string>
-    <string name="PREGUNTAc4">Ahora que esten disponibles las vacunas de acuerdo a su rango de edad digame, usted desea vacunarse contra COVID-19</string>
-    <string name="PREGUNTAc5">¿Por qué razón no desea vacunarse? (registrar primera respuesta espontánea)</string>
-    <string name="PREGUNTAc6">De las vacunas disponibles hasta hoy en México, ¿cuál le genera más confianza? (no leer ninguna, no conoce las vacunas)</string>
-    <string name="PREGUNTAc7">De las vacunas disponibles hasta hoy en México, ¿cuál le genera menos confianza? (no leer todas, no conoce las vacunas)</string>
-    <string name="PREGUNTAc8">¿Me podría decir su edad?</string>
-    <string name="PREGUNTAc9">¿En su casa vive al menos una persona mayor de 60 años?</string>
-    <string name="PREGUNTAc10">¿Esta(s) persona(s) mayor de 60 años desea(n) vacunarse contra COVID-19?</string>
-    <string name="PREGUNTAc11">¿Por qué razón no desea vacunarse esta(s) persona(s) mayor(es)? (registrar primera respuesta espontánea)</string>
-    <string name="PREGUNTAc12">La(s) persona(s) mayor(es) de 60 años que viven en su hogar…</string>
-    <string name="PREGUNTAc12a">…ya se registró(aron) en la plataforma del Gobierno Federal para vacunarse?</string>
-    <string name="PREGUNTAc12b">…ya le(s) llamaron para preguntarle(s) si desea vacunarse?</string>
-    <string name="PREGUNTAc12c">… cuando se instalen los centros de vacunación, ¿podría trasladarse a el centro de vacunación que instalen en su colonia?</string>
-    <string name="PREGUNTAc13">En los últimos siete meses, ¿ha visitado su hogar personal del Gobierno de la Ciudad para informarle a usted o algún familiar sobre medidas de prevención y cuidado durante la pandemia de Coronavirus?</string>
-    <string name="PREGUNTAc14">En los últimos siete meses ¿Usted ha visto en su colonia trípticos, folletos o carteles del Gobierno de la Ciudad para informar sobre medidas de prevención y cuidado durante la pandemia de Coronavirus?</string>
-    <string name="PREGUNTAc15">Antes de que yo se lo mencionara, ¿usted sabía que ya se permite que haya reelección de cargos populares?</string>
-    <string name="PREGUNTAc16">En general ¿está usted de acuerdo o no con la reelección de alcaldes y diputados? (No leer ni de acuerdo ni en desacuerdo)</string>
-    <string name="PREGUNTAc17">¿Usted votaría por algún candidato que buscara la reelección para alcalde o diputado: Si, sin importar el candidato, Si, dependiendo del candidato, No, nunca votaría para que alguien se reeligiera?</string>
-    <string name="PREGUNTAc18">Solo para estadística, ¿me podría decir por quién votó para Jefe de Gobierno en las elecciones de 2018? (Espontáneo)</string>
-    <string name="PREGUNTAc19a">A dos años de la elección ¿sigue pensando que fue la mejor elección para la Jefatura de Gobierno? (espontáneo)</string>
-    <string name="PREGUNTAc19b">Después de dos años de la elección  ¿cómo cree que está haciendo su trabajo la Jefa de Gobierno, Claudia Sheinbaum, bien o mal? (no leer regular)</string>
-    <string name="PREGUNTAc20">Si hoy fueran las elecciones para elegir alcaldes y diputados ¿por qué partido votaría usted? (espontáneo)</string>
+    <string name="PREGUNTA5">Comparada con la situación que tenía el país hace un año, ¿cómo diría usted que está la situación actual del país, mejor o peor? (no leer igual de bien, igual de mal)</string>
+    <string name="PREGUNTA6">¿Cuál considera usted que es el principal problema de la Ciudad de México?
+    (REGISTRAR PRIMER RESPUESTA ESPONTÁNEA, NO LEA OPCIONES)</string>
+<string name="PREGUNTA7">Pasando a otro tema ¿Cuál considera usted que es el principal problema de su colonia? (REGISTRAR PRIMER RESPUESTA ESPONTÁNEA, NO LEA OPCIONES) </string>
+<string name="PREGUNTAcovi">¿Cómo evalúa usted a… en relación a la atención de la pandemia de Coronavirus, bien o mal?  (no leer regular)</string>
+<string name="PREGUNTAcovi1">Médicos y hospitales</string>
+<string name="PREGUNTAcovi2">Autoridades de Salud</string>
+<string name="PREGUNTAcovi3">Gobierno de la Ciudad de México</string>
+<string name="PREGUNTAcovi4">Su diputado(a) local</string>
+<string name="PREGUNTA8">Con lo que usted sabe ¿está de acuerdo, o en desacuerdo con el trabajo realizado hasta ahora por el Presidente de la República, Andrés Manuel López Obrador? (no leer ni de acuerdo ni en desacuerdo)</string>
+<string name="PREGUNTA9">Hablando ahora de la Ciudad de México y de su gobierno, con lo que Ud. sabe, ¿está de acuerdo o en desacuerdo con el trabajo realizado hasta ahora por la Jefa de Gobierno, Claudia Sheinbaum?  (no leer ni de acuerdo ni en desacuerdo)</string>
+<string name="PREGUNTA10">Con lo que Ud. sabe, ¿está de acuerdo o en desacuerdo con el trabajo realizado hasta ahora por su  Alcalde? (no leer ni de acuerdo ni en desacuerdo)</string>
+<string name="PREGUNTA11">Con lo que Ud. sabe, ¿está de acuerdo o en desacuerdo con el trabajo realizado hasta ahora por su Diputado(a) local en este distrito electoral? (no leer ni de acuerdo ni en desacuerdo)</string>
+<string name="PREGUNTA12">Con lo que Ud. sabe, ¿está de acuerdo o en desacuerdo con el trabajo realizado hasta ahora por su Diputado(a) Federal en este distrito electoral? (no leer ni de acuerdo ni en desacuerdo)</string>
+<string name="PREGUNTA13">Actualmente ¿tiene usted credencial de elector vigente?</string>
+<string name="PREGUNTA14">En junio próximo habrá elecciones para elegir alcaldes, diputados locales y diputados federales. ¿Qué tan interesado está usted de ir a votar en estas elecciones: totalmente interesado, bastante interesado, poco interesado o nada interesado?</string>
+<string name="PREGUNTA15">Y dígame, ¿qué tan seguro está usted de ir a votar en estas elecciones: totalmente seguro, bastante seguro, poco seguro o nada seguro?</string>
+<string name="PREGUNTA16"> Solamente para las estadísticas ¿Usted votó en las pasadas elecciones del 2018?</string>
+<string name="PREGUNTA16a">¿Y en esas las elecciones del año 2018, por cuál partido votó para Diputado Federal del distrito 10? (ESPONTÁNEA) </string>
+<string name="PREGUNTA16b"> Y si hubiera podido votar, ¿por cuál partido hubiera votado usted para Diputado federal del distrito 10 en julio del 2018?</string>
+<string name="PREGUNTA17">Independientemente del partido por el que usted vota, ¿usted normalmente se considera panista, priísta, perredista, morenista o de otro partido?</string>
+<string name="PREGUNTA18">¿Por cuál partido nunca votaría? (espontánea, registrar primera mención)</string>
+<string name="PREGUNTA19">Solo para estadística, ¿me podría decir por quién votó para Jefe de Gobierno en las elecciones de 2018? (espontánea)</string>
+<string name="PREGUNTA19a">A dos años de la elección ¿sigue pensando que Claudia Sheinbaum fue la mejor elección para la Jefatura de Gobierno? (espontáneo)</string>
+<string name="PREGUNTA19b">Después de dos años de la elección ¿cómo cree que está haciendo su trabajo la Jefa de Gobierno, Claudia Sheinbaum, bien o mal? (no leer regular)</string>
+<string name="PREGUNTA20">A usted que cree que beneficie más a su distrito federal 10, ¿qué continúe el mismo partido tres años más o que cambie el partido que gobierna el Distrito Federal 10?</string>
+<string name="PREGUNTA21">La ley electoral vigente actualmente permite que alcaldes y/o diputados tengan oportunidad de reelegirse. Antes de que se lo mencionara ¿Usted ya lo sabía?</string>
+<string name="PREGUNTA22">¿Qué tan de acuerdo está usted con esta disposición que permite que alcaldes y/o diputados  tengan oportunidad de reelegirse?</string>
+<string name="PREGUNTA23a">Si su Diputado local buscara la reelección en el 2021 por un periodo de tres años más en su puesto  ¿Qué tan dispuesto estaría a votar por él (ella)?</string>
+<string name="PREGUNTA23b">Si su Diputado federal buscara la reelección en el 2021 por un periodo de tres años más en su puesto  ¿Qué tan dispuesto estaría a votar por él (ella)?</string>
+<string name="PREGUNTA23c">Si su Alcalde (Insertar nombre por sistema) buscara la reelección en el 2021 por un periodo de tres años más en su puesto  ¿Qué tan dispuesto estaría a votar por él (ella)?</string>
+<string name="PREGUNTA24">Le voy a leer los nombres de varias personas. ¿Ha oído mencionar a...? (ENCUESTADOR: SI NO HA OÍDO MENCIONAR AL CANDIDATO, CONTINÚE CON LA PERSONA SIGUEINTE) </string>
+<string name="PREGUNTA24_1">Margarita Zavala Gómez del Campo </string>
+<string name="PREGUNTA24_1a">¿Qué opinión tiene de esta persona muy buena, buena, mala o muy mala? </string>
+<string name="PREGUNTA24_1b">¿Estaría usted dispuesto o no a votar por Margarita Zavala Gómez del Campo para diputado federal del distrito 10 ?</string>
+<string name="PREGUNTA24_2">Gabriela Cuevas Barron</string>
+<string name="PREGUNTA24_2a">¿Qué opinión tiene de esta persona muy buena, buena, mala o muy mala? </string>
+<string name="PREGUNTA24_2b">¿Estaría usted dispuesto o no a votar por Gabriela Cuevas Barron para diputado federal del distrito 10 ?</string>
+<string name="PREGUNTA24_3">Javier Hidalgo Ponce</string>
+<string name="PREGUNTA24_3a">¿Qué opinión tiene de esta persona muy buena, buena, mala o muy mala? </string>
+<string name="PREGUNTA24_3b">¿Estaría usted dispuesto o no a votar por Javier Hidalgo Ponce para diputado federal del distrito 10 ?</string>
+<string name="PREGUNTA25">Le voy a leer una lista de personas ¿Si hoy fueran las elecciones, de entre estos candidatos por cual votaría? (LEER CANDIDATOS, NO LEER NINGUNO Y NO SABE NO CONTESTÓ)</string>
+<string name="PREGUNTA26">y ¿Si hoy fueran las elecciones, de entre estos candidatos por cual votaría? (LEER CANDIDATOS, NO LEER NINGUNO Y NO SABE NO CONTESTÓ)</string>
+<string name="PREGUNTA27">Y entre estos candidatos ¿Si hoy fueran las elecciones, de entre estos candidatos de MORENA por cual votaría? (LEER CANDIDATOS, NO LEER NINGUNO Y NO SABE NO CONTESTÓ)</string>
+<string name="PREGUNTA28">El próximo 6 de junio se llevarán a cabo también las elecciones para elegir Diputados Federales y Locales.
+    Si hoy fueran las elecciones para elegir Diputados, ¿por cuál partido votaría usted para diputados? (REGISTRAR PRIMERA RESPUESTA ESPONTÁNEA)
 
-    <string name="PREGUNTAATRIBUTOS">De los siguientes atributos personales, ¿cuáles cree usted que sí o que no tiene la Jefa de Gobierno, Claudia Sheinbaum?</string>
+    Le repito que su respuesta es anónima, confidencial y secreta.
+    Su respuesta se usa solamente en esta encuesta</string>
+<string name="PREGUNTA29">El próximo 6 de junio se llevarán a cabo también las elecciones para elegir Alcaldes
+    Si hoy fueran las elecciones para elegir Alcaldes, ¿por cuál partido votaría usted para Alcalde? (REGISTRAR PRIMERA RESPUESTA ESPONTÁNEA)
+
+    Le repito que su respuesta es anónima, confidencial y secreta.
+    Su respuesta se usa solamente en esta encuesta</string>
+
+<string name="PREGUNTAATRIBUTOS">De los siguientes atributos personales, ¿cuáles cree usted que sí o que no tiene la Jefa de Gobierno, Claudia Sheinbaum?</string>
     <string name="PREGUNTAEST">Para terminar le voy a realizar algunas preguntas para la estadística</string>
     <string name="PREGUNTAHIJOS">Tiene hijos</string>
     <string name="PREGUNTAAPORTA">Pensando en el jefe o jefa de hogar, ¿cuál fue el último año de estudios que aprobó en la escuela?</string>
